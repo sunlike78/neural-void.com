@@ -1,45 +1,78 @@
 # Neural Void — Site
 
-Static website for **Neural Void**, an AI-native product lab.
+Brand site for **Neural Void**, an AI-native product lab.
+Live at [neural-void-site.pages.dev](https://neural-void-site.pages.dev) (→ neural-void.com after DNS activation).
 
 ## Structure
 
 ```
 site/
-  index.html          — Main landing page
-  fold-wing.html      — Fold Wing product page
-  assets/
-    css/style.css     — Global styles (CSS variables, layout, components)
-    js/main.js        — Minimal vanilla JS (scroll effects, mobile nav, reveal)
-    img/              — Image assets (empty — add OG images, icons, etc.)
+├── index.html                    — Main landing page
+├── foldwink/
+│   ├── overview/
+│   │   └── index.html            — Foldwink product page (B2B)
+│   ├── index.html                — Foldwink game build (existing)
+│   └── assets/, favicon.svg …    — Game assets (existing)
+├── assets/
+│   ├── css/style.css             — Global styles (CSS variables, components)
+│   ├── js/main.js                — Vanilla JS (scroll, nav, reveal)
+│   └── img/                      — Image assets (add OG images here)
+└── .gitignore
 ```
+
+## Pages
+
+| URL path               | Content                                    |
+|-------------------------|--------------------------------------------|
+| `/`                     | Main landing — hero, about, Foldwink, concepts, process, contact |
+| `/foldwink/overview/`   | Foldwink product page — B2B positioning, audience, deliverables, pilot timeline |
+| `/foldwink/`            | Foldwink game build (existing, not part of this site project)     |
 
 ## Running locally
 
-No build step required. Open `index.html` directly in a browser, or use any local server:
+No build step. Use any static server:
 
 ```bash
 # Python
 python -m http.server 8000
 
-# Node (npx)
+# Node
 npx serve .
 
-# VS Code — use the Live Server extension
+# Or just open index.html in a browser (anchor links with / paths need a server)
 ```
 
-## Tech stack
+## Deploying
 
-- Pure HTML / CSS / vanilla JavaScript
-- No frameworks, no bundlers, no external UI kits
-- Google Fonts: Inter + JetBrains Mono (loaded via CDN)
-- CSS custom properties for easy theming (see `:root` in `style.css`)
+Site is deployed via **Cloudflare Pages** (project: `neural-void-site`).
 
-## Key design decisions
+```bash
+npx wrangler pages deploy . --project-name neural-void-site --branch main
+```
 
-- Dark theme with cyan/violet accents — high-end sci-tech aesthetic
-- Glass-panel card style with backdrop-filter blur
-- Responsive layout (mobile-first breakpoints at 768px and 480px)
-- Scroll-reveal animations via IntersectionObserver
-- All text in English
-- Contact email placeholder: `hello@neural-void.com` (marked with TODO comments)
+## Where to edit
+
+| What                | Where                                                       |
+|---------------------|-------------------------------------------------------------|
+| Colors / theme      | `assets/css/style.css` → `:root` CSS variables              |
+| Brand copy          | `index.html` — look for section comments                    |
+| Foldwink copy       | `foldwink/overview/index.html` — look for section comments  |
+| Demo URL            | Search for `sunlike78.github.io/foldwink` — replace all     |
+| Contact email       | Search for `hello@neural-void.com` — replace all (marked TODO) |
+| CTA buttons         | Inside `hero-actions`, `featured-actions`, `cta-actions` divs |
+| OG images           | Add files to `assets/img/`, update `og:image` meta tags     |
+
+## Demo flow
+
+Foldwink demo links currently point to the external temporary URL:
+`https://sunlike78.github.io/foldwink/`
+
+When ready to host internally, replace all demo URLs with the internal path (e.g., `/foldwink/` or a dedicated demo subdomain).
+
+## Tech
+
+- Pure HTML / CSS / vanilla JS — no frameworks, no build step
+- Google Fonts CDN: Inter + JetBrains Mono
+- CSS custom properties for theming
+- IntersectionObserver for scroll-reveal
+- Responsive: 768px and 480px breakpoints
