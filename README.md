@@ -1,7 +1,7 @@
 # Neural Void — Site
 
 Brand site for **Neural Void**, an AI-native product lab.
-Live at [neural-void-site.pages.dev](https://neural-void-site.pages.dev) (→ neural-void.com after DNS activation).
+Live at [neural-void.com](https://neural-void.com).
 
 ## Structure
 

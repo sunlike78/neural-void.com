@@ -1,7 +1,7 @@
 # Project Polish & Deploy Report
 
 **Date:** 2026-04-12
-**Status:** Deployed to Cloudflare Pages. Custom domain pending DNS activation.
+**Status:** Deployed and live at https://neural-void.com
 
 ---
 
@@ -73,17 +73,9 @@ The initial project had:
 - Deployed all files successfully
 - Live at: https://neural-void-site.pages.dev
 - Custom domain `neural-void.com` added to project
-- **DNS record pending** — needs CNAME record pointing to `neural-void-site.pages.dev`
-
-### DNS Action Required
-Add one record in Cloudflare Dashboard (dash.cloudflare.com):
-- **Type:** CNAME
-- **Name:** `@` (or `neural-void.com`)
-- **Target:** `neural-void-site.pages.dev`
-- **Proxy:** ON (orange cloud)
-- **TTL:** Auto
-
-After adding this record, Cloudflare Pages will automatically verify the domain and provision an SSL certificate.
+- CNAME record added: `neural-void.com` → `neural-void-site.pages.dev` (Proxied)
+- Domain verified, SSL active
+- **Site live at https://neural-void.com**
 
 ## Design decisions
 
