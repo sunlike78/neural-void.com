@@ -16,7 +16,7 @@ site/
 ├── assets/
 │   ├── css/style.css             — Global styles (CSS variables, components)
 │   ├── js/main.js                — Vanilla JS (scroll, nav, reveal)
-│   └── img/                      — Image assets (add OG images here)
+│   └── img/                      — Favicon, OG images
 └── .gitignore
 ```
 
@@ -27,6 +27,7 @@ site/
 | `/`                     | Main landing — hero, about, Foldwink, concepts, process, contact |
 | `/foldwink/overview/`   | Foldwink product page — B2B positioning, audience, deliverables, pilot timeline |
 | `/foldwink/`            | Foldwink game build (existing, not part of this site project)     |
+| `/privacy/`             | Privacy policy                                                    |
 
 ## Running locally
 
@@ -57,17 +58,10 @@ npx wrangler pages deploy . --project-name neural-void-site --branch main
 | Colors / theme      | `assets/css/style.css` → `:root` CSS variables              |
 | Brand copy          | `index.html` — look for section comments                    |
 | Foldwink copy       | `foldwink/overview/index.html` — look for section comments  |
-| Demo URL            | Search for `sunlike78.github.io/foldwink` — replace all     |
-| Contact email       | Search for `hello@neural-void.com` — replace all (marked TODO) |
+| Demo URL            | All demo links point to `/foldwink/` (internal)             |
+| Contact email       | `hello@neural-void.com` — configured via Cloudflare Email Routing |
 | CTA buttons         | Inside `hero-actions`, `featured-actions`, `cta-actions` divs |
-| OG images           | Add files to `assets/img/`, update `og:image` meta tags     |
-
-## Demo flow
-
-Foldwink demo links currently point to the external temporary URL:
-`https://sunlike78.github.io/foldwink/`
-
-When ready to host internally, replace all demo URLs with the internal path (e.g., `/foldwink/` or a dedicated demo subdomain).
+| OG images           | Replace PNGs in `assets/img/` with designed versions if needed |
 
 ## Tech
 
