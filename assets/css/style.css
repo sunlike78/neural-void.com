@@ -428,6 +428,23 @@ img { max-width: 100%; display: block; }
   background: rgba(122, 122, 148, 0.1);
   border: 1px solid rgba(122, 122, 148, 0.15);
 }
+.card-status.external {
+  color: var(--nv-accent-alt);
+  background: rgba(128, 102, 255, 0.1);
+  border: 1px solid rgba(128, 102, 255, 0.2);
+}
+.card-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--nv-font-mono);
+  font-size: 0.8rem;
+  color: var(--nv-text-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.card-link:hover {
+  color: var(--nv-accent-alt);
+}
 
 /* --- Featured Product Block --- */
 .featured-block {

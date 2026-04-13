@@ -101,3 +101,20 @@ The initial project had:
 8. **Consider analytics** — Cloudflare Web Analytics (free, no JS) or Plausible
 9. **Internal demo hosting** — when ready, the game is already at `/foldwink/`, just update demo URLs
 10. **Legal pages** — privacy policy, terms if needed before public promotion
+
+---
+
+## Update: WurfKit Added as Secondary Portfolio Case (2026-04-13)
+
+### Changes Made
+
+- **Concepts section** (`index.html`): Added WurfKit as a 4th card with "External Case" badge (violet accent, consistent with `--nv-accent-alt`)
+- **Section copy** updated from "A curated set of concepts at various stages" → "A curated set of product directions, pilots, and external proofs" to naturally accommodate external cases
+- **CSS** (`style.css`): Added `.card-status.external` badge style (violet color scheme) and `.card-link` inline link style for external navigation
+- **External link**: WurfKit card links to https://wurfkit.de/ (opens in new tab)
+
+### Positioning
+
+- Foldwink remains the featured product (hero CTA + dedicated featured block + product page)
+- WurfKit appears only in the concepts grid as a secondary card — no hero mention, no nav link, no dedicated page
+- Visual hierarchy preserved: WurfKit uses violet accent (secondary) vs Foldwink's cyan (primary)
