@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Verbum — Local Voice Dictation for Windows 11 & Developers</title>
+  <meta name="description" content="Local-first, ultra-fast speech recognition for Windows 11 tailored for developers and technical professionals. Speak Russian naturally with mixed English code and technical jargon. Zero cloud, 100% offline via Vulkan GPU acceleration.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Verbum — Local Voice Dictation for Windows 11 & Developers">
+  <meta property="og:description" content="Speak Russian naturally. Keep English code and CLI flags. 100% local speech recognition with Vulkan GPU acceleration. Zero cloud, safe clipboard, terminal zero-execution guard.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neural-void.com/verbum/">
+  <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    /* Specific styling for Verbum product page */
+    .hero-badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(0, 212, 245, 0.08);
+      border: 1px solid rgba(0, 212, 245, 0.25);
+      color: var(--nv-accent);
+    }
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
+    }
+    .hero-badge.version {
+      background: rgba(128, 102, 255, 0.1);
+      border-color: rgba(128, 102, 255, 0.3);
+      color: #bfa8ff;
+    }
+
+    /* Terminal Simulator Showcase */
+    .terminal-window {
+      background: #090c15;
+      border: 1px solid var(--nv-border-hi);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 212, 245, 0.05);
+      overflow: hidden;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .terminal-header {
+      background: #0e121e;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--nv-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .terminal-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #232738;
+    }
+    .terminal-dot.red { background: #ef4444; }
+    .terminal-dot.yellow { background: #eab308; }
+    .terminal-dot.green { background: #22c55e; }
+    .terminal-title {
+      font-family: var(--nv-font-mono);
+      font-size: 0.78rem;
+      color: var(--nv-text-dim);
+    }
+    .terminal-tabs {
+      display: flex;
+      gap: 8px;
+    }
+    .terminal-tab {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--nv-text-dim);
+      font-family: var(--nv-font-mono);
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .terminal-tab.active {
+      background: rgba(0, 212, 245, 0.15);
+      border-color: var(--nv-accent);
+      color: var(--nv-white);
+    }
+    .terminal-body {
+      padding: 24px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      min-height: 200px;
+    }
+    .terminal-voice-input {
+      color: #94a3b8;
+      font-size: 0.82rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .voice-pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--nv-accent);
+      box-shadow: 0 0 10px var(--nv-accent);
+      animation: pulse 1.5s infinite;
+    }
+    .terminal-output {
+      color: #38bdf8;
+      font-weight: 500;
+    }
+    .terminal-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      background: var(--nv-accent);
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* Download Box */
+    .download-card {
+      background: linear-gradient(145deg, rgba(17, 17, 24, 0.85), rgba(12, 12, 20, 0.95));
+      border: 1px solid rgba(0, 212, 245, 0.3);
+      border-radius: 18px;
+      padding: 36px 30px;
+      text-align: center;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 212, 245, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .download-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--nv-accent), var(--nv-accent-alt), transparent);
+    }
+    .download-btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 36px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00d4f5, #0099cc);
+      color: #060911;
+      text-decoration: none;
+      box-shadow: 0 0 35px rgba(0, 212, 245, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .download-btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(0, 212, 245, 0.5);
+      background: linear-gradient(135deg, #eeeef4, #00d4f5);
+      color: #060911;
+    }
+    .download-btn-main svg {
+      width: 22px;
+      height: 22px;
+    }
+    .download-meta {
+      margin-top: 14px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.78rem;
+      color: var(--nv-text-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .sha-badge {
+      margin-top: 22px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--nv-border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      overflow-x: auto;
+      font-family: var(--nv-font-mono);
+      font-size: 0.76rem;
+    }
+    .sha-label {
+      color: var(--nv-accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .sha-val {
+      color: #94a3b8;
+      word-break: break-all;
+    }
+    .copy-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--nv-white);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .copy-btn:hover {
+      background: var(--nv-accent);
+      color: #000;
+    }
+
+    /* Comparison Table */
+    .compare-table-wrapper {
+      overflow-x: auto;
+      margin-top: 36px;
+      border: 1px solid var(--nv-border);
+      border-radius: var(--nv-radius);
+      background: var(--nv-surface);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--nv-border);
+    }
+    .compare-table th {
+      background: rgba(255, 255, 255, 0.02);
+      font-family: var(--nv-font-mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nv-text-dim);
+    }
+    .compare-table th.highlight, .compare-table td.highlight {
+      background: rgba(0, 212, 245, 0.05);
+      color: var(--nv-white);
+      font-weight: 600;
+      border-left: 1px solid rgba(0, 212, 245, 0.2);
+      border-right: 1px solid rgba(0, 212, 245, 0.2);
+    }
+    .check { color: #34d399; font-weight: 700; }
+    .cross { color: #ef4444; font-weight: 700; }
+    .dim { color: var(--nv-text-dim); }
+
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid var(--nv-border);
+      border-radius: var(--nv-radius-sm);
+      margin-bottom: 12px;
+      background: var(--nv-surface);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover {
+      border-color: var(--nv-border-hi);
+    }
+    .faq-question {
+      padding: 18px 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--nv-white);
+      font-size: 0.95rem;
+    }
+    .faq-icon {
+      font-size: 1.2rem;
+      color: var(--nv-accent);
+      transition: transform 0.25s ease;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 22px 18px 22px;
+      color: var(--nv-text-dim);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="nav-logo">NEURAL<span>VOID</span></a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="#demo">Live Demo</a></li>
+          <li><a href="#features">Architecture</a></li>
+          <li><a href="#comparison">Comparison</a></li>
+          <li><a href="#specs">Requirements</a></li>
+          <li><a href="#download" class="btn btn-ghost nav-cta">Download v1.2.0</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero" style="min-height: auto; padding: 130px 0 70px 0;">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content" style="max-width: 860px;">
+        
+        <div class="hero-badge-container">
+          <span class="hero-badge"><span class="dot"></span> 100% Offline • Vulkan GPU</span>
+          <span class="hero-badge version">v1.2.0 Production Release</span>
+          <span class="hero-badge" style="border-color: rgba(52, 211, 153, 0.3); color: #34d399;">Windows 11 Native</span>
+        </div>
+
+        <h1 class="hero-title">
+          Speak Russian.<br>
+          Keep English Code.<br>
+          <span class="accent">Zero Cloud. Zero Layout Switching.</span>
+        </h1>
+
+        <p class="hero-sub" style="max-width: 720px; font-size: 1.05rem;">
+          <strong>Verbum</strong> is a commercial-grade local voice dictation tool tailored for developers, engineers, and AI coding agents (Claude Code, VS Code, Cursor, Windsurf, Windows Terminal, Obsidian). Speak Russian naturally with mixed English technical terms, code identifiers, CLI flags, and German terminology — instantly typed into your active application without accidental execution.
+        </p>
+
+        <div class="hero-actions" style="margin-top: 28px;">
+          <a href="#download" class="btn btn-primary" style="padding: 15px 32px; font-size: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.802"/></svg>
+            Download Verbum (v1.2.0)
+          </a>
+          <a href="https://github.com/sunlike78/neural-void.com/releases/tag/v1.2.0" target="_blank" rel="noopener" class="btn btn-ghost">
+            GitHub Release & Source
+          </a>
+        </div>
+
+        <!-- Terminal Interactive Mockup -->
+        <div class="terminal-window reveal" id="demo">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+            </div>
+            <div class="terminal-title">verbum // voice injection stream</div>
+            <div class="terminal-tabs">
+              <button class="terminal-tab active" onclick="setDemo(0)">Claude Code</button>
+              <button class="terminal-tab" onclick="setDemo(1)">Python / VS Code</button>
+              <button class="terminal-tab" onclick="setDemo(2)">Git CLI</button>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-voice-input">
+              <span class="voice-pulse"></span>
+              <span id="demo-voice">🎙️ Spoken: "создай функцию calculate_hash которая принимает auth_token и возвращает sha256"</span>
+            </div>
+            <div class="terminal-output" id="demo-output">
+              def calculate_hash(auth_token: str) -> str:
+            </div>
+            <div style="margin-top: 10px; color: #475569; font-size: 0.78rem;">
+              [Safe Insertion: Terminal Guard Active • Enter Key Suppressed • Latency: 240ms]
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== ARCHITECTURE & FEATURES ========== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Engine Architecture</span>
+        <h2 class="section-title">Built for technical flow state.</h2>
+        <p class="section-text">Standard voice typing fails in code editors because it translates code names, garbles technical English, and triggers accidental commands. Verbum solves this with a purpose-built local architecture.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card glass reveal">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title">Dual-Mode Inference</h3>
+          <p class="card-text">
+            <strong>Fast Mode:</strong> Sub-300ms single-pass recognition using optimized models for rapid agent prompts.
+            <br><br>
+            <strong>Accurate Mode:</strong> <code>large-v3-turbo-q5_0</code> with confidence rescue and spoken punctuation for long-form engineering dictation.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title">Zero-Execution Terminal Safety</h3>
+          <p class="card-text">
+            Never auto-submits dangerous commands. Verbum strictly suppresses <code>Enter</code>, <code>Tab</code>, and control characters in terminal targets (Windows Terminal, PowerShell, WSL, Claude CLI, Codex).
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🌐</div>
+          <h3 class="card-title">Zero Layout Switching</h3>
+          <p class="card-text">
+            Speak Russian sentences with mixed English identifiers, <code>camelCase</code>, <code>snake_case</code>, CLI flags (<code>--check</code>), and German terms. Automatic language detection without manual hotkey toggling.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🔒</div>
+          <h3 class="card-title">100% Offline & Private</h3>
+          <p class="card-text">
+            Powered by local <code>whisper.cpp</code> with Vulkan GPU acceleration (AMD Radeon, NVIDIA RTX, Intel Arc) with automatic CPU fallback. Zero audio streaming, zero telemetry, zero mandatory cloud accounts.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">📋</div>
+          <h3 class="card-title">Safe Clipboard Preservation</h3>
+          <p class="card-text">
+            Full-format snapshot and restoration for text, rich HTML, DIB bitmaps, and HDROP file paths. Your active clipboard history remains completely untouched during voice injection.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">📦</div>
+          <h3 class="card-title">Terminology Packs (.vpack)</h3>
+          <p class="card-text">
+            Strict resolution hierarchy: Personal Dictionary &gt; Cryptographically Signed <code>.vpack</code> Archives &gt; Core Glossaries. Custom domain dictionaries for IT, backend, devops, and science.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== COMPARISON ========== -->
+  <section class="section" id="comparison">
+    <div class="container reveal">
+      <span class="section-label">Benchmark & Capabilities</span>
+      <h2 class="section-title">How Verbum compares.</h2>
+      <p class="section-text">Why developers replace cloud voice APIs and standard OS voice typing with Verbum.</p>
+
+      <div class="compare-table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature / Capability</th>
+              <th class="highlight">Verbum v1.2.0</th>
+              <th>Cloud Whisper / API</th>
+              <th>Windows Voice (Win+H)</th>
+              <th>macOS Dictation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>100% Local & Offline</strong></td>
+              <td class="highlight"><span class="check">✓</span> Yes (Vulkan GPU)</td>
+              <td><span class="cross">✗</span> Cloud Streamed</td>
+              <td><span class="cross">✗</span> Microsoft Cloud</td>
+              <td><span class="dim">~</span> Mixed</td>
+            </tr>
+            <tr>
+              <td><strong>Zero Layout Switching (RU + EN Code)</strong></td>
+              <td class="highlight"><span class="check">✓</span> Native Multi-Vocab</td>
+              <td><span class="dim">~</span> Inconsistent</td>
+              <td><span class="cross">✗</span> Single Language</td>
+              <td><span class="cross">✗</span> Single Language</td>
+            </tr>
+            <tr>
+              <td><strong>Terminal Zero-Execution Guard</strong></td>
+              <td class="highlight"><span class="check">✓</span> Hardware-level Lock</td>
+              <td><span class="cross">✗</span> No Guard</td>
+              <td><span class="cross">✗</span> May submit Enter</td>
+              <td><span class="cross">✗</span> No Guard</td>
+            </tr>
+            <tr>
+              <td><strong>Safe Clipboard Snapshot/Restore</strong></td>
+              <td class="highlight"><span class="check">✓</span> Text + Bitmaps + Files</td>
+              <td><span class="cross">✗</span> Corrupts Clip</td>
+              <td><span class="cross">✗</span> N/A</td>
+              <td><span class="cross">✗</span> N/A</td>
+            </tr>
+            <tr>
+              <td><strong>Domain Packs (.vpack) & Custom Glossaries</strong></td>
+              <td class="highlight"><span class="check">✓</span> Signed Packs</td>
+              <td><span class="cross">✗</span> None</td>
+              <td><span class="cross">✗</span> None</td>
+              <td><span class="cross">✗</span> None</td>
+            </tr>
+            <tr>
+              <td><strong>Latency (Push-to-Talk)</strong></td>
+              <td class="highlight"><span class="check">✓</span> ~200–400 ms</td>
+              <td><span class="cross">✗</span> 800–2500 ms (RTT)</td>
+              <td><span class="dim">~</span> 500–1200 ms</td>
+              <td><span class="dim">~</span> 400–800 ms</td>
+            </tr>
+            <tr>
+              <td><strong>Subscription / Per-Minute Cost</strong></td>
+              <td class="highlight"><span class="check">✓</span> 100% Free / Local</td>
+              <td><span class="cross">✗</span> $0.006/min + API</td>
+              <td><span class="check">✓</span> Included</td>
+              <td><span class="check">✓</span> Included</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== SYSTEM REQUIREMENTS & SPECS ========== -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Hardware Specifications</span>
+        <h2 class="section-title">System requirements.</h2>
+        <p class="section-text">Verbum is compiled natively for Windows 64-bit architecture with modern hardware acceleration.</p>
+      </div>
+
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="card glass reveal">
+          <div class="card-icon">💻</div>
+          <h3 class="card-title">Operating System</h3>
+          <p class="card-text">
+            Windows 11 (22H2 or newer recommended) or Windows 10 x64 (build 19041+). Native WinUI 3 desktop shell with Mica material support.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🎮</div>
+          <h3 class="card-title">GPU Acceleration</h3>
+          <p class="card-text">
+            <strong>Recommended:</strong> AMD Radeon (780M / RDNA2 / RDNA3+), NVIDIA GeForce (RTX / GTX 10-series+), Intel Arc with Vulkan 1.3 support.
+            <br><br>
+            <strong>CPU Fallback:</strong> AVX2 / AVX-512 multi-threaded CPU backend included.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🧠</div>
+          <h3 class="card-title">Memory & Storage</h3>
+          <p class="card-text">
+            <strong>RAM:</strong> 8 GB minimum (16 GB recommended for Turbo model).<br>
+            <strong>Disk Space:</strong> 2.5 GB free space for bundled models and runtime binaries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== DOWNLOAD & VERIFICATION ========== -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="download-card reveal">
+        <span class="section-label" style="margin-bottom: 10px;">Official Windows Release</span>
+        <h2 class="section-title" style="margin-bottom: 12px;">Download Verbum v1.2.0</h2>
+        <p class="section-text" style="margin: 0 auto 30px auto; max-width: 620px;">
+          Standalone, clean Inno Setup installer. Bundled with complete offline STT models, Vulkan GPU engine, and desktop app.
+        </p>
+
+        <a href="https://github.com/sunlike78/neural-void.com/releases/download/v1.2.0/Verbum-Setup-1.2.0.exe" class="download-btn-main">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+          Download Verbum-Setup-1.2.0.exe
+        </a>
+
+        <div class="download-meta">
+          <span>📦 Size: <strong>~1.00 GB</strong></span>
+          <span>🏷️ Version: <strong>1.2.0</strong></span>
+          <span>🖥️ Platform: <strong>Windows x64</strong></span>
+          <span>📅 Date: <strong>August 2026</strong></span>
+        </div>
+
+        <div class="sha-badge">
+          <span class="sha-label">SHA-256 Checksum:</span>
+          <span class="sha-val" id="sha-text">739a7fcd9717f7b01570794d85feee4b480b0998d0a3ca1a3734b7a336fa5d7e</span>
+          <button class="copy-btn" onclick="copySha()">Copy Hash</button>
+        </div>
+
+        <div style="margin-top: 20px; font-family: var(--nv-font-mono); font-size: 0.74rem; color: var(--nv-text-dim);">
+          Verify in PowerShell: <code>Get-FileHash Verbum-Setup-1.2.0.exe -Algorithm SHA256</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq">
+    <div class="container reveal">
+      <span class="section-label">Questions & Answers</span>
+      <h2 class="section-title">Frequently asked questions.</h2>
+
+      <div style="max-width: 800px; margin-top: 32px;">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Does Verbum send my voice or transcriptions to the cloud?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            No. Verbum runs 100% locally on your machine via a native C++ Vulkan speech recognition backend. It makes zero outbound network calls for audio streaming or recognition telemetry.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How does Verbum prevent accidental command execution in terminals?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Verbum uses a specialized Win32 input injection sink that explicitly strips newlines and control characters when typing into terminal windows (Windows Terminal, Command Prompt, PowerShell, VS Code terminal). Your transcribed text is typed as a draft, allowing you to review before pressing Enter manually.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What hotkeys are supported?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Verbum supports both Push-to-Talk (hold key while speaking) and Toggle (press to start, press to stop) modes. Presets include Right Alt, Right Ctrl, Ctrl+Shift+Space, CapsLock, and custom Win32 low-level key bindings with modifier suppression.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do Terminology Packs (.vpack) work?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <code>.vpack</code> files are signed, tamper-evident archives containing domain-specific vocabularies (e.g. Kubernetes, React, Python, Machine Learning). When loaded, the terminology engine canonicalizes spoken phrases (e.g. "докер компоуз" → "docker compose") using an exact word-boundary graph with zero hallucination.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Neural Void • Product Lab</p>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/verbum/">Verbum</a></li>
+          <li><a href="/foldwink/">Foldwink</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Interactive terminal demo data
+    const demos = [
+      {
+        voice: '🎙️ Spoken: "создай функцию calculate_hash которая принимает auth_token и возвращает sha256"',
+        output: 'def calculate_hash(auth_token: str) -> str:'
+      },
+      {
+        voice: '🎙️ Spoken: "запусти pytest tests с флагом минус v и исключи benchmark"',
+        output: 'pytest tests/ -v -k "not benchmark"'
+      },
+      {
+        voice: '🎙️ Spoken: "git commit с сообщением фикс утечки памяти в бэкенде stt"',
+        output: 'git commit -m "fix: memory leak in STT backend"'
+      }
+    ];
+
+    function setDemo(index) {
+      document.querySelectorAll('.terminal-tab').forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+      const d = demos[index];
+      document.getElementById('demo-voice').textContent = d.voice;
+      document.getElementById('demo-output').textContent = d.output;
+    }
+
+    function toggleFaq(el) {
+      const item = el.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+
+    function copySha() {
+      const text = document.getElementById('sha-text').textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy Hash', 2000);
+      });
+    }
+  </script>
+</body>
+</html>
