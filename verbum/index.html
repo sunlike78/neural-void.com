@@ -1105,12 +1105,18 @@
       });
     }
 
-    // Initialize stored language preference
+    // Initialize stored language preference (default: ru)
     (function() {
       try {
         const stored = localStorage.getItem('verbum_lang');
-        if (stored === 'en') { setLang('en'); }
-      } catch(e) {}
+        if (stored === 'en') {
+          setLang('en');
+        } else {
+          setLang('ru');
+        }
+      } catch(e) {
+        setLang('ru');
+      }
     })();
   </script>
 </body>
