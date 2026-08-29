@@ -487,6 +487,53 @@
 
   <div class="divider"></div>
 
+  <!-- ========== WORKFLOW PAIN POINTS ========== -->
+  <section class="section" style="padding: 70px 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label"><span data-lang="ru">Проблема и Решение</span><span data-lang="en">The Problem & Solution</span></span>
+        <h2 class="section-title"><span data-lang="ru">Почему обычный голосовой ввод бесит разработчиков.</span><span data-lang="en">Why standard voice tools fail developers.</span></h2>
+      </div>
+
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 30px;">
+        <div class="card glass reveal">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">✕</div>
+          <h3 class="card-title" style="color: #f87171;"><span data-lang="ru">Переключение раскладки</span><span data-lang="en">Constant Layout Switching</span></h3>
+          <p class="card-text" data-lang="ru">
+            Каждое английское слово в русском предложении (<em>«добавь auth_token в headers»</em>) заставляет переключать раскладку или выдает «аутх_токен». <strong>Verbum понимает смешанную речь на лету.</strong>
+          </p>
+          <p class="card-text" data-lang="en">
+            Mixing English identifiers into Russian speech breaks standard speech engines. <strong>Verbum recognizes mixed technical terminology natively on the fly.</strong>
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">✕</div>
+          <h3 class="card-title" style="color: #f87171;"><span data-lang="ru">Случайный Enter в терминале</span><span data-lang="en">Accidental Enter in Shells</span></h3>
+          <p class="card-text" data-lang="ru">
+            Обычные утилиты отправляют переводы строк, нажимая Enter посреди незаконченной команды <code>rm</code> или <code>git push</code>. <strong>Verbum аппаратно блокирует Enter в консолях.</strong>
+          </p>
+          <p class="card-text" data-lang="en">
+            Standard voice tools inject newlines and execute partial shell commands like <code>git push</code>. <strong>Verbum enforces a zero-execution hardware guard.</strong>
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">✕</div>
+          <h3 class="card-title" style="color: #f87171;"><span data-lang="ru">Облачный лаг и приватность</span><span data-lang="en">Cloud Lag & Leakage</span></h3>
+          <p class="card-text" data-lang="ru">
+            Облачные API заставляют ждать 2 секунды и отправляют ваш закрытый код на чужие сервера. <strong>Verbum на 100% оффлайн на вашем GPU с откликом 200–400 мс.</strong>
+          </p>
+          <p class="card-text" data-lang="en">
+            Cloud APIs add 2-second round-trip latency and stream proprietary code across the web. <strong>Verbum is 100% offline on your local GPU with sub-400ms speed.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- ========== ARCHITECTURE & FEATURES ========== -->
   <section class="section" id="features">
     <div class="container">
@@ -701,6 +748,38 @@
 
   <div class="divider"></div>
 
+  <!-- ========== QUICKSTART ========== -->
+  <section class="section" style="padding: 80px 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label"><span data-lang="ru">Быстрый Старт</span><span data-lang="en">Quickstart</span></span>
+        <h2 class="section-title"><span data-lang="ru">Готов к работе за 60 секунд.</span><span data-lang="en">Ready in 60 seconds.</span></h2>
+        <p class="section-text" data-lang="ru">Никаких консольных скриптов, настроек окружения или установки Python. Все упаковано в один автономный инсталлятор.</p>
+        <p class="section-text" data-lang="en">No environment setup, manual Python venvs, or dependencies. Everything is bundled into a single standalone installer.</p>
+      </div>
+
+      <div class="process-grid reveal" style="counter-reset: step; margin-top: 36px;">
+        <div class="process-step">
+          <h3><span data-lang="ru">1. Установите</span><span data-lang="en">1. Install</span></h3>
+          <p data-lang="ru">Скачайте и запустите <code>Verbum-Setup-1.2.0.exe</code>. Установка занимает меньше минуты в локальный профиль.</p>
+          <p data-lang="en">Download and run <code>Verbum-Setup-1.2.0.exe</code>. Clean local install in under a minute.</p>
+        </div>
+        <div class="process-step">
+          <h3><span data-lang="ru">2. Зажмите хоткей</span><span data-lang="en">2. Hold Hotkey</span></h3>
+          <p data-lang="ru">По умолчанию зажмите <strong>Правый Alt</strong> (Push-to-Talk) и начните говорить в любом приложении.</p>
+          <p data-lang="en">Hold <strong>Right Alt</strong> (Push-to-Talk default) and speak naturally in any target window.</p>
+        </div>
+        <div class="process-step">
+          <h3><span data-lang="ru">3. Готово!</span><span data-lang="en">3. Done!</span></h3>
+          <p data-lang="ru">Отпустите клавишу — распознанный текст со всеми английскими терминами мгновенно напечатается в окно.</p>
+          <p data-lang="en">Release the key — clean formatted text with technical identifiers is inserted into your active app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- ========== DOWNLOAD & VERIFICATION ========== -->
   <section class="section" id="download">
     <div class="container">
@@ -883,12 +962,28 @@
       updateDemoContent();
     }
 
+    let typeTimer = null;
+
     function updateDemoContent() {
       const isEn = document.body.classList.contains('lang-en');
       const list = isEn ? demos.en : demos.ru;
       const d = list[currentDemoIndex];
       document.getElementById('demo-voice').textContent = d.voice;
-      document.getElementById('demo-output').textContent = d.output;
+      
+      const outEl = document.getElementById('demo-output');
+      outEl.textContent = '';
+      if (typeTimer) clearTimeout(typeTimer);
+      
+      let charIndex = 0;
+      const targetText = d.output;
+      function typeNext() {
+        if (charIndex < targetText.length) {
+          outEl.textContent += targetText.charAt(charIndex);
+          charIndex++;
+          typeTimer = setTimeout(typeNext, 16);
+        }
+      }
+      typeNext();
     }
 
     function toggleFaq(el) {
