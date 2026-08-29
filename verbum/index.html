@@ -491,7 +491,7 @@
             <span data-lang="en">Native Windows 11 Interface (WinUI 3 / Mica Dark)</span>
           </div>
           <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--nv-border-hi); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 212, 245, 0.15);">
-            <img src="/assets/img/verbum/app-ui-dashboard.jpg" alt="Verbum Windows 11 Native Interface" style="width: 100%; height: auto; display: block;" loading="lazy">
+            <img id="img-app-ui" src="/assets/img/verbum/app-ui-ru.jpg" data-src-ru="/assets/img/verbum/app-ui-ru.jpg" data-src-en="/assets/img/verbum/app-ui-en.jpg" alt="Verbum Windows 11 Native Interface" style="width: 100%; height: auto; display: block;" loading="lazy">
           </div>
         </div>
 
@@ -546,7 +546,7 @@
 
       <!-- Dev Meme: Layout switch pain -->
       <div class="reveal" style="margin-top: 36px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(239, 68, 68, 0.25); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);">
-        <img src="/assets/img/verbum/meme-keyboard-pain.jpg" alt="Keyboard Layout Switch Pain vs Verbum" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img id="img-meme-keyboard" src="/assets/img/verbum/meme-keyboard-pain-ru.jpg" data-src-ru="/assets/img/verbum/meme-keyboard-pain-ru.jpg" data-src-en="/assets/img/verbum/meme-keyboard-pain-en.jpg" alt="Keyboard Layout Switch Pain vs Verbum" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
     </div>
@@ -704,7 +704,7 @@
 
       <!-- Dev Meme: Meeting Privacy vs Cloud Bots -->
       <div class="reveal" style="margin-top: 36px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(128, 102, 255, 0.3); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);">
-        <img src="/assets/img/verbum/meme-meeting-privacy.jpg" alt="Cloud Meeting Bots vs Verbum Offline Transcriber" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img id="img-meme-meeting" src="/assets/img/verbum/meme-meeting-privacy-ru.jpg" data-src-ru="/assets/img/verbum/meme-meeting-privacy-ru.jpg" data-src-en="/assets/img/verbum/meme-meeting-privacy-en.jpg" alt="Cloud Meeting Bots vs Verbum Offline Transcriber" style="width: 100%; height: auto; display: block;" loading="lazy">
       </div>
 
     </div>
@@ -999,7 +999,8 @@
   <script>
     // Language Toggle
     function setLang(lang) {
-      if (lang === 'en') {
+      const isEn = (lang === 'en');
+      if (isEn) {
         document.body.classList.add('lang-en');
         document.documentElement.lang = 'en';
         document.getElementById('btn-en').classList.add('active');
@@ -1010,6 +1011,13 @@
         document.getElementById('btn-ru').classList.add('active');
         document.getElementById('btn-en').classList.remove('active');
       }
+      // Swap localized images
+      document.querySelectorAll('img[data-src-ru]').forEach(img => {
+        const targetSrc = isEn ? img.getAttribute('data-src-en') : img.getAttribute('data-src-ru');
+        if (targetSrc && img.src !== targetSrc) {
+          img.src = targetSrc;
+        }
+      });
       try { localStorage.setItem('verbum_lang', lang); } catch (e) {}
       updateDemoContent();
     }
