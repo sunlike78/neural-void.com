@@ -421,22 +421,22 @@
 
         <h1 class="hero-title" data-lang="ru">
           Говори по-русски.<br>
-          Пиши код на английском.<br>
+          Используй английские термины.<br>
           <span class="accent">Ноль облаков. Без смены раскладки.</span>
         </h1>
 
         <h1 class="hero-title" data-lang="en">
           Speak Russian.<br>
-          Keep English Code.<br>
+          Keep English Terms.<br>
           <span class="accent">Zero Cloud. Zero Layout Switching.</span>
         </h1>
 
         <p class="hero-sub" style="max-width: 760px; font-size: 1.05rem;" data-lang="ru">
-          <strong>Verbum</strong> — локальная система голосового ввода для Windows 11, созданная специально для разработчиков, технических специалистов и работы с AI-агентами (Claude Code, Cursor, Windsurf, VS Code, Windows Terminal, Obsidian). Говорите по-русски с английскими идентификаторами, флагами CLI и немецкими терминами — текст мгновенно печатается в активное окно без случайного запуска команд.
+          <strong>Verbum</strong> — локальная система голосовой диктовки для Windows 11. Надиктовывайте промпты в AI-агенты (Claude Code, Cursor, Windsurf), пишите комментарии, коммиты и документацию голосом — на естественном русском языке со встроенными английскими терминами, названиями библиотек и флагами без ручного переключения раскладки клавиатуры.
         </p>
 
         <p class="hero-sub" style="max-width: 760px; font-size: 1.05rem;" data-lang="en">
-          <strong>Verbum</strong> is a commercial-grade local voice dictation tool tailored for developers, engineers, and AI coding agents (Claude Code, VS Code, Cursor, Windsurf, Windows Terminal, Obsidian). Speak Russian naturally with mixed English technical terms, code identifiers, CLI flags, and German terminology — instantly typed into your active application without accidental execution.
+          <strong>Verbum</strong> is a local-first voice dictation tool for Windows 11. Dictate prompts into Claude Code, Cursor & AI agents, draft commit messages, code comments, and documentation in Russian with zero keyboard layout switching for English technical terms and CLI flags.
         </p>
 
         <div class="hero-actions" style="margin-top: 28px;">
@@ -469,10 +469,10 @@
           <div class="terminal-body">
             <div class="terminal-voice-input">
               <span class="voice-pulse"></span>
-              <span id="demo-voice">🎙️ Голос: «создай функцию calculate_hash которая принимает auth_token и возвращает sha256»</span>
+              <span id="demo-voice">🎙️ Голос: «сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша»</span>
             </div>
             <div class="terminal-output" id="demo-output">
-              def calculate_hash(auth_token: str) -> str:
+              сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша
             </div>
             <div style="margin-top: 12px; color: #475569; font-size: 0.78rem;">
               <span data-lang="ru">[Безопасный ввод: Terminal Guard активен • Нажатие Enter заблокировано • Задержка: 240 мс]</span>
@@ -845,30 +845,30 @@
     const demos = {
       ru: [
         {
-          voice: '🎙️ Голос: «создай функцию calculate_hash которая принимает auth_token и возвращает sha256»',
-          output: 'def calculate_hash(auth_token: str) -> str:'
+          voice: '🎙️ Голос: «сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша»',
+          output: 'сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша'
         },
         {
-          voice: '🎙️ Голос: «запусти pytest tests с флагом минус v и исключи benchmark»',
-          output: 'pytest tests/ -v -k "not benchmark"'
+          voice: '🎙️ Голос: «git commit с сообщением фикс утечки памяти в whisper бэкенде»',
+          output: 'git commit -m "fix: memory leak in whisper backend"'
         },
         {
-          voice: '🎙️ Голос: «git commit с сообщением фикс утечки памяти в бэкенде stt»',
-          output: 'git commit -m "fix: memory leak in STT backend"'
+          voice: '🎙️ Голос: «функция принимает payload и возвращает Response со статусом 200»',
+          output: '// Функция принимает payload и возвращает Response со статусом 200'
         }
       ],
       en: [
         {
-          voice: '🎙️ Spoken: "create function calculate_hash taking auth_token and returning sha256"',
-          output: 'def calculate_hash(auth_token: str) -> str:'
+          voice: '🎙️ Spoken: "refactor auth_token middleware and add sha256 hash verification"',
+          output: 'refactor auth_token middleware and add sha256 hash verification'
         },
         {
-          voice: '🎙️ Spoken: "run pytest tests flag dash v and exclude benchmark"',
-          output: 'pytest tests/ -v -k "not benchmark"'
+          voice: '🎙️ Spoken: "git commit with message fix memory leak in whisper backend"',
+          output: 'git commit -m "fix: memory leak in whisper backend"'
         },
         {
-          voice: '🎙️ Spoken: "git commit with message fix memory leak in stt backend"',
-          output: 'git commit -m "fix: memory leak in STT backend"'
+          voice: '🎙️ Spoken: "function accepts payload and returns Response with status 200"',
+          output: '// Function accepts payload and returns Response with status 200'
         }
       ]
     };
