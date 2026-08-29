@@ -391,6 +391,7 @@
           <li><a href="/"><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a></li>
           <li><a href="#demo"><span data-lang="ru">Демо</span><span data-lang="en">Demo</span></a></li>
           <li><a href="#features"><span data-lang="ru">Архитектура</span><span data-lang="en">Architecture</span></a></li>
+          <li><a href="#meetings"><span data-lang="ru">Созвоны [Beta]</span><span data-lang="en">Meetings [Beta]</span></a></li>
           <li><a href="#comparison"><span data-lang="ru">Сравнение</span><span data-lang="en">Comparison</span></a></li>
           <li><a href="#specs"><span data-lang="ru">Требования</span><span data-lang="en">Specs</span></a></li>
           <li><a href="#download" class="btn btn-ghost nav-cta"><span data-lang="ru">Скачать v1.2.0</span><span data-lang="en">Download v1.2.0</span></a></li>
@@ -416,6 +417,7 @@
         <div class="hero-badge-container">
           <span class="hero-badge"><span class="dot"></span> <span data-lang="ru">100% Оффлайн • Vulkan GPU</span><span data-lang="en">100% Offline • Vulkan GPU</span></span>
           <span class="hero-badge version"><span data-lang="ru">Релиз v1.2.0 Production</span><span data-lang="en">v1.2.0 Production Release</span></span>
+          <span class="hero-badge" style="border-color: rgba(128, 102, 255, 0.35); color: #bfa8ff;"><span data-lang="ru">🎙️ Запись созвонов & Zoom [Beta]</span><span data-lang="en">🎙️ Meeting Transcriber [Beta]</span></span>
           <span class="hero-badge" style="border-color: rgba(52, 211, 153, 0.3); color: #34d399;"><span data-lang="ru">Windows 11 Native</span><span data-lang="en">Windows 11 Native</span></span>
         </div>
 
@@ -611,6 +613,74 @@
           <p class="card-text" data-lang="en">
             Strict resolution hierarchy: Personal Dictionary &gt; Cryptographically Signed <code>.vpack</code> Archives &gt; Core Glossaries. Custom domain dictionaries for IT, backend, devops, and science.
           </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🎙️</div>
+          <h3 class="card-title"><span data-lang="ru">Запись Созвонов (Zoom / Teams) [Beta]</span><span data-lang="en">Meeting Transcriber (Zoom / Teams) [Beta]</span></h3>
+          <p class="card-text" data-lang="ru">
+            Двухканальный захват звука (WASAPI loopback + микрофон). Записывает ваш голос и собеседников из Zoom, Teams или Meet, разделяет спикеров и формирует Markdown-конспект с таймкодами. Плюс плавающее окно Live Captions.
+          </p>
+          <p class="card-text" data-lang="en">
+            Dual-channel capture (WASAPI loopback + microphone). Records you and remote speakers from Zoom, Teams, or Meet, diarizes speakers, and outputs timestamped Markdown notes with real-time Live Captions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== MEETINGS & CONFERENCES SHOWCASE ========== -->
+  <section class="section" id="meetings" style="padding: 80px 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" style="color: #bfa8ff;"><span data-lang="ru">Новая Возможность • Beta</span><span data-lang="en">New Feature • Beta</span></span>
+        <h2 class="section-title"><span data-lang="ru">Конспекты созвонов без облачных ботов.</span><span data-lang="en">Meeting notes with zero cloud bots.</span></h2>
+        <p class="section-text" data-lang="ru">
+          Не нужно пускать сторонних ботов в конфиденциальные звонки. Verbum захватывает системный звук Windows и микрофон прямо на вашем ПК, разделяет речь участников и сохраняет готовый структурированный конспект.
+        </p>
+        <p class="section-text" data-lang="en">
+          No need to invite untrusted cloud bots into private client meetings. Verbum captures system loopback audio and your microphone locally, separating speakers into structured Markdown notes.
+        </p>
+      </div>
+
+      <!-- Meeting Visual Mockup -->
+      <div class="terminal-window reveal" style="margin-top: 36px; border-color: rgba(128, 102, 255, 0.3); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(128, 102, 255, 0.08);">
+        <div class="terminal-header" style="background: #110e20;">
+          <div class="terminal-dots">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+          </div>
+          <div class="terminal-title" style="color: #bfa8ff;">verbum // meeting session • zoom (mic + wasapi loopback)</div>
+          <div style="font-family: var(--nv-font-mono); font-size: 0.72rem; color: #34d399; display: flex; align-items: center; gap: 6px;">
+            <span class="voice-pulse" style="background: #34d399; box-shadow: 0 0 10px #34d399;"></span>
+            <span data-lang="ru">Запись активна • 100% Локально</span>
+            <span data-lang="en">Recording Live • 100% Local</span>
+          </div>
+        </div>
+        <div class="terminal-body" style="font-size: 0.86rem; line-height: 1.8;">
+          <div style="color: #94a3b8; margin-bottom: 10px; font-size: 0.78rem;">
+            # 📁 meeting_2026-08-29_architecture_sync.md
+          </div>
+          <div style="margin-bottom: 12px;">
+            <span style="color: var(--nv-accent); font-weight: 600;">[00:04] Вы:</span>
+            <span style="color: #e2e8f0;"> Привет! Давайте согласуем переход на Vulkan STT бэкенд и проверим оффлайн-задержку.</span>
+          </div>
+          <div style="margin-bottom: 12px;">
+            <span style="color: #c084fc; font-weight: 600;">[00:19] Собеседник (Zoom):</span>
+            <span style="color: #cbd5e1;"> Отлично, мы протестировали на AMD 780M и RTX 4080 — задержка меньше 300 мс, буфер обмена не затирается.</span>
+          </div>
+          <div style="margin-bottom: 12px;">
+            <span style="color: var(--nv-accent); font-weight: 600;">[00:42] Вы:</span>
+            <span style="color: #e2e8f0;"> Зафиксировал в таске. Конспект сохранен в Obsidian.</span>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--nv-border); display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.76rem; color: #7a7a94;">
+            <span>✨ Live Captions Overlay</span>
+            <span>📱 Телефон-Конспектатор (QR-код)</span>
+            <span>💾 Экспорт Markdown / JSON</span>
+          </div>
         </div>
       </div>
     </div>
@@ -873,13 +943,13 @@
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
-            <span data-lang="ru">Как работают пакеты терминов (.vpack)?</span>
-            <span data-lang="en">How do Terminology Packs (.vpack) work?</span>
+            <span data-lang="ru">Как работает режим записи конференций (Zoom / Teams)?</span>
+            <span data-lang="en">How does the Meeting Transcriber (Zoom / Teams) work?</span>
             <span class="faq-icon">+</span>
           </div>
           <div class="faq-answer">
-            <span data-lang="ru">Файлы <code>.vpack</code> — это подписанные архивы со специализированными словарями (Kubernetes, Python, React, Data Science). При распознавании движок автоматически заменяет русскую транслитерацию на точные английские сущности без участия генеративных нейросетей (ноль галлюцинаций).</span>
-            <span data-lang="en"><code>.vpack</code> files are signed, tamper-evident archives containing domain-specific vocabularies (e.g. Kubernetes, React, Python, Machine Learning). When loaded, the terminology engine canonicalizes spoken phrases (e.g. "докер компоуз" → "docker compose") using an exact word-boundary graph with zero hallucination.</span>
+            <span data-lang="ru">Verbum использует нативный Windows WASAPI Loopback захват системного звука параллельно с микрофоном. Это позволяет записывать как ваш голос, так и голоса удаленных собеседников из любого приложения (Zoom, Microsoft Teams, Google Meet, Telegram, Discord). Вся транскрипция происходит на 100% локально на вашем GPU без подключения облачных ботов, с автоматическим экспортом в Markdown.</span>
+            <span data-lang="en">Verbum uses native Windows WASAPI Loopback capture alongside your microphone. It records both your voice and remote participants from any app (Zoom, Teams, Google Meet, Discord) completely offline on your local GPU without inviting third-party cloud bots, exporting ready-to-use Markdown transcripts.</span>
           </div>
         </div>
       </div>
