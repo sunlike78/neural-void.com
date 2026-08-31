@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO — edit title & description to match current messaging -->
-  <title>Neural Void — AI-Native Product Lab</title>
-  <meta name="description" content="Neural Void builds AI-native digital products, branded engagement modules, and interactive experiences. Explore Foldwink and other concepts.">
+  <title>Neural Void — AI-Native Product Lab & Atlassian Cloud Solutions</title>
+  <meta name="description" content="Neural Void builds AI-native digital products, zero-egress Jira Cloud extensions, and interactive experiences. Explore Sprint Scope Guard, Foldwink, and Verbum.">
 
-  <!-- Open Graph — replace placeholders with final assets -->
-  <meta property="og:title" content="Neural Void — AI-Native Product Lab">
-  <meta property="og:description" content="AI-native products, branded systems, and interactive experiences — designed, prototyped, and launched as real products.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Neural Void — AI-Native Product Lab & Atlassian Cloud Solutions">
+  <meta property="og:description" content="AI-native products, zero-egress Jira Cloud governance apps, and interactive digital experiences.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://neural-void.com">
   <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
@@ -23,6 +23,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .lang-switcher-pill {
+      display: inline-flex;
+      background: var(--nv-surface-hi);
+      border: 1px solid var(--nv-border-hi);
+      border-radius: 20px;
+      padding: 3px;
+      gap: 4px;
+    }
+    .lang-pill-btn {
+      background: transparent;
+      border: none;
+      color: var(--nv-text-dim);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: all var(--nv-transition);
+      font-family: var(--nv-font-mono);
+    }
+    .lang-pill-btn.active {
+      background: var(--nv-accent);
+      color: var(--nv-bg);
+      font-weight: 700;
+    }
+    .badge-certified {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 212, 245, 0.1);
+      border: 1px solid rgba(0, 212, 245, 0.3);
+      color: var(--nv-accent);
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: var(--nv-font-mono);
+      font-weight: 600;
+    }
+    .badge-beta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(128, 102, 255, 0.15);
+      border: 1px solid rgba(128, 102, 255, 0.4);
+      color: #b39ddb;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: var(--nv-font-mono);
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,10 +86,10 @@
         <a href="/" class="nav-logo">NEURAL<span>VOID</span></a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#jira-suite" style="color: var(--nv-accent); font-weight: 600;">Jira Suite ⚡</a></li>
           <li><a href="/verbum/">Verbum</a></li>
           <li><a href="#foldwink">Foldwink</a></li>
           <li><a href="#concepts">Concepts</a></li>
-          <li><a href="#process">Process</a></li>
           <li><a href="#contact" class="btn btn-ghost nav-cta">Get in Touch</a></li>
         </ul>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
@@ -50,12 +103,11 @@
     <div class="hero-grid"></div>
     <div class="container">
       <div class="hero-content">
-        <!-- Hero headline — edit to refine brand messaging -->
         <h1 class="hero-title">Where intelligent concepts become <span class="accent">productized reality.</span></h1>
-        <p class="hero-sub">AI-native products, branded engagement systems, and interactive experiences — designed, prototyped, and launched as real products.</p>
+        <p class="hero-sub">AI-native products, zero-egress Atlassian Cloud governance systems, and interactive digital experiences — designed, prototyped, and shipped.</p>
         <div class="hero-actions">
-          <!-- Primary CTA — edit href and text as needed -->
-          <a href="#foldwink" class="btn btn-primary">See Foldwink</a>
+          <a href="#jira-suite" class="btn btn-primary">Explore Jira Suite</a>
+          <a href="#foldwink" class="btn btn-secondary">Play Foldwink</a>
           <a href="#contact" class="btn btn-ghost">Discuss a Pilot</a>
         </div>
       </div>
@@ -68,9 +120,143 @@
       <span class="section-label">What is Neural Void</span>
       <h2 class="section-title">A curated lab of productized ideas.</h2>
       <p class="section-text">
-        AI, interaction design, and product packaging — combined into launch-ready digital concepts.
-        Every product we build is engineered to ship, not just to demo.
+        AI, interaction design, and enterprise-grade cloud packaging — combined into launch-ready digital products.
+        Every tool we build is engineered for high performance, zero data egress, and seamless team workflow integration.
       </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== ATLASSIAN JIRA SUITE (NEW) ========== -->
+  <section class="section" id="jira-suite" style="background: linear-gradient(180deg, rgba(8,8,13,0) 0%, rgba(12,12,20,0.8) 50%, rgba(8,8,13,0) 100%);">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; flex-wrap: wrap; gap: 16px;" class="reveal">
+        <div>
+          <span class="section-label">Atlassian Marketplace Partner</span>
+          <h2 class="section-title">Neural Void Jira Cloud Suite</h2>
+          <p class="section-text">Enterprise-grade, zero-data-egress Forge applications designed to protect agile velocity, automate compliance, and streamline team workflows.</p>
+        </div>
+        
+        <!-- Interactive Multi-Language Switcher for Apps Showcase -->
+        <div>
+          <div class="lang-switcher-pill">
+            <button class="lang-pill-btn active" onclick="switchSuiteLang('en')">🇬🇧 English</button>
+            <button class="lang-pill-btn" onclick="switchSuiteLang('de')">🇩🇪 Deutsch</button>
+            <button class="lang-pill-btn" onclick="switchSuiteLang('ru')">🇷🇺 Русский</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <!-- App 1: Sprint Scope Guard -->
+        <div class="card glass reveal" style="border: 1px solid rgba(0, 212, 245, 0.25); background: rgba(17, 17, 24, 0.85); box-shadow: 0 8px 32px rgba(0, 212, 245, 0.05);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <span class="card-status live">Ready for Release</span>
+            <span class="badge-certified">🛡️ Runs on Atlassian</span>
+          </div>
+          <h3 class="card-title" style="color: var(--nv-white); font-size: 1.25rem;">Sprint Scope Guard & Agile JQL Pro</h3>
+          
+          <div class="suite-lang-block" data-lang="en">
+            <p class="card-text">
+              Real-time Scrum Scope Creep Sentinel. Locks planning baselines, predicts goal blowout dates via inflation velocity, balances capacity with <strong>1-Click Smart Scope Swap («1-In-1-Out»)</strong>, auto-compiles AI Retro reports for Confluence, and supercharges Jira with custom JQL functions.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              ⚡ 0ms SWR Cache • Trilingual UI (DE/EN/RU) • SOC2 & GDPR Ready
+            </div>
+          </div>
+
+          <div class="suite-lang-block" data-lang="de" style="display: none;">
+            <p class="card-text">
+              Echtzeit-Wächter gegen Scope Creep. Sperrt Planungs-Baselines, prognostiziert Zielabbruch-Tage, gleicht Teamkapazitäten mit <strong>1-Klick Smart Scope Swap (1-In-1-Out)</strong> aus, erstellt Markdown-Retro-Berichte für Confluence und erweitert Jira um leistungsstarke JQL-Befehle.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              ⚡ 0ms SWR Cache • Dreisprachig (DE/EN/RU) • SOC2 & DSGVO Konform
+            </div>
+          </div>
+
+          <div class="suite-lang-block" data-lang="ru" style="display: none;">
+            <p class="card-text">
+              Радар контроля раздувания скоупа спринта. Фиксирует плановый Baseline, предсказывает день срыва целей спринта, восстанавливает баланс через <strong>1-Click Smart Scope Swap («1 вошла — 1 вышла»)</strong>, компилирует ретро-отчеты для Confluence и дает кастомные JQL-функции.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              ⚡ Турбо 0мс SWR • Полная поддержка DE/EN/RU • Безопасность без утечки данных
+            </div>
+          </div>
+        </div>
+
+        <!-- App 2: Smart Defaults & DoD Guard -->
+        <div class="card glass reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <span class="badge-beta">🧪 Beta / Testing</span>
+            <span class="badge-certified">🛡️ Forge Serverless</span>
+          </div>
+          <h3 class="card-title" style="color: var(--nv-white); font-size: 1.25rem;">Smart Defaults & DoD Guard</h3>
+
+          <div class="suite-lang-block" data-lang="en">
+            <p class="card-text">
+              Enforces Definition of Done (DoD) checklists and quality gates directly in the issue view. Automatically populates standard descriptions by issue type and validates 100% checklist completion before transitions to Done.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              📋 Workflow Transition Validator • Interactive Checklists • Project Settings
+            </div>
+          </div>
+
+          <div class="suite-lang-block" data-lang="de" style="display: none;">
+            <p class="card-text">
+              Erzwingt Definition of Done (DoD) Checklisten und Qualitäts-Gates direkt in der Vorgangsansicht. Füllt Beschreibungen automatisch nach Vorgangstyp aus und blockiert Übergänge zu „Fertig“, bis alle Kriterien erfüllt sind.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              📋 Workflow-Validierer • Interaktive Checklisten • Projekt-Vorlagen
+            </div>
+          </div>
+
+          <div class="suite-lang-block" data-lang="ru" style="display: none;">
+            <p class="card-text">
+              Автоматизация Definition of Done (DoD) и шаблонов задач. Встраивает интерактивный чек-лист в тикет и валидатор воркфлоу, блокирующий закрытие задачи до выполнения всех обязательных критериев приемки.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              📋 Валидатор переходов • Чек-листы качества • Авто-шаблоны описания
+            </div>
+          </div>
+        </div>
+
+        <!-- App 3: JSM Email Audit Trail -->
+        <div class="card glass reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <span class="badge-beta">🧪 Beta / Testing</span>
+            <span class="badge-certified">🛡️ Zero-Egress Storage</span>
+          </div>
+          <h3 class="card-title" style="color: var(--nv-white); font-size: 1.25rem;">JSM Outgoing Email & Delivery Audit</h3>
+
+          <div class="suite-lang-block" data-lang="en">
+            <p class="card-text">
+              Provides forensic outgoing notification audit trails for Jira Service Management customer tickets. Inspect delivery statuses, SMTP response codes, recipient timestamps, and export CSV audit logs for SOC2 compliance.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              📬 Service Desk Context Tab • Global Admin Log Explorer • SOC2 Dump
+            </div>
+          </div>
+
+          <div class="suite-lang-block" data-lang="de" style="display: none;">
+            <p class="card-text">
+              Bietet lückenlose Prüfpfade für ausgehende E-Mail-Benachrichtigungen in Jira Service Management. Überwachen Sie Zustellstatus, SMTP-Antwortcodes und exportieren Sie CSV-Prüfprotokolle für SOC2-Audits.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              📬 Ticket-Audit-Verlauf • Globaler Admin-Explorer • SOC2 Export
+            </div>
+          </div>
+
+          <div class="suite-lang-block" data-lang="ru" style="display: none;">
+            <p class="card-text">
+              Полный аудит исходящих email-уведомлений для тикетов Jira Service Management. Просматривайте статус доставки, SMTP-коды ответов, временные метки и выгружайте CSV-дампы для подтверждения SLA и SOC2.
+            </p>
+            <div style="margin-top: 14px; font-size: 0.8rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
+              📬 Вкладка аудита тикета • Глобальный журнал админа • Экспорт для SOC2
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -128,7 +314,7 @@
         <p class="section-text">A curated set of product directions, pilots, and external proofs. Each one is built to ship.</p>
       </div>
 
-      <!-- Concept cards — add/remove/rename as the portfolio evolves -->
+      <!-- Concept cards -->
       <div class="card-grid">
         <div class="card glass reveal">
           <span class="card-status live">Live</span>
@@ -154,14 +340,10 @@
           <a href="https://moire.neural-void.com/" class="card-link">Open MOIRÉ &rarr;</a>
         </div>
         <div class="card glass reveal">
-          <span class="card-status soon">In Development</span>
-          <h3 class="card-title">Signal Modules</h3>
-          <p class="card-text">AI-driven content signals for editorial and recommendation systems.</p>
-        </div>
-        <div class="card glass reveal">
-          <span class="card-status soon">Exploring</span>
-          <h3 class="card-title">AI Utilities</h3>
-          <p class="card-text">Focused micro-tools for specific vertical workflows, powered by language models.</p>
+          <span class="card-status live">Atlassian Suite</span>
+          <h3 class="card-title">Sprint Scope Guard</h3>
+          <p class="card-text">Scrum Scope Creep Radar, 1-Click Scope Swap, and Custom JQL Pro for Jira Cloud.</p>
+          <a href="#jira-suite" class="card-link">View Jira Suite &rarr;</a>
         </div>
         <div class="card glass reveal">
           <span class="card-status external">External Case</span>
@@ -210,14 +392,14 @@
   <section class="section cta-section" id="contact">
     <div class="container reveal">
       <span class="section-label">Get in Touch</span>
-      <h2 class="section-title">Ready to explore a pilot?</h2>
+      <h2 class="section-title">Ready to explore a pilot or integration?</h2>
       <p class="section-text">
-        Looking at Foldwink for your platform, or want to discuss a custom concept — let's talk.
+        Looking at Foldwink, Verbum, or our Atlassian Jira Cloud governance extensions — let's talk.
       </p>
       <div class="cta-actions">
-        <a href="/foldwink/" class="btn btn-primary">Play Foldwink</a>
-        <a href="/foldwink/overview/" class="btn btn-secondary">Foldwink Details</a>
-<a href="mailto:hello@neural-void.com" class="btn btn-ghost">Contact Us</a>
+        <a href="#jira-suite" class="btn btn-primary">View Jira Apps</a>
+        <a href="/foldwink/" class="btn btn-secondary">Play Foldwink</a>
+        <a href="mailto:hello@neural-void.com" class="btn btn-ghost">Contact Us</a>
       </div>
       <p class="cta-email">Or reach out directly: <a href="mailto:hello@neural-void.com">hello@neural-void.com</a></p>
     </div>
@@ -230,6 +412,7 @@
         <p class="footer-copy">&copy; 2026 Neural Void</p>
         <ul class="footer-links">
           <li><a href="/">Home</a></li>
+          <li><a href="#jira-suite">Jira Suite</a></li>
           <li><a href="/verbum/">Verbum</a></li>
           <li><a href="/foldwink/">Foldwink</a></li>
           <li><a href="/privacy/">Privacy</a></li>
@@ -240,5 +423,18 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    function switchSuiteLang(lang) {
+      document.querySelectorAll('.suite-lang-block').forEach(el => {
+        el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
+      });
+      document.querySelectorAll('.lang-pill-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.innerText.toLowerCase().includes(lang === 'en' ? 'english' : (lang === 'de' ? 'deutsch' : 'русский'))) {
+          btn.classList.add('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
