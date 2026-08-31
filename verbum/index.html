@@ -15,6 +15,11 @@
   <meta property="og:url" content="https://neural-void.com/verbum/">
   <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
 
+    <link rel="canonical" href="https://neural-void.com/verbum/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Verbum — Local Voice Dictation for Windows 11">
+  <meta name="twitter:description" content="100% offline speech recognition via whisper.cpp & Vulkan GPU. Speak Russian with mixed English technical terms.">
+  <meta name="twitter:image" content="https://neural-void.com/assets/img/verbum/app-ui-dashboard.jpg">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Fonts -->
@@ -716,21 +721,30 @@
             # 📁 meeting_2026-08-29_architecture_sync.md
           </div>
           <div style="margin-bottom: 12px;">
-            <span style="color: var(--nv-accent); font-weight: 600;">[00:04] Вы:</span>
-            <span style="color: #e2e8f0;"> Привет! Давайте согласуем переход на Vulkan STT бэкенд и проверим оффлайн-задержку.</span>
+            <span style="color: var(--nv-accent); font-weight: 600;"><span data-lang="ru">[00:04] Вы:</span><span data-lang="en">[00:04] You:</span></span>
+            <span style="color: #e2e8f0;">
+              <span data-lang="ru">Привет! Давайте согласуем переход на Vulkan STT бэкенд и проверим оффлайн-задержку.</span>
+              <span data-lang="en">Hi! Let's verify the Vulkan STT backend transition and check offline latency.</span>
+            </span>
           </div>
           <div style="margin-bottom: 12px;">
-            <span style="color: #c084fc; font-weight: 600;">[00:19] Собеседник (Zoom):</span>
-            <span style="color: #cbd5e1;"> Отлично, мы протестировали на AMD 780M и RTX 4080 — задержка меньше 300 мс, буфер обмена не затирается.</span>
+            <span style="color: #c084fc; font-weight: 600;"><span data-lang="ru">[00:19] Собеседник (Zoom):</span><span data-lang="en">[00:19] Colleague (Zoom):</span></span>
+            <span style="color: #cbd5e1;">
+              <span data-lang="ru">Отлично, мы протестировали на AMD 780M и RTX 4080 — задержка меньше 300 мс, буфер обмена не затирается.</span>
+              <span data-lang="en">Sounds great, we tested on AMD 780M and RTX 4080 — latency is sub-300ms, clipboard stays intact.</span>
+            </span>
           </div>
           <div style="margin-bottom: 12px;">
-            <span style="color: var(--nv-accent); font-weight: 600;">[00:42] Вы:</span>
-            <span style="color: #e2e8f0;"> Зафиксировал в таске. Конспект сохранен в Obsidian.</span>
+            <span style="color: var(--nv-accent); font-weight: 600;"><span data-lang="ru">[00:42] Вы:</span><span data-lang="en">[00:42] You:</span></span>
+            <span style="color: #e2e8f0;">
+              <span data-lang="ru">Зафиксировал в таске. Конспект сохранен в Obsidian.</span>
+              <span data-lang="en">Logged in task. Summary saved directly to Obsidian.</span>
+            </span>
           </div>
           <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--nv-border); display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.76rem; color: #7a7a94;">
             <span>✨ Live Captions Overlay</span>
-            <span>📱 Телефон-Конспектатор (QR-код)</span>
-            <span>💾 Экспорт Markdown / JSON</span>
+            <span><span data-lang="ru">📱 Телефон-Конспектатор (QR-код)</span><span data-lang="en">📱 Phone Companion (QR Code)</span></span>
+            <span><span data-lang="ru">💾 Экспорт Markdown / JSON</span><span data-lang="en">💾 Export Markdown / JSON</span></span>
           </div>
         </div>
       </div>
@@ -803,14 +817,14 @@
             <tr>
               <td><strong><span data-lang="ru">Задержка (Push-to-Talk)</span><span data-lang="en">Latency (Push-to-Talk)</span></strong></td>
               <td class="highlight"><span class="check">✓</span> ~200–400 ms</td>
-              <td><span class="cross">✗</span> 800–2500 ms (сеть)</td>
+              <td><span class="cross">✗</span> <span data-lang="ru">800–2500 ms (сеть)</span><span data-lang="en">800–2500 ms (network)</span></td>
               <td><span class="dim">~</span> 500–1200 ms</td>
               <td><span class="dim">~</span> 400–800 ms</td>
             </tr>
             <tr>
               <td><strong><span data-lang="ru">Стоимость / Подписка</span><span data-lang="en">Subscription / Cost</span></strong></td>
               <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Бесплатно / Локально</span><span data-lang="en">100% Free / Local</span></td>
-              <td><span class="cross">✗</span> $0.006/мин + подписка</td>
+              <td><span class="cross">✗</span> <span data-lang="ru">$0.006/мин + подписка</span><span data-lang="en">$0.006/min + subscription</span></td>
               <td><span class="check">✓</span> <span data-lang="ru">Встроено</span><span data-lang="en">Included</span></td>
               <td><span class="check">✓</span> <span data-lang="ru">Встроено</span><span data-lang="en">Included</span></td>
             </tr>
@@ -885,7 +899,7 @@
         <p class="section-text" data-lang="en">No environment setup, manual Python venvs, or dependencies. Everything is bundled into a single standalone installer.</p>
       </div>
 
-      <div class="process-grid reveal" style="counter-reset: step; margin-top: 36px;">
+      <div class="process-grid process-grid-3 reveal" style="counter-reset: step; margin-top: 36px;">
         <div class="process-step">
           <h3><span data-lang="ru">1. Установите</span><span data-lang="en">1. Install</span></h3>
           <p data-lang="ru">Скачайте и запустите <code>Verbum-Setup-1.2.0.exe</code>. Установка занимает меньше минуты в локальный профиль.</p>
@@ -1020,6 +1034,8 @@
         <p class="footer-copy">&copy; 2026 Neural Void • Product Lab</p>
         <ul class="footer-links">
           <li><a href="/"><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a></li>
+          <li><a href="/#jira-suite">Jira Suite</a></li>
+          <li><a href="/sprint-scope-guard/">Scope Guard</a></li>
           <li><a href="/verbum/">Verbum</a></li>
           <li><a href="/foldwink/">Foldwink</a></li>
           <li><a href="/privacy/"><span data-lang="ru">Конфиденциальность</span><span data-lang="en">Privacy Policy</span></a></li>
@@ -1051,11 +1067,11 @@
           img.src = targetSrc;
         }
       });
-      try { localStorage.setItem('verbum_lang', lang); } catch (e) {}
+      try { localStorage.setItem('verbum_lang', lang); localStorage.setItem('nv_lang', lang); } catch (e) {}
       updateDemoContent();
     }
 
-    // Interactive terminal demo data
+    // Interactive terminal demo data (0: Claude Code/AI, 1: Python/VS Code, 2: Git/DevOps)
     const demos = {
       ru: [
         {
@@ -1063,12 +1079,12 @@
           output: 'сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша'
         },
         {
-          voice: '🎙️ Голос: «git commit с сообщением фикс утечки памяти в whisper бэкенде»',
-          output: 'git commit -m "fix: memory leak in whisper backend"'
-        },
-        {
           voice: '🎙️ Голос: «функция принимает payload и возвращает Response со статусом 200»',
           output: '// Функция принимает payload и возвращает Response со статусом 200'
+        },
+        {
+          voice: '🎙️ Голос: «git commit с сообщением фикс утечки памяти в whisper бэкенде»',
+          output: 'git commit -m "fix: memory leak in whisper backend"'
         }
       ],
       en: [
@@ -1077,12 +1093,12 @@
           output: 'refactor auth_token middleware and add sha256 hash verification'
         },
         {
-          voice: '🎙️ Spoken: "git commit with message fix memory leak in whisper backend"',
-          output: 'git commit -m "fix: memory leak in whisper backend"'
-        },
-        {
           voice: '🎙️ Spoken: "function accepts payload and returns Response with status 200"',
           output: '// Function accepts payload and returns Response with status 200'
+        },
+        {
+          voice: '🎙️ Spoken: "git commit with message fix memory leak in whisper backend"',
+          output: 'git commit -m "fix: memory leak in whisper backend"'
         }
       ]
     };
@@ -1128,20 +1144,27 @@
 
     function copySha() {
       const text = document.getElementById('sha-text').textContent.trim();
-      const isEn = document.body.classList.contains('lang-en');
       navigator.clipboard.writeText(text).then(() => {
         const btn = document.querySelector('.copy-btn');
-        btn.textContent = isEn ? 'Copied!' : 'Скопировано!';
-        setTimeout(() => {
-          btn.textContent = isEn ? 'Copy Hash' : 'Копировать';
-        }, 2000);
+        const spanRu = btn.querySelector('[data-lang="ru"]');
+        const spanEn = btn.querySelector('[data-lang="en"]');
+        if (spanRu && spanEn) {
+          const origRu = spanRu.textContent;
+          const origEn = spanEn.textContent;
+          spanRu.textContent = 'Скопировано!';
+          spanEn.textContent = 'Copied!';
+          setTimeout(() => {
+            spanRu.textContent = origRu;
+            spanEn.textContent = origEn;
+          }, 2000);
+        }
       });
     }
 
     // Initialize stored language preference (default: ru)
     (function() {
       try {
-        const stored = localStorage.getItem('verbum_lang');
+        const stored = localStorage.getItem('nv_lang') || localStorage.getItem('verbum_lang');
         if (stored === 'en') {
           setLang('en');
         } else {
