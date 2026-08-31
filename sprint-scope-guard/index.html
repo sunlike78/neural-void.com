@@ -7,13 +7,6 @@
   <title>Sprint Scope Guard & Agile JQL Pro — Neural Void</title>
   <meta name="description" content="Scrum Scope Creep Sentinel, 1-Click Scope Swap capacity balancer, and custom JQL functions for Jira Cloud. Zero-data-egress Forge architecture.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sprint Scope Guard & Agile JQL Pro — Neural Void">
-  <meta property="og:description" content="Real-time Scrum Scope Creep Sentinel & 1-Click Capacity Balancer for Jira Cloud.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://neural-void.com/sprint-scope-guard/">
-  <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
-
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Fonts -->
@@ -21,80 +14,99 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/css/style.css">
   <style>
+    :root {
+      --nv-bg: #08080d;
+      --nv-bg-alt: #0c0c14;
+      --nv-surface: #111118;
+      --nv-surface-hi: #16161f;
+      --nv-border: #1c1c2a;
+      --nv-border-hi: #2a2a3e;
+      --nv-text: #d4d4e0;
+      --nv-text-dim: #7a7a94;
+      --nv-accent: #00d4f5;
+      --nv-accent-alt: #8066ff;
+      --nv-white: #eeeef4;
+      --nv-glow: rgba(0, 212, 245, 0.15);
+      --nv-radius: 14px;
+      --nv-radius-sm: 8px;
+      --nv-max-width: 1100px;
+      --nv-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --nv-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+      --nv-transition: .28s cubic-bezier(.4, 0, .2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--nv-font);
+      background: var(--nv-bg);
+      color: var(--nv-text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: var(--nv-accent); text-decoration: none; transition: color var(--nv-transition); }
+    a:hover { color: var(--nv-white); }
+    .container { width: 100%; max-width: var(--nv-max-width); margin: 0 auto; padding: 0 28px; }
+    
+    /* Header */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(8, 8, 13, 0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--nv-border); padding: 18px 0;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: var(--nv-font-mono); font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--nv-white); }
+    .nav-logo span { color: var(--nv-accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nv-text-dim); font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--nv-white); }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 24px; border-radius: var(--nv-radius-sm); font-size: 0.9rem;
+      font-weight: 600; cursor: pointer; transition: all var(--nv-transition);
+      font-family: var(--nv-font); border: none; text-decoration: none;
+    }
+    .btn-primary { background: var(--nv-accent); color: var(--nv-bg); }
+    .btn-primary:hover { background: var(--nv-white); color: var(--nv-bg); box-shadow: 0 0 24px var(--nv-glow); }
+    .btn-ghost { background: transparent; color: var(--nv-text); border: 1px solid var(--nv-border-hi); }
+    .btn-ghost:hover { border-color: var(--nv-accent); color: var(--nv-white); }
+
+    /* Hero */
+    .hero { padding: 140px 0 80px 0; position: relative; }
     .badge-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-family: var(--nv-font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      background: rgba(0, 212, 245, 0.08);
-      border: 1px solid rgba(0, 212, 245, 0.25);
-      color: var(--nv-accent);
+      display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px;
+      border-radius: 20px; font-family: var(--nv-font-mono); font-size: 0.78rem; font-weight: 600;
+      background: rgba(0, 212, 245, 0.08); border: 1px solid rgba(0, 212, 245, 0.25); color: var(--nv-accent);
     }
-    .lang-switcher-pill {
-      display: inline-flex;
-      background: var(--nv-surface-hi);
-      border: 1px solid var(--nv-border-hi);
-      border-radius: 20px;
-      padding: 3px;
-      gap: 4px;
-    }
-    .lang-pill-btn {
-      background: transparent;
-      border: none;
-      color: var(--nv-text-dim);
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 14px;
-      cursor: pointer;
-      transition: all var(--nv-transition);
-      font-family: var(--nv-font-mono);
-    }
-    .lang-pill-btn.active {
-      background: var(--nv-accent);
-      color: var(--nv-bg);
-      font-weight: 700;
-    }
-    .feature-card {
-      background: rgba(17, 17, 24, 0.85);
-      border: 1px solid var(--nv-border-hi);
-      border-radius: var(--nv-radius);
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color var(--nv-transition), transform var(--nv-transition);
-    }
-    .feature-card:hover {
-      border-color: rgba(0, 212, 245, 0.4);
-      transform: translateY(-2px);
-    }
-    .interactive-radar-box {
-      background: #0d0e15;
-      border: 1px solid rgba(0, 212, 245, 0.2);
-      border-radius: 12px;
-      padding: 24px;
-      margin: 28px 0;
-      font-family: var(--nv-font-mono);
-    }
-    .code-pill {
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 10px 14px;
-      border-radius: 6px;
-      font-family: var(--nv-font-mono);
-      font-size: 0.85rem;
-      color: var(--nv-accent);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-    }
+    .hero-title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 800; line-height: 1.15; color: var(--nv-white); margin-top: 18px; letter-spacing: -0.02em; }
+    .accent { color: var(--nv-accent); }
+    .hero-sub { font-size: 1.15rem; color: var(--nv-text-dim); max-width: 680px; margin-top: 18px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+
+    /* Lang Switcher */
+    .lang-bar { background: rgba(12, 12, 20, 0.9); border-top: 1px solid var(--nv-border); border-bottom: 1px solid var(--nv-border); padding: 16px 0; }
+    .lang-switcher-pill { display: inline-flex; background: var(--nv-surface-hi); border: 1px solid var(--nv-border-hi); border-radius: 20px; padding: 3px; gap: 4px; }
+    .lang-pill-btn { background: transparent; border: none; color: var(--nv-text-dim); font-size: 0.78rem; font-weight: 600; padding: 6px 14px; border-radius: 16px; cursor: pointer; transition: all var(--nv-transition); font-family: var(--nv-font-mono); }
+    .lang-pill-btn.active { background: var(--nv-accent); color: var(--nv-bg); font-weight: 700; }
+
+    /* Cards */
+    .section { padding: 90px 0; }
+    .section-label { font-family: var(--nv-font-mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nv-accent); margin-bottom: 12px; display: block; }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--nv-white); margin-bottom: 16px; letter-spacing: -0.02em; }
+    .section-text { font-size: 1.05rem; color: var(--nv-text-dim); max-width: 620px; line-height: 1.7; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 48px; }
+    .feature-card { background: rgba(17, 17, 24, 0.85); border: 1px solid var(--nv-border-hi); border-radius: var(--nv-radius); padding: 32px; transition: border-color var(--nv-transition), transform var(--nv-transition); }
+    .feature-card:hover { border-color: rgba(0, 212, 245, 0.4); transform: translateY(-2px); }
+    .code-pill { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); padding: 10px 14px; border-radius: 6px; font-family: var(--nv-font-mono); font-size: 0.85rem; color: var(--nv-accent); margin-bottom: 8px; }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid var(--nv-border); padding: 48px 0; background: var(--nv-bg); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 0.85rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono); }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { color: var(--nv-text-dim); font-size: 0.85rem; }
+    .footer-links a:hover { color: var(--nv-white); }
   </style>
 </head>
 <body>
@@ -110,35 +122,32 @@
           <li><a href="/verbum/">Verbum</a></li>
           <li><a href="/foldwink/">Foldwink</a></li>
           <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="mailto:hello@neural-void.com" class="btn btn-ghost nav-cta">Support</a></li>
+          <li><a href="mailto:hello@neural-void.com" class="btn btn-ghost" style="padding: 6px 16px;">Support</a></li>
         </ul>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
       </nav>
     </div>
   </header>
 
   <!-- ========== HERO ========== -->
-  <section class="hero" style="padding-top: 150px; padding-bottom: 90px;">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
+  <section class="hero">
     <div class="container">
-      <div class="hero-content" style="max-width: 820px;">
-        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+      <div style="max-width: 820px;">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
           <span class="badge-chip">⚡ Jira Cloud Forge App</span>
           <span class="badge-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.3); background: rgba(74, 222, 128, 0.08);">🛡️ Runs on Atlassian Certified</span>
           <span class="badge-chip" style="color: #c084fc; border-color: rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.08);">🔒 Zero Data Egress</span>
         </div>
 
-        <h1 class="hero-title" style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15;">
+        <h1 class="hero-title">
           Stop Mid-Sprint Scope Creep. <span class="accent">Protect Team Velocity.</span>
         </h1>
         
-        <p class="hero-sub" style="font-size: 1.15rem; max-width: 680px; margin-top: 16px;">
+        <p class="hero-sub">
           Real-time Scrum scope creep radar, 1-Click Smart Scope Swap («1-In-1-Out»), predictive goal blowout timeline, and AI retrospective summaries directly inside your Jira Cloud boards.
         </p>
 
-        <div class="hero-actions" style="margin-top: 32px;">
-          <a href="https://marketplace.atlassian.com/vendors/48554082" class="btn btn-primary" style="padding: 14px 28px; font-weight: 600;">
+        <div class="hero-actions">
+          <a href="https://marketplace.atlassian.com/vendors/48554082" class="btn btn-primary" style="padding: 14px 28px;">
             Install from Atlassian Marketplace ↗
           </a>
           <a href="#features" class="btn btn-ghost">Explore Features</a>
@@ -148,7 +157,7 @@
   </section>
 
   <!-- ========== INTERACTIVE LANGUAGE SWITCHER BAR ========== -->
-  <section style="background: rgba(12, 12, 20, 0.9); border-top: 1px solid var(--nv-border); border-bottom: 1px solid var(--nv-border); padding: 18px 0;">
+  <section class="lang-bar">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
       <div style="font-size: 0.9rem; color: var(--nv-text-dim); font-family: var(--nv-font-mono);">
         Product Overview Documentation &bull; v3.12.0 Production Release
@@ -169,7 +178,7 @@
       
       <!-- ENGLISH CONTENT BLOCK -->
       <div class="doc-lang-block" data-lang="en">
-        <div class="reveal">
+        <div>
           <span class="section-label">Core Pillars</span>
           <h2 class="section-title">Engineered for High-Discipline Scrum Teams</h2>
           <p class="section-text">
@@ -177,8 +186,7 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 48px;">
-          <!-- Card 1 -->
+        <div class="cards-grid">
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">📡 0ms Real-Time Scope Radar</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -186,7 +194,6 @@
             </p>
           </div>
 
-          <!-- Card 2 -->
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">⚖️ 1-Click Smart Scope Swap</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -194,7 +201,6 @@
             </p>
           </div>
 
-          <!-- Card 3 -->
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">🔮 Predictive Breach Forecasting</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -202,7 +208,6 @@
             </p>
           </div>
 
-          <!-- Card 4 -->
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">📝 AI Retrospective Compiler</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -210,7 +215,6 @@
             </p>
           </div>
 
-          <!-- Card 5 -->
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">⚡ Custom Agile JQL Functions</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px;">
@@ -220,7 +224,6 @@
             <div class="code-pill"><code>issue in removedFromSprint()</code></div>
           </div>
 
-          <!-- Card 6 -->
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">🔒 Zero External Data Egress</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -232,7 +235,7 @@
 
       <!-- DEUTSCH CONTENT BLOCK -->
       <div class="doc-lang-block" data-lang="de" style="display: none;">
-        <div class="reveal">
+        <div>
           <span class="section-label">Kernfunktionen</span>
           <h2 class="section-title">Entwickelt für disziplinierte Scrum-Teams</h2>
           <p class="section-text">
@@ -240,7 +243,7 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="cards-grid">
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">📡 0ms Echtzeit Scope-Radar</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -250,7 +253,7 @@
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">⚖️ 1-Klick Smart Scope Swap</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
-              Dringende Aufgabe hinzugefügt? Mit 1 Klick werden To-Do-Tickets mit gleicher Story-Point-Zahl zurück ins Backlog verschoben, um die Kapazität zu wahren.
+              Dringende Aufgabe hinzugefügt? Mit 1 Klick werden To-Do-Tickets mit gleicher Story-Point-Zahl zurück ins Backlog verschoben.
             </p>
           </div>
           <div class="feature-card">
@@ -262,7 +265,7 @@
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">📝 KI-Retrospektiven Generator</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
-              Erstellt strukturierte Markdown-Zusammenfassungen für Confluence mit Ursachenanalyse (Hotfixes vs. Vertrieb vs. Feature Creep).
+              Erstellt strukturierte Markdown-Zusammenfassungen für Confluence mit Ursachenanalyse.
             </p>
           </div>
         </div>
@@ -270,7 +273,7 @@
 
       <!-- RUSSIAN CONTENT BLOCK -->
       <div class="doc-lang-block" data-lang="ru" style="display: none;">
-        <div class="reveal">
+        <div>
           <span class="section-label">Ключевые возможности</span>
           <h2 class="section-title">Инструмент дисциплины для Scrum-команд</h2>
           <p class="section-text">
@@ -278,7 +281,7 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="cards-grid">
           <div class="feature-card">
             <h3 style="color: var(--nv-white); font-size: 1.25rem; margin-bottom: 12px;">📡 Турбо-радар Scope Creep (0мс)</h3>
             <p style="color: var(--nv-text-dim); font-size: 0.95rem; line-height: 1.6;">
@@ -310,15 +313,15 @@
   </section>
 
   <!-- ========== CALL TO ACTION ========== -->
-  <section class="section cta-section" style="background: rgba(12, 12, 20, 0.6); border-top: 1px solid var(--nv-border);">
-    <div class="container reveal" style="text-align: center;">
+  <section class="section" style="background: rgba(12, 12, 20, 0.6); border-top: 1px solid var(--nv-border); text-align: center;">
+    <div class="container">
       <span class="section-label">Get Started</span>
       <h2 class="section-title">Take Full Control of Your Sprint Velocity</h2>
       <p class="section-text" style="margin: 0 auto 32px auto;">
         Install Sprint Scope Guard on your Jira Cloud instance today. Free 30-day full reverse trial, no credit card required.
       </p>
-      <div class="cta-actions" style="justify-content: center;">
-        <a href="https://marketplace.atlassian.com/vendors/48554082" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem; font-weight: 600;">
+      <div style="display: flex; justify-content: center; gap: 16px;">
+        <a href="https://marketplace.atlassian.com/vendors/48554082" class="btn btn-primary" style="padding: 14px 32px; font-weight: 600;">
           Add to Jira Cloud ↗
         </a>
         <a href="mailto:hello@neural-void.com" class="btn btn-ghost">Contact Support</a>
@@ -341,7 +344,6 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
   <script>
     function setDocLang(lang) {
       document.querySelectorAll('.doc-lang-block').forEach(el => {
