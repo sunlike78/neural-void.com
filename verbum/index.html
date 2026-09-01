@@ -458,8 +458,74 @@
           </a>
         </div>
 
+        <!-- NEW: 2026 Floating Glassmorphic Pill HUD Showcase -->
+        <div class="reveal" style="margin-top: 45px; text-align: center;">
+          <div style="font-family: var(--nv-font-mono); font-size: 0.8rem; color: #00d4f5; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px;">
+            <span>✨</span>
+            <span data-lang="ru">Новый интерфейс 2026: Плавающий Glassmorphic Pill HUD</span>
+            <span data-lang="en">New 2026 Interface: Floating Glassmorphic Pill HUD</span>
+          </div>
+
+          <!-- The Floating Pill Widget -->
+          <div style="background: radial-gradient(circle at 50% 0%, rgba(0, 212, 245, 0.12), transparent 70%), rgba(10, 14, 26, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(0, 212, 245, 0.35); box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 35px rgba(0, 212, 245, 0.2); border-radius: 28px; padding: 18px 26px; max-width: 680px; margin: 0 auto; text-align: left;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+              
+              <!-- Left: Mic + Animated Waveform + Badge -->
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 212, 245, 0.15); border: 1px solid rgba(0, 212, 245, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 0 15px rgba(0, 212, 245, 0.3);">
+                  🎙️
+                </div>
+                <!-- Animated Soundbars -->
+                <div style="display: flex; align-items: center; gap: 3px; height: 22px;">
+                  <span style="display: inline-block; width: 3px; height: 16px; background: #00d4f5; border-radius: 2px; animation: soundwave 1.2s infinite ease-in-out;"></span>
+                  <span style="display: inline-block; width: 3px; height: 22px; background: #34d399; border-radius: 2px; animation: soundwave 0.8s infinite ease-in-out 0.2s;"></span>
+                  <span style="display: inline-block; width: 3px; height: 12px; background: #00d4f5; border-radius: 2px; animation: soundwave 1.4s infinite ease-in-out 0.4s;"></span>
+                  <span style="display: inline-block; width: 3px; height: 18px; background: #bfa8ff; border-radius: 2px; animation: soundwave 1.0s infinite ease-in-out 0.1s;"></span>
+                  <span style="display: inline-block; width: 3px; height: 10px; background: #34d399; border-radius: 2px; animation: soundwave 1.1s infinite ease-in-out 0.3s;"></span>
+                </div>
+                <!-- Dynamic Profile Badge -->
+                <span id="pill-badge" style="font-family: var(--nv-font-mono); font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; background: rgba(52, 211, 153, 0.15); border: 1px solid #34d399; color: #34d399;">
+                  CLI / TERMINAL
+                </span>
+              </div>
+
+              <!-- Right: Live Latency HUD + Undo Hint -->
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-family: var(--nv-font-mono); font-size: 0.76rem; color: #00d4f5; background: rgba(0, 212, 245, 0.08); border: 1px solid rgba(0, 212, 245, 0.2); padding: 4px 8px; border-radius: 8px;">
+                  ⚡ 142ms (On-Device GPU)
+                </span>
+                <span style="font-family: var(--nv-font-mono); font-size: 0.7rem; color: #94a3b8; border: 1px dashed rgba(255,255,255,0.2); padding: 3px 7px; border-radius: 6px;">
+                  Alt+⌫ Undo
+                </span>
+              </div>
+
+            </div>
+
+            <!-- Spoken Text Stream inside Pill -->
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); font-family: var(--nv-font-mono); font-size: 0.9rem; color: #f1f5f9;">
+              <span style="color: #64748b;">$</span> <span id="pill-text" style="color: #38bdf8; font-weight: 600;">docker compose up -d &amp;&amp; git checkout -b feature/auth</span>
+            </div>
+          </div>
+
+          <!-- Interactive Mode Switchers -->
+          <div style="margin-top: 18px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <button onclick="setPillDemo('cli')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              💻 Terminal Guard (CLI)
+            </button>
+            <button onclick="setPillDemo('macro')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              🔤 Macro (camelCase)
+            </button>
+            <button onclick="setPillDemo('datev')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              💼 DATEV Finance
+            </button>
+            <button onclick="setPillDemo('meeting')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              👥 Zoom Meeting
+            </button>
+          </div>
+        </div>
+
         <!-- Terminal Interactive Mockup -->
-        <div class="terminal-window reveal" id="demo">
+        <div class="terminal-window reveal" id="demo" style="margin-top: 40px;">
           <div class="terminal-header">
             <div class="terminal-dots">
               <div class="terminal-dot red"></div>
@@ -482,8 +548,8 @@
               сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша
             </div>
             <div style="margin-top: 12px; color: #475569; font-size: 0.78rem;">
-              <span data-lang="ru">[Безопасный ввод: Terminal Guard активен • Нажатие Enter заблокировано • Задержка: 240 мс]</span>
-              <span data-lang="en">[Safe Insertion: Terminal Guard Active • Enter Key Suppressed • Latency: 240ms]</span>
+              <span data-lang="ru">[Безопасный ввод: Terminal Guard активен • Нажатие Enter заблокировано • Задержка: 142 мс]</span>
+              <span data-lang="en">[Safe Insertion: Terminal Guard Active • Enter Key Suppressed • Latency: 142ms]</span>
             </div>
           </div>
         </div>
@@ -679,6 +745,17 @@
           </p>
           <p class="card-text" data-lang="en">
             Ultra-sleek Windows 11 Mica Alt floating capsule: real-time audio waveform, dynamic profile badges (<code>[CLI]</code>, <code>[CODE]</code>, <code>[DATEV]</code>), and transparent latency HUD (<code>⚡ 142ms</code>).
+          </p>
+        </div>
+
+        <div class="card glass reveal" style="border-color: rgba(0, 212, 245, 0.35); box-shadow: 0 0 25px rgba(0, 212, 245, 0.08);">
+          <div class="card-icon" style="background: rgba(0, 212, 245, 0.15); color: var(--nv-accent);">⚡</div>
+          <h3 class="card-title" style="color: var(--nv-accent);"><span data-lang="ru">4x-HyperSpeed & Очистка Речи (38 мкс)</span><span data-lang="en">4x-HyperSpeed & Prose Cleaner (38µs)</span></h3>
+          <p class="card-text" data-lang="ru">
+            Специализированная 4-Tier микро-модель для подкастов и длинных войсов. Распознает речь на <strong>4x скорости</strong>, автоматически вырезает слова-паразиты (<em>«типа», «как бы», «эээ», «you know»</em>), схлопывает заикания и размечает реплики по ролям (<code>[Ведущий]</code> / <code>[Гость]</code>) с рекордной задержкой <strong>0.038 мс</strong>!
+          </p>
+          <p class="card-text" data-lang="en">
+            Curriculum-distilled 4-Tier micro-model for podcasts and voice notes. Transcribes speech at <strong>4x speed</strong>, automatically removes spoken disfluencies (<em>"um", "like", "you know"</em>), fixes stutters, and attributes speaker roles (<code>[Host]</code> / <code>[Guest]</code>) in <strong>0.038 ms</strong>.
           </p>
         </div>
       </div>
@@ -1102,6 +1179,39 @@
         }
       ]
     };
+
+    // Floating Pill HUD Interactive Mode Switcher
+    function setPillDemo(mode) {
+      const badge = document.getElementById('pill-badge');
+      const text = document.getElementById('pill-text');
+      if (!badge || !text) return;
+
+      if (mode === 'cli') {
+        badge.innerText = 'CLI / TERMINAL';
+        badge.style.background = 'rgba(52, 211, 153, 0.15)';
+        badge.style.borderColor = '#34d399';
+        badge.style.color = '#34d399';
+        text.innerText = 'docker compose up -d && git checkout -b feature/auth';
+      } else if (mode === 'macro') {
+        badge.innerText = 'CODE MACRO';
+        badge.style.background = 'rgba(0, 212, 245, 0.15)';
+        badge.style.borderColor = '#00d4f5';
+        badge.style.color = '#00d4f5';
+        text.innerText = 'const userId = request.params.userId; const response_status = 200;';
+      } else if (mode === 'datev') {
+        badge.innerText = 'DATEV FINANCE';
+        badge.style.background = 'rgba(251, 191, 36, 0.15)';
+        badge.style.borderColor = '#fbbf24';
+        badge.style.color = '#fbbf24';
+        text.innerText = 'Buchungssatz: Soll 8400 an Haben 1200, Belegnummer 4540 (SKR03)';
+      } else if (mode === 'meeting') {
+        badge.innerText = 'MEETING DIARIZATION';
+        badge.style.background = 'rgba(192, 132, 252, 0.15)';
+        badge.style.borderColor = '#c084fc';
+        badge.style.color = '#c084fc';
+        text.innerText = '[Ведущий]: Обсуждаем релиз. [Архитектор]: База задеплоена на стейджинг.';
+      }
+    }
 
     let currentDemoIndex = 0;
 
