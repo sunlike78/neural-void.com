@@ -1,0 +1,1289 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Verbum — Локальный голосовой ввод для Windows 11 и разработчиков</title>
+  <meta name="description" content="Локальное распознавание речи для Windows 11 для разработчиков и технических специалистов. Говори по-русски с английским кодом и терминами. 100% оффлайн, Vulkan GPU, без смены раскладки.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Verbum — Локальный голосовой ввод для Windows 11 и разработчиков">
+  <meta property="og:description" content="Говори по-русски. Пиши код на английском. 100% локальное распознавание речи с ускорением Vulkan GPU. Ноль облаков, защита буфера, блокировка случайного Enter в терминале.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neural-void.com/verbum/">
+  <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
+
+    <link rel="canonical" href="https://neural-void.com/verbum/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Verbum — Local Voice Dictation for Windows 11">
+  <meta name="twitter:description" content="100% offline speech recognition via whisper.cpp & Vulkan GPU. Speak Russian with mixed English technical terms.">
+  <meta name="twitter:image" content="https://neural-void.com/assets/img/verbum/app-ui-dashboard.jpg">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    /* Specific styling for Verbum product page */
+    .hero-badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(0, 212, 245, 0.08);
+      border: 1px solid rgba(0, 212, 245, 0.25);
+      color: var(--nv-accent);
+    }
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
+    }
+    .hero-badge.version {
+      background: rgba(128, 102, 255, 0.1);
+      border-color: rgba(128, 102, 255, 0.3);
+      color: #bfa8ff;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--nv-border);
+      border-radius: 20px;
+      padding: 2px;
+      margin-left: 12px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.75rem;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--nv-text-dim);
+      padding: 4px 10px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: var(--nv-accent);
+      color: #060911;
+      box-shadow: 0 0 12px rgba(0, 212, 245, 0.4);
+    }
+
+    /* Terminal Simulator Showcase */
+    .terminal-window {
+      background: #090c15;
+      border: 1px solid var(--nv-border-hi);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 212, 245, 0.05);
+      overflow: hidden;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .terminal-header {
+      background: #0e121e;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--nv-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .terminal-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #232738;
+    }
+    .terminal-dot.red { background: #ef4444; }
+    .terminal-dot.yellow { background: #eab308; }
+    .terminal-dot.green { background: #22c55e; }
+    .terminal-title {
+      font-family: var(--nv-font-mono);
+      font-size: 0.78rem;
+      color: var(--nv-text-dim);
+    }
+    .terminal-tabs {
+      display: flex;
+      gap: 8px;
+    }
+    .terminal-tab {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--nv-text-dim);
+      font-family: var(--nv-font-mono);
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .terminal-tab.active {
+      background: rgba(0, 212, 245, 0.15);
+      border-color: var(--nv-accent);
+      color: var(--nv-white);
+    }
+    .terminal-body {
+      padding: 24px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      min-height: 180px;
+    }
+    .terminal-voice-input {
+      color: #94a3b8;
+      font-size: 0.82rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      word-break: break-word;
+    }
+    .voice-pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--nv-accent);
+      box-shadow: 0 0 10px var(--nv-accent);
+      animation: pulse 1.5s infinite;
+      flex-shrink: 0;
+    }
+    .terminal-output {
+      color: #38bdf8;
+      font-weight: 500;
+      font-size: 0.92rem;
+    }
+
+    /* Download Box */
+    .download-card {
+      background: linear-gradient(145deg, rgba(17, 17, 24, 0.85), rgba(12, 12, 20, 0.95));
+      border: 1px solid rgba(0, 212, 245, 0.3);
+      border-radius: 18px;
+      padding: 36px 30px;
+      text-align: center;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 212, 245, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .download-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--nv-accent), var(--nv-accent-alt), transparent);
+    }
+    .download-btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 36px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00d4f5, #0099cc);
+      color: #060911;
+      text-decoration: none;
+      box-shadow: 0 0 35px rgba(0, 212, 245, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .download-btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(0, 212, 245, 0.5);
+      background: linear-gradient(135deg, #eeeef4, #00d4f5);
+      color: #060911;
+    }
+    .download-btn-main svg {
+      width: 22px;
+      height: 22px;
+    }
+    .download-meta {
+      margin-top: 14px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.78rem;
+      color: var(--nv-text-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .sha-badge {
+      margin-top: 22px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--nv-border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      overflow-x: auto;
+      font-family: var(--nv-font-mono);
+      font-size: 0.76rem;
+    }
+    .sha-label {
+      color: var(--nv-accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .sha-val {
+      color: #94a3b8;
+      word-break: break-all;
+    }
+    .copy-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--nv-white);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .copy-btn:hover {
+      background: var(--nv-accent);
+      color: #000;
+    }
+
+    /* Notice banner */
+    .notice-box {
+      margin-top: 24px;
+      background: rgba(128, 102, 255, 0.08);
+      border: 1px solid rgba(128, 102, 255, 0.25);
+      border-radius: 10px;
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.85rem;
+      color: #d4d4e0;
+      line-height: 1.6;
+    }
+    .notice-box strong {
+      color: #bfa8ff;
+    }
+
+    /* Comparison Table */
+    .compare-table-wrapper {
+      overflow-x: auto;
+      margin-top: 36px;
+      border: 1px solid var(--nv-border);
+      border-radius: var(--nv-radius);
+      background: var(--nv-surface);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+      min-width: 680px;
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--nv-border);
+    }
+    .compare-table th {
+      background: rgba(255, 255, 255, 0.02);
+      font-family: var(--nv-font-mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nv-text-dim);
+    }
+    .compare-table th.highlight, .compare-table td.highlight {
+      background: rgba(0, 212, 245, 0.05);
+      color: var(--nv-white);
+      font-weight: 600;
+      border-left: 1px solid rgba(0, 212, 245, 0.2);
+      border-right: 1px solid rgba(0, 212, 245, 0.2);
+    }
+    .check { color: #34d399; font-weight: 700; }
+    .cross { color: #ef4444; font-weight: 700; }
+    .dim { color: var(--nv-text-dim); }
+
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid var(--nv-border);
+      border-radius: var(--nv-radius-sm);
+      margin-bottom: 12px;
+      background: var(--nv-surface);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover {
+      border-color: var(--nv-border-hi);
+    }
+    .faq-question {
+      padding: 18px 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--nv-white);
+      font-size: 0.95rem;
+    }
+    .faq-icon {
+      font-size: 1.2rem;
+      color: var(--nv-accent);
+      transition: transform 0.25s ease;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 22px 18px 22px;
+      color: var(--nv-text-dim);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* Language visibility helpers */
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="en"] { display: block; }
+    body.lang-en [data-lang="ru"] { display: none; }
+    body.lang-en span[data-lang="en"], body.lang-en a[data-lang="en"], body.lang-en strong[data-lang="en"] { display: inline; }
+    body.lang-en span[data-lang="ru"], body.lang-en a[data-lang="ru"], body.lang-en strong[data-lang="ru"] { display: none; }
+    body:not(.lang-en) span[data-lang="ru"], body:not(.lang-en) a[data-lang="ru"], body:not(.lang-en) strong[data-lang="ru"] { display: inline; }
+    body:not(.lang-en) span[data-lang="en"], body:not(.lang-en) a[data-lang="en"], body:not(.lang-en) strong[data-lang="en"] { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="nav-logo">NEURAL<span>VOID</span></a>
+        
+        <ul class="nav-links">
+          <li><a href="/"><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a></li>
+          <li><a href="#demo"><span data-lang="ru">Демо</span><span data-lang="en">Demo</span></a></li>
+          <li><a href="#features"><span data-lang="ru">Архитектура</span><span data-lang="en">Architecture</span></a></li>
+          <li><a href="#meetings"><span data-lang="ru">Созвоны [Beta]</span><span data-lang="en">Meetings [Beta]</span></a></li>
+          <li><a href="#comparison"><span data-lang="ru">Сравнение</span><span data-lang="en">Comparison</span></a></li>
+          <li><a href="#specs"><span data-lang="ru">Требования</span><span data-lang="en">Specs</span></a></li>
+          <li><a href="#download" class="btn btn-ghost nav-cta"><span data-lang="ru">Скачать v1.2.0</span><span data-lang="en">Download v1.2.0</span></a></li>
+        </ul>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-ru" onclick="setLang('ru')">RU</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero" style="min-height: auto; padding: 130px 0 70px 0;">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content" style="max-width: 880px;">
+        
+        <div class="hero-badge-container">
+          <span class="hero-badge"><span class="dot"></span> <span data-lang="ru">100% Оффлайн • Vulkan GPU</span><span data-lang="en">100% Offline • Vulkan GPU</span></span>
+          <span class="hero-badge version"><span data-lang="ru">Релиз v1.2.0 Production</span><span data-lang="en">v1.2.0 Production Release</span></span>
+          <span class="hero-badge" style="border-color: rgba(128, 102, 255, 0.35); color: #bfa8ff;"><span data-lang="ru">🎙️ Запись созвонов & Zoom [Beta]</span><span data-lang="en">🎙️ Meeting Transcriber [Beta]</span></span>
+          <span class="hero-badge" style="border-color: rgba(52, 211, 153, 0.3); color: #34d399;"><span data-lang="ru">Windows 11 Native</span><span data-lang="en">Windows 11 Native</span></span>
+        </div>
+
+        <h1 class="hero-title" data-lang="ru">
+          Говори по-русски.<br>
+          Используй английские термины.<br>
+          <span class="accent">Ноль облаков. Без смены раскладки.</span>
+        </h1>
+
+        <h1 class="hero-title" data-lang="en">
+          Speak Russian.<br>
+          Keep English Terms.<br>
+          <span class="accent">Zero Cloud. Zero Layout Switching.</span>
+        </h1>
+
+        <p class="hero-sub" style="max-width: 760px; font-size: 1.05rem;" data-lang="ru">
+          <strong>Verbum</strong> — локальная система голосовой диктовки для Windows 11. Надиктовывайте промпты в AI-агенты (Claude Code, Cursor, Windsurf), пишите комментарии, коммиты и документацию голосом — на естественном русском языке со встроенными английскими терминами, названиями библиотек и флагами без ручного переключения раскладки клавиатуры.
+        </p>
+
+        <p class="hero-sub" style="max-width: 760px; font-size: 1.05rem;" data-lang="en">
+          <strong>Verbum</strong> is a local-first voice dictation tool for Windows 11. Dictate in Russian without ever switching layouts for English identifiers, CLI flags, or library names — Verbum handles the technical mix natively.
+        </p>
+
+        <div class="hero-actions" style="margin-top: 28px;">
+          <a href="#download" class="btn btn-primary" style="padding: 15px 32px; font-size: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.802"/></svg>
+            <span data-lang="ru">Скачать Verbum (v1.2.0)</span>
+            <span data-lang="en">Download Verbum (v1.2.0)</span>
+          </a>
+          <a href="https://github.com/vladimirevseevpro-collab/neural-void.com/releases/tag/v1.2.0" target="_blank" rel="noopener" class="btn btn-ghost">
+            <span data-lang="ru">GitHub Release и исходники</span>
+            <span data-lang="en">GitHub Release & Source</span>
+          </a>
+        </div>
+
+        <!-- NEW: 2026 Floating Glassmorphic Pill HUD Showcase -->
+        <div class="reveal" style="margin-top: 45px; text-align: center;">
+          <div style="font-family: var(--nv-font-mono); font-size: 0.8rem; color: #00d4f5; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px;">
+            <span>✨</span>
+            <span data-lang="ru">Новый интерфейс 2026: Плавающий Glassmorphic Pill HUD</span>
+            <span data-lang="en">New 2026 Interface: Floating Glassmorphic Pill HUD</span>
+          </div>
+
+          <!-- The Floating Pill Widget -->
+          <div style="background: radial-gradient(circle at 50% 0%, rgba(0, 212, 245, 0.12), transparent 70%), rgba(10, 14, 26, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(0, 212, 245, 0.35); box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 35px rgba(0, 212, 245, 0.2); border-radius: 28px; padding: 18px 26px; max-width: 680px; margin: 0 auto; text-align: left;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+              
+              <!-- Left: Mic + Animated Waveform + Badge -->
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 212, 245, 0.15); border: 1px solid rgba(0, 212, 245, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 0 15px rgba(0, 212, 245, 0.3);">
+                  🎙️
+                </div>
+                <!-- Animated Soundbars -->
+                <div style="display: flex; align-items: center; gap: 3px; height: 22px;">
+                  <span style="display: inline-block; width: 3px; height: 16px; background: #00d4f5; border-radius: 2px; animation: soundwave 1.2s infinite ease-in-out;"></span>
+                  <span style="display: inline-block; width: 3px; height: 22px; background: #34d399; border-radius: 2px; animation: soundwave 0.8s infinite ease-in-out 0.2s;"></span>
+                  <span style="display: inline-block; width: 3px; height: 12px; background: #00d4f5; border-radius: 2px; animation: soundwave 1.4s infinite ease-in-out 0.4s;"></span>
+                  <span style="display: inline-block; width: 3px; height: 18px; background: #bfa8ff; border-radius: 2px; animation: soundwave 1.0s infinite ease-in-out 0.1s;"></span>
+                  <span style="display: inline-block; width: 3px; height: 10px; background: #34d399; border-radius: 2px; animation: soundwave 1.1s infinite ease-in-out 0.3s;"></span>
+                </div>
+                <!-- Dynamic Profile Badge -->
+                <span id="pill-badge" style="font-family: var(--nv-font-mono); font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; background: rgba(52, 211, 153, 0.15); border: 1px solid #34d399; color: #34d399;">
+                  CLI / TERMINAL
+                </span>
+              </div>
+
+              <!-- Right: Live Latency HUD + Undo Hint -->
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-family: var(--nv-font-mono); font-size: 0.76rem; color: #00d4f5; background: rgba(0, 212, 245, 0.08); border: 1px solid rgba(0, 212, 245, 0.2); padding: 4px 8px; border-radius: 8px;">
+                  ⚡ 142ms (On-Device GPU)
+                </span>
+                <span style="font-family: var(--nv-font-mono); font-size: 0.7rem; color: #94a3b8; border: 1px dashed rgba(255,255,255,0.2); padding: 3px 7px; border-radius: 6px;">
+                  Alt+⌫ Undo
+                </span>
+              </div>
+
+            </div>
+
+            <!-- Spoken Text Stream inside Pill -->
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); font-family: var(--nv-font-mono); font-size: 0.9rem; color: #f1f5f9;">
+              <span style="color: #64748b;">$</span> <span id="pill-text" style="color: #38bdf8; font-weight: 600;">docker compose up -d &amp;&amp; git checkout -b feature/auth</span>
+            </div>
+          </div>
+
+          <!-- Interactive Mode Switchers -->
+          <div style="margin-top: 18px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <button onclick="setPillDemo('cli')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              💻 Terminal Guard (CLI)
+            </button>
+            <button onclick="setPillDemo('macro')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              🔤 Macro (camelCase)
+            </button>
+            <button onclick="setPillDemo('datev')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              💼 DATEV Finance
+            </button>
+            <button onclick="setPillDemo('meeting')" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.78rem; font-family: var(--nv-font-mono);">
+              👥 Zoom Meeting
+            </button>
+          </div>
+        </div>
+
+        <!-- Terminal Interactive Mockup -->
+        <div class="terminal-window reveal" id="demo" style="margin-top: 40px;">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+            </div>
+            <div class="terminal-title">verbum // voice injection stream</div>
+            <div class="terminal-tabs">
+              <button class="terminal-tab active" onclick="setDemo(0)">Claude Code / AI</button>
+              <button class="terminal-tab" onclick="setDemo(1)">Python / VS Code</button>
+              <button class="terminal-tab" onclick="setDemo(2)">Git / DevOps</button>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-voice-input">
+              <span class="voice-pulse"></span>
+              <span id="demo-voice">🎙️ Голос: «сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша»</span>
+            </div>
+            <div class="terminal-output" id="demo-output">
+              сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша
+            </div>
+            <div style="margin-top: 12px; color: #475569; font-size: 0.78rem;">
+              <span data-lang="ru">[Безопасный ввод: Terminal Guard активен • Нажатие Enter заблокировано • Задержка: 142 мс]</span>
+              <span data-lang="en">[Safe Insertion: Terminal Guard Active • Enter Key Suppressed • Latency: 142ms]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Windows 11 App Interface Preview -->
+        <div class="reveal" style="margin-top: 40px; text-align: center;">
+          <div style="font-family: var(--nv-font-mono); font-size: 0.78rem; color: var(--nv-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 8px;">
+            <span>🖥️</span>
+            <span data-lang="ru">Нативный интерфейс для Windows 11 (WinUI 3 / Mica Dark)</span>
+            <span data-lang="en">Native Windows 11 Interface (WinUI 3 / Mica Dark)</span>
+          </div>
+          <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--nv-border-hi); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 212, 245, 0.15);">
+            <img id="img-app-ui" src="/assets/img/verbum/app-ui-ru.jpg" data-src-ru="/assets/img/verbum/app-ui-ru.jpg" data-src-en="/assets/img/verbum/app-ui-en.jpg" alt="Verbum Windows 11 Native Interface" style="width: 100%; height: auto; display: block;" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== WORKFLOW PAIN POINTS ========== -->
+  <section class="section" style="padding: 70px 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label"><span data-lang="ru">Проблема и Решение</span><span data-lang="en">The Problem & Solution</span></span>
+        <h2 class="section-title"><span data-lang="ru">Почему обычный голосовой ввод бесит разработчиков.</span><span data-lang="en">Why standard voice tools fail developers.</span></h2>
+      </div>
+
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 30px;">
+        <div class="card glass reveal">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">✕</div>
+          <h3 class="card-title" style="color: #f87171;"><span data-lang="ru">Переключение раскладки</span><span data-lang="en">Constant Layout Switching</span></h3>
+          <p class="card-text" data-lang="ru">
+            Каждое английское слово в русском предложении (<em>«добавь auth_token в headers»</em>) заставляет переключать раскладку или выдает «аутх_токен». <strong>Verbum понимает смешанную речь на лету.</strong>
+          </p>
+          <p class="card-text" data-lang="en">
+            Mixing English identifiers into Russian speech breaks standard speech engines. <strong>Verbum recognizes mixed technical terminology natively on the fly.</strong>
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">✕</div>
+          <h3 class="card-title" style="color: #f87171;"><span data-lang="ru">Случайный Enter в терминале</span><span data-lang="en">Accidental Enter in Shells</span></h3>
+          <p class="card-text" data-lang="ru">
+            Обычные утилиты отправляют переводы строк, нажимая Enter посреди незаконченной команды <code>rm -rf /var/data</code> или <code>git push</code>. <strong>Verbum аппаратно блокирует Enter в консолях.</strong>
+          </p>
+          <p class="card-text" data-lang="en">
+            Standard voice tools inject newlines and execute partial shell commands like <code>git push --force</code>. <strong>Verbum enforces a zero-execution hardware guard.</strong>
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">✕</div>
+          <h3 class="card-title" style="color: #f87171;"><span data-lang="ru">Облачный лаг и приватность</span><span data-lang="en">Cloud Lag & Leakage</span></h3>
+          <p class="card-text" data-lang="ru">
+            Облачные API заставляют ждать 2 секунды и отправляют ваш закрытый код на чужие сервера. <strong>Verbum на 100% оффлайн на вашем GPU с откликом 200–400 мс.</strong>
+          </p>
+          <p class="card-text" data-lang="en">
+            Cloud APIs add 2-second round-trip latency and stream proprietary code to remote servers. <strong>Verbum is 100% offline on your local GPU with sub-400ms speed.</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Dev Meme: Layout switch pain -->
+      <div class="reveal" style="margin-top: 36px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(239, 68, 68, 0.25); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);">
+        <img id="img-meme-keyboard" src="/assets/img/verbum/meme-keyboard-pain-ru.jpg" data-src-ru="/assets/img/verbum/meme-keyboard-pain-ru.jpg" data-src-en="/assets/img/verbum/meme-keyboard-pain-en.jpg" alt="Keyboard Layout Switch Pain vs Verbum" style="width: 100%; height: auto; display: block;" loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== ARCHITECTURE & FEATURES ========== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label"><span data-lang="ru">Архитектура Движка</span><span data-lang="en">Engine Architecture</span></span>
+        <h2 class="section-title"><span data-lang="ru">Создан для непрерывного потока разработки.</span><span data-lang="en">Built for technical flow state.</span></h2>
+        <p class="section-text" data-lang="ru">Обычная диктовка ломается в редакторах кода: переводит названия функций, коверкает английские термины и случайно нажимает Enter в консоли. Verbum решает это на уровне локальной архитектуры.</p>
+        <p class="section-text" data-lang="en">Standard voice typing fails in code editors because it translates code names, garbles technical English, and triggers accidental commands. Verbum solves this with a purpose-built local architecture.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card glass reveal">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title"><span data-lang="ru">Два Режима Распознавания</span><span data-lang="en">Dual-Mode Inference</span></h3>
+          <p class="card-text" data-lang="ru">
+            <strong>Fast (Быстрый):</strong> отклик 200–500 мс на легкой модели для мгновенных промптов в AI-агенты.<br><br>
+            <strong>Accurate (Точный):</strong> модель <code>large-v3-turbo-q5_0</code> с confidence rescue и расстановкой пунктуации для сложных технических текстов.
+          </p>
+          <p class="card-text" data-lang="en">
+            <strong>Fast Mode:</strong> Sub-300ms single-pass recognition using optimized models for rapid agent prompts.<br><br>
+            <strong>Accurate Mode:</strong> <code>large-v3-turbo-q5_0</code> with confidence rescue and spoken punctuation for long-form engineering dictation.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title"><span data-lang="ru">Zero-Execution: Защита Терминала</span><span data-lang="en">Zero-Execution Terminal Safety</span></h3>
+          <p class="card-text" data-lang="ru">
+            Никаких случайных запусков команд. Verbum строго блокирует отправку <code>Enter</code>, <code>Tab</code> и управляющих символов в терминалы (Windows Terminal, PowerShell, WSL, Claude CLI, Codex). Текст вставляется как черновик.
+          </p>
+          <p class="card-text" data-lang="en">
+            Never auto-submits dangerous commands. Verbum strictly suppresses <code>Enter</code>, <code>Tab</code>, and control characters in terminal targets (Windows Terminal, PowerShell, WSL, Claude CLI, Codex).
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🌐</div>
+          <h3 class="card-title"><span data-lang="ru">Без Смены Раскладки</span><span data-lang="en">Zero Layout Switching</span></h3>
+          <p class="card-text" data-lang="ru">
+            Говорите по-русски, свободно используя английские идентификаторы, <code>camelCase</code>, <code>snake_case</code>, флаги CLI (<code>--force</code>) и немецкие термины. Автоматическое определение языка без ручных переключателей.
+          </p>
+          <p class="card-text" data-lang="en">
+            Speak Russian sentences with mixed English identifiers, <code>camelCase</code>, <code>snake_case</code>, CLI flags (<code>--check</code>), and German terms. Automatic language detection without manual hotkey toggling.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🔒</div>
+          <h3 class="card-title"><span data-lang="ru">100% Локально и Приватно</span><span data-lang="en">100% Offline & Private</span></h3>
+          <p class="card-text" data-lang="ru">
+            Работает на базе C++ движка <code>whisper.cpp</code> с Vulkan GPU-ускорением (AMD Radeon, NVIDIA RTX, Intel Arc) и автоматическим fallback на CPU. Никакой отправки голоса в облако, ноль телеметрии.
+          </p>
+          <p class="card-text" data-lang="en">
+            Powered by local <code>whisper.cpp</code> with Vulkan GPU acceleration (AMD Radeon, NVIDIA RTX, Intel Arc) with automatic CPU fallback. Zero audio streaming, zero telemetry, zero mandatory cloud accounts.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">📋</div>
+          <h3 class="card-title"><span data-lang="ru">Защита Буфера Обмена</span><span data-lang="en">Safe Clipboard Preservation</span></h3>
+          <p class="card-text" data-lang="ru">
+            Интеллектуальный снимок и восстановление текста, HTML, битмапов (DIB) и файлов (HDROP). История вашего буфера обмена не повреждается и не затирается при голосовой вставке.
+          </p>
+          <p class="card-text" data-lang="en">
+            Full-format snapshot and restoration for text, rich HTML, DIB bitmaps, and HDROP file paths. Your active clipboard history remains completely untouched during voice injection.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">📦</div>
+          <h3 class="card-title"><span data-lang="ru">Пакеты Терминов (.vpack)</span><span data-lang="en">Terminology Packs (.vpack)</span></h3>
+          <p class="card-text" data-lang="ru">
+            Строгая иерархия подстановки: Личный словарь &gt; Криптографически подписанные пакеты <code>.vpack</code> &gt; Базовый глоссарий. Точная канонизация сленга («докер компоуз» → «docker compose»).
+          </p>
+          <p class="card-text" data-lang="en">
+            Strict resolution hierarchy: Personal Dictionary &gt; Cryptographically Signed <code>.vpack</code> Archives &gt; Core Glossaries. Custom domain dictionaries for IT, backend, devops, and science.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🎙️</div>
+          <h3 class="card-title"><span data-lang="ru">Запись Созвонов (Zoom / Teams) [Beta]</span><span data-lang="en">Meeting Transcriber (Zoom / Teams) [Beta]</span></h3>
+          <p class="card-text" data-lang="ru">
+            Двухканальный захват звука (WASAPI loopback + микрофон). Записывает ваш голос и собеседников из Zoom, Teams или Meet, разделяет спикеров и формирует Markdown-конспект с таймкодами. Плюс плавающее окно Live Captions.
+          </p>
+          <p class="card-text" data-lang="en">
+            Dual-channel capture (WASAPI loopback + microphone). Records you and remote speakers from Zoom, Teams, or Meet, diarizes speakers, and outputs timestamped Markdown notes with real-time Live Captions.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🔤</div>
+          <h3 class="card-title"><span data-lang="ru">Голосовые Макросы (camelCase & snake_case)</span><span data-lang="en">Natural Developer Voice Macros</span></h3>
+          <p class="card-text" data-lang="ru">
+            Диктуйте код естественно: скажите <em>«в кэмел кейсе юзер айди»</em> ➔ <code>userId</code>, <em>«в снейк кейсе респонс статус»</em> ➔ <code>response_status</code>, <em>«в кебаб кейсе аус токен»</em> ➔ <code>auth-token</code>.
+          </p>
+          <p class="card-text" data-lang="en">
+            Speak code naturally: say <em>"in camel case user id"</em> ➔ <code>userId</code>, <em>"in snake case response status"</em> ➔ <code>response_status</code>, <em>"in kebab case auth token"</em> ➔ <code>auth-token</code>.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">⏪</div>
+          <h3 class="card-title"><span data-lang="ru">1-Keystroke Undo (Мгновенный Откат)</span><span data-lang="en">1-Keystroke Undo & Rollback</span></h3>
+          <p class="card-text" data-lang="ru">
+            Нажмите <code>Right Alt + Backspace</code> сразу после вставки — Verbum мгновенно сотрет надиктованный текст и восстановит исходное состояние буфера обмена.
+          </p>
+          <p class="card-text" data-lang="en">
+            Press <code>Right Alt + Backspace</code> after injection — Verbum immediately deletes the inserted text and restores your prior clipboard state.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">✨</div>
+          <h3 class="card-title"><span data-lang="ru">Плавающий Glassmorphic HUD</span><span data-lang="en">Floating Glassmorphic HUD</span></h3>
+          <p class="card-text" data-lang="ru">
+            Ультра-легкая капсула в стиле Windows 11 Mica Alt: живая звуковая волна, бейджи целевых профилей (<code>[CLI]</code>, <code>[CODE]</code>, <code>[DATEV]</code>) и прозрачный тайминг задержки (<code>⚡ 142ms</code>).
+          </p>
+          <p class="card-text" data-lang="en">
+            Ultra-sleek Windows 11 Mica Alt floating capsule: real-time audio waveform, dynamic profile badges (<code>[CLI]</code>, <code>[CODE]</code>, <code>[DATEV]</code>), and transparent latency HUD (<code>⚡ 142ms</code>).
+          </p>
+        </div>
+
+        <div class="card glass reveal" style="border-color: rgba(0, 212, 245, 0.35); box-shadow: 0 0 25px rgba(0, 212, 245, 0.08);">
+          <div class="card-icon" style="background: rgba(0, 212, 245, 0.15); color: var(--nv-accent);">⚡</div>
+          <h3 class="card-title" style="color: var(--nv-accent);"><span data-lang="ru">4x-HyperSpeed & Очистка Речи (38 мкс)</span><span data-lang="en">4x-HyperSpeed & Prose Cleaner (38µs)</span></h3>
+          <p class="card-text" data-lang="ru">
+            Специализированная 4-Tier микро-модель для подкастов и длинных войсов. Распознает речь на <strong>4x скорости</strong>, автоматически вырезает слова-паразиты (<em>«типа», «как бы», «эээ», «you know»</em>), схлопывает заикания и размечает реплики по ролям (<code>[Ведущий]</code> / <code>[Гость]</code>) с рекордной задержкой <strong>0.038 мс</strong>!
+          </p>
+          <p class="card-text" data-lang="en">
+            Curriculum-distilled 4-Tier micro-model for podcasts and voice notes. Transcribes speech at <strong>4x speed</strong>, automatically removes spoken disfluencies (<em>"um", "like", "you know"</em>), fixes stutters, and attributes speaker roles (<code>[Host]</code> / <code>[Guest]</code>) in <strong>0.038 ms</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== MEETINGS & CONFERENCES SHOWCASE ========== -->
+  <section class="section" id="meetings" style="padding: 80px 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label" style="color: #bfa8ff;"><span data-lang="ru">Новая Возможность • Beta</span><span data-lang="en">New Feature • Beta</span></span>
+        <h2 class="section-title"><span data-lang="ru">Конспекты созвонов без облачных ботов.</span><span data-lang="en">Meeting notes with zero cloud bots.</span></h2>
+        <p class="section-text" data-lang="ru">
+          Не нужно пускать сторонних ботов в конфиденциальные звонки. Verbum захватывает системный звук Windows и микрофон прямо на вашем ПК, разделяет речь участников и сохраняет готовый структурированный конспект.
+        </p>
+        <p class="section-text" data-lang="en">
+          No need to invite untrusted cloud bots into private client meetings. Verbum captures system loopback audio and your microphone locally, separating speakers into structured Markdown notes.
+        </p>
+      </div>
+
+      <!-- Meeting Visual Mockup -->
+      <div class="terminal-window reveal" style="margin-top: 36px; border-color: rgba(128, 102, 255, 0.3); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(128, 102, 255, 0.08);">
+        <div class="terminal-header" style="background: #110e20;">
+          <div class="terminal-dots">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+          </div>
+          <div class="terminal-title" style="color: #bfa8ff;">verbum // meeting session • zoom (mic + wasapi loopback)</div>
+          <div style="font-family: var(--nv-font-mono); font-size: 0.72rem; color: #34d399; display: flex; align-items: center; gap: 6px;">
+            <span class="voice-pulse" style="background: #34d399; box-shadow: 0 0 10px #34d399;"></span>
+            <span data-lang="ru">Запись активна • 100% Локально</span>
+            <span data-lang="en">Recording Live • 100% Local</span>
+          </div>
+        </div>
+        <div class="terminal-body" style="font-size: 0.86rem; line-height: 1.8;">
+          <div style="color: #94a3b8; margin-bottom: 10px; font-size: 0.78rem;">
+            # 📁 meeting_2026-08-29_architecture_sync.md
+          </div>
+          <div style="margin-bottom: 12px;">
+            <span style="color: var(--nv-accent); font-weight: 600;"><span data-lang="ru">[00:04] Вы:</span><span data-lang="en">[00:04] You:</span></span>
+            <span style="color: #e2e8f0;">
+              <span data-lang="ru">Привет! Давайте согласуем переход на Vulkan STT бэкенд и проверим оффлайн-задержку.</span>
+              <span data-lang="en">Hi! Let's verify the Vulkan STT backend transition and check offline latency.</span>
+            </span>
+          </div>
+          <div style="margin-bottom: 12px;">
+            <span style="color: #c084fc; font-weight: 600;"><span data-lang="ru">[00:19] Собеседник (Zoom):</span><span data-lang="en">[00:19] Colleague (Zoom):</span></span>
+            <span style="color: #cbd5e1;">
+              <span data-lang="ru">Отлично, мы протестировали на AMD 780M и RTX 4080 — задержка меньше 300 мс, буфер обмена не затирается.</span>
+              <span data-lang="en">Sounds great, we tested on AMD 780M and RTX 4080 — latency is sub-300ms, clipboard stays intact.</span>
+            </span>
+          </div>
+          <div style="margin-bottom: 12px;">
+            <span style="color: var(--nv-accent); font-weight: 600;"><span data-lang="ru">[00:42] Вы:</span><span data-lang="en">[00:42] You:</span></span>
+            <span style="color: #e2e8f0;">
+              <span data-lang="ru">Зафиксировал в таске. Конспект сохранен в Obsidian.</span>
+              <span data-lang="en">Logged in task. Summary saved directly to Obsidian.</span>
+            </span>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--nv-border); display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.76rem; color: #7a7a94;">
+            <span>✨ Live Captions Overlay</span>
+            <span><span data-lang="ru">📱 Телефон-Конспектатор (QR-код)</span><span data-lang="en">📱 Phone Companion (QR Code)</span></span>
+            <span><span data-lang="ru">💾 Экспорт Markdown / JSON</span><span data-lang="en">💾 Export Markdown / JSON</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dev Meme: Meeting Privacy vs Cloud Bots -->
+      <div class="reveal" style="margin-top: 36px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(128, 102, 255, 0.3); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);">
+        <img id="img-meme-meeting" src="/assets/img/verbum/meme-meeting-privacy-ru.jpg" data-src-ru="/assets/img/verbum/meme-meeting-privacy-ru.jpg" data-src-en="/assets/img/verbum/meme-meeting-privacy-en.jpg" alt="Cloud Meeting Bots vs Verbum Offline Transcriber" style="width: 100%; height: auto; display: block;" loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== COMPARISON ========== -->
+  <section class="section" id="comparison">
+    <div class="container reveal">
+      <span class="section-label"><span data-lang="ru">Сравнение Возможностей</span><span data-lang="en">Benchmark & Capabilities</span></span>
+      <h2 class="section-title"><span data-lang="ru">Почему разработчики выбирают Verbum.</span><span data-lang="en">How Verbum compares.</span></h2>
+      <p class="section-text" data-lang="ru">Наглядное сравнение с облачными API и стандартными системными утилитами.</p>
+      <p class="section-text" data-lang="en">Why developers replace cloud voice APIs and standard OS voice typing with Verbum.</p>
+
+      <div class="compare-table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th><span data-lang="ru">Функция / Характеристика</span><span data-lang="en">Feature / Capability</span></th>
+              <th class="highlight">Verbum v1.2.0</th>
+              <th>Cloud Whisper API</th>
+              <th>Windows Voice (Win+H)</th>
+              <th>macOS Dictation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong><span data-lang="ru">100% Локально и Оффлайн</span><span data-lang="en">100% Local & Offline</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Да (Vulkan GPU)</span><span data-lang="en">Yes (Vulkan GPU)</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Облачный стриминг</span><span data-lang="en">Cloud Streamed</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Облако Microsoft</span><span data-lang="en">Microsoft Cloud</span></td>
+              <td><span class="dim">~</span> <span data-lang="ru">Частично</span><span data-lang="en">Mixed</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-lang="ru">Без смены раскладки (RU + EN Код)</span><span data-lang="en">Zero Layout Switching (RU + EN)</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Нативный микс</span><span data-lang="en">Native Multi-Vocab</span></td>
+              <td><span class="dim">~</span> <span data-lang="ru">Нестабильно</span><span data-lang="en">Inconsistent</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Только 1 язык</span><span data-lang="en">Single Language</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Только 1 язык</span><span data-lang="en">Single Language</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-lang="ru">Защита от случайного Enter в терминале</span><span data-lang="en">Terminal Zero-Execution Guard</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Аппаратный замок</span><span data-lang="en">Hardware-level Lock</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Нет</span><span data-lang="en">No Guard</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Может нажать Enter</span><span data-lang="en">May submit Enter</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Нет</span><span data-lang="en">No Guard</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-lang="ru">Сохранение буфера обмена (картинки, файлы)</span><span data-lang="en">Safe Clipboard Snapshot/Restore</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Полный снимок</span><span data-lang="en">Text + Bitmaps + Files</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Затирает буфер</span><span data-lang="en">Corrupts Clip</span></td>
+              <td><span class="cross">✗</span> N/A</td>
+              <td><span class="cross">✗</span> N/A</td>
+            </tr>
+            <tr>
+              <td><strong><span data-lang="ru">Пакеты терминов (.vpack) и глоссарии</span><span data-lang="en">Domain Packs (.vpack)</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Подписанные архивы</span><span data-lang="en">Signed Packs</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Нет</span><span data-lang="en">None</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Нет</span><span data-lang="en">None</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">Нет</span><span data-lang="en">None</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-lang="ru">Задержка (Push-to-Talk)</span><span data-lang="en">Latency (Push-to-Talk)</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> ~200–400 ms</td>
+              <td><span class="cross">✗</span> <span data-lang="ru">800–2500 ms (сеть)</span><span data-lang="en">800–2500 ms (network)</span></td>
+              <td><span class="dim">~</span> 500–1200 ms</td>
+              <td><span class="dim">~</span> 400–800 ms</td>
+            </tr>
+            <tr>
+              <td><strong><span data-lang="ru">Стоимость / Подписка</span><span data-lang="en">Subscription / Cost</span></strong></td>
+              <td class="highlight"><span class="check">✓</span> <span data-lang="ru">Бесплатно / Локально</span><span data-lang="en">100% Free / Local</span></td>
+              <td><span class="cross">✗</span> <span data-lang="ru">$0.006/мин + подписка</span><span data-lang="en">$0.006/min + subscription</span></td>
+              <td><span class="check">✓</span> <span data-lang="ru">Встроено</span><span data-lang="en">Included</span></td>
+              <td><span class="check">✓</span> <span data-lang="ru">Встроено</span><span data-lang="en">Included</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== SYSTEM REQUIREMENTS & SPECS ========== -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label"><span data-lang="ru">Системные Требования</span><span data-lang="en">Hardware Specifications</span></span>
+        <h2 class="section-title"><span data-lang="ru">Требования к оборудованию.</span><span data-lang="en">System requirements.</span></h2>
+        <p class="section-text" data-lang="ru">Verbum скомпилирован нативно под 64-битную архитектуру Windows с поддержкой современного аппаратного ускорения.</p>
+        <p class="section-text" data-lang="en">Verbum is compiled natively for Windows 64-bit architecture with modern hardware acceleration.</p>
+      </div>
+
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="card glass reveal">
+          <div class="card-icon">💻</div>
+          <h3 class="card-title"><span data-lang="ru">Операционная Система</span><span data-lang="en">Operating System</span></h3>
+          <p class="card-text" data-lang="ru">
+            Windows 11 (рекомендуется 22H2 или новее) или Windows 10 x64 (сборка 19041+). Нативный интерфейс WinUI 3 с поддержкой материалов Mica.
+          </p>
+          <p class="card-text" data-lang="en">
+            Windows 11 (22H2 or newer recommended) or Windows 10 x64 (build 19041+). Native WinUI 3 desktop shell with Mica material support.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🎮</div>
+          <h3 class="card-title"><span data-lang="ru">GPU Ускорение</span><span data-lang="en">GPU Acceleration</span></h3>
+          <p class="card-text" data-lang="ru">
+            <strong>Рекомендуется:</strong> AMD Radeon (780M / RDNA2 / RDNA3+), NVIDIA GeForce (RTX / GTX 10-серия+), Intel Arc с поддержкой Vulkan 1.3.<br><br>
+            <strong>CPU Fallback:</strong> Включен оптимизированный многопоточный AVX2 / AVX-512 CPU бэкенд.
+          </p>
+          <p class="card-text" data-lang="en">
+            <strong>Recommended:</strong> AMD Radeon (780M / RDNA2 / RDNA3+), NVIDIA GeForce (RTX / GTX 10-series+), Intel Arc with Vulkan 1.3 support.<br><br>
+            <strong>CPU Fallback:</strong> AVX2 / AVX-512 multi-threaded CPU backend included.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="card-icon">🧠</div>
+          <h3 class="card-title"><span data-lang="ru">Память и Диск</span><span data-lang="en">Memory & Storage</span></h3>
+          <p class="card-text" data-lang="ru">
+            <strong>RAM:</strong> 8 ГБ минимум (16 ГБ рекомендуется для Turbo модели).<br>
+            <strong>Диск:</strong> 2.5 ГБ свободного места для встроенных моделей Whisper и бинарников.
+          </p>
+          <p class="card-text" data-lang="en">
+            <strong>RAM:</strong> 8 GB minimum (16 GB recommended for Turbo model).<br>
+            <strong>Disk Space:</strong> 2.5 GB free space for bundled models and runtime binaries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== QUICKSTART ========== -->
+  <section class="section" style="padding: 80px 0;">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label"><span data-lang="ru">Быстрый Старт</span><span data-lang="en">Quickstart</span></span>
+        <h2 class="section-title"><span data-lang="ru">Готов к работе за 60 секунд.</span><span data-lang="en">Ready in 60 seconds.</span></h2>
+        <p class="section-text" data-lang="ru">Никаких консольных скриптов, настроек окружения или установки Python. Все упаковано в один автономный инсталлятор.</p>
+        <p class="section-text" data-lang="en">No environment setup, manual Python venvs, or dependencies. Everything is bundled into a single standalone installer.</p>
+      </div>
+
+      <div class="process-grid process-grid-3 reveal" style="counter-reset: step; margin-top: 36px;">
+        <div class="process-step">
+          <h3><span data-lang="ru">1. Установите</span><span data-lang="en">1. Install</span></h3>
+          <p data-lang="ru">Скачайте и запустите <code>Verbum-Setup-1.2.0.exe</code>. Установка занимает меньше минуты в локальный профиль.</p>
+          <p data-lang="en">Download and run <code>Verbum-Setup-1.2.0.exe</code>. Clean local install in under a minute.</p>
+        </div>
+        <div class="process-step">
+          <h3><span data-lang="ru">2. Зажмите хоткей</span><span data-lang="en">2. Hold Hotkey</span></h3>
+          <p data-lang="ru">По умолчанию зажмите <strong>Правый Alt</strong> (Push-to-Talk) и начните говорить в любом приложении.</p>
+          <p data-lang="en">Hold <strong>Right Alt</strong> (Push-to-Talk default) and speak naturally in any target window.</p>
+        </div>
+        <div class="process-step">
+          <h3><span data-lang="ru">3. Готово!</span><span data-lang="en">3. Done!</span></h3>
+          <p data-lang="ru">Отпустите клавишу — распознанный текст со всеми английскими терминами мгновенно напечатается в окно.</p>
+          <p data-lang="en">Release the key — clean formatted text with technical identifiers is inserted into your active app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== DOWNLOAD & VERIFICATION ========== -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="download-card reveal">
+        <span class="section-label" style="margin-bottom: 10px;"><span data-lang="ru">Официальный Релиз для Windows</span><span data-lang="en">Official Windows Release</span></span>
+        <h2 class="section-title" style="margin-bottom: 12px;"><span data-lang="ru">Скачать Verbum v1.2.0</span><span data-lang="en">Download Verbum v1.2.0</span></h2>
+        <p class="section-text" style="margin: 0 auto 30px auto; max-width: 660px;" data-lang="ru">
+          Автономный чистый инсталлятор Inno Setup. Включает оффлайн-модели STT, движок Vulkan GPU и графическое приложение.
+        </p>
+        <p class="section-text" style="margin: 0 auto 30px auto; max-width: 660px;" data-lang="en">
+          Standalone, clean Inno Setup installer. Bundled with complete offline STT models, Vulkan GPU engine, and desktop app.
+        </p>
+
+        <a href="https://github.com/vladimirevseevpro-collab/neural-void.com/releases/download/v1.2.0/Verbum-Setup-1.2.0.exe" class="download-btn-main">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+          <span data-lang="ru">Скачать Verbum-Setup-1.2.0.exe</span>
+          <span data-lang="en">Download Verbum-Setup-1.2.0.exe</span>
+        </a>
+
+        <div class="download-meta">
+          <span>📦 <span data-lang="ru">Размер:</span><span data-lang="en">Size:</span> <strong>~1.00 GB</strong></span>
+          <span>🏷️ <span data-lang="ru">Версия:</span><span data-lang="en">Version:</span> <strong>1.2.0</strong></span>
+          <span>🖥️ <span data-lang="ru">Платформа:</span><span data-lang="en">Platform:</span> <strong>Windows x64</strong></span>
+          <span>📅 <span data-lang="ru">Дата:</span><span data-lang="en">Date:</span> <strong>Август 2026</strong></span>
+        </div>
+
+        <div class="sha-badge">
+          <span class="sha-label"><span data-lang="ru">Хэш SHA-256:</span><span data-lang="en">SHA-256 Checksum:</span></span>
+          <span class="sha-val" id="sha-text">1557eb1db6ab66b187ca14a3c4b01e9d97a91233deb928e5c36ba9c19c058ff3</span>
+          <button class="copy-btn" onclick="copySha()"><span data-lang="ru">Копировать</span><span data-lang="en">Copy Hash</span></button>
+        </div>
+
+        <div style="margin-top: 18px; font-family: var(--nv-font-mono); font-size: 0.74rem; color: var(--nv-text-dim);">
+          <span data-lang="ru">Проверка в PowerShell:</span><span data-lang="en">Verify in PowerShell:</span> <code>Get-FileHash Verbum-Setup-1.2.0.exe -Algorithm SHA256</code>
+        </div>
+
+        <div class="notice-box">
+          <strong data-lang="ru">💡 Подсказка при первом запуске:</strong>
+          <strong data-lang="en">💡 First Run Notice:</strong>
+          <span data-lang="ru">Так как инсталлятор распространяется независимо без платного корпоративного сертификата Microsoft, фильтр SmartScreen может показать предупреждение. Нажмите <em>«Подробнее» → «Выполнить в любом случае»</em>.</span>
+          <span data-lang="en">Since this installer is distributed directly without an expensive enterprise certificate, Windows SmartScreen may show a prompt. Click <em>"More info" → "Run anyway"</em>.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq">
+    <div class="container reveal">
+      <span class="section-label"><span data-lang="ru">Вопросы и Ответы</span><span data-lang="en">Questions & Answers</span></span>
+      <h2 class="section-title"><span data-lang="ru">Часто задаваемые вопросы.</span><span data-lang="en">Frequently asked questions.</span></h2>
+
+      <div style="max-width: 800px; margin-top: 32px;">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-lang="ru">Отправляет ли Verbum мой голос или текст в интернет?</span>
+            <span data-lang="en">Does Verbum send my voice or transcriptions to the cloud?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <span data-lang="ru">Нет. Verbum работает на 100% локально на вашем компьютере через нативный Vulkan C++ движок. Приложение не делает никаких сетевых запросов для стриминга аудио или аналитики.</span>
+            <span data-lang="en">No. Verbum runs 100% locally on your machine via a native C++ Vulkan speech recognition backend. It makes zero outbound network calls for audio streaming or recognition telemetry.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-lang="ru">Как Verbum защищает от случайного выполнения команд в терминале?</span>
+            <span data-lang="en">How does Verbum prevent accidental command execution in terminals?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <span data-lang="ru">Используется специальный Win32 инжектор ввода, который аппаратно отсекает символы перевода строки (`Enter`) и `Tab` при вводе в консольные окна (Windows Terminal, PowerShell, CMD, терминал VS Code). Текст вводится как черновик, который вы подтверждаете вручную.</span>
+            <span data-lang="en">Verbum uses a specialized Win32 input injection sink that explicitly strips newlines and control characters when typing into terminal windows (Windows Terminal, Command Prompt, PowerShell, VS Code terminal). Your transcribed text is typed as a draft, allowing you to review before pressing Enter manually.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-lang="ru">Какие горячие клавиши поддерживаются?</span>
+            <span data-lang="en">What hotkeys are supported?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <span data-lang="ru">Поддерживаются режимы Push-to-Talk (удержание клавиши) и Toggle (нажал — говоришь, нажал — завершил). По умолчанию активен <strong>Правый Alt</strong>. Также доступны <code>Right Ctrl</code>, <code>Ctrl+Shift+Space</code>, <code>CapsLock</code> и любые кастомные глобальные хуки.</span>
+            <span data-lang="en">Verbum supports both Push-to-Talk (hold key while speaking) and Toggle (press to start, press to stop) modes. Presets include Right Alt, Right Ctrl, Ctrl+Shift+Space, CapsLock, and custom Win32 low-level key bindings with modifier suppression.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-lang="ru">Как работает режим записи конференций (Zoom / Teams)?</span>
+            <span data-lang="en">How does the Meeting Transcriber (Zoom / Teams) work?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <span data-lang="ru">Verbum использует нативный Windows WASAPI Loopback захват системного звука параллельно с микрофоном. Это позволяет записывать как ваш голос, так и голоса удаленных собеседников из любого приложения (Zoom, Microsoft Teams, Google Meet, Telegram, Discord). Вся транскрипция происходит на 100% локально на вашем GPU без подключения облачных ботов, с автоматическим экспортом в Markdown.</span>
+            <span data-lang="en">Verbum uses native Windows WASAPI Loopback capture alongside your microphone. It records both your voice and remote participants from any app (Zoom, Teams, Google Meet, Discord) completely offline on your local GPU without inviting third-party cloud bots, exporting ready-to-use Markdown transcripts.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Neural Void • Product Lab</p>
+        <ul class="footer-links">
+          <li><a href="/"><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a></li>
+          <li><a href="/#jira-suite">Jira Suite</a></li>
+          <li><a href="/sprint-scope-guard/">Scope Guard</a></li>
+          <li><a href="/verbum/">Verbum</a></li>
+          <li><a href="/foldwink/">Foldwink</a></li>
+          <li><a href="/privacy/"><span data-lang="ru">Конфиденциальность</span><span data-lang="en">Privacy Policy</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Language Toggle
+    function setLang(lang) {
+      const isEn = (lang === 'en');
+      if (isEn) {
+        document.body.classList.add('lang-en');
+        document.documentElement.lang = 'en';
+        document.getElementById('btn-en').classList.add('active');
+        document.getElementById('btn-ru').classList.remove('active');
+      } else {
+        document.body.classList.remove('lang-en');
+        document.documentElement.lang = 'ru';
+        document.getElementById('btn-ru').classList.add('active');
+        document.getElementById('btn-en').classList.remove('active');
+      }
+      // Swap localized images
+      document.querySelectorAll('img[data-src-ru]').forEach(img => {
+        const targetSrc = isEn ? img.getAttribute('data-src-en') : img.getAttribute('data-src-ru');
+        if (targetSrc && img.src !== targetSrc) {
+          img.src = targetSrc;
+        }
+      });
+      try { localStorage.setItem('verbum_lang', lang); localStorage.setItem('nv_lang', lang); } catch (e) {}
+      updateDemoContent();
+    }
+
+    // Interactive terminal demo data (0: Claude Code/AI, 1: Python/VS Code, 2: Git/DevOps)
+    const demos = {
+      ru: [
+        {
+          voice: '🎙️ Голос: «сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша»',
+          output: 'сделай рефакторинг auth_token middleware и добавь проверку sha256 хэша'
+        },
+        {
+          voice: '🎙️ Голос: «функция принимает payload и возвращает Response со статусом 200»',
+          output: '// Функция принимает payload и возвращает Response со статусом 200'
+        },
+        {
+          voice: '🎙️ Голос: «git commit с сообщением фикс утечки памяти в whisper бэкенде»',
+          output: 'git commit -m "fix: memory leak in whisper backend"'
+        }
+      ],
+      en: [
+        {
+          voice: '🎙️ Spoken: "refactor auth_token middleware and add sha256 hash verification"',
+          output: 'refactor auth_token middleware and add sha256 hash verification'
+        },
+        {
+          voice: '🎙️ Spoken: "function accepts payload and returns Response with status 200"',
+          output: '// Function accepts payload and returns Response with status 200'
+        },
+        {
+          voice: '🎙️ Spoken: "git commit with message fix memory leak in whisper backend"',
+          output: 'git commit -m "fix: memory leak in whisper backend"'
+        }
+      ]
+    };
+
+    // Floating Pill HUD Interactive Mode Switcher
+    function setPillDemo(mode) {
+      const badge = document.getElementById('pill-badge');
+      const text = document.getElementById('pill-text');
+      if (!badge || !text) return;
+
+      if (mode === 'cli') {
+        badge.innerText = 'CLI / TERMINAL';
+        badge.style.background = 'rgba(52, 211, 153, 0.15)';
+        badge.style.borderColor = '#34d399';
+        badge.style.color = '#34d399';
+        text.innerText = 'docker compose up -d && git checkout -b feature/auth';
+      } else if (mode === 'macro') {
+        badge.innerText = 'CODE MACRO';
+        badge.style.background = 'rgba(0, 212, 245, 0.15)';
+        badge.style.borderColor = '#00d4f5';
+        badge.style.color = '#00d4f5';
+        text.innerText = 'const userId = request.params.userId; const response_status = 200;';
+      } else if (mode === 'datev') {
+        badge.innerText = 'DATEV FINANCE';
+        badge.style.background = 'rgba(251, 191, 36, 0.15)';
+        badge.style.borderColor = '#fbbf24';
+        badge.style.color = '#fbbf24';
+        text.innerText = 'Buchungssatz: Soll 8400 an Haben 1200, Belegnummer 4540 (SKR03)';
+      } else if (mode === 'meeting') {
+        badge.innerText = 'MEETING DIARIZATION';
+        badge.style.background = 'rgba(192, 132, 252, 0.15)';
+        badge.style.borderColor = '#c084fc';
+        badge.style.color = '#c084fc';
+        text.innerText = '[Ведущий]: Обсуждаем релиз. [Архитектор]: База задеплоена на стейджинг.';
+      }
+    }
+
+    let currentDemoIndex = 0;
+
+    function setDemo(index) {
+      currentDemoIndex = index;
+      document.querySelectorAll('.terminal-tab').forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+      updateDemoContent();
+    }
+
+    let typeTimer = null;
+
+    function updateDemoContent() {
+      const isEn = document.body.classList.contains('lang-en');
+      const list = isEn ? demos.en : demos.ru;
+      const d = list[currentDemoIndex];
+      document.getElementById('demo-voice').textContent = d.voice;
+      
+      const outEl = document.getElementById('demo-output');
+      outEl.textContent = '';
+      if (typeTimer) clearTimeout(typeTimer);
+      
+      let charIndex = 0;
+      const targetText = d.output;
+      function typeNext() {
+        if (charIndex < targetText.length) {
+          outEl.textContent += targetText.charAt(charIndex);
+          charIndex++;
+          typeTimer = setTimeout(typeNext, 16);
+        }
+      }
+      typeNext();
+    }
+
+    function toggleFaq(el) {
+      const item = el.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+
+    function copySha() {
+      const text = document.getElementById('sha-text').textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const spanRu = btn.querySelector('[data-lang="ru"]');
+        const spanEn = btn.querySelector('[data-lang="en"]');
+        if (spanRu && spanEn) {
+          const origRu = spanRu.textContent;
+          const origEn = spanEn.textContent;
+          spanRu.textContent = 'Скопировано!';
+          spanEn.textContent = 'Copied!';
+          setTimeout(() => {
+            spanRu.textContent = origRu;
+            spanEn.textContent = origEn;
+          }, 2000);
+        }
+      });
+    }
+
+    // Initialize stored language preference (default: ru)
+    (function() {
+      try {
+        const stored = localStorage.getItem('nv_lang') || localStorage.getItem('verbum_lang');
+        if (stored === 'en') {
+          setLang('en');
+        } else {
+          setLang('ru');
+        }
+      } catch(e) {
+        setLang('ru');
+      }
+    })();
+  </script>
+</body>
+</html>
