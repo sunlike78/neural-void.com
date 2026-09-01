@@ -1,0 +1,477 @@
+{
+  "screenshots": [
+    "C:/AI/neural-void.com/foldwink/docs/reports/assets/foldwink-r4-menu-390.png",
+    "C:/AI/neural-void.com/foldwink/docs/reports/assets/foldwink-r4-stats-390.png",
+    "C:/AI/neural-void.com/foldwink/docs/reports/assets/foldwink-r4-result-390.png"
+  ],
+  "layout": {
+    "320x700:menu": {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 936,
+      "clientHeight": 700,
+      "boxes": {
+        "dailyFold": {
+          "x": 16,
+          "y": 285,
+          "width": 288,
+          "height": 75.5,
+          "right": 304,
+          "bottom": 360.5,
+          "visibleInViewport": true
+        },
+        "dailyButton": {
+          "x": 40,
+          "y": 372.5,
+          "width": 240,
+          "height": 50,
+          "right": 280,
+          "bottom": 422.5,
+          "visibleInViewport": true
+        },
+        "statsButton": {
+          "x": 40,
+          "y": 644.5,
+          "width": 240,
+          "height": 50,
+          "right": 280,
+          "bottom": 694.5,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "320x700:stats": {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 805,
+      "clientHeight": 700,
+      "boxes": {
+        "dailyFold": {
+          "x": 16,
+          "y": 324.1875,
+          "width": 288,
+          "height": 75.5,
+          "right": 304,
+          "bottom": 399.6875,
+          "visibleInViewport": true
+        },
+        "archiveRow": {
+          "x": 16,
+          "y": 411.6875,
+          "width": 288,
+          "height": 34,
+          "right": 304,
+          "bottom": 445.6875,
+          "visibleInViewport": true
+        },
+        "backButton": {
+          "x": 16,
+          "y": 649.6875,
+          "width": 288,
+          "height": 50,
+          "right": 304,
+          "bottom": 699.6875,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "320x700:result": {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 929,
+      "clientHeight": 700,
+      "boxes": {
+        "personalMoment": {
+          "x": 16,
+          "y": 589.09375,
+          "width": 288,
+          "height": 85.5,
+          "right": 304,
+          "bottom": 674.59375,
+          "visibleInViewport": true
+        },
+        "shareButton": {
+          "x": 16,
+          "y": 649.59375,
+          "width": 288,
+          "height": 50,
+          "right": 304,
+          "bottom": 699.59375,
+          "visibleInViewport": true
+        },
+        "ctaStack": {
+          "x": 16,
+          "y": 519.59375,
+          "width": 288,
+          "height": 108,
+          "right": 304,
+          "bottom": 627.59375,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "390x844:menu": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 886,
+      "clientHeight": 844,
+      "boxes": {
+        "dailyFold": {
+          "x": 35,
+          "y": 285,
+          "width": 320,
+          "height": 75.5,
+          "right": 355,
+          "bottom": 360.5,
+          "visibleInViewport": true
+        },
+        "dailyButton": {
+          "x": 75,
+          "y": 372.5,
+          "width": 240,
+          "height": 50,
+          "right": 315,
+          "bottom": 422.5,
+          "visibleInViewport": true
+        },
+        "statsButton": {
+          "x": 75,
+          "y": 644.5,
+          "width": 240,
+          "height": 50,
+          "right": 315,
+          "bottom": 694.5,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "390x844:stats": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 844,
+      "clientHeight": 844,
+      "boxes": {
+        "dailyFold": {
+          "x": 16,
+          "y": 324.1875,
+          "width": 358,
+          "height": 75.5,
+          "right": 374,
+          "bottom": 399.6875,
+          "visibleInViewport": true
+        },
+        "archiveRow": {
+          "x": 16,
+          "y": 411.6875,
+          "width": 358,
+          "height": 34,
+          "right": 374,
+          "bottom": 445.6875,
+          "visibleInViewport": true
+        },
+        "backButton": {
+          "x": 16,
+          "y": 682.6875,
+          "width": 358,
+          "height": 50,
+          "right": 374,
+          "bottom": 732.6875,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "390x844:result": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 889,
+      "clientHeight": 844,
+      "boxes": {
+        "personalMoment": {
+          "x": 16,
+          "y": 549.09375,
+          "width": 358,
+          "height": 85.5,
+          "right": 374,
+          "bottom": 634.59375,
+          "visibleInViewport": true
+        },
+        "shareButton": {
+          "x": 16,
+          "y": 646.59375,
+          "width": 358,
+          "height": 50,
+          "right": 374,
+          "bottom": 696.59375,
+          "visibleInViewport": true
+        },
+        "ctaStack": {
+          "x": 16,
+          "y": 708.59375,
+          "width": 358,
+          "height": 108,
+          "right": 374,
+          "bottom": 816.59375,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "430x932:menu": {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "scrollHeight": 932,
+      "clientHeight": 932,
+      "boxes": {
+        "dailyFold": {
+          "x": 55,
+          "y": 285,
+          "width": 320,
+          "height": 75.5,
+          "right": 375,
+          "bottom": 360.5,
+          "visibleInViewport": true
+        },
+        "dailyButton": {
+          "x": 95,
+          "y": 372.5,
+          "width": 240,
+          "height": 50,
+          "right": 335,
+          "bottom": 422.5,
+          "visibleInViewport": true
+        },
+        "statsButton": {
+          "x": 95,
+          "y": 644.5,
+          "width": 240,
+          "height": 50,
+          "right": 335,
+          "bottom": 694.5,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "430x932:stats": {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "scrollHeight": 932,
+      "clientHeight": 932,
+      "boxes": {
+        "dailyFold": {
+          "x": 16,
+          "y": 324.1875,
+          "width": 398,
+          "height": 75.5,
+          "right": 414,
+          "bottom": 399.6875,
+          "visibleInViewport": true
+        },
+        "archiveRow": {
+          "x": 16,
+          "y": 411.6875,
+          "width": 398,
+          "height": 34,
+          "right": 414,
+          "bottom": 445.6875,
+          "visibleInViewport": true
+        },
+        "backButton": {
+          "x": 16,
+          "y": 682.6875,
+          "width": 398,
+          "height": 50,
+          "right": 414,
+          "bottom": 732.6875,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "430x932:result": {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "scrollHeight": 932,
+      "clientHeight": 932,
+      "boxes": {
+        "personalMoment": {
+          "x": 16,
+          "y": 549.09375,
+          "width": 398,
+          "height": 85.5,
+          "right": 414,
+          "bottom": 634.59375,
+          "visibleInViewport": true
+        },
+        "shareButton": {
+          "x": 16,
+          "y": 646.59375,
+          "width": 398,
+          "height": 50,
+          "right": 414,
+          "bottom": 696.59375,
+          "visibleInViewport": true
+        },
+        "ctaStack": {
+          "x": 16,
+          "y": 708.59375,
+          "width": 398,
+          "height": 108,
+          "right": 414,
+          "bottom": 816.59375,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "1280x800:menu": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "scrollHeight": 866,
+      "clientHeight": 800,
+      "boxes": {
+        "dailyFold": {
+          "x": 480,
+          "y": 313,
+          "width": 320,
+          "height": 75.5,
+          "right": 800,
+          "bottom": 388.5,
+          "visibleInViewport": true
+        },
+        "dailyButton": {
+          "x": 520,
+          "y": 400.5,
+          "width": 240,
+          "height": 50,
+          "right": 760,
+          "bottom": 450.5,
+          "visibleInViewport": true
+        },
+        "statsButton": {
+          "x": 520,
+          "y": 672.5,
+          "width": 240,
+          "height": 50,
+          "right": 760,
+          "bottom": 722.5,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "1280x800:stats": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "scrollHeight": 800,
+      "clientHeight": 800,
+      "boxes": {
+        "dailyFold": {
+          "x": 416,
+          "y": 369,
+          "width": 448,
+          "height": 75.5,
+          "right": 864,
+          "bottom": 444.5,
+          "visibleInViewport": true
+        },
+        "archiveRow": {
+          "x": 416,
+          "y": 456.5,
+          "width": 448,
+          "height": 34,
+          "right": 864,
+          "bottom": 490.5,
+          "visibleInViewport": true
+        },
+        "backButton": {
+          "x": 416,
+          "y": 707.5,
+          "width": 448,
+          "height": 50,
+          "right": 864,
+          "bottom": 757.5,
+          "visibleInViewport": true
+        }
+      }
+    },
+    "1280x800:result": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "scrollHeight": 861,
+      "clientHeight": 800,
+      "boxes": {
+        "personalMoment": {
+          "x": 416,
+          "y": 569.5,
+          "width": 448,
+          "height": 85.5,
+          "right": 864,
+          "bottom": 655,
+          "visibleInViewport": true
+        },
+        "shareButton": {
+          "x": 416,
+          "y": 667,
+          "width": 448,
+          "height": 50,
+          "right": 864,
+          "bottom": 717,
+          "visibleInViewport": true
+        },
+        "ctaStack": {
+          "x": 416,
+          "y": 692,
+          "width": 448,
+          "height": 108,
+          "right": 864,
+          "bottom": 800,
+          "visibleInViewport": true
+        }
+      }
+    }
+  }
+}

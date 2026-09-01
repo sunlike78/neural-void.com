@@ -1,0 +1,35 @@
+{
+  "id": "de-0445",
+  "title": "Im Kleiderschrank",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 10,
+    "editorialRank": 0,
+    "gptDifficulty": 10,
+    "gptRationale": "Oberteile, Beinbekleidung, Schuhe und Kleidungszubehör sind vier vertraute und klar getrennte Gruppen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Oberteile",
+      "items": ["T-Shirt", "Pullover", "Hemd", "Bluse"]
+    },
+    {
+      "id": "group_b",
+      "label": "Beinbekleidung",
+      "items": ["Jeans", "Stoffhose", "Shorts", "Leggings"]
+    },
+    {
+      "id": "group_c",
+      "label": "Schuhe",
+      "items": ["Turnschuhe", "Stiefel", "Sandalen", "Hausschuhe"]
+    },
+    {
+      "id": "group_d",
+      "label": "Kleidungszubehör",
+      "items": ["Gürtel", "Schal", "Mütze", "Handschuhe"]
+    }
+  ]
+}

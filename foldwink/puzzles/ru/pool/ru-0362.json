@@ -1,0 +1,38 @@
+{
+  "id": "ru-0362",
+  "title": "Простые совпадения",
+  "difficulty": "easy",
+  "editorialSummary": "Лёгкая доска с бытовой, природной, спортивной и танцевальной категориями; группы различаются по смыслу и легко считываются.",
+  "meta": {
+    "theme": "повседневные знания",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["easy", "everyday", "general-knowledge"],
+    "batch": "cq6-ru-replacements-wave2",
+    "status": "draft"
+  },
+  "groups": [
+    {
+      "id": "kitchen_utensils",
+      "label": "Кухонная утварь",
+      "items": ["Кастрюля", "Сковорода", "Чайник", "Дуршлаг"]
+    },
+    {
+      "id": "domestic_birds",
+      "label": "Домашние птицы",
+      "items": ["Курица", "Утка", "Гусь", "Индейка"]
+    },
+    {
+      "id": "ball_sports",
+      "label": "Игры с мячом",
+      "items": ["Футбол", "Баскетбол", "Волейбол", "Гандбол"]
+    },
+    {
+      "id": "ballroom_dances",
+      "label": "Бальные танцы",
+      "items": ["Вальс", "Танго", "Фокстрот", "Ча-ча-ча"]
+    }
+  ]
+}

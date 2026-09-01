@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0492",
+  "title": "Still Open",
+  "difficulty": "hard",
+  "editorialSummary": "Famous unsolved problems in mathematics and science grouped by field. Pure mathematics: Riemann Hypothesis, P vs NP, Goldbach's Conjecture, Collatz Conjecture — all open problems in pure math/theoretical CS (P vs NP straddles both but is formally a math problem). Physics: Dark Matter Identity, Quantum Gravity, Turbulence (Navier-Stokes smooth solutions), Matter-Antimatter Asymmetry — foundational open questions in physics. Biology/medicine: Origin of Life, Protein Folding (now partially solved by AlphaFold but the general mechanism is still debated), Consciousness, Ageing Mechanism — open biological questions. Cosmology: Nature of Dark Energy, Shape of the Universe, Hubble Tension, Fermi Paradox. Hard because P vs NP looks computational rather than mathematical; Protein Folding looks chemical; Consciousness looks philosophical; Hubble Tension looks like a physics measurement dispute rather than cosmology.",
+  "meta": {
+    "theme": "famous unsolved problems",
+    "categoryType": "classification",
+    "batch": "batch-15",
+    "status": "approved",
+    "difficultyScore": 37,
+    "editorialRank": 51,
+    "gptDifficulty": 61,
+    "gptRationale": "The broad idea of open problems is accessible, but the categories blur and one entry especially invites cross-disciplinary second-guessing."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "UNSOLVED PURE MATHEMATICS",
+      "items": [
+        "Riemann Hypothesis",
+        "Goldbach's Conjecture",
+        "Collatz Conjecture",
+        "Twin Prime Conjecture"
+      ],
+      "revealHint": "UNSOLV"
+    },
+    {
+      "id": "g2",
+      "label": "UNSOLVED PHYSICS",
+      "items": [
+        "Dark Matter Identity",
+        "Quantum Gravity",
+        "Matter-Antimatter Asymmetry",
+        "Turbulence"
+      ],
+      "revealHint": "UNSOLV"
+    },
+    {
+      "id": "g3",
+      "label": "UNSOLVED LIFE SCIENCE",
+      "items": [
+        "Origin of Life",
+        "Consciousness",
+        "Ageing Mechanism",
+        "Why We Sleep"
+      ],
+      "revealHint": "UNSOLV"
+    },
+    {
+      "id": "g4",
+      "label": "UNSOLVED COSMOLOGY",
+      "items": [
+        "Nature of Dark Energy",
+        "Shape of the Universe",
+        "Hubble Tension",
+        "Cosmic Inflation"
+      ],
+      "revealHint": "UNSOLV"
+    }
+  ]
+}

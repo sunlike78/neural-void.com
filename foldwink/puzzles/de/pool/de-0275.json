@@ -1,0 +1,55 @@
+{
+  "id": "de-0275",
+  "title": "Pharmaindustrie",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "pharma",
+    "batch": "de-batch-03",
+    "difficultyScore": 31,
+    "editorialRank": 46,
+    "gptDifficulty": 56,
+    "gptRationale": "Pharmafirmen und Wirkstoffgruppen sind noch relativ bekannt, aber Forschungsbegriffe wie Zulassung oder Wirksamkeit erhöhen die begriffliche Nähe und Abstraktion."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Pharma-Unternehmen",
+      "items": [
+        "Bayer",
+        "Boehringer",
+        "Merck",
+        "Stada"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Wirkstoffgruppen",
+      "items": [
+        "Antibiotika",
+        "Schmerzmittel",
+        "Impfstoffe",
+        "Hormone"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Pharma-Standorte",
+      "items": [
+        "Leverkusen",
+        "Darmstadt",
+        "Ingelheim",
+        "Berlin"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Pharma-Forschung",
+      "items": [
+        "Klinische Studie",
+        "Zulassung",
+        "Wirksamkeit",
+        "Nebenwirkung"
+      ]
+    }
+  ]
+}

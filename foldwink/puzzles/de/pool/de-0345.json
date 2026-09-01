@@ -1,0 +1,59 @@
+{
+  "id": "de-0345",
+  "title": "Raumfahrt-Meilensteine",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Raumfahrt",
+    "batch": "de-batch-04",
+    "difficultyScore": 19,
+    "editorialRank": 30,
+    "gptDifficulty": 37,
+    "gptRationale": "Raumfahrt-Meilensteine sind populärwissenschaftlich gut verankert und die Trennung nach Akteuren funktioniert meist schnell."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "ESA-Missionen",
+      "revealHint": "Europ. Raumfahrt",
+      "items": [
+        "Rosetta",
+        "Herschel",
+        "Gaia",
+        "BepiColombo"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "NASA-Missionen",
+      "revealHint": "US-Raumfahrt",
+      "items": [
+        "Apollo 11",
+        "Voyager",
+        "Hubble",
+        "Curiosity"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Sowjetische Missionen",
+      "revealHint": "UdSSR im All",
+      "items": [
+        "Sputnik",
+        "Wostok 1",
+        "Lunokhod",
+        "Mir"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Private Raumfahrt",
+      "revealHint": "Privater Weltraum",
+      "items": [
+        "Falcon 9",
+        "Crew Dragon",
+        "New Shepard",
+        "Starship"
+      ]
+    }
+  ]
+}

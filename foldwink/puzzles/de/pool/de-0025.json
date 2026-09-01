@@ -1,0 +1,55 @@
+{
+  "id": "de-0025",
+  "title": "Mathematik-Begriffe",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Mathematik",
+    "batch": "de-batch-01",
+    "difficultyScore": 14,
+    "editorialRank": 40,
+    "gptDifficulty": 58,
+    "gptRationale": "Mathematikbegriffe sind zwar schulisch bekannt, aber die Mischung aus Operatoren, Objekten und Fachwörtern erhöht die begriffliche Abstraktion spürbar."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Additions-Begriffe",
+      "items": [
+        "Summe",
+        "Summand",
+        "Plus",
+        "Ergebnis"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Geometrie-Begriffe",
+      "items": [
+        "Dreieck",
+        "Kreis",
+        "Parallelogramm",
+        "Trapez"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Algebra-Begriffe",
+      "items": [
+        "Variable",
+        "Gleichung",
+        "Funktion",
+        "Koeffizient"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Statistik-Begriffe",
+      "items": [
+        "Mittelwert",
+        "Median",
+        "Modus",
+        "Streuung"
+      ]
+    }
+  ]
+}

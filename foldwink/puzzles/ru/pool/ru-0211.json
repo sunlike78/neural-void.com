@@ -1,0 +1,55 @@
+{
+  "id": "ru-0211",
+  "title": "Домашний уют",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Ремонт квартиры",
+    "batch": "ru-batch-07",
+    "difficultyScore": 16,
+    "editorialRank": 14,
+    "gptDifficulty": 12,
+    "gptRationale": "Very everyday home-improvement vocabulary with clean category borders and almost no plausible cross-category confusion."
+  },
+  "groups": [
+    {
+      "id": "flooring",
+      "label": "Напольные покрытия",
+      "items": [
+        "Паркет",
+        "Ламинат",
+        "Плитка",
+        "Ковролин"
+      ]
+    },
+    {
+      "id": "walls",
+      "label": "Отделка стен",
+      "items": [
+        "Обои",
+        "Штукатурка",
+        "Покраска",
+        "Панели"
+      ]
+    },
+    {
+      "id": "plumbing",
+      "label": "Сантехника",
+      "items": [
+        "Унитаз",
+        "Раковина",
+        "Ванна",
+        "Душевая кабина"
+      ]
+    },
+    {
+      "id": "lighting",
+      "label": "Освещение",
+      "items": [
+        "Люстра",
+        "Бра",
+        "Торшер",
+        "Споты"
+      ]
+    }
+  ]
+}

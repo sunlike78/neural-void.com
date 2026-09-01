@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0106",
+  "title": "Card night",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "games",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 20,
+    "editorialRank": 46,
+    "gptDifficulty": 63,
+    "gptRationale": "Card and tabletop game families are recognizable, but genre boundaries and the inclusion of Mahjong create notable category confusion."
+  },
+  "groups": [
+    {
+      "id": "trick",
+      "label": "Trick-Taking Games",
+      "items": [
+        "Bridge",
+        "Spades",
+        "Hearts",
+        "Euchre"
+      ]
+    },
+    {
+      "id": "match",
+      "label": "Matching Games",
+      "items": [
+        "Rummy",
+        "Canasta",
+        "Gin",
+        "Go Fish"
+      ]
+    },
+    {
+      "id": "casino",
+      "label": "Casino Card Games",
+      "items": [
+        "Blackjack",
+        "Poker",
+        "Baccarat",
+        "War"
+      ]
+    },
+    {
+      "id": "solitaire",
+      "label": "Patience Games",
+      "items": [
+        "Klondike",
+        "Spider",
+        "FreeCell",
+        "Pyramid"
+      ]
+    }
+  ]
+}

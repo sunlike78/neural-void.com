@@ -1,0 +1,55 @@
+{
+  "id": "de-0259",
+  "title": "Klassizismus und Romantik",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "klassizismus-romantik",
+    "batch": "de-batch-03",
+    "difficultyScore": 29,
+    "editorialRank": 44,
+    "gptDifficulty": 54,
+    "gptRationale": "Klassizismus und Romantik verlangt stilhistorisches Denken über Architektur, Malerei, Literatur und Musik hinweg statt bloßer Alltagserkennung."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Klassizismus-Bauten",
+      "items": [
+        "Brandenburger Tor",
+        "Glyptothek",
+        "Walhalla",
+        "Altes Museum"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Romantik-Malerei",
+      "items": [
+        "Wanderer im Nebel",
+        "Eismeer",
+        "Mondaufgang",
+        "Riesengebirge"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Romantik-Literatur",
+      "items": [
+        "Eichendorff",
+        "Tieck",
+        "Novalis",
+        "Brentano"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Romantik-Musik",
+      "items": [
+        "Weber",
+        "Schubert",
+        "Schumann",
+        "Mendelssohn"
+      ]
+    }
+  ]
+}

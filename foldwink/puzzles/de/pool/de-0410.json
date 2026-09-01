@@ -1,0 +1,51 @@
+{
+  "id": "de-0410",
+  "title": "Frühstück",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Frühstück",
+    "batch": "cq6-de-replacements-wave3"
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Brotaufstriche",
+      "items": [
+        "Butter",
+        "Marmelade",
+        "Honig",
+        "Frischkäse"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Müsli-Zutaten",
+      "items": [
+        "Haferflocken",
+        "Rosinen",
+        "Nüsse",
+        "Apfelstücke"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Eiergerichte",
+      "items": [
+        "Rührei",
+        "Spiegelei",
+        "Omelett",
+        "Gekochtes Ei"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Frühstücksgetränke",
+      "items": [
+        "Orangensaft",
+        "Milch",
+        "Kaffee",
+        "Tee"
+      ]
+    }
+  ]
+}

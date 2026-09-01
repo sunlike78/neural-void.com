@@ -1,0 +1,31 @@
+{
+  "id": "de-0420",
+  "title": "Gemüsearten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gemüse",
+    "batch": "cq6-de-replacements-wave4"
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Kohlsorten",
+      "items": ["Brokkoli", "Blumenkohl", "Rosenkohl", "Wirsing"]
+    },
+    {
+      "id": "group_b",
+      "label": "Wurzelgemüse",
+      "items": ["Karotte", "Pastinake", "Rote Bete", "Rettich"]
+    },
+    {
+      "id": "group_c",
+      "label": "Hülsenfrüchte",
+      "items": ["Erbsen", "Bohnen", "Linsen", "Kichererbsen"]
+    },
+    {
+      "id": "group_d",
+      "label": "Salatsorten",
+      "items": ["Kopfsalat", "Eisbergsalat", "Feldsalat", "Rucola"]
+    }
+  ]
+}

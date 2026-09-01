@@ -1,0 +1,55 @@
+{
+  "id": "de-9006",
+  "title": "Kunstrichtungen erkennen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kunststile im deutschsprachigen Raum",
+    "batch": "de-batch-11",
+    "difficultyScore": 26,
+    "editorialRank": 50,
+    "gptDifficulty": 66,
+    "gptRationale": "Kunstrichtungen teilen Stilmerkmale, Namen und Epochenwissen, sodass die Gruppen ohne Kulturwissen deutlich schwerer auseinanderzuhalten sind."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Expressionismus",
+      "items": [
+        "Die Brücke",
+        "Verzerrte Gesichter",
+        "Grelle Farben",
+        "Ernst Ludwig Kirchner"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Bauhaus",
+      "items": [
+        "Form folgt Funktion",
+        "Walter Gropius",
+        "Dessau-Schule",
+        "Stahlrohrsessel"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Jugendstil",
+      "items": [
+        "Florale Ornamente",
+        "Wiener Werkstätte",
+        "Gustav Klimt",
+        "Verschlungene Linien"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Dadaismus",
+      "items": [
+        "Zufallscollagen",
+        "Hugo Ball",
+        "Cabaret Voltaire",
+        "Antikunst als Protest"
+      ]
+    }
+  ]
+}

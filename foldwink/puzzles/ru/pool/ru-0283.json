@@ -1,0 +1,55 @@
+{
+  "id": "ru-0283",
+  "title": "Национальная кухня — Россия",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Традиционные русские блюда",
+    "batch": "ru-batch-11",
+    "difficultyScore": 25,
+    "editorialRank": 24,
+    "gptDifficulty": 23,
+    "gptRationale": "Russian cuisine categories are everyday and concrete, with dishes that are widely recognizable to the target audience."
+  },
+  "groups": [
+    {
+      "id": "russian_soups",
+      "label": "Супы",
+      "items": [
+        "Щи",
+        "Борщ",
+        "Рассольник",
+        "Солянка"
+      ]
+    },
+    {
+      "id": "russian_mains",
+      "label": "Горячие блюда",
+      "items": [
+        "Пельмени",
+        "Голубцы",
+        "Котлеты",
+        "Жаркое"
+      ]
+    },
+    {
+      "id": "russian_pies",
+      "label": "Пироги",
+      "items": [
+        "Кулебяка",
+        "Расстегай",
+        "Шаньга",
+        "Курник"
+      ]
+    },
+    {
+      "id": "russian_desserts",
+      "label": "Десерты",
+      "items": [
+        "Кисель",
+        "Варенье",
+        "Пастила",
+        "Медовик"
+      ]
+    }
+  ]
+}

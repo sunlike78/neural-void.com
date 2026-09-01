@@ -1,0 +1,55 @@
+{
+  "id": "de-9049",
+  "title": "In der Küche",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Küchenausstattung",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 10,
+    "editorialRank": 1,
+    "gptDifficulty": 14,
+    "gptRationale": "Geläufige Küchensachen sind nach klaren, funktionalen Gerätegruppen geordnet und ohne Nebenpfade angelegt."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Kochgeschirr",
+      "items": [
+        "Topf",
+        "Pfanne",
+        "Auflaufform",
+        "Backblech"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Küchengeräte",
+      "items": [
+        "Mixer",
+        "Toaster",
+        "Wasserkocher",
+        "Kaffeemaschine"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Schneidewerkzeuge",
+      "items": [
+        "Kochmesser",
+        "Küchenschere",
+        "Sparschäler",
+        "Pizzaschneider"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Messwerkzeuge",
+      "items": [
+        "Messbecher",
+        "Küchenwaage",
+        "Messlöffel",
+        "Küchenthermometer"
+      ]
+    }
+  ]
+}

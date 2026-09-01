@@ -1,0 +1,51 @@
+{
+  "id": "de-0413",
+  "title": "Obstsorten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Obst",
+    "batch": "cq6-de-replacements-wave4"
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Zitrusfrüchte",
+      "items": [
+        "Orange",
+        "Zitrone",
+        "Mandarine",
+        "Grapefruit"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Melonen",
+      "items": [
+        "Wassermelone",
+        "Honigmelone",
+        "Cantaloupe",
+        "Galiamelone"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Steinobst",
+      "items": [
+        "Kirsche",
+        "Pfirsich",
+        "Aprikose",
+        "Pflaume"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Beeren",
+      "items": [
+        "Erdbeere",
+        "Himbeere",
+        "Blaubeere",
+        "Brombeere"
+      ]
+    }
+  ]
+}

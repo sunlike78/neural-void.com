@@ -1,0 +1,55 @@
+{
+  "id": "de-0091",
+  "title": "Tee",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tee",
+    "batch": "de-batch-04",
+    "difficultyScore": 19,
+    "editorialRank": 27,
+    "gptDifficulty": 33,
+    "gptRationale": "Tea categories are fairly transparent, though distinguishing named tea styles from herbal or fruit blends takes some care."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schwarzteesorten",
+      "items": [
+        "Assam",
+        "Darjeeling",
+        "Earl Grey",
+        "English Breakfast"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Grünteesorten",
+      "items": [
+        "Sencha",
+        "Matcha",
+        "Gunpowder",
+        "Jasmin"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Kräuterteesorten",
+      "items": [
+        "Kamille",
+        "Pfefferminze",
+        "Melisse",
+        "Salbei"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Früchteteesorten",
+      "items": [
+        "Hagebutte",
+        "Hibiskus",
+        "Waldbeere",
+        "Apfel-Zimt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0187",
+  "title": "Landwirtschaft",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wirtschaft",
+    "batch": "de-batch-02",
+    "difficultyScore": 20,
+    "editorialRank": 19,
+    "gptDifficulty": 19,
+    "gptRationale": "Landwirtschaft enthält extrem naheliegende Kategorien wie Getreide, Viehzucht und Landmaschinen, die schnell ins Auge fallen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Getreide",
+      "items": [
+        "Weizen",
+        "Roggen",
+        "Gerste",
+        "Hafer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Viehzucht",
+      "items": [
+        "Rind",
+        "Schwein",
+        "Schaf",
+        "Ziege"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Obst und Gemüse",
+      "items": [
+        "Erdbeere",
+        "Spargel",
+        "Karotte",
+        "Zwiebel"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Landmaschinen",
+      "items": [
+        "Traktor",
+        "Mähdrescher",
+        "Pflug",
+        "Erntemaschine"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0307",
+  "title": "Романтические жанры",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Жанры романтической литературы",
+    "batch": "ru-batch-12",
+    "difficultyScore": 32,
+    "editorialRank": 44,
+    "gptDifficulty": 52,
+    "gptRationale": "Genre families are understandable, but cross-genre literary labels and abbreviated subgenres make the set more conceptual than it first appears."
+  },
+  "groups": [
+    {
+      "id": "romance_subgenres",
+      "label": "Поджанры романа",
+      "items": [
+        "Любовный роман",
+        "Исторический роман",
+        "Приключения",
+        "Семейная сага"
+      ]
+    },
+    {
+      "id": "horror_genres",
+      "label": "Ужасы",
+      "items": [
+        "Готика",
+        "Хоррор",
+        "Психол. триллер",
+        "Мистика"
+      ]
+    },
+    {
+      "id": "detective_genres",
+      "label": "Детектив",
+      "items": [
+        "Классический детектив",
+        "Нуар",
+        "Полицейский",
+        "Юридический"
+      ]
+    },
+    {
+      "id": "scifi_genres",
+      "label": "Фантастика",
+      "items": [
+        "Твёрдая НФ",
+        "Киберпанк",
+        "Космоопера",
+        "Постапокалипсис"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0216",
+  "title": "Ruhrgebiet",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "ruhrgebiet",
+    "batch": "de-batch-03",
+    "difficultyScore": 29,
+    "editorialRank": 28,
+    "gptDifficulty": 27,
+    "gptRationale": "Ruhrgebiet hat sehr klare Stadt-, Industrie- und Kulturcluster mit stark bekannten Begriffen und kaum mehrdeutigen Ablenkungen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Ruhrgebiet-Städte",
+      "items": [
+        "Dortmund",
+        "Essen",
+        "Bochum",
+        "Duisburg"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Ruhr-Geschichte",
+      "items": [
+        "Zechensterben",
+        "Stahlkrise",
+        "Gastarbeiter",
+        "Strukturwandel"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Industrie",
+      "items": [
+        "Zeche",
+        "Hochofen",
+        "Kokerei",
+        "Stahlwerk"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Ruhr-Kultur",
+      "items": [
+        "Ruhrtriennale",
+        "Extraschicht",
+        "Zollverein",
+        "Gasometer"
+      ]
+    }
+  ]
+}

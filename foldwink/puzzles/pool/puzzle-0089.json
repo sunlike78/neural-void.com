@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0089",
+  "title": "Coat and collar",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "hats",
+      "label": "Hats",
+      "items": [
+        "Beret",
+        "Fedora",
+        "Panama",
+        "Trilby"
+      ]
+    },
+    {
+      "id": "bags",
+      "label": "Bags",
+      "items": [
+        "Tote",
+        "Clutch",
+        "Duffel",
+        "Satchel"
+      ]
+    },
+    {
+      "id": "watches",
+      "label": "Watch Parts",
+      "items": [
+        "Bezel",
+        "Crown",
+        "Dial",
+        "Strap"
+      ]
+    },
+    {
+      "id": "knots",
+      "label": "Tie Knots",
+      "items": [
+        "Windsor",
+        "Four-in-hand",
+        "Half Windsor",
+        "Pratt"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 12,
+    "editorialRank": 45,
+    "gptDifficulty": 67,
+    "gptRationale": "Fashion accessories and specialized watch/tie vocabulary create stronger ambiguity and require more precise domain knowledge than most easy-tier sets."
+  }
+}

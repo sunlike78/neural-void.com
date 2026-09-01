@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0066",
+  "title": "State of play",
+  "difficulty": "medium",
+  "editorialSummary": "Game terms by game type.",
+  "groups": [
+    {
+      "id": "chess",
+      "label": "Chess Terms",
+      "revealHint": "CHESS",
+      "items": [
+        "Gambit",
+        "Pin",
+        "Zugzwang",
+        "Fianchetto"
+      ]
+    },
+    {
+      "id": "poker",
+      "label": "Poker Terms",
+      "revealHint": "POKER",
+      "items": [
+        "Flop",
+        "Bluff",
+        "River",
+        "Straight"
+      ]
+    },
+    {
+      "id": "go",
+      "label": "Go Terms",
+      "revealHint": "GO",
+      "items": [
+        "Atari",
+        "Joseki",
+        "Komi",
+        "Seki"
+      ]
+    },
+    {
+      "id": "tennis",
+      "label": "Tennis Terms",
+      "revealHint": "TENNIS",
+      "items": [
+        "Ace",
+        "Lob",
+        "Volley",
+        "Deuce"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 20,
+    "editorialRank": 54,
+    "gptDifficulty": 76,
+    "gptRationale": "This is one of the tougher medium puzzles because it mixes specialized terminology from four games, including several terms many players will not know."
+  }
+}

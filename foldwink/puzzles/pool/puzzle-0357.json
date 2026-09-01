@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0357",
+  "title": "Shape Families",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "mathematics",
+    "categoryType": "classification",
+    "batch": "batch-10",
+    "status": "approved",
+    "difficultyScore": 30,
+    "editorialRank": 40,
+    "gptDifficulty": 46,
+    "gptRationale": "Most shapes are standard school math vocabulary, with only the Platonic-solid group pushing it slightly above mid-tier ease."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Quadrilaterals",
+      "items": [
+        "Rhombus",
+        "Trapezoid",
+        "Parallelogram",
+        "Rectangle"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Types of Triangles",
+      "items": [
+        "Acute",
+        "Obtuse",
+        "Right",
+        "Equilateral"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "3D Solids",
+      "items": [
+        "Tetrahedron",
+        "Octahedron",
+        "Dodecahedron",
+        "Icosahedron"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Conic Sections",
+      "items": [
+        "Ellipse",
+        "Parabola",
+        "Hyperbola",
+        "Circle"
+      ]
+    }
+  ]
+}

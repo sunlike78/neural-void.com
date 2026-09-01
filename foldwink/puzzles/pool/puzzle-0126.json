@@ -1,0 +1,68 @@
+{
+  "id": "puzzle-0126",
+  "title": "Styles and Strategy",
+  "difficulty": "medium",
+  "editorialSummary": "Built as a clean medium board with two deliberate false trails: head-related words split into Headwear and Salon cuts, while play-related words split into Classic board games and Chess pieces. Internal critique rejected broader or weaker variants, including synonym-paired hat options and dance-based sets that created cleaner alternate labels.",
+  "meta": {
+    "theme": "style and play",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "general",
+      "medium",
+      "style",
+      "games"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 9
+  },
+  "groups": [
+    {
+      "id": "headwear",
+      "label": "Headwear",
+      "items": [
+        "Beret",
+        "Bonnet",
+        "Fedora",
+        "Turban"
+      ],
+      "revealHint": "Dress code"
+    },
+    {
+      "id": "cuts",
+      "label": "Haircuts",
+      "items": [
+        "Bob",
+        "Mullet",
+        "Pixie",
+        "Shag"
+      ],
+      "revealHint": "New look"
+    },
+    {
+      "id": "board",
+      "label": "Classic board games",
+      "items": [
+        "Monopoly",
+        "Scrabble",
+        "Clue",
+        "Risk"
+      ],
+      "revealHint": "Boxed staples of family game night"
+    },
+    {
+      "id": "chess",
+      "label": "Chess pieces",
+      "items": [
+        "Bishop",
+        "Knight",
+        "Pawn",
+        "Rook"
+      ],
+      "revealHint": "Roles in a 64-square battle"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ru-0002",
+  "title": "Что можно снять и включить",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "фразеологизмы_и_ирония",
+    "categoryType": "idiom_attribute",
+    "batch": "ru-batch-01",
+    "difficultyScore": 22,
+    "editorialRank": 25,
+    "gptRationale": "Остроумные фразеологизмы русского языка, соединяющие быт, кино и сленг."
+  },
+  "groups": [
+    {
+      "id": "verbs_take_off",
+      "label": "Что можно «снять»",
+      "revealHint": "СНЯТЬ",
+      "items": [
+        "Фильм",
+        "Квартиру",
+        "Шляпу",
+        "Кассу"
+      ]
+    },
+    {
+      "id": "verbs_hang",
+      "label": "Что можно «повесить»",
+      "revealHint": "ВЕСИТЬ",
+      "items": [
+        "Нос",
+        "Уши",
+        "Ярлык",
+        "Трубку"
+      ]
+    },
+    {
+      "id": "verbs_turn_on",
+      "label": "Что можно «включить»",
+      "revealHint": "ВКЛЮЧИТЬ",
+      "items": [
+        "Свет",
+        "Дурака",
+        "Заднюю",
+        "Логику"
+      ]
+    },
+    {
+      "id": "verbs_brew_cook",
+      "label": "Что можно «варить»",
+      "revealHint": "ВАРИТЬ",
+      "items": [
+        "Кашу",
+        "Кофе",
+        "Металл",
+        "Котелок"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "de-0403",
+  "title": "Antonyme nach Thema",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Antonyme",
+    "batch": "de-batch-05",
+    "difficultyScore": 31,
+    "editorialRank": 38,
+    "gptDifficulty": 42,
+    "gptRationale": "Die Antonymfelder sind erkennbar, doch innerhalb der Paare gibt es semantische Abstufungen statt glasklarer Eins-zu-eins-Gegensätze."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Temperaturwörter",
+      "items": [
+        "heiß",
+        "kalt",
+        "glühend",
+        "eisig"
+      ],
+      "revealHint": "Temp"
+    },
+    {
+      "id": "group_b",
+      "label": "Größenwörter",
+      "items": [
+        "riesig",
+        "winzig",
+        "gewaltig",
+        "zwergenhaft"
+      ],
+      "revealHint": "Größe"
+    },
+    {
+      "id": "group_c",
+      "label": "Geschwindigkeitswörter",
+      "items": [
+        "rasend",
+        "gemächlich",
+        "blitzschnell",
+        "schleppend"
+      ],
+      "revealHint": "Tempo"
+    },
+    {
+      "id": "group_d",
+      "label": "Emotionswörter",
+      "items": [
+        "heiter",
+        "trübsinnig",
+        "begeistert",
+        "niedergeschlagen"
+      ],
+      "revealHint": "Gefühl"
+    }
+  ]
+}

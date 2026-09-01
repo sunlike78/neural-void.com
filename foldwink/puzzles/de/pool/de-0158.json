@@ -1,0 +1,55 @@
+{
+  "id": "de-0158",
+  "title": "Augenarzt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gesundheit",
+    "batch": "de-batch-02",
+    "difficultyScore": 27,
+    "editorialRank": 37,
+    "gptDifficulty": 44,
+    "gptRationale": "Viele Begriffe sind geläufig, aber ophthalmologische Fachwörter wie Astigmatismus, Makuladegeneration oder Spaltlampe erhöhen den Anspruch etwas."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Sehfehler",
+      "items": [
+        "Kurzsichtigkeit",
+        "Weitsichtigkeit",
+        "Astigmatismus",
+        "Alterssichtigkeit"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Sehhilfen",
+      "items": [
+        "Brille",
+        "Kontaktlinsen",
+        "Lupenbrille",
+        "Laser-OP"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Augenerkrankungen",
+      "items": [
+        "Grauer Star",
+        "Grüner Star",
+        "Makuladegeneration",
+        "Bindehautentzündung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Untersuchungen",
+      "items": [
+        "Sehtest",
+        "Augendruckmessung",
+        "Spaltlampe",
+        "Gesichtsfeld"
+      ]
+    }
+  ]
+}

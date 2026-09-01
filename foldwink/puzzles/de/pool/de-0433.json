@@ -1,0 +1,55 @@
+{
+  "id": "de-0433",
+  "title": "Im Badezimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 10,
+    "editorialRank": 0,
+    "gptDifficulty": 10,
+    "gptRationale": "Die vier Gruppen benennen jeweils eine konkrete Art von Badartikel und sind im Alltag klar unterscheidbar."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Haarpflege",
+      "items": [
+        "Shampoo",
+        "Spülung",
+        "Haarkur",
+        "Haaröl"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Zahnpflege",
+      "items": [
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Mundspülung"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Duschprodukte",
+      "items": [
+        "Duschgel",
+        "Seife",
+        "Duschöl",
+        "Duschschaum"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Badtextilien",
+      "items": [
+        "Handtuch",
+        "Waschlappen",
+        "Bademantel",
+        "Badematte"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0017",
+  "title": "Дикие животные",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Дикие животные",
+    "batch": "ru-batch-01",
+    "difficultyScore": 46,
+    "editorialRank": 32,
+    "gptDifficulty": 22,
+    "gptRationale": "Wild-animal groupings are familiar and visually distinct, making the set easy to parse."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Хищники леса",
+      "items": [
+        "Волк",
+        "Медведь",
+        "Рысь",
+        "Лиса"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Травоядные леса",
+      "items": [
+        "Лось",
+        "Олень",
+        "Кабан",
+        "Косуля"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Африканские животные",
+      "items": [
+        "Лев",
+        "Слон",
+        "Жираф",
+        "Зебра"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Полярные животные",
+      "items": [
+        "Белый медведь",
+        "Морж",
+        "Тюлень",
+        "Песец"
+      ]
+    }
+  ]
+}

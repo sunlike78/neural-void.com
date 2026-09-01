@@ -1,0 +1,59 @@
+{
+  "id": "puzzle-0001",
+  "title": "Morning Ritual",
+  "difficulty": "easy",
+  "tags": [
+    "lifestyle",
+    "cozy",
+    "food"
+  ],
+  "groups": [
+    {
+      "id": "coffee_brew",
+      "label": "Coffee brewing methods",
+      "items": [
+        "French Press",
+        "Pour Over",
+        "Espresso",
+        "Cold Brew"
+      ]
+    },
+    {
+      "id": "bakery",
+      "label": "Artisan bakery pastries",
+      "items": [
+        "Croissant",
+        "Sourdough",
+        "Brioche",
+        "Baguette"
+      ]
+    },
+    {
+      "id": "alarm_sounds",
+      "label": "Morning sounds",
+      "items": [
+        "Chime",
+        "Rooster",
+        "Buzzer",
+        "Birds"
+      ]
+    },
+    {
+      "id": "breakfast_spreads",
+      "label": "Breakfast spreads",
+      "items": [
+        "Butter",
+        "Jam",
+        "Honey",
+        "Marmalade"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "morning_ritual",
+    "categoryType": "classification",
+    "difficultyScore": 10,
+    "editorialRank": 10,
+    "gptRationale": "Warm cozy morning aesthetic with clean single-category boundaries and immediate recognition."
+  }
+}

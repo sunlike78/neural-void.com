@@ -1,0 +1,55 @@
+{
+  "id": "de-0225",
+  "title": "Nordische Mythologie",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "nordische-mythologie",
+    "batch": "de-batch-03",
+    "difficultyScore": 31,
+    "editorialRank": 45,
+    "gptDifficulty": 55,
+    "gptRationale": "Nordische Mythologie enthält mehrere weniger alltagsbekannte Namen und semantisch nahe Figuren- und Ortswelten."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Asen-Götter",
+      "items": [
+        "Odin",
+        "Thor",
+        "Tyr",
+        "Baldur"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Wanen-Götter",
+      "items": [
+        "Freyr",
+        "Freya",
+        "Njörd",
+        "Kvasir"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Riesen der Edda",
+      "items": [
+        "Ymir",
+        "Thrym",
+        "Surtr",
+        "Utgard-Loki"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nordische Orte",
+      "items": [
+        "Asgard",
+        "Midgard",
+        "Niflheim",
+        "Valhalla"
+      ]
+    }
+  ]
+}

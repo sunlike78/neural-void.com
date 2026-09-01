@@ -1,0 +1,62 @@
+{
+  "id": "de-0317",
+  "title": "Kleidung für draußen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kleidung für draußen",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "kleidung",
+      "alltag",
+      "mode"
+    ],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 11
+  },
+  "groups": [
+    {
+      "id": "headwear",
+      "label": "Kopfbedeckungen",
+      "items": [
+        "Mütze",
+        "Hut",
+        "Kappe",
+        "Stirnband"
+      ]
+    },
+    {
+      "id": "tops",
+      "label": "Oberteile",
+      "items": [
+        "Hemd",
+        "Pullover",
+        "T-Shirt",
+        "Bluse"
+      ]
+    },
+    {
+      "id": "legwear",
+      "label": "Unterteile",
+      "items": [
+        "Hose",
+        "Rock",
+        "Shorts",
+        "Leggings"
+      ]
+    },
+    {
+      "id": "footwear",
+      "label": "Schuhe",
+      "items": [
+        "Sneaker",
+        "Stiefel",
+        "Sandale",
+        "Wanderschuh"
+      ]
+    }
+  ]
+}

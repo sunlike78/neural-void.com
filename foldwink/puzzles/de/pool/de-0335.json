@@ -1,0 +1,59 @@
+{
+  "id": "de-0335",
+  "title": "Medizinische Fachgebiete",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Medizin Fachgebiete",
+    "batch": "de-batch-04",
+    "difficultyScore": 38,
+    "editorialRank": 31,
+    "gptDifficulty": 27,
+    "gptRationale": "Medizinische Fachgebiete und typische Fälle sind relativ geläufig und lassen sich ohne viel Wortspielaufwand sortieren."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Innere Medizin behandelt",
+      "revealHint": "Ohne Operation",
+      "items": [
+        "Herzinsuffizienz",
+        "Diabetes",
+        "Lungenentzündung",
+        "Hepatitis"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Chirurgie behandelt",
+      "revealHint": "Mit Operation",
+      "items": [
+        "Appendektomie",
+        "Bypass",
+        "Transplantation",
+        "Fraktur"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Psychiatrie behandelt",
+      "revealHint": "Psyche und Geist",
+      "items": [
+        "Depression",
+        "Schizophrenie",
+        "Bipolare Störung",
+        "PTBS"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Neurologie behandelt",
+      "revealHint": "Nervensystem",
+      "items": [
+        "Schlaganfall",
+        "Epilepsie",
+        "Parkinson",
+        "MS"
+      ]
+    }
+  ]
+}

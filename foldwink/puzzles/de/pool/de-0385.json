@@ -1,0 +1,59 @@
+{
+  "id": "de-0385",
+  "title": "Trainingsformen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Training",
+    "batch": "de-batch-04",
+    "difficultyScore": 24,
+    "editorialRank": 28,
+    "gptDifficulty": 31,
+    "gptRationale": "Trainingsformen sind gut unterscheidbar, auch wenn einzelne Übungen wie Intervalltraining oder Yoga zunächst in mehrere Richtungen deuten könnten."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Ausdauertraining",
+      "revealHint": "Lange Belastung",
+      "items": [
+        "Dauerlauf",
+        "Intervalltraining",
+        "Fahrradfahren",
+        "Schwimmen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Krafttraining",
+      "revealHint": "Muskeln aufbauen",
+      "items": [
+        "Bankdrücken",
+        "Kniebeuge",
+        "Kreuzheben",
+        "Klimmzug"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Koordinationstraining",
+      "revealHint": "Bewegung steuern",
+      "items": [
+        "Balance",
+        "Reaktion",
+        "Rhythmisierung",
+        "Differenzierung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Flexibilitätstraining",
+      "revealHint": "Beweglichkeit",
+      "items": [
+        "Statisches Dehnen",
+        "Dynamisches Dehnen",
+        "Yoga",
+        "PNF-Methode"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0257",
+  "title": "Münchner Architektur",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "muenchner-architektur",
+    "batch": "de-batch-03",
+    "difficultyScore": 35,
+    "editorialRank": 51,
+    "gptDifficulty": 62,
+    "gptRationale": "Münchner Architektur kombiniert Stil-, Orts- und Gebäudewissen auf recht lokaler Ebene und hat dadurch höhere Hürden."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Münchner Barock",
+      "items": [
+        "Nymphenburg",
+        "Theatinerkirche",
+        "Residenz",
+        "Asamkirche"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Jugendstil München",
+      "items": [
+        "Müllersches Volksbad",
+        "Preysing-Palais",
+        "Elvira-Atelier",
+        "Hofatelier Elvira"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Moderne München",
+      "items": [
+        "BMW Welt",
+        "Olympiastadion",
+        "Pinakothek der Moderne",
+        "Allianz Arena"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Historisches München",
+      "items": [
+        "Marienplatz",
+        "Isartor",
+        "Sendlinger Tor",
+        "Hofbräuhaus"
+      ]
+    }
+  ]
+}

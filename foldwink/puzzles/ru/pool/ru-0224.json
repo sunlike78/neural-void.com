@@ -1,0 +1,55 @@
+{
+  "id": "ru-0224",
+  "title": "Озёра мира",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Знаменитые озёра",
+    "batch": "ru-batch-08",
+    "difficultyScore": 22,
+    "editorialRank": 44,
+    "gptDifficulty": 58,
+    "gptRationale": "World-lake knowledge is less automatic, and the 'горные озёра' set depends on somewhat specialized geographic familiarity."
+  },
+  "groups": [
+    {
+      "id": "african_lakes",
+      "label": "Африка",
+      "items": [
+        "Виктория",
+        "Танганьика",
+        "Малави",
+        "Чад"
+      ]
+    },
+    {
+      "id": "american_lakes",
+      "label": "Великие озёра",
+      "items": [
+        "Верхнее",
+        "Мичиган",
+        "Гурон",
+        "Эри"
+      ]
+    },
+    {
+      "id": "russian_lakes",
+      "label": "Россия",
+      "items": [
+        "Байкал",
+        "Ладожское",
+        "Онежское",
+        "Чудское"
+      ]
+    },
+    {
+      "id": "mountain_lakes",
+      "label": "Альпийские озёра",
+      "items": [
+        "Гарда",
+        "Женевское",
+        "Комо",
+        "Люцерн"
+      ]
+    }
+  ]
+}

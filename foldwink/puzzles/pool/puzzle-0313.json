@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0313",
+  "title": "Bread Around the World",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification",
+    "batch": "batch-08",
+    "status": "approved",
+    "difficultyScore": 26,
+    "editorialRank": 42,
+    "gptDifficulty": 52,
+    "gptRationale": "Many entries are recognizable as breads, but distinguishing preparation/style groups across multiple cuisines requires more precise food knowledge."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Flatbreads",
+      "items": [
+        "Roti",
+        "Lavash",
+        "Tortilla",
+        "Matzo"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Leavened Loaves",
+      "items": [
+        "Sourdough",
+        "Soda Bread",
+        "Ciabatta",
+        "Brioche"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Steamed Breads",
+      "items": [
+        "Mantou",
+        "Dhokla",
+        "Chinese Flower Roll",
+        "Bao Bun"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Enriched Sweet Breads",
+      "items": [
+        "Challah",
+        "Panettone",
+        "Babka",
+        "Stollen"
+      ]
+    }
+  ]
+}

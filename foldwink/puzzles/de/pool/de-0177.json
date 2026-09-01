@@ -1,0 +1,55 @@
+{
+  "id": "de-0177",
+  "title": "Gebirge der Welt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-batch-02",
+    "difficultyScore": 42,
+    "editorialRank": 45,
+    "gptDifficulty": 47,
+    "gptRationale": "Gebirge der Welt sind thematisch klar, aber einige weniger geläufige Namen wie Rwenzori oder Tianshan heben die Schwierigkeit etwas an."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Europäische Gebirge",
+      "items": [
+        "Alpen",
+        "Pyrenäen",
+        "Karpaten",
+        "Skandinav. Gebirge"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Amerikanische Gebirge",
+      "items": [
+        "Rocky Mountains",
+        "Anden",
+        "Appalachen",
+        "Sierra Nevada"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Asiatische Gebirge",
+      "items": [
+        "Himalaya",
+        "Karakorum",
+        "Hindukusch",
+        "Tianshan"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Afrikanische Gebirge",
+      "items": [
+        "Tibesti",
+        "Atlas",
+        "Rwenzori",
+        "Drakensberge"
+      ]
+    }
+  ]
+}

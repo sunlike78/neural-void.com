@@ -1,0 +1,55 @@
+{
+  "id": "de-0122",
+  "title": "Zirkus und Varieté",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Unterhaltung",
+    "batch": "de-batch-02",
+    "difficultyScore": 16,
+    "editorialRank": 24,
+    "gptDifficulty": 30,
+    "gptRationale": "Circus imagery is vivid and category-driven, though a few roles and props can overlap in feel."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Artisten",
+      "items": [
+        "Akrobat",
+        "Jongleur",
+        "Trapezartist",
+        "Seiltänzer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Zirkustiere",
+      "items": [
+        "Elefant",
+        "Löwe",
+        "Pferd",
+        "Bär"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Requisiten",
+      "items": [
+        "Feuerfackel",
+        "Zylinder",
+        "Reifen",
+        "Einrad"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Berufe",
+      "items": [
+        "Clown",
+        "Zauberer",
+        "Dompteur",
+        "Conférencier"
+      ]
+    }
+  ]
+}

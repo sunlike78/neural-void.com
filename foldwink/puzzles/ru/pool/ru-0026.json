@@ -1,0 +1,55 @@
+{
+  "id": "ru-0026",
+  "title": "Мебель",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Мебель",
+    "batch": "ru-batch-01",
+    "difficultyScore": 40,
+    "editorialRank": 38,
+    "gptDifficulty": 37,
+    "gptRationale": "Furniture is everyday, but several pieces fit multiple use-based categories, creating mild ambiguity."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Мебель для сна",
+      "items": [
+        "Кровать",
+        "Диван",
+        "Раскладушка",
+        "Двухъярусная кровать"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Мебель для хранения",
+      "items": [
+        "Шкаф",
+        "Комод",
+        "Тумбочка",
+        "Стеллаж"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Мебель для сидения",
+      "items": [
+        "Стул",
+        "Кресло",
+        "Табурет",
+        "Пуф"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Мебель со столешницей",
+      "items": [
+        "Стол",
+        "Письменный стол",
+        "Журнальный столик",
+        "Консоль"
+      ]
+    }
+  ]
+}

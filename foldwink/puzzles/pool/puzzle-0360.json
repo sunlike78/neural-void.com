@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0360",
+  "title": "Bone types",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "anatomy",
+    "categoryType": "classification",
+    "batch": "batch-10",
+    "status": "approved",
+    "difficultyScore": 32,
+    "editorialRank": 39,
+    "gptDifficulty": 44,
+    "gptRationale": "Human bone regions are concrete and taught in school, though a few smaller bone names raise the precision needed."
+  },
+  "groups": [
+    {
+      "id": "arm",
+      "label": "Arm Bones",
+      "items": [
+        "Humerus",
+        "Radius",
+        "Ulna",
+        "Clavicle"
+      ]
+    },
+    {
+      "id": "leg",
+      "label": "Leg Bones",
+      "items": [
+        "Femur",
+        "Tibia",
+        "Fibula",
+        "Patella"
+      ]
+    },
+    {
+      "id": "hand",
+      "label": "Hand Bones",
+      "items": [
+        "Carpals",
+        "Metacarpals",
+        "Phalanges",
+        "Hamate"
+      ]
+    },
+    {
+      "id": "foot",
+      "label": "Foot Bones",
+      "items": [
+        "Metatarsal",
+        "Navicular",
+        "Calcaneus",
+        "Cuboid"
+      ]
+    }
+  ]
+}

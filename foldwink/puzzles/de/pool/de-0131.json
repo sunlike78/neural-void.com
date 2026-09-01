@@ -1,0 +1,55 @@
+{
+  "id": "de-0131",
+  "title": "Camping",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Freizeit",
+    "batch": "de-batch-02",
+    "difficultyScore": 32,
+    "editorialRank": 22,
+    "gptDifficulty": 16,
+    "gptRationale": "Camping gear, food, activities, and formats are very familiar and produce obvious clusters."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Ausrüstung",
+      "items": [
+        "Zelt",
+        "Schlafsack",
+        "Isomatte",
+        "Kopflampe"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Lebensmittel",
+      "items": [
+        "Dosenessen",
+        "Instantnudeln",
+        "Müsliriegel",
+        "Trockenfleisch"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Aktivitäten",
+      "items": [
+        "Lagerfeuer",
+        "Sternegucken",
+        "Wandern",
+        "Kanufahren"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Camping-Arten",
+      "items": [
+        "Zelten",
+        "Biwak",
+        "Wohnwagen",
+        "Camper"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "de-0347",
+  "title": "Astronomische Objekte",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Astronomische Objekte",
+    "batch": "de-batch-04",
+    "difficultyScore": 41,
+    "editorialRank": 34,
+    "gptDifficulty": 29,
+    "gptRationale": "Astronomische Objekttypen sind anschaulich und begrifflich recht klar voneinander unterschieden."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Sterntypen",
+      "revealHint": "Arten von Sternen",
+      "items": [
+        "Roter Riese",
+        "Weißer Zwerg",
+        "Neutronenstern",
+        "Magnetar"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Galaxientypen",
+      "revealHint": "Galaxienformen",
+      "items": [
+        "Spiralgalaxie",
+        "Elliptisch",
+        "Irreguläre",
+        "Linsenförmig"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Nebeltypen",
+      "revealHint": "Gaswolken im All",
+      "items": [
+        "Emissionsnebel",
+        "Reflexionsnebel",
+        "Planetarisch",
+        "Supernova-Rest"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kleinkörper-Typen",
+      "revealHint": "Kleine Objekte",
+      "items": [
+        "Asteroid",
+        "Komet",
+        "Meteoroid",
+        "Zwergplanet"
+      ]
+    }
+  ]
+}

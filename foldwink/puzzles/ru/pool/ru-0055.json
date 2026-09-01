@@ -1,0 +1,55 @@
+{
+  "id": "ru-0055",
+  "title": "Смартфон и приложения",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Смартфон и приложения",
+    "batch": "ru-batch-01",
+    "difficultyScore": 25,
+    "editorialRank": 20,
+    "gptDifficulty": 16,
+    "gptRationale": "Smartphone functions and apps are highly familiar to most players, with clean category cues."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Функции смартфона",
+      "items": [
+        "Камера",
+        "Фонарик",
+        "Навигатор",
+        "Будильник"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Мессенджеры",
+      "items": [
+        "WhatsApp",
+        "Telegram",
+        "Viber",
+        "Signal"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Стриминговые сервисы",
+      "items": [
+        "Spotify",
+        "YouTube",
+        "Netflix",
+        "Кинопоиск"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Настройки телефона",
+      "items": [
+        "Яркость",
+        "Авиарежим",
+        "Wi-Fi",
+        "Bluetooth"
+      ]
+    }
+  ]
+}

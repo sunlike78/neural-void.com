@@ -1,0 +1,62 @@
+{
+  "id": "ru-0359",
+  "title": "Ясные категории",
+  "difficulty": "easy",
+  "editorialSummary": "Четыре независимые категории из школьного и повседневного кругозора; ни одна карточка не подходит к соседней группе.",
+  "meta": {
+    "theme": "общие знания",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "easy",
+      "general-knowledge",
+      "school"
+    ],
+    "batch": "cq6-ru-replacements-wave2",
+    "status": "draft"
+  },
+  "groups": [
+    {
+      "id": "chess_pieces",
+      "label": "Шахматные фигуры",
+      "items": [
+        "Король",
+        "Ферзь",
+        "Ладья",
+        "Слон"
+      ]
+    },
+    {
+      "id": "measuring_instruments",
+      "label": "Измерительные приборы",
+      "items": [
+        "Термометр",
+        "Барометр",
+        "Компас",
+        "Секундомер"
+      ]
+    },
+    {
+      "id": "dog_breeds",
+      "label": "Породы собак",
+      "items": [
+        "Лабрадор",
+        "Такса",
+        "Пудель",
+        "Бигль"
+      ]
+    },
+    {
+      "id": "theatre_genres",
+      "label": "Театральные жанры",
+      "items": [
+        "Комедия",
+        "Трагедия",
+        "Драма",
+        "Мюзикл"
+      ]
+    }
+  ]
+}

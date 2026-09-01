@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0044",
+  "title": "Boxed pantry",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "short-pasta",
+      "label": "Short Pasta",
+      "items": [
+        "Penne",
+        "Fusilli",
+        "Rigatoni",
+        "Farfalle"
+      ]
+    },
+    {
+      "id": "long-pasta",
+      "label": "Long Pasta",
+      "items": [
+        "Spaghetti",
+        "Linguine",
+        "Fettuccine",
+        "Bucatini"
+      ]
+    },
+    {
+      "id": "stuffed",
+      "label": "Stuffed Pasta",
+      "items": [
+        "Ravioli",
+        "Tortellini",
+        "Agnolotti",
+        "Cappelletti"
+      ]
+    },
+    {
+      "id": "dumpling",
+      "label": "Dumplings",
+      "items": [
+        "Gnocchi",
+        "Pierogi",
+        "Wonton",
+        "Manti"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 33,
+    "editorialRank": 54,
+    "gptDifficulty": 68,
+    "gptRationale": "Pasta and dumpling names are concrete but culturally specific, and several Italian forms are easy to mix up without strong food vocabulary."
+  }
+}

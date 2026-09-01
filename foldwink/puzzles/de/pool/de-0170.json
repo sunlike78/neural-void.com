@@ -1,0 +1,55 @@
+{
+  "id": "de-0170",
+  "title": "Nürnberg Sehenswürdigkeiten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-batch-02",
+    "difficultyScore": 33,
+    "editorialRank": 52,
+    "gptDifficulty": 65,
+    "gptRationale": "Nürnberg mischt gut bekannte Altstadtorte mit spezifischen Stadtteilen und historischen Begriffen, die nicht jeder sofort erkennt."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Burg und Altstadt",
+      "items": [
+        "Kaiserburg",
+        "Stadtmauer",
+        "Hauptmarkt",
+        "Schöner Brunnen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Museen",
+      "items": [
+        "Germ. Nationalmuseum",
+        "Spielzeugmuseum",
+        "Dokumentation Nürnberg",
+        "DB Museum"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Stadtteile",
+      "items": [
+        "Gostenhof",
+        "Schweinau",
+        "Ziegelstein",
+        "Laufamholz"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Geschichte",
+      "items": [
+        "Nürnberger Prozesse",
+        "Reichsparteitag",
+        "Albrecht Dürer",
+        "Nürnberger Trichter"
+      ]
+    }
+  ]
+}

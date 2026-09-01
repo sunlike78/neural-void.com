@@ -1,0 +1,55 @@
+{
+  "id": "de-0011",
+  "title": "Frühstückstisch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Frühstück",
+    "batch": "de-batch-01",
+    "difficultyScore": 12,
+    "editorialRank": 17,
+    "gptDifficulty": 21,
+    "gptRationale": "Frühstücksprodukte sind sehr bekannt und sauber gruppiert, auch wenn einzelne Milchprodukte oder Backwaren leicht querassoziiert werden können."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Brotaufstriche",
+      "items": [
+        "Erdnussbutter",
+        "Marmelade",
+        "Honig",
+        "Nutella"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Backwaren",
+      "items": [
+        "Brötchen",
+        "Toast",
+        "Croissant",
+        "Baguette"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Frühstücksgetränke",
+      "items": [
+        "Kaffee",
+        "Tee",
+        "Orangensaft",
+        "Milch"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Milchprodukte",
+      "items": [
+        "Joghurt",
+        "Quark",
+        "Käse",
+        "Sahne"
+      ]
+    }
+  ]
+}

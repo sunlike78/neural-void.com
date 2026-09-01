@@ -1,0 +1,55 @@
+{
+  "id": "ru-0003",
+  "title": "Пасха и весна",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Пасха и весна",
+    "batch": "ru-batch-01",
+    "difficultyScore": 30,
+    "editorialRank": 31,
+    "gptDifficulty": 32,
+    "gptRationale": "Mostly familiar seasonal material, though Easter items and spring phenomena require a bit more thematic sorting than the easiest sets."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Пасхальные символы",
+      "items": [
+        "Кулич",
+        "Крашенки",
+        "Творожная пасха",
+        "Верба"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Весенние цветы",
+      "items": [
+        "Подснежники",
+        "Тюльпаны",
+        "Мимоза",
+        "Нарциссы"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Признаки весны",
+      "items": [
+        "Капель",
+        "Проталины",
+        "Ледоход",
+        "Половодье"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Весенние птицы",
+      "items": [
+        "Ласточки",
+        "Скворцы",
+        "Грачи",
+        "Жаворонки"
+      ]
+    }
+  ]
+}

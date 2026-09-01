@@ -1,0 +1,55 @@
+{
+  "id": "de-0494",
+  "title": "Im Kleiderschrank",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kleidung",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 8,
+    "editorialRank": 1,
+    "gptDifficulty": 12,
+    "gptRationale": "Die vier Kleidungsarten sind im deutschen Alltag sehr geläufig und jedes Wort hat eine eindeutige Funktion."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Oberteile",
+      "items": [
+        "T-Shirt",
+        "Pullover",
+        "Hemd",
+        "Bluse"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Unterteile",
+      "items": [
+        "Hose",
+        "Rock",
+        "Shorts",
+        "Leggings"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Schuhe",
+      "items": [
+        "Sneaker",
+        "Sandale",
+        "Stiefel",
+        "Hausschuh"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kopfbedeckungen",
+      "items": [
+        "Mütze",
+        "Kappe",
+        "Hut",
+        "Kopftuch"
+      ]
+    }
+  ]
+}

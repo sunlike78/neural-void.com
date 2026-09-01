@@ -1,0 +1,55 @@
+{
+  "id": "ru-0052",
+  "title": "Детские игрушки",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Детские игрушки",
+    "batch": "ru-batch-01",
+    "difficultyScore": 27,
+    "editorialRank": 19,
+    "gptDifficulty": 13,
+    "gptRationale": "Toy categories are extremely familiar and visually distinct, making the grouping nearly automatic."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Куклы и фигурки",
+      "items": [
+        "Барби",
+        "Пупс",
+        "Солдатики",
+        "Лего-фигурки"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Транспорт-игрушки",
+      "items": [
+        "Машинка",
+        "Поезд",
+        "Вертолёт",
+        "Корабль"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Мягкие игрушки",
+      "items": [
+        "Плюшевый мишка",
+        "Зайчик",
+        "Собачка",
+        "Лисица"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Конструкторы",
+      "items": [
+        "Лего",
+        "Магнитный конструктор",
+        "Кубики",
+        "Пазл"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0221",
+  "title": "Take the jacket",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of jacket — outerwear garment, book cover, potato skin, vinyl record sleeve. Outerwear false trail as 'denim' and 'leather' pull towards fabric-type thinking.",
+  "meta": {
+    "theme": "wordplay",
+    "categoryType": "wordplay",
+    "batch": "batch-04",
+    "status": "approved",
+    "difficultyScore": 36,
+    "editorialRank": 50,
+    "gptDifficulty": 59,
+    "gptRationale": "Book, potato, record, and clothing jackets are all fair, but the record-jacket set is more niche and raises the solve burden."
+  },
+  "groups": [
+    {
+      "id": "garment",
+      "label": "Garment Jacket",
+      "revealHint": "Coat",
+      "items": [
+        "Denim",
+        "Leather",
+        "Tweed",
+        "Bomber"
+      ]
+    },
+    {
+      "id": "book",
+      "label": "Book Jacket",
+      "revealHint": "Novel",
+      "items": [
+        "Blurb",
+        "Title",
+        "Flap",
+        "Synopsis"
+      ]
+    },
+    {
+      "id": "potato",
+      "label": "Potato Jacket",
+      "revealHint": "Spud",
+      "items": [
+        "Baked",
+        "Crispy",
+        "Butter",
+        "Chives"
+      ]
+    },
+    {
+      "id": "record",
+      "label": "Record Jacket",
+      "revealHint": "Vinyl",
+      "items": [
+        "Liner Notes",
+        "Gatefold",
+        "Track List",
+        "Sleeve Art"
+      ]
+    }
+  ]
+}

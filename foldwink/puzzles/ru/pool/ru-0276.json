@@ -1,0 +1,55 @@
+{
+  "id": "ru-0276",
+  "title": "Виды тканей",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Виды тканей и материалов",
+    "batch": "ru-batch-10",
+    "difficultyScore": 23,
+    "editorialRank": 39,
+    "gptDifficulty": 50,
+    "gptRationale": "Fabric classes are concrete but material-science and trade names like 'гортекс' and 'спандекс' make sorting less automatic."
+  },
+  "groups": [
+    {
+      "id": "natural_fabrics",
+      "label": "Растительные волокна",
+      "items": [
+        "Хлопок",
+        "Лён",
+        "Джут",
+        "Конопля"
+      ]
+    },
+    {
+      "id": "synthetic_fabrics",
+      "label": "Синтетические",
+      "items": [
+        "Нейлон",
+        "Полиэстер",
+        "Акрил",
+        "Спандекс"
+      ]
+    },
+    {
+      "id": "luxury_fabrics",
+      "label": "Животные волокна",
+      "items": [
+        "Кашемир",
+        "Ангора",
+        "Мохер",
+        "Альпака"
+      ]
+    },
+    {
+      "id": "tech_fabrics",
+      "label": "Технические",
+      "items": [
+        "Кевлар",
+        "Гортекс",
+        "Тефлон",
+        "Неопрен"
+      ]
+    }
+  ]
+}

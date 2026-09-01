@@ -1,0 +1,66 @@
+{
+  "id": "puzzle-0164",
+  "title": "Online and Overnight",
+  "difficulty": "easy",
+  "editorialSummary": "Four familiar everyday classifications. The digital groups use different functions, and the bedding set is a distinct, exact home category.",
+  "meta": {
+    "theme": "daily routines",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "digital",
+      "bedding",
+      "email",
+      "classification",
+      "easy"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 5
+  },
+  "groups": [
+    {
+      "id": "email-folders",
+      "label": "Email Folders",
+      "items": [
+        "Drafts",
+        "Inbox",
+        "Sent",
+        "Spam"
+      ]
+    },
+    {
+      "id": "signup-fields",
+      "label": "Sign-Up Fields",
+      "items": [
+        "Email",
+        "Name",
+        "Password",
+        "Username"
+      ]
+    },
+    {
+      "id": "bedding",
+      "label": "Bedding",
+      "items": [
+        "Blanket",
+        "Duvet",
+        "Pillow",
+        "Sheet"
+      ]
+    },
+    {
+      "id": "video-player-controls",
+      "label": "Video Player Controls",
+      "items": [
+        "Pause",
+        "Play",
+        "Rewind",
+        "Skip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0061",
+  "title": "Цирк",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Цирк",
+    "batch": "ru-batch-01",
+    "difficultyScore": 23,
+    "editorialRank": 24,
+    "gptDifficulty": 24,
+    "gptRationale": "Circus imagery is vivid and the category splits are concrete and visually memorable."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Цирковые артисты",
+      "items": [
+        "Акробат",
+        "Жонглёр",
+        "Клоун",
+        "Фокусник"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Цирковые животные",
+      "items": [
+        "Слон",
+        "Тигр",
+        "Лошадь",
+        "Медведь"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Цирковые снаряды",
+      "items": [
+        "Трапеция",
+        "Канат",
+        "Батут",
+        "Обруч"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Цирковые атрибуты",
+      "items": [
+        "Арена",
+        "Манеж",
+        "Купол",
+        "Афиша"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0183",
+  "title": "Sacred spaces",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "history",
+    "categoryType": "classification",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 26,
+    "editorialRank": 55,
+    "gptDifficulty": 74,
+    "gptRationale": "Religious and ancient-structure vocabulary is culturally broad but less everyday, with several architecturally adjacent terms inviting misclassification."
+  },
+  "groups": [
+    {
+      "id": "christian",
+      "label": "Christian Buildings",
+      "items": [
+        "Cathedral",
+        "Chapel",
+        "Basilica",
+        "Abbey"
+      ]
+    },
+    {
+      "id": "islamic",
+      "label": "Islamic Buildings",
+      "items": [
+        "Mosque",
+        "Minaret",
+        "Madrasa",
+        "Mausoleum"
+      ]
+    },
+    {
+      "id": "eastern",
+      "label": "Eastern Temples",
+      "items": [
+        "Pagoda",
+        "Stupa",
+        "Shrine",
+        "Torii Gate"
+      ]
+    },
+    {
+      "id": "ancient",
+      "label": "Ancient Monuments",
+      "items": [
+        "Ziggurat",
+        "Colosseum",
+        "Pyramid",
+        "Obelisk"
+      ]
+    }
+  ]
+}

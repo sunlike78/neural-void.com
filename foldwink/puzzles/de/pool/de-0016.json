@@ -1,0 +1,55 @@
+{
+  "id": "de-0016",
+  "title": "Zimmer im Haus",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zimmer im Haus",
+    "batch": "de-batch-01",
+    "difficultyScore": 31,
+    "editorialRank": 29,
+    "gptDifficulty": 27,
+    "gptRationale": "Zimmer und Hausbereiche sind leicht verständlich, aber Außenbereiche wie Garage oder Garten stehen etwas lockerer neben den eigentlichen Räumen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Wohnbereiche",
+      "items": [
+        "Wohnzimmer",
+        "Esszimmer",
+        "Schlafzimmer",
+        "Kinderzimmer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Sanitärräume",
+      "items": [
+        "Badezimmer",
+        "Toilette",
+        "Duschbad",
+        "Gäste-WC"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Nebenräume",
+      "items": [
+        "Keller",
+        "Dachboden",
+        "Abstellkammer",
+        "Hobbyraum"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Außenbereiche",
+      "items": [
+        "Terrasse",
+        "Balkon",
+        "Garten",
+        "Garage"
+      ]
+    }
+  ]
+}

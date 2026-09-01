@@ -1,0 +1,55 @@
+{
+  "id": "de-0366",
+  "title": "Im Badezimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Badezimmer",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 10,
+    "editorialRank": 10,
+    "gptDifficulty": 10,
+    "gptRationale": "Alltägliche Badartikel bilden vier klar getrennte, vertraute Produktgruppen ohne Fachwissen oder mehrdeutige Zuordnung."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Zahnpflegeprodukte",
+      "items": [
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Mundspülung"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Haarpflegeprodukte",
+      "items": [
+        "Shampoo",
+        "Spülung",
+        "Haarkur",
+        "Haaröl"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Duschprodukte",
+      "items": [
+        "Duschgel",
+        "Duschschaum",
+        "Duschöl",
+        "Körperpeeling"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nagelpflegewerkzeuge",
+      "items": [
+        "Nagelfeile",
+        "Nagelschere",
+        "Nagelknipser",
+        "Nagelbürste"
+      ]
+    }
+  ]
+}

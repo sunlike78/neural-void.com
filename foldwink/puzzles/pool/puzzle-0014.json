@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-0014",
+  "title": "Moving Bodies",
+  "difficulty": "easy",
+  "tags": [
+    "sports"
+  ],
+  "groups": [
+    {
+      "id": "dances",
+      "label": "Dances",
+      "items": [
+        "Salsa",
+        "Tango",
+        "Waltz",
+        "Ballet"
+      ]
+    },
+    {
+      "id": "martial",
+      "label": "Martial Arts",
+      "items": [
+        "Karate",
+        "Judo",
+        "Taekwondo",
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": "gym",
+      "label": "Gymnastics",
+      "items": [
+        "Vault",
+        "Beam",
+        "Rings",
+        "Bars"
+      ]
+    },
+    {
+      "id": "track",
+      "label": "Track Events",
+      "items": [
+        "Sprint",
+        "Hurdles",
+        "Relay",
+        "Marathon"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 20,
+    "editorialRank": 36,
+    "gptDifficulty": 46,
+    "gptRationale": "Sports-related terms are concrete, yet gymnastics and track vocabulary are less universal and raise the recall burden."
+  }
+}

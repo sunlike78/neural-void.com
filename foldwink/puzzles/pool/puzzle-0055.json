@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0055",
+  "title": "Morning fuel",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "coffee",
+      "label": "Coffee Drinks",
+      "items": [
+        "Espresso",
+        "Latte",
+        "Macchiato",
+        "Cortado"
+      ]
+    },
+    {
+      "id": "tea",
+      "label": "Tea Leaves",
+      "items": [
+        "Oolong",
+        "Darjeeling",
+        "Assam",
+        "Sencha"
+      ]
+    },
+    {
+      "id": "juice",
+      "label": "Juice",
+      "items": [
+        "Orange",
+        "Apple",
+        "Grapefruit",
+        "Cranberry"
+      ]
+    },
+    {
+      "id": "pastries",
+      "label": "Pastries",
+      "items": [
+        "Croissant",
+        "Muffin",
+        "Scone",
+        "Danish"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 20,
+    "editorialRank": 35,
+    "gptDifficulty": 45,
+    "gptRationale": "Cafe items are common, but tea-leaf names and some coffee-drink distinctions raise the vocabulary load."
+  }
+}

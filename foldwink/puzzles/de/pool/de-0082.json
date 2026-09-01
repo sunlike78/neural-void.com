@@ -1,0 +1,55 @@
+{
+  "id": "de-0082",
+  "title": "Nationalparks Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Nationalparks Deutschland",
+    "batch": "de-batch-04",
+    "difficultyScore": 37,
+    "editorialRank": 62,
+    "gptDifficulty": 78,
+    "gptRationale": "National park grouping is tricky because it requires specific geographic knowledge and includes several strong regional false trails."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Küsten-Nationalparks",
+      "items": [
+        "Wattenmeer NDS",
+        "Wattenmeer HH",
+        "Wattenmeer SH",
+        "Jasmund"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Mittelgebirgs-Parks",
+      "items": [
+        "Harz",
+        "Eifel",
+        "Hunsrück-Hochwald",
+        "Schwarzwald"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Nationalparks im Alpenraum",
+      "items": [
+        "Berchtesgaden",
+        "Kalkalpen",
+        "Gesäuse",
+        "Hohe Tauern"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Weitere Nationalparks",
+      "items": [
+        "Müritz",
+        "Unteres Odertal",
+        "Kellerwald",
+        "Sächs. Schweiz"
+      ]
+    }
+  ]
+}

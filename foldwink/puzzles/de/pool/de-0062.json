@@ -1,0 +1,55 @@
+{
+  "id": "de-0062",
+  "title": "Kochtechniken",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kochtechniken",
+    "batch": "de-batch-03",
+    "difficultyScore": 52,
+    "editorialRank": 53,
+    "gptDifficulty": 53,
+    "gptRationale": "Kochtechniken sind zwar lebensnah, aber viele Verfahren liegen begrifflich nah beieinander und setzen etwas Küchenpraxis voraus."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Bratmethoden",
+      "items": [
+        "Anbraten",
+        "Schmoren",
+        "Frittieren",
+        "Dünsten"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Kochmethoden",
+      "items": [
+        "Kochen",
+        "Dämpfen",
+        "Blanchieren",
+        "Pochieren"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Backmethoden",
+      "items": [
+        "Überbacken",
+        "Braten im Ofen",
+        "Garen",
+        "Gratinieren"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Grillmethoden",
+      "items": [
+        "Direktes Grillen",
+        "Indirektes Grillen",
+        "Räuchern",
+        "Plancha"
+      ]
+    }
+  ]
+}

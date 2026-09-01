@@ -1,0 +1,38 @@
+{
+  "id": "de-0331",
+  "title": "Sauber machen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sauber machen",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["haushalt", "alltag", "putzen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 14
+  },
+  "groups": [
+    {
+      "id": "cleaning_tools",
+      "label": "Putzgeräte",
+      "items": ["Besen", "Staubsauger", "Wischmopp", "Kehrschaufel"]
+    },
+    {
+      "id": "cleaning_products",
+      "label": "Reinigungsmittel",
+      "items": ["Spülmittel", "Waschmittel", "Glasreiniger", "Allzweckreiniger"]
+    },
+    {
+      "id": "laundry_care",
+      "label": "Für die Wäsche",
+      "items": ["Wäschekorb", "Wäscheständer", "Bügeleisen", "Wäscheklammer"]
+    },
+    {
+      "id": "waste_bins",
+      "label": "Abfallbehälter",
+      "items": ["Mülleimer", "Biotonne", "Papiertonne", "Glascontainer"]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0117",
+  "title": "Fußball Bundesliga",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-batch-02",
+    "difficultyScore": 25,
+    "editorialRank": 27,
+    "gptDifficulty": 29,
+    "gptRationale": "Bundesliga content is accessible for many players, though stadiums and record terms may be weaker outside football fans."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Vereine",
+      "items": [
+        "Bayern München",
+        "Borussia Dortmund",
+        "Schalke 04",
+        "Werder Bremen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rekorde",
+      "items": [
+        "Torrekord",
+        "Meistertitel",
+        "Zuschauerzahl",
+        "Siegesserie"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Positionen",
+      "items": [
+        "Torwart",
+        "Stürmer",
+        "Mittelfeld",
+        "Verteidiger"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Stadien",
+      "items": [
+        "Allianz Arena",
+        "Signal Iduna Park",
+        "Olympiastadion",
+        "Volksparkstadion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0257",
+  "title": "Nine worlds",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "mythology",
+    "categoryType": "classification",
+    "batch": "batch-06",
+    "status": "approved",
+    "difficultyScore": 26,
+    "editorialRank": 54,
+    "gptDifficulty": 72,
+    "gptRationale": "Norse-myth vocabulary is the kind of themed knowledge many players only partly know, and the names are similar enough to create strong confusion."
+  },
+  "groups": [
+    {
+      "id": "realms",
+      "label": "Norse Realms",
+      "items": [
+        "Asgard",
+        "Midgard",
+        "Jotunheim",
+        "Helheim"
+      ]
+    },
+    {
+      "id": "creatures",
+      "label": "Norse Creatures",
+      "items": [
+        "Valkyrie",
+        "Fenrir",
+        "Draugr",
+        "Troll"
+      ]
+    },
+    {
+      "id": "items",
+      "label": "Legendary Items",
+      "items": [
+        "Mjolnir",
+        "Gungnir",
+        "Draupnir",
+        "Gleipnir"
+      ]
+    },
+    {
+      "id": "heroes",
+      "label": "Norse Heroes",
+      "items": [
+        "Sigurd",
+        "Brynhild",
+        "Ragnar",
+        "Gunnar"
+      ]
+    }
+  ]
+}

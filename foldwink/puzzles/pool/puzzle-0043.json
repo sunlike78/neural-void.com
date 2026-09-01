@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0043",
+  "title": "Head in the clouds",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "high-clouds",
+      "label": "High Clouds",
+      "items": [
+        "Cirrus",
+        "Cirrocumulus",
+        "Cirrostratus",
+        "Mare's Tail"
+      ]
+    },
+    {
+      "id": "low-clouds",
+      "label": "Low Clouds and Ground Fog",
+      "items": [
+        "Stratus",
+        "Stratocumulus",
+        "Fog",
+        "Mist"
+      ]
+    },
+    {
+      "id": "storm",
+      "label": "Storm Signs",
+      "items": [
+        "Anvil",
+        "Gust Front",
+        "Squall",
+        "Funnel"
+      ]
+    },
+    {
+      "id": "colors",
+      "label": "Sky Colors",
+      "items": [
+        "Dusk",
+        "Golden",
+        "Overcast",
+        "Twilight"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 52,
+    "editorialRank": 66,
+    "gptDifficulty": 76,
+    "gptRationale": "Cloud taxonomy and sky terms are the hardest kind of easy-tier material because the words are specialized and several items feel visually or conceptually adjacent."
+  }
+}

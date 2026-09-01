@@ -1,0 +1,55 @@
+{
+  "id": "de-0096",
+  "title": "Auf der Burg",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Mittelalterliche Burg",
+    "batch": "de-batch-04",
+    "difficultyScore": 25,
+    "editorialRank": 39,
+    "gptDifficulty": 48,
+    "gptRationale": "Castle life is concrete in theme, but several medieval terms are niche enough to slow confident sorting."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Burgverteidigung",
+      "items": [
+        "Zugbrücke",
+        "Burggraben",
+        "Zinnen",
+        "Schießscharten"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Burgbereiche",
+      "items": [
+        "Palas",
+        "Bergfried",
+        "Kapelle",
+        "Vorburg"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Burgpersonal",
+      "items": [
+        "Burgherr",
+        "Knappe",
+        "Wächter",
+        "Kämmerer"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Burgwaffen",
+      "items": [
+        "Katapult",
+        "Pfeil und Bogen",
+        "Kessel mit Pech",
+        "Baliste"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0171",
+  "title": "Deutschlands Nachbarländer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-batch-02",
+    "difficultyScore": 31,
+    "editorialRank": 36,
+    "gptDifficulty": 39,
+    "gptRationale": "Deutschlands Nachbarländer ist grundsätzlich vertraut, doch die Einbindung von Meeren, Flüssen und Bergen erzeugt leichte False Trails."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Norden Deutschlands",
+      "items": [
+        "Dänemark",
+        "Nordsee",
+        "Ostsee",
+        "Schleswig-Holstein"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Osten Deutschlands",
+      "items": [
+        "Polen",
+        "Tschechien",
+        "Oder",
+        "Neisse"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Süden Deutschlands",
+      "items": [
+        "Österreich",
+        "Schweiz",
+        "Bodensee",
+        "Zugspitze"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Westen Deutschlands",
+      "items": [
+        "Frankreich",
+        "Luxemburg",
+        "Belgien",
+        "Niederlande"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0222",
+  "title": "Europäische Märchen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "europaeische-maerchen",
+    "batch": "de-batch-03",
+    "difficultyScore": 35,
+    "editorialRank": 42,
+    "gptDifficulty": 46,
+    "gptRationale": "Märchen sind bekannt, aber das Sortieren nach nationalen Traditionen statt nach Figurentypen verlangt etwas literarische Vorbildung."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Grimm-Märchen",
+      "items": [
+        "Rotkäppchen",
+        "Hänsel und Gretel",
+        "Froschkönig",
+        "Rumpelstilzchen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Andersen-Märchen",
+      "items": [
+        "Kleine Meerjungfrau",
+        "Däumelinchen",
+        "Hässliches Entlein",
+        "Standhafter Zinnsoldat"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Perrault-Märchen",
+      "items": [
+        "Blaubart",
+        "Gestiefelte Kater",
+        "Der kleine Däumling",
+        "Eselshaut"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Slawische Märchen",
+      "items": [
+        "Baba Jaga",
+        "Iwan Zarewitsch",
+        "Firebird",
+        "Wassilissa"
+      ]
+    }
+  ]
+}

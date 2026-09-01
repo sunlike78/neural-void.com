@@ -1,0 +1,59 @@
+{
+  "id": "de-0319",
+  "title": "Soziologie Grundbegriffe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Soziologie",
+    "batch": "de-batch-04",
+    "difficultyScore": 34,
+    "editorialRank": 53,
+    "gptDifficulty": 66,
+    "gptRationale": "Soziologische Kernbegriffe sind deutlich akademischer und mehrere Wörter klingen auch außerhalb ihrer eigentlichen Denktradition plausibel."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Webers Konzepte",
+      "revealHint": "Vers. Soziologie",
+      "items": [
+        "Entzauberung",
+        "Charisma",
+        "Protestantismus",
+        "Bürokratie"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Durkheims Konzepte",
+      "revealHint": "Soziale Fakten",
+      "items": [
+        "Anomie",
+        "Solidarität",
+        "Kollektivbewusstsein",
+        "Totem"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Simmels Konzepte",
+      "revealHint": "Formale Soziologie",
+      "items": [
+        "Wechselwirkung",
+        "Vergesellschaftung",
+        "Fremde",
+        "Triade"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Bourdieus Konzepte",
+      "revealHint": "Kapitaltheorie",
+      "items": [
+        "Habitus",
+        "Feld",
+        "Kapital",
+        "Doxa"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "de-0001",
+  "title": "Alles für den Kater",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wortspiele_und_alltag",
+    "categoryType": "compound_wordplay",
+    "batch": "de-batch-01",
+    "difficultyScore": 23,
+    "editorialRank": 15,
+    "gptRationale": "Kater und Sonnenbrille verbinden Katze, Katerstimmung und die Suche am Morgen danach."
+  },
+  "groups": [
+    {
+      "id": "felines",
+      "label": "Große und kleine Katzen",
+      "revealHint": "KATZEN",
+      "items": [
+        "Luchs",
+        "Gepard",
+        "Löwe",
+        "Kater"
+      ]
+    },
+    {
+      "id": "kater_compounds",
+      "label": "Körperliche und seelische Zustände",
+      "revealHint": "KÖRPER",
+      "items": [
+        "Muskelkater",
+        "Katerstimmung",
+        "Erschöpfung",
+        "Schlafmangel"
+      ]
+    },
+    {
+      "id": "morning_after",
+      "label": "Am Morgen danach gesucht",
+      "revealHint": "MORGEN",
+      "items": [
+        "Aspirin",
+        "Wasser",
+        "Rollmops",
+        "Kaffee"
+      ]
+    },
+    {
+      "id": "brille_compounds",
+      "label": "Dinge mit «-brille»",
+      "revealHint": "BRILLE",
+      "items": [
+        "Lesebrille",
+        "Taucherbrille",
+        "Klobrille",
+        "Sonnenbrille"
+      ]
+    }
+  ]
+}

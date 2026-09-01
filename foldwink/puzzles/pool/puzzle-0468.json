@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0468",
+  "title": "Sand and Sky",
+  "difficulty": "easy",
+  "editorialSummary": "Major deserts sorted by continent: African (Sahara, Namib, Kalahari, Danakil), Asian (Gobi, Arabian, Karakum, Thar), American (Atacama, Sonoran, Patagonian, Chihuahuan), and polar/cold (Antarctic, Arctic, Great Basin, Taklamakan). Each desert is unambiguously on one continent.",
+  "meta": {
+    "theme": "deserts by region",
+    "categoryType": "classification",
+    "batch": "batch-14",
+    "status": "approved",
+    "difficultyScore": 25,
+    "editorialRank": 45,
+    "gptDifficulty": 58,
+    "gptRationale": "Several deserts are well known, but the geography test becomes tricky once less famous regions and cold-desert classification enter the mix."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "AFRICAN",
+      "items": [
+        "Sahara",
+        "Namib",
+        "Kalahari",
+        "Danakil"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "ASIAN",
+      "items": [
+        "Gobi",
+        "Arabian",
+        "Karakum",
+        "Thar"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "AMERICAN",
+      "items": [
+        "Atacama",
+        "Sonoran",
+        "Patagonian",
+        "Chihuahuan"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "COLD DESERTS",
+      "items": [
+        "Antarctic",
+        "Arctic",
+        "Great Basin",
+        "Taklamakan"
+      ]
+    }
+  ]
+}

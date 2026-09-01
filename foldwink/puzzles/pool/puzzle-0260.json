@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0260",
+  "title": "In session",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "law",
+    "categoryType": "classification",
+    "batch": "batch-06",
+    "status": "approved",
+    "difficultyScore": 29,
+    "editorialRank": 35,
+    "gptDifficulty": 39,
+    "gptRationale": "Courtroom language is accessible in broad strokes, but the legal-document and trial-phase terms are more exact than standard easy-tier fare."
+  },
+  "groups": [
+    {
+      "id": "professionals",
+      "label": "Court Professionals",
+      "items": [
+        "Judge",
+        "Attorney",
+        "Bailiff",
+        "Clerk"
+      ]
+    },
+    {
+      "id": "documents",
+      "label": "Legal Documents",
+      "items": [
+        "Subpoena",
+        "Warrant",
+        "Affidavit",
+        "Brief"
+      ]
+    },
+    {
+      "id": "phases",
+      "label": "Trial Phases",
+      "items": [
+        "Arraignment",
+        "Opening Statement",
+        "Verdict",
+        "Sentencing"
+      ]
+    },
+    {
+      "id": "types",
+      "label": "Court Types",
+      "items": [
+        "Supreme",
+        "Family",
+        "Small Claims",
+        "Appellate"
+      ]
+    }
+  ]
+}

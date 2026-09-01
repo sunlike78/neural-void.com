@@ -1,0 +1,59 @@
+{
+  "id": "de-0458",
+  "title": "Logistik und Supply Chain",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "logistik",
+    "batch": "de-batch-05",
+    "difficultyScore": 33,
+    "editorialRank": 44,
+    "gptDifficulty": 51,
+    "gptRationale": "Die Logistikfelder sind nachvollziehbar, jedoch sind mehrere englische Fachbegriffe für Nicht-BWLer nicht sofort trennscharf."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Logistik-Begriffe",
+      "revealHint": "Transport & Lager",
+      "items": [
+        "Umschlagspunkt",
+        "Lagerumschlag",
+        "Kommissionierung",
+        "Routenplanung"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Logistik-Methoden",
+      "revealHint": "Optimierungswege",
+      "items": [
+        "FIFO",
+        "LIFO",
+        "Cross-Docking",
+        "Milk Run"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Logistik-Systeme",
+      "revealHint": "IT & Infrastruktur",
+      "items": [
+        "ERP-System",
+        "WMS",
+        "TMS",
+        "RFID-Tracking"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Logistik-Kennzahlen",
+      "revealHint": "Messbare Größen",
+      "items": [
+        "Lieferquote",
+        "Durchlaufzeit",
+        "Lagerreichweite",
+        "Fehlerquote"
+      ]
+    }
+  ]
+}

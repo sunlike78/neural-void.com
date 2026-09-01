@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0187",
+  "title": "Reptile house",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "nature",
+    "categoryType": "classification",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 23,
+    "editorialRank": 45,
+    "gptDifficulty": 60,
+    "gptRationale": "Reptile-house groupings are appealingly concrete, but snake subtypes and the mythical-creature set increase the need for exact knowledge."
+  },
+  "groups": [
+    {
+      "id": "venomous",
+      "label": "Venomous Snakes",
+      "items": [
+        "Cobra",
+        "Viper",
+        "Mamba",
+        "Rattlesnake"
+      ]
+    },
+    {
+      "id": "constrictors",
+      "label": "Constrictor Snakes",
+      "items": [
+        "Python",
+        "Boa",
+        "Anaconda",
+        "Rosy Boa"
+      ]
+    },
+    {
+      "id": "lizards",
+      "label": "Lizards",
+      "items": [
+        "Gecko",
+        "Iguana",
+        "Chameleon",
+        "Monitor"
+      ]
+    },
+    {
+      "id": "legendary",
+      "label": "Mythical Reptiles",
+      "items": [
+        "Basilisk",
+        "Hydra",
+        "Wyrm",
+        "Leviathan"
+      ]
+    }
+  ]
+}

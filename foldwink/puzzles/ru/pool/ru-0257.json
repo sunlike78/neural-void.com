@@ -1,0 +1,55 @@
+{
+  "id": "ru-0257",
+  "title": "Школьные предметы",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Школьные и вузовские предметы",
+    "batch": "ru-batch-09",
+    "difficultyScore": 33,
+    "editorialRank": 25,
+    "gptDifficulty": 19,
+    "gptRationale": "School subjects are among the most straightforward everyday categories, with only a couple of less-common class names adding minor resistance."
+  },
+  "groups": [
+    {
+      "id": "exact_subjects",
+      "label": "Точные науки",
+      "items": [
+        "Математика",
+        "Физика",
+        "Химия",
+        "Информатика"
+      ]
+    },
+    {
+      "id": "humanities",
+      "label": "Гуманитарные",
+      "items": [
+        "История",
+        "Литература",
+        "Обществознание",
+        "МХК"
+      ]
+    },
+    {
+      "id": "nature_subjects",
+      "label": "Естественные",
+      "items": [
+        "Биология",
+        "География",
+        "Астрономия",
+        "Экология"
+      ]
+    },
+    {
+      "id": "language_subjects",
+      "label": "Языки",
+      "items": [
+        "Древнегреческий",
+        "Иностранный язык",
+        "Латинский",
+        "Риторика"
+      ]
+    }
+  ]
+}

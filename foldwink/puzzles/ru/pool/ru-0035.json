@@ -1,0 +1,55 @@
+{
+  "id": "ru-0035",
+  "title": "Напитки",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Напитки",
+    "batch": "ru-batch-01",
+    "difficultyScore": 29,
+    "editorialRank": 34,
+    "gptDifficulty": 38,
+    "gptRationale": "Drink categories are mostly everyday, though regional beverage knowledge makes some entries less immediate."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Горячие напитки",
+      "items": [
+        "Чай",
+        "Кофе",
+        "Какао",
+        "Глинтвейн"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Квас и морс",
+      "items": [
+        "Хлебный квас",
+        "Берёзовый квас",
+        "Клюквенный морс",
+        "Брусничный морс"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Молочные напитки",
+      "items": [
+        "Кефир",
+        "Ряженка",
+        "Простокваша",
+        "Варенец"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Газированные напитки",
+      "items": [
+        "Лимонад",
+        "Тархун",
+        "Байкал",
+        "Дюшес"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0043",
+  "title": "Bücher und Literatur",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bücher und Literatur",
+    "batch": "de-batch-02",
+    "difficultyScore": 20,
+    "editorialRank": 35,
+    "gptDifficulty": 45,
+    "gptRationale": "Literaturformen sind grundsätzlich bekannt, doch Lyrikgattungen und Kinderbuch-Unterformen sind nicht für alle sofort abrufbar."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Romangattungen",
+      "items": [
+        "Krimi",
+        "Thriller",
+        "Science-Fiction",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Sachbücher",
+      "items": [
+        "Biografie",
+        "Ratgeber",
+        "Reiseführer",
+        "Lexikon"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Lyrik-Formen",
+      "items": [
+        "Sonett",
+        "Haiku",
+        "Ballade",
+        "Ode"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kinder- und Jugendbuch",
+      "items": [
+        "Bilderbuch",
+        "Märchen",
+        "Abenteuerroman",
+        "Comicroman"
+      ]
+    }
+  ]
+}

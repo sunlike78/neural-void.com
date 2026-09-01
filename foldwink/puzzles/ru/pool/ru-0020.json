@@ -1,0 +1,55 @@
+{
+  "id": "ru-0020",
+  "title": "Насекомые",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Насекомые",
+    "batch": "ru-batch-01",
+    "difficultyScore": 26,
+    "editorialRank": 35,
+    "gptDifficulty": 41,
+    "gptRationale": "Insects are concrete, but some category labels are loose and several creatures can feel misclassified or overlapping."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Бабочки и стрекозы",
+      "items": [
+        "Бабочка",
+        "Стрекоза",
+        "Махаон",
+        "Мотылёк"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Кусающие насекомые",
+      "items": [
+        "Комар",
+        "Оса",
+        "Пчела",
+        "Слепень"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Жуки",
+      "items": [
+        "Майский жук",
+        "Божья коровка",
+        "Жук-олень",
+        "Колорадский жук"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Ползающие насекомые",
+      "items": [
+        "Муравей",
+        "Таракан",
+        "Кузнечик",
+        "Сверчок"
+      ]
+    }
+  ]
+}

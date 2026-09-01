@@ -1,0 +1,63 @@
+{
+  "id": "ru-0469",
+  "title": "В кафе",
+  "difficulty": "easy",
+  "editorialSummary": "Карточки из кафе разделены на четыре обыденные и непересекающиеся категории: горячие напитки, блюда, посуда и работники.",
+  "meta": {
+    "theme": "кафе",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "easy",
+      "еда",
+      "кафе"
+    ],
+    "batch": "cq6-ru-replacements-wave5",
+    "status": "draft",
+    "difficultyScore": 7
+  },
+  "groups": [
+    {
+      "id": "hot_drinks",
+      "label": "Горячие напитки",
+      "items": [
+        "Чай",
+        "Кофе",
+        "Какао",
+        "Горячий шоколад"
+      ]
+    },
+    {
+      "id": "menu_dishes",
+      "label": "Блюда в меню",
+      "items": [
+        "Суп",
+        "Салат",
+        "Пицца",
+        "Сэндвич"
+      ]
+    },
+    {
+      "id": "tableware",
+      "label": "Посуда на столе",
+      "items": [
+        "Чашка",
+        "Стакан",
+        "Тарелка",
+        "Блюдце"
+      ]
+    },
+    {
+      "id": "cafe_workers",
+      "label": "Работники кафе",
+      "items": [
+        "Официант",
+        "Повар",
+        "Бариста",
+        "Администратор"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "de-0329",
+  "title": "Kriegsschiffstypen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Kriegsschiffe",
+    "batch": "de-batch-04",
+    "difficultyScore": 31,
+    "editorialRank": 51,
+    "gptDifficulty": 64,
+    "gptRationale": "Viele Schiffstypen sind historisch spezifisch und ohne solides Vorwissen schwer sauber nach Epochen zu bündeln."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Antike Kriegsschiffe",
+      "revealHint": "Rudergetrieben",
+      "items": [
+        "Trireme",
+        "Pentekonter",
+        "Bireme",
+        "Liburne"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Mittelalter Kriegsschiffe",
+      "revealHint": "Mittelaltersegler",
+      "items": [
+        "Kogge",
+        "Galeere",
+        "Drachenkopfschiff",
+        "Holk"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Neuzeit Kriegsschiffe",
+      "revealHint": "Segelzeitalter",
+      "items": [
+        "Linienschiff",
+        "Fregatte",
+        "Korvette",
+        "Galleon"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Moderne Kriegsschiffe",
+      "revealHint": "Stahl und Motor",
+      "items": [
+        "Zerstörer",
+        "U-Boot",
+        "Flugzeugträger",
+        "Kreuzer"
+      ]
+    }
+  ]
+}

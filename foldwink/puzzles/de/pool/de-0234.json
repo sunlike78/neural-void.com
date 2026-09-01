@@ -1,0 +1,55 @@
+{
+  "id": "de-0234",
+  "title": "Kriminalromane",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "kriminalromane",
+    "batch": "de-batch-03",
+    "difficultyScore": 38,
+    "editorialRank": 26,
+    "gptDifficulty": 18,
+    "gptRationale": "Krimi ist extrem zugänglich und die Kategorien folgen offensichtlichen Rollen-, Orts- und Genrelogiken."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Krimi-Figuren",
+      "items": [
+        "Inspektor",
+        "Kommissar",
+        "Detektiv",
+        "Staatsanwalt"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Krimi-Schauplätze",
+      "items": [
+        "Mordschauplatz",
+        "Gerichtssaal",
+        "Leichenfundort",
+        "Polizeirevier"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Ermittlungsmethoden",
+      "items": [
+        "Fingerabdruck",
+        "DNA-Analyse",
+        "Zeugenbefragung",
+        "Alibi-Prüfung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Deutsche Krimi-Serien",
+      "items": [
+        "Tatort",
+        "Polizeiruf 110",
+        "Der Alte",
+        "Derrick"
+      ]
+    }
+  ]
+}

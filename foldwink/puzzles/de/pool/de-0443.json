@@ -1,0 +1,59 @@
+{
+  "id": "de-0443",
+  "title": "Romantik-Bewegung weltweit",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "literatur",
+    "batch": "de-batch-05",
+    "difficultyScore": 24,
+    "editorialRank": 50,
+    "gptDifficulty": 68,
+    "gptRationale": "Die nationale Zuordnung romantischer Autoren ist für viele nicht stabil präsent und die Namen sind teils nur literarisch Gebildeten geläufig."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Deutsche Romantiker",
+      "revealHint": "Novalis bis Heine",
+      "items": [
+        "Novalis",
+        "Brentano",
+        "Eichendorff",
+        "Heine"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Englische Romantiker",
+      "revealHint": "Byron & Keats",
+      "items": [
+        "Byron",
+        "Keats",
+        "Shelley",
+        "Wordsworth"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Französische Romantiker",
+      "revealHint": "Hugo & Sand",
+      "items": [
+        "Victor Hugo",
+        "George Sand",
+        "Lamartine",
+        "Alfred de Musset"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Russische Romantiker",
+      "revealHint": "Puschkin & Co.",
+      "items": [
+        "Puschkin",
+        "Lermontow",
+        "Gogol",
+        "Schukowski"
+      ]
+    }
+  ]
+}

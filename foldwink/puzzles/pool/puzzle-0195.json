@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0195",
+  "title": "Signs and signals",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 34,
+    "editorialRank": 29,
+    "gptDifficulty": 25,
+    "gptRationale": "Road-sign categories are everyday and practical, though some work-zone signs feel a touch less universal."
+  },
+  "groups": [
+    {
+      "id": "warning",
+      "label": "Warning Signs",
+      "items": [
+        "Slippery Road",
+        "Falling Rocks",
+        "Deer Crossing",
+        "Sharp Curve"
+      ]
+    },
+    {
+      "id": "regulatory",
+      "label": "Regulatory Signs",
+      "items": [
+        "Stop",
+        "Yield",
+        "Speed Limit",
+        "No Entry"
+      ]
+    },
+    {
+      "id": "guide",
+      "label": "Guide Signs",
+      "items": [
+        "Exit",
+        "Rest Area",
+        "Mile Marker",
+        "Detour"
+      ]
+    },
+    {
+      "id": "work",
+      "label": "Road Work Signs",
+      "items": [
+        "Workers Ahead",
+        "Flagger",
+        "Lane Closed",
+        "Cones Ahead"
+      ]
+    }
+  ]
+}

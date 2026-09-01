@@ -1,0 +1,59 @@
+{
+  "id": "de-0391",
+  "title": "Meteorologie",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Meteorologie",
+    "batch": "de-batch-04",
+    "difficultyScore": 26,
+    "editorialRank": 31,
+    "gptDifficulty": 35,
+    "gptRationale": "Meteorologische Basiskategorien sind bekannt, doch Jet-Stream und numerische Modelle machen das Set etwas anspruchsvoller als Schulniveau."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Wetterphänomene",
+      "revealHint": "Naturereignisse",
+      "items": [
+        "Tornado",
+        "Gewitter",
+        "Hagel",
+        "Schneesturm"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Messinstrumente",
+      "revealHint": "Wetter messen",
+      "items": [
+        "Barometer",
+        "Thermometer",
+        "Anemometer",
+        "Hygrometer"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Wettersysteme",
+      "revealHint": "Atmosphär. Systeme",
+      "items": [
+        "Hochdruckgebiet",
+        "Tiefdruckgebiet",
+        "Front",
+        "Jet-Stream"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Wettervorhersage",
+      "revealHint": "Prognose-Methoden",
+      "items": [
+        "Wetterkarte",
+        "Numerisches Modell",
+        "Radarsystem",
+        "Satellit"
+      ]
+    }
+  ]
+}

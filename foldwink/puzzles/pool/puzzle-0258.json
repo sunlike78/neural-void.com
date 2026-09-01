@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0258",
+  "title": "Land of pharaohs",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "mythology",
+    "categoryType": "classification",
+    "batch": "batch-06",
+    "status": "approved",
+    "difficultyScore": 29,
+    "editorialRank": 49,
+    "gptDifficulty": 63,
+    "gptRationale": "Ancient Egypt is a familiar theme, but many of the specific objects and place names still require relatively specialized recall."
+  },
+  "groups": [
+    {
+      "id": "pharaohs",
+      "label": "Famous Pharaohs",
+      "items": [
+        "Tutankhamun",
+        "Hatshepsut",
+        "Ramses",
+        "Khufu"
+      ]
+    },
+    {
+      "id": "objects",
+      "label": "Sacred Objects",
+      "items": [
+        "Ankh",
+        "Was Scepter",
+        "Crook",
+        "Djed"
+      ]
+    },
+    {
+      "id": "afterlife",
+      "label": "Afterlife Items",
+      "items": [
+        "Mummy",
+        "Sarcophagus",
+        "Canopic Jar",
+        "Death Mask"
+      ]
+    },
+    {
+      "id": "places",
+      "label": "Nile Locations",
+      "items": [
+        "Giza",
+        "Thebes",
+        "Memphis",
+        "Luxor"
+      ]
+    }
+  ]
+}

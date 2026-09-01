@@ -1,0 +1,55 @@
+{
+  "id": "de-0340",
+  "title": "Im Badezimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Badezimmer",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 18,
+    "editorialRank": 18,
+    "gptDifficulty": 17,
+    "gptRationale": "Alltagsgegenstände aus klar getrennten Bereichen des Badezimmers."
+  },
+  "groups": [
+    {
+      "id": "fixtures",
+      "label": "Feste Einrichtung",
+      "items": [
+        "Waschbecken",
+        "Badewanne",
+        "Dusche",
+        "Spiegel"
+      ]
+    },
+    {
+      "id": "teeth",
+      "label": "Zur Zahnpflege",
+      "items": [
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Mundspülung"
+      ]
+    },
+    {
+      "id": "shower",
+      "label": "Duschzubehör",
+      "items": [
+        "Shampoo",
+        "Duschgel",
+        "Seife",
+        "Handtuch"
+      ]
+    },
+    {
+      "id": "grooming",
+      "label": "Pflegewerkzeuge",
+      "items": [
+        "Kamm",
+        "Haarbürste",
+        "Nagelschere",
+        "Pinzette"
+      ]
+    }
+  ]
+}

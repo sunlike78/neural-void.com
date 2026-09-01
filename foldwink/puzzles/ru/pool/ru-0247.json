@@ -1,0 +1,55 @@
+{
+  "id": "ru-0247",
+  "title": "Математика",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Разделы математики",
+    "batch": "ru-batch-09",
+    "difficultyScore": 19,
+    "editorialRank": 44,
+    "gptDifficulty": 60,
+    "gptRationale": "Math vocabulary is school-based but more abstract than typical easy-tier content, especially in statistics and number-type terminology."
+  },
+  "groups": [
+    {
+      "id": "geometry_terms",
+      "label": "Геометрия",
+      "items": [
+        "Теорема",
+        "Аксиома",
+        "Биссектриса",
+        "Тангенс"
+      ]
+    },
+    {
+      "id": "algebra_terms",
+      "label": "Алгебра",
+      "items": [
+        "Уравнение",
+        "Функция",
+        "Матрица",
+        "Полином"
+      ]
+    },
+    {
+      "id": "stats_terms",
+      "label": "Статистика",
+      "items": [
+        "Медиана",
+        "Дисперсия",
+        "Выборка",
+        "Корреляция"
+      ]
+    },
+    {
+      "id": "numbers_types",
+      "label": "Виды чисел",
+      "items": [
+        "Простое",
+        "Рациональное",
+        "Мнимое",
+        "Трансцендентное"
+      ]
+    }
+  ]
+}

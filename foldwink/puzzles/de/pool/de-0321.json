@@ -1,0 +1,59 @@
+{
+  "id": "de-0321",
+  "title": "Deutsche Sagen nach Ort",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Deutsche Sagen",
+    "batch": "de-batch-04",
+    "difficultyScore": 48,
+    "editorialRank": 62,
+    "gptDifficulty": 71,
+    "gptRationale": "Regionale Sagenstoffe sind ungleich bekannt und manche Motive wirken austauschbar, was die Ortsbindung spürbar erschwert."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Sagen: Schwarzwald",
+      "revealHint": "Südlicher Wald",
+      "items": [
+        "Schatzhauser",
+        "Wassernix",
+        "Holzmann",
+        "Erdmänneken"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Sagen: Rheinland",
+      "revealHint": "Am großen Fluss",
+      "items": [
+        "Loreley",
+        "Heinzelmänner",
+        "Nibelungen",
+        "Rolandsage"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Sagen: Norddeutschland",
+      "revealHint": "Küste und Heide",
+      "items": [
+        "Rattenfänger",
+        "Strandräuber",
+        "Stormgeist",
+        "Blanker Hans"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Sagen: Bayern",
+      "revealHint": "Alpenland",
+      "items": [
+        "Watzmannlegende",
+        "Berchta",
+        "Perchten",
+        "Wildes Heer"
+      ]
+    }
+  ]
+}

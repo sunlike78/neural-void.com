@@ -1,0 +1,55 @@
+{
+  "id": "de-9004",
+  "title": "Was Bergwetter ankündigt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Naturphänomene in den Alpen",
+    "batch": "de-batch-11",
+    "difficultyScore": 40,
+    "editorialRank": 48,
+    "gptDifficulty": 53,
+    "gptRationale": "Bergwetterzeichen sind anschaulich, doch die Unterscheidung zwischen Föhn, Nebel, Gewitter und Lawine lebt stark von alpinem Erfahrungswissen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Föhn",
+      "items": [
+        "Kuh wird unruhig",
+        "Kopfschmerzen im Tal",
+        "Schneegrenze steigt",
+        "Klare Fernsicht"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Lawine",
+      "items": [
+        "Donnerndes Rauschen",
+        "Verschüttete Piste",
+        "Schutznetz gespannt",
+        "Schneebruch im Wald"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Gewitter",
+      "items": [
+        "Gipfelkreuz leuchtet",
+        "Hagelschlag im August",
+        "Grollen im Tal",
+        "Blitze über dem Grat"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nebel",
+      "items": [
+        "Tal versinkt morgens",
+        "Sicht unter 50 Meter",
+        "Gipfel ragen heraus",
+        "Orientierung weg"
+      ]
+    }
+  ]
+}

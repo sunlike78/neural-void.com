@@ -1,0 +1,55 @@
+{
+  "id": "ru-0008",
+  "title": "Виды транспорта",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Виды транспорта",
+    "batch": "ru-batch-01",
+    "difficultyScore": 29,
+    "editorialRank": 35,
+    "gptDifficulty": 39,
+    "gptRationale": "The transport domains are intuitive, yet some entries are less everyday and a few distinctions feel taxonomy-based rather than obvious."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Воздушный транспорт",
+      "items": [
+        "Самолёт",
+        "Вертолёт",
+        "Дирижабль",
+        "Дельтаплан"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Морской транспорт",
+      "items": [
+        "Корабль",
+        "Подлодка",
+        "Лайнер",
+        "Танкер"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Железнодорожный",
+      "items": [
+        "Поезд",
+        "Скоростной поезд",
+        "Паровоз",
+        "Товарняк"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Космические аппараты",
+      "items": [
+        "Ракета",
+        "Шаттл",
+        "Спутник",
+        "Марсоход"
+      ]
+    }
+  ]
+}

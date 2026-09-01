@@ -1,0 +1,55 @@
+{
+  "id": "ru-0216",
+  "title": "Насекомые",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Насекомые",
+    "batch": "ru-batch-07",
+    "difficultyScore": 34,
+    "editorialRank": 39,
+    "gptDifficulty": 43,
+    "gptRationale": "The insect theme is concrete, but overlap like bees appearing in multiple biological roles creates mild false trails."
+  },
+  "groups": [
+    {
+      "id": "pollinators",
+      "label": "Опылители",
+      "items": [
+        "Пчела",
+        "Шмель",
+        "Бабочка",
+        "Муха"
+      ]
+    },
+    {
+      "id": "beetles",
+      "label": "Жуки",
+      "items": [
+        "Майский жук",
+        "Жук-олень",
+        "Колорадский жук",
+        "Светлячок"
+      ]
+    },
+    {
+      "id": "pests_insect",
+      "label": "Вредители",
+      "items": [
+        "Тля",
+        "Саранча",
+        "Клоп",
+        "Моль"
+      ]
+    },
+    {
+      "id": "social_insects",
+      "label": "Общественные",
+      "items": [
+        "Муравей",
+        "Шершень",
+        "Оса",
+        "Термит"
+      ]
+    }
+  ]
+}

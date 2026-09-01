@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0107",
+  "title": "Breakfast table",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 21,
+    "editorialRank": 20,
+    "gptDifficulty": 20,
+    "gptRationale": "Breakfast foods and drinks are everyday items with very obvious category structure and little room for false grouping."
+  },
+  "groups": [
+    {
+      "id": "bread",
+      "label": "Bread-Based",
+      "items": [
+        "Toast",
+        "Bagel",
+        "Croissant",
+        "Waffle"
+      ]
+    },
+    {
+      "id": "egg",
+      "label": "Egg Dishes",
+      "items": [
+        "Omelette",
+        "Scrambled",
+        "Poached",
+        "Frittata"
+      ]
+    },
+    {
+      "id": "cereal",
+      "label": "Cereals and Grains",
+      "items": [
+        "Oatmeal",
+        "Granola",
+        "Muesli",
+        "Cornflakes"
+      ]
+    },
+    {
+      "id": "drink",
+      "label": "Morning Drinks",
+      "items": [
+        "Espresso",
+        "Matcha",
+        "Smoothie",
+        "Chai"
+      ]
+    }
+  ]
+}

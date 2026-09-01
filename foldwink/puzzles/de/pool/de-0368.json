@@ -1,0 +1,55 @@
+{
+  "id": "de-0368",
+  "title": "Beim Backen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Backen",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 11,
+    "editorialRank": 11,
+    "gptDifficulty": 11,
+    "gptRationale": "Die Zutaten, Formen und Dekorationen sind im Alltag geläufig und jeweils eindeutig einer konkreten Backkategorie zuzuordnen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Teigzutaten",
+      "items": [
+        "Mehl",
+        "Zucker",
+        "Butter",
+        "Eier"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Triebmittel",
+      "items": [
+        "Backpulver",
+        "Hefe",
+        "Natron",
+        "Sauerteig"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Backformen",
+      "items": [
+        "Kastenform",
+        "Springform",
+        "Gugelhupfform",
+        "Muffinblech"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kuchendekorationen",
+      "items": [
+        "Streusel",
+        "Zuckerguss",
+        "Schokoglasur",
+        "Marzipan"
+      ]
+    }
+  ]
+}

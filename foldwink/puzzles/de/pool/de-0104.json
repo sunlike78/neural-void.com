@@ -1,0 +1,55 @@
+{
+  "id": "de-0104",
+  "title": "Regenwald",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-batch-02",
+    "difficultyScore": 17,
+    "editorialRank": 33,
+    "gptDifficulty": 43,
+    "gptRationale": "Rainforest categories are clear, though indigenous groups and plant names are less familiar than the animal and threat terms."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Tiere",
+      "items": [
+        "Jaguar",
+        "Ara",
+        "Anaconda",
+        "Faultier"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Pflanzen",
+      "items": [
+        "Bromelien",
+        "Lianen",
+        "Orchidee",
+        "Riesenseerosel"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Indigene Völker",
+      "items": [
+        "Yanomami",
+        "Kayapo",
+        "Matsés",
+        "Awá"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Bedrohungen",
+      "items": [
+        "Abholzung",
+        "Brandrodung",
+        "Goldabbau",
+        "Wilderei"
+      ]
+    }
+  ]
+}

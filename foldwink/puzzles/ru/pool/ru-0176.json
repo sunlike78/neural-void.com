@@ -1,0 +1,55 @@
+{
+  "id": "ru-0176",
+  "title": "Технологии",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Технологии и IT",
+    "batch": "ru-batch-05",
+    "difficultyScore": 22,
+    "editorialRank": 19,
+    "gptDifficulty": 17,
+    "gptRationale": "Все категории максимально современные и массово знакомые, поэтому связи обычно видны почти сразу."
+  },
+  "groups": [
+    {
+      "id": "programming_langs",
+      "label": "Языки программирования",
+      "items": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "C++"
+      ]
+    },
+    {
+      "id": "databases",
+      "label": "Базы данных",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis"
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Облачные платформы",
+      "items": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Яндекс Облако"
+      ]
+    },
+    {
+      "id": "ai_tools",
+      "label": "ИИ-инструменты",
+      "items": [
+        "ChatGPT",
+        "Midjourney",
+        "Stable Diffusion",
+        "GigaChat"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "de-0427",
+  "title": "Am Esstisch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Esstisch",
+    "batch": "cq6-de-replacements-wave4"
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Besteckteile",
+      "items": ["Gabel", "Messer", "Esslöffel", "Teelöffel"]
+    },
+    {
+      "id": "group_b",
+      "label": "Trinkgefäße",
+      "items": ["Trinkglas", "Tasse", "Becher", "Weinglas"]
+    },
+    {
+      "id": "group_c",
+      "label": "Tischwäsche",
+      "items": ["Tischdecke", "Tischläufer", "Platzset", "Stoffserviette"]
+    },
+    {
+      "id": "group_d",
+      "label": "Würzgefäße",
+      "items": ["Salzstreuer", "Pfeffermühle", "Ölflasche", "Essigflasche"]
+    }
+  ]
+}

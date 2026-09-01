@@ -1,0 +1,55 @@
+{
+  "id": "de-0083",
+  "title": "Der Schwarzwald",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schwarzwald",
+    "batch": "de-batch-04",
+    "difficultyScore": 31,
+    "editorialRank": 45,
+    "gptDifficulty": 55,
+    "gptRationale": "The Schwarzwald theme is accessible in outline, but several place, food, and culture references require regional familiarity."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schwarzwald-Produkte",
+      "items": [
+        "Kuckucksuhr",
+        "Tracht",
+        "Bollenhut",
+        "Holzschnitzerei"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Schwarzwald-Gerichte",
+      "items": [
+        "Schwarzwälder Torte",
+        "Vesper",
+        "Schäufele",
+        "Zwiebelrostbraten"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Schwarzwald-Orte",
+      "items": [
+        "Freiburg",
+        "Baden-Baden",
+        "Triberg",
+        "Titisee"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Schwarzwald-Natur",
+      "items": [
+        "Feldberg",
+        "Schluchsee",
+        "Kinzig",
+        "Tanne"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9035",
+  "title": "Steine erzählen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baustile durch Merkmale",
+    "batch": "de-batch-12",
+    "difficultyScore": 36,
+    "editorialRank": 45,
+    "gptDifficulty": 51,
+    "gptRationale": "Architekturstile sind visuell gut trennbar, aber die Fachwörter für Bauelemente verlangen mehr Präzision als ein typisches Alltagspuzzle."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Romanik",
+      "items": [
+        "Rundbogen über Portal",
+        "Mauern meterdick",
+        "Wenige schmale Fenster",
+        "Würfelkapitell"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Gotik",
+      "items": [
+        "Spitzbogen im Chor",
+        "Strebewerk außen",
+        "Rosette aus Maßwerk",
+        "Gewölberippen kreuzen"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Barock",
+      "items": [
+        "Kuppel über dem Schiff",
+        "Vergoldete Stuckdecke",
+        "Doppelturm an Fassade",
+        "Geschwungene Treppe"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Bauhaus",
+      "items": [
+        "Flachdach aus Beton",
+        "Stahl und Glas",
+        "Ornament weggelassen",
+        "Funktion formt Gestalt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "de-0446",
+  "title": "Einkauf im Supermarkt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Supermarkteinkauf",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 8,
+    "editorialRank": 1,
+    "gptDifficulty": 12,
+    "gptRationale": "Vier vertraute Warengruppen mit eindeutigen Alltagsbegriffen und ohne konkurrierende Zuordnungen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Backwaren",
+      "items": ["Brötchen", "Brezel", "Croissant", "Baguette"]
+    },
+    {
+      "id": "group_b",
+      "label": "Milchprodukte",
+      "items": ["Milch", "Joghurt", "Quark", "Käse"]
+    },
+    {
+      "id": "group_c",
+      "label": "Obstsorten",
+      "items": ["Apfel", "Birne", "Banane", "Orange"]
+    },
+    {
+      "id": "group_d",
+      "label": "Gemüsesorten",
+      "items": ["Möhre", "Gurke", "Paprika", "Zucchini"]
+    }
+  ]
+}

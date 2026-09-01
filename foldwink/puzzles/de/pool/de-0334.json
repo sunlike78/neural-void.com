@@ -1,0 +1,59 @@
+{
+  "id": "de-0334",
+  "title": "Anatomie Systeme",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Anatomie",
+    "batch": "de-batch-04",
+    "difficultyScore": 36,
+    "editorialRank": 33,
+    "gptDifficulty": 31,
+    "gptRationale": "Anatomische Systeme und ihre Bestandteile sind anschaulich und großteils sehr bekannt, mit klaren semantischen Clustern."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Kreislaufsystem Organe",
+      "revealHint": "Blut fließt",
+      "items": [
+        "Herz",
+        "Aorta",
+        "Vene",
+        "Kapillare"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Nervensystem Organe",
+      "revealHint": "Signale leiten",
+      "items": [
+        "Gehirn",
+        "Rückenmark",
+        "Synapse",
+        "Neuron"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Verdauungssystem Organe",
+      "revealHint": "Nahrung aufnehmen",
+      "items": [
+        "Magen",
+        "Dünndarm",
+        "Leber",
+        "Bauchspeicheldrüse"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Immunsystem Organe",
+      "revealHint": "Abwehr des Körpers",
+      "items": [
+        "Milz",
+        "Thymus",
+        "Lymphknoten",
+        "Knochenmark"
+      ]
+    }
+  ]
+}

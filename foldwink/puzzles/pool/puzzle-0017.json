@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-0017",
+  "title": "Cafe Menu",
+  "difficulty": "easy",
+  "tags": [
+    "food"
+  ],
+  "groups": [
+    {
+      "id": "pizza",
+      "label": "Pizza Toppings",
+      "items": [
+        "Pepperoni",
+        "Olive",
+        "Mushroom",
+        "Sausage"
+      ]
+    },
+    {
+      "id": "icecream",
+      "label": "Ice Cream Flavors",
+      "items": [
+        "Vanilla",
+        "Pistachio",
+        "Stracciatella",
+        "Neapolitan"
+      ]
+    },
+    {
+      "id": "cocktails",
+      "label": "Cocktails",
+      "items": [
+        "Martini",
+        "Mojito",
+        "Margarita",
+        "Daiquiri"
+      ]
+    },
+    {
+      "id": "breakfast",
+      "label": "Breakfast Foods",
+      "items": [
+        "Pancake",
+        "Waffle",
+        "Omelette",
+        "Porridge"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 27,
+    "editorialRank": 42,
+    "gptDifficulty": 52,
+    "gptRationale": "This is still accessible, but several borrowed food and drink terms increase cultural exposure demands and invite cross-category hesitation."
+  }
+}

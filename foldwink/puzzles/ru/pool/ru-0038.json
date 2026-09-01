@@ -1,0 +1,55 @@
+{
+  "id": "ru-0038",
+  "title": "Части лица",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Части лица",
+    "batch": "ru-batch-01",
+    "difficultyScore": 17,
+    "editorialRank": 27,
+    "gptDifficulty": 33,
+    "gptRationale": "Face anatomy is familiar overall, though nested subparts like parts of the eye require more precise attention."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Органы чувств",
+      "items": [
+        "Кожа",
+        "Нос",
+        "Уши",
+        "Язык"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Части рта",
+      "items": [
+        "Губы",
+        "Зубы",
+        "Нёбо",
+        "Дёсны"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Части глаза",
+      "items": [
+        "Ресницы",
+        "Брови",
+        "Веки",
+        "Зрачок"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Черты лица",
+      "items": [
+        "Щёки",
+        "Лоб",
+        "Подбородок",
+        "Скулы"
+      ]
+    }
+  ]
+}

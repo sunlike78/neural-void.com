@@ -1,0 +1,62 @@
+{
+  "id": "de-0339",
+  "title": "Packen für die Reise",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Packen für die Reise",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "reise",
+      "alltag",
+      "gepäck"
+    ],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 13
+  },
+  "groups": [
+    {
+      "id": "travel_documents",
+      "label": "Reiseunterlagen",
+      "items": [
+        "Fahrkarte",
+        "Reisepass",
+        "Ausweis",
+        "Buchungsbestätigung"
+      ]
+    },
+    {
+      "id": "travel_clothes",
+      "label": "Kleidung im Koffer",
+      "items": [
+        "Jeans",
+        "Kleid",
+        "Unterwäsche",
+        "Regenjacke"
+      ]
+    },
+    {
+      "id": "travel_hygiene",
+      "label": "Hygieneartikel",
+      "items": [
+        "Zahnbürste",
+        "Zahnpasta",
+        "Shampoo",
+        "Kamm"
+      ]
+    },
+    {
+      "id": "travel_bag_items",
+      "label": "Elektronik",
+      "items": [
+        "Smartphone",
+        "Ladekabel",
+        "Powerbank",
+        "Kopfh�rer"
+      ]
+    }
+  ]
+}

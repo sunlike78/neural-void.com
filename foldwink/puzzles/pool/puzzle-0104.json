@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0104",
+  "title": "Pasta party",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 54,
+    "editorialRank": 55,
+    "gptDifficulty": 55,
+    "gptRationale": "Pasta types feel approachable, but many players will need finer culinary knowledge to separate stuffed and soup pastas cleanly."
+  },
+  "groups": [
+    {
+      "id": "long",
+      "label": "Long Pasta",
+      "items": [
+        "Spaghetti",
+        "Linguine",
+        "Fettuccine",
+        "Tagliatelle"
+      ]
+    },
+    {
+      "id": "short",
+      "label": "Short Pasta",
+      "items": [
+        "Penne",
+        "Rigatoni",
+        "Fusilli",
+        "Farfalle"
+      ]
+    },
+    {
+      "id": "stuffed",
+      "label": "Stuffed Pasta",
+      "items": [
+        "Ravioli",
+        "Tortellini",
+        "Cannelloni",
+        "Agnolotti"
+      ]
+    },
+    {
+      "id": "soup",
+      "label": "Soup Pasta",
+      "items": [
+        "Orzo",
+        "Stelline",
+        "Ditalini",
+        "Acini di Pepe"
+      ]
+    }
+  ]
+}

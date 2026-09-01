@@ -1,0 +1,55 @@
+{
+  "id": "ru-0029",
+  "title": "Обувь",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Обувь",
+    "batch": "ru-batch-01",
+    "difficultyScore": 27,
+    "editorialRank": 32,
+    "gptDifficulty": 35,
+    "gptRationale": "Shoe types are familiar, but fashion terminology and some cross-season usage raise the complexity a bit."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Зимняя обувь",
+      "items": [
+        "Валенки",
+        "Сапоги",
+        "Унты",
+        "Дутики"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Летняя обувь",
+      "items": [
+        "Сандалии",
+        "Шлёпанцы",
+        "Мокасины",
+        "Босоножки"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Спортивная обувь",
+      "items": [
+        "Кроссовки",
+        "Кеды",
+        "Бутсы",
+        "Слипоны"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Классическая обувь",
+      "items": [
+        "Туфли",
+        "Ботинки",
+        "Оксфорды",
+        "Полуботинки"
+      ]
+    }
+  ]
+}

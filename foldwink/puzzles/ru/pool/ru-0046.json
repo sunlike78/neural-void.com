@@ -1,0 +1,55 @@
+{
+  "id": "ru-0046",
+  "title": "Виды спорта",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Виды спорта",
+    "batch": "ru-batch-01",
+    "difficultyScore": 34,
+    "editorialRank": 25,
+    "gptDifficulty": 19,
+    "gptRationale": "Sports categories are broad, well-known, and easy to separate for a typical player."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Командные игры",
+      "items": [
+        "Футбол",
+        "Баскетбол",
+        "Волейбол",
+        "Хоккей"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Единоборства",
+      "items": [
+        "Бокс",
+        "Дзюдо",
+        "Каратэ",
+        "Борьба"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Водные виды",
+      "items": [
+        "Плавание",
+        "Гребля",
+        "Сёрфинг",
+        "Прыжки в воду"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Лёгкая атлетика",
+      "items": [
+        "Бег",
+        "Прыжки в длину",
+        "Метание диска",
+        "Толкание ядра"
+      ]
+    }
+  ]
+}

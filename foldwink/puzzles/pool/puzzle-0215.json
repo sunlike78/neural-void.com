@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0215",
+  "title": "In the kitchen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "kitchen",
+    "categoryType": "classification",
+    "batch": "batch-04",
+    "status": "approved",
+    "difficultyScore": 28,
+    "editorialRank": 21,
+    "gptDifficulty": 16,
+    "gptRationale": "Kitchen items are common and concrete, though cookware versus ovenware asks for a small amount of functional sorting."
+  },
+  "groups": [
+    {
+      "id": "cookware",
+      "label": "Stovetop Cookware",
+      "items": [
+        "Skillet",
+        "Saucepan",
+        "Wok",
+        "Stockpot"
+      ]
+    },
+    {
+      "id": "bakeware",
+      "label": "Ovenware",
+      "items": [
+        "Muffin Tin",
+        "Loaf Pan",
+        "Baking Sheet",
+        "Pie Dish"
+      ]
+    },
+    {
+      "id": "small-appliances",
+      "label": "Small Appliances",
+      "items": [
+        "Blender",
+        "Toaster",
+        "Kettle",
+        "Microwave"
+      ]
+    },
+    {
+      "id": "textiles",
+      "label": "Kitchen Textiles",
+      "items": [
+        "Apron",
+        "Oven Mitt",
+        "Dish Towel",
+        "Potholder"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0005",
+  "title": "Школьные принадлежности",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Школьные принадлежности",
+    "batch": "ru-batch-01",
+    "difficultyScore": 32,
+    "editorialRank": 21,
+    "gptDifficulty": 14,
+    "gptRationale": "Very everyday school vocabulary, though a couple of bag-related items create mild overlap between stationery and what sits in a backpack."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Пишущие инструменты",
+      "items": [
+        "Ручки",
+        "Карандаши",
+        "Фломастеры",
+        "Маркеры"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "В пенале",
+      "items": [
+        "Ластик",
+        "Линейка",
+        "Точилка",
+        "Циркуль"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Тетради и бумага",
+      "items": [
+        "Тетради",
+        "Альбом",
+        "Блокнот",
+        "Дневник"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "В рюкзаке",
+      "items": [
+        "Учебники",
+        "Пенал",
+        "Папка",
+        "Ланчбокс"
+      ]
+    }
+  ]
+}

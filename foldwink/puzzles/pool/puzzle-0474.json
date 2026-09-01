@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0474",
+  "title": "Pay Up",
+  "difficulty": "medium",
+  "editorialSummary": "Types of tax sorted by the economic base they are levied on. False trail: VAT and sales tax are both consumption taxes but VAT is specifically a value-added mechanism grouped with consumption; estate tax and inheritance tax are related but both belong to wealth taxes. Players must distinguish income, consumption, wealth, and payroll bases.",
+  "meta": {
+    "theme": "types of tax",
+    "categoryType": "classification",
+    "batch": "batch-14",
+    "status": "approved",
+    "difficultyScore": 48,
+    "editorialRank": 45,
+    "gptDifficulty": 43,
+    "gptRationale": "Tax-type buckets are conceptually straightforward, though a few items vary by jurisdiction and can blur wealth, payroll, and consumption distinctions."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "INCOME / PROFITS TAX",
+      "items": [
+        "Personal Income Tax",
+        "Capital Gains",
+        "Dividend Tax",
+        "Corporate Tax"
+      ],
+      "revealHint": "INCOME"
+    },
+    {
+      "id": "g2",
+      "label": "CONSUMPTION TAX",
+      "items": [
+        "VAT",
+        "Sales Tax",
+        "Excise Duty",
+        "Customs Tariff"
+      ],
+      "revealHint": "CONSUM"
+    },
+    {
+      "id": "g3",
+      "label": "WEALTH TAX",
+      "items": [
+        "Estate Tax",
+        "Inheritance Tax",
+        "Property Tax",
+        "Net Worth Tax"
+      ],
+      "revealHint": "WEALTH"
+    },
+    {
+      "id": "g4",
+      "label": "SOCIAL INSURANCE PAYROLL CHARGES",
+      "items": [
+        "Social Security",
+        "Medicare Levy",
+        "Unemployment Tax",
+        "Pension Contribution"
+      ],
+      "revealHint": "SOCIAL"
+    }
+  ]
+}

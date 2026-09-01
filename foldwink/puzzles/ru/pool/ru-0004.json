@@ -1,0 +1,55 @@
+{
+  "id": "ru-0004",
+  "title": "День Победы",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "День Победы",
+    "batch": "ru-batch-01",
+    "difficultyScore": 34,
+    "editorialRank": 40,
+    "gptDifficulty": 44,
+    "gptRationale": "The categories are clear, but historical knowledge and culturally loaded symbols make it less automatic for a typical player."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Символы праздника",
+      "items": [
+        "Георгиевская лента",
+        "Салют",
+        "Вечный огонь",
+        "Красная гвоздика"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Военная техника",
+      "items": [
+        "Танк",
+        "Самолёт",
+        "Катюша",
+        "Подводная лодка"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Города-герои",
+      "items": [
+        "Москва",
+        "Ленинград",
+        "Сталинград",
+        "Севастополь"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Военные награды",
+      "items": [
+        "Медаль",
+        "Орден",
+        "Звезда Героя",
+        "Крест"
+      ]
+    }
+  ]
+}

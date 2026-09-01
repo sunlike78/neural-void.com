@@ -1,0 +1,69 @@
+{
+  "id": "puzzle-0069",
+  "title": "Around the house",
+  "difficulty": "medium",
+  "editorialSummary": "Everyday home board with three adjacent apparel-care domains and one pantry anchor. Stress-tested against overbroad clothing and verb-noun crossover traps; no alternate quartet resolves cleanly.",
+  "meta": {
+    "theme": "everyday-home",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "home",
+      "laundry",
+      "sewing",
+      "pantry"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 8
+  },
+  "groups": [
+    {
+      "id": "laundry",
+      "label": "Laundry actions",
+      "items": [
+        "Sort",
+        "Soak",
+        "Rinse",
+        "Wring"
+      ],
+      "revealHint": "Washday"
+    },
+    {
+      "id": "sewing",
+      "label": "Sewing kit items",
+      "items": [
+        "Needle",
+        "Thimble",
+        "Spool",
+        "Shears"
+      ],
+      "revealHint": "Mending"
+    },
+    {
+      "id": "closures",
+      "label": "Closures on clothing or bags",
+      "items": [
+        "Buckle",
+        "Clasp",
+        "Snap",
+        "Zipper"
+      ],
+      "revealHint": "Wardrobe"
+    },
+    {
+      "id": "pantry",
+      "label": "Dry pantry staples",
+      "items": [
+        "Flour",
+        "Rice",
+        "Sugar",
+        "Oats"
+      ],
+      "revealHint": "Cupboard"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "de-0492",
+  "title": "Mars-Kolonisierung",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "raumfahrt",
+    "batch": "de-batch-05",
+    "difficultyScore": 27,
+    "editorialRank": 41,
+    "gptDifficulty": 50,
+    "gptRationale": "Marswissen ist populär, aber Personen, Missionen, Probleme und Lösungsansätze fordern dennoch breiteres Raumfahrtwissen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Mars-Probleme",
+      "items": [
+        "Kosmische Strahlung",
+        "Dünne Atmosphäre",
+        "Geringe Schwerkraft",
+        "Isolation"
+      ],
+      "revealHint": "Probleme"
+    },
+    {
+      "id": "group_b",
+      "label": "Mars-Lösungen",
+      "items": [
+        "Terraforming",
+        "Unterirdische Basis",
+        "Wassergewinnung",
+        "ISRU"
+      ],
+      "revealHint": "Lösungen"
+    },
+    {
+      "id": "group_c",
+      "label": "Mars-Missionen",
+      "items": [
+        "Curiosity Rover",
+        "Perseverance",
+        "InSight Lander",
+        "Mars Odyssey"
+      ],
+      "revealHint": "Missionen"
+    },
+    {
+      "id": "group_d",
+      "label": "Mars-Personen",
+      "items": [
+        "Elon Musk",
+        "Robert Zubrin",
+        "Buzz Aldrin",
+        "Wernher von Braun"
+      ],
+      "revealHint": "Personen"
+    }
+  ]
+}

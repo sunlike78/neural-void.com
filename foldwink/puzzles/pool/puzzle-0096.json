@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0096",
+  "title": "Under pressure",
+  "difficulty": "medium",
+  "editorialSummary": "Human body systems grouped by function. A classification medium that does not depend on word-play.",
+  "groups": [
+    {
+      "id": "transport-system",
+      "label": "Transport System",
+      "revealHint": "Circulation",
+      "items": [
+        "Blood",
+        "Artery",
+        "Vein",
+        "Capillary"
+      ]
+    },
+    {
+      "id": "support-system",
+      "label": "Support System",
+      "revealHint": "Skeleton",
+      "items": [
+        "Skull",
+        "Spine",
+        "Rib",
+        "Pelvis"
+      ]
+    },
+    {
+      "id": "defense-system",
+      "label": "Defense System",
+      "revealHint": "Immunity",
+      "items": [
+        "Thymus",
+        "Spleen",
+        "Tonsil",
+        "Lymph Node"
+      ]
+    },
+    {
+      "id": "message-system",
+      "label": "Message System",
+      "revealHint": "Nerves",
+      "items": [
+        "Neuron",
+        "Axon",
+        "Synapse",
+        "Dendrite"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 17,
+    "editorialRank": 38,
+    "gptDifficulty": 52,
+    "gptRationale": "Human-body system groupings are logical, but the labels are slightly abstract and some organs or structures feel less obviously assigned."
+  }
+}

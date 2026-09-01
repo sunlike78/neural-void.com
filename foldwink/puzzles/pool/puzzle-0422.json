@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0422",
+  "title": "Architectural Movements",
+  "difficulty": "medium",
+  "editorialSummary": "Architecture movements grouped by era and aesthetic: Baroque/Rococo, Neoclassical, Art Nouveau/Art Deco, Modernist. False trail: Bauhaus is Modernist not Art Deco despite shared geometric aesthetics; Rococo could be confused with Baroque (it is its ornate sub-style).",
+  "meta": {
+    "theme": "architecture",
+    "categoryType": "classification",
+    "batch": "batch-12",
+    "status": "approved",
+    "difficultyScore": 43,
+    "editorialRank": 59,
+    "gptDifficulty": 69,
+    "gptRationale": "Famous buildings help, but mapping them accurately to architectural movements requires solid art-history knowledge and tolerating mixed labels."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "BAROQUE & ROCOCO",
+      "items": [
+        "Versailles",
+        "Trevi Fountain",
+        "Schönbrunn Palace",
+        "Zwinger Palace"
+      ],
+      "revealHint": "BAROQU"
+    },
+    {
+      "id": "g2",
+      "label": "NEOCLASSICAL",
+      "items": [
+        "Panthéon",
+        "US Capitol",
+        "Brandenburg Gate",
+        "British Museum"
+      ],
+      "revealHint": "NEOCLA"
+    },
+    {
+      "id": "g3",
+      "label": "ART NOUVEAU & DECO",
+      "items": [
+        "Sagrada Família",
+        "Chrysler Building",
+        "Hôtel Tassel",
+        "Empire State Building"
+      ],
+      "revealHint": "ART"
+    },
+    {
+      "id": "g4",
+      "label": "MODERNIST & BRUTALIST",
+      "items": [
+        "Fallingwater",
+        "Habitat 67",
+        "Unité d'Habitation",
+        "Seagram Building"
+      ],
+      "revealHint": "MODERN"
+    }
+  ]
+}

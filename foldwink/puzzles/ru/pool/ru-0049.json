@@ -1,0 +1,55 @@
+{
+  "id": "ru-0049",
+  "title": "Спортивный инвентарь",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Спортивный инвентарь",
+    "batch": "ru-batch-01",
+    "difficultyScore": 35,
+    "editorialRank": 27,
+    "gptDifficulty": 22,
+    "gptRationale": "Sports equipment maps very directly onto familiar activities, so the set feels approachable."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Мячи",
+      "items": [
+        "Футбольный мяч",
+        "Баскетбольный мяч",
+        "Теннисный мяч",
+        "Волейбольный мяч"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Для тренажёрного зала",
+      "items": [
+        "Гантели",
+        "Штанга",
+        "Скакалка",
+        "Эспандер"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Для единоборств",
+      "items": [
+        "Боксёрские перчатки",
+        "Капа",
+        "Защитный шлем",
+        "Кимоно"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Зимний инвентарь",
+      "items": [
+        "Лыжи",
+        "Коньки",
+        "Клюшка",
+        "Сноуборд"
+      ]
+    }
+  ]
+}

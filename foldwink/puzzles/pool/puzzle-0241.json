@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0241",
+  "title": "At the post office",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 43,
+    "editorialRank": 37,
+    "gptDifficulty": 33,
+    "gptRationale": "Postal concepts are still concrete, but service names and markings can blur together unless the player knows mail systems fairly well."
+  },
+  "groups": [
+    {
+      "id": "mailables",
+      "label": "Mailed Items",
+      "items": [
+        "Letter",
+        "Greeting Card",
+        "Postcard",
+        "Magazine"
+      ]
+    },
+    {
+      "id": "stamps",
+      "label": "Postal Markings",
+      "items": [
+        "Postage Stamp",
+        "Postmark",
+        "Barcode",
+        "Return Address"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Mail Services",
+      "items": [
+        "First Class",
+        "Registered",
+        "Express",
+        "Certified"
+      ]
+    },
+    {
+      "id": "staff",
+      "label": "Postal Staff",
+      "items": [
+        "Postman",
+        "Clerk",
+        "Sorter",
+        "Courier"
+      ]
+    }
+  ]
+}

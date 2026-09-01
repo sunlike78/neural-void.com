@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0046",
+  "title": "Around the sun",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "terrestrial",
+      "label": "Terrestrial Planets",
+      "items": [
+        "Mercury",
+        "Venus",
+        "Mars",
+        "Earth"
+      ]
+    },
+    {
+      "id": "gas-giants",
+      "label": "Outer Planets",
+      "items": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ]
+    },
+    {
+      "id": "jupiter-moons",
+      "label": "Moons of Jupiter",
+      "items": [
+        "Io",
+        "Europa",
+        "Ganymede",
+        "Callisto"
+      ]
+    },
+    {
+      "id": "dwarf",
+      "label": "Dwarf Planets",
+      "items": [
+        "Pluto",
+        "Ceres",
+        "Eris",
+        "Makemake"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 21,
+    "editorialRank": 34,
+    "gptDifficulty": 43,
+    "gptRationale": "Solar-system categories are well taught, but dwarf planets and Jupiter's moons add a moderate recall challenge."
+  }
+}

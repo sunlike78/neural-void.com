@@ -1,0 +1,55 @@
+{
+  "id": "ru-0232",
+  "title": "Греческие боги",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Боги Древней Греции",
+    "batch": "ru-batch-08",
+    "difficultyScore": 17,
+    "editorialRank": 38,
+    "gptDifficulty": 52,
+    "gptRationale": "Greek mythology is recognizable, but several lesser-known sea and underworld figures require more than surface familiarity."
+  },
+  "groups": [
+    {
+      "id": "olympians_main",
+      "label": "Верховные олимпийцы",
+      "items": [
+        "Зевс",
+        "Гера",
+        "Аполлон",
+        "Афина"
+      ]
+    },
+    {
+      "id": "sea_gods",
+      "label": "Боги моря",
+      "items": [
+        "Посейдон",
+        "Амфитрита",
+        "Протей",
+        "Тритон"
+      ]
+    },
+    {
+      "id": "underworld_gods",
+      "label": "Подземный мир",
+      "items": [
+        "Аид",
+        "Персефона",
+        "Харон",
+        "Танатос"
+      ]
+    },
+    {
+      "id": "nature_gods",
+      "label": "Боги природы",
+      "items": [
+        "Деметра",
+        "Дионис",
+        "Артемида",
+        "Пан"
+      ]
+    }
+  ]
+}

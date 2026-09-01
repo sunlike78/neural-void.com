@@ -1,0 +1,55 @@
+{
+  "id": "de-0022",
+  "title": "Flüsse Deutschlands",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Flüsse Deutschlands",
+    "batch": "de-batch-01",
+    "difficultyScore": 7,
+    "editorialRank": 45,
+    "gptDifficulty": 71,
+    "gptRationale": "Flusssysteme und Nordsee-Zuflüsse erfordern deutlich mehr Sachwissen als typische Easy-Themen und bieten starke Verwechslungsgefahr zwischen Einzugsgebiet und Zielmeer."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Rhein-System",
+      "items": [
+        "Mosel",
+        "Main",
+        "Neckar",
+        "Lahn"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Elbe-Nebenflüsse",
+      "items": [
+        "Saale",
+        "Havel",
+        "Mulde",
+        "Schwarze Elster"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Donau-System",
+      "items": [
+        "Inn",
+        "Isar",
+        "Iller",
+        "Altmühl"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nordsee-Zuflüsse",
+      "items": [
+        "Weser",
+        "Ems",
+        "Eider",
+        "Elbe"
+      ]
+    }
+  ]
+}

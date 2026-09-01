@@ -1,0 +1,59 @@
+{
+  "id": "de-0440",
+  "title": "Bibel-Figuren",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "religion",
+    "batch": "de-batch-05",
+    "difficultyScore": 20,
+    "editorialRank": 33,
+    "gptDifficulty": 41,
+    "gptRationale": "Viele Figuren sind bekannt, doch die Trennung zwischen Testamenten, Propheten und Aposteln verlangt etwas Bibelorientierung."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Altes Testament",
+      "revealHint": "Erster Bund",
+      "items": [
+        "Mose",
+        "David",
+        "Abraham",
+        "Salomo"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Neues Testament",
+      "revealHint": "Jesus-Zeit",
+      "items": [
+        "Maria",
+        "Josef",
+        "Johannes",
+        "Magdalena"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Propheten",
+      "revealHint": "Gottes Sprecher",
+      "items": [
+        "Jesaja",
+        "Jeremia",
+        "Ezechiel",
+        "Amos"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Apostel Jesu",
+      "revealHint": "Zwölf Jünger",
+      "items": [
+        "Petrus",
+        "Andreas",
+        "Matthäus",
+        "Jakobus"
+      ]
+    }
+  ]
+}

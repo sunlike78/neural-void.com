@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0052",
+  "title": "Four-legged crowd",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "herding",
+      "label": "Herding Dogs",
+      "items": [
+        "Collie",
+        "Australian Shepherd",
+        "Corgi",
+        "Shetland Sheepdog"
+      ]
+    },
+    {
+      "id": "toy-dogs",
+      "label": "Toy Dogs",
+      "items": [
+        "Chihuahua",
+        "Maltese",
+        "Pug",
+        "Pomeranian"
+      ]
+    },
+    {
+      "id": "cats-long",
+      "label": "Long-haired Cats",
+      "items": [
+        "Persian",
+        "Ragdoll",
+        "Maine Coon",
+        "Birman"
+      ]
+    },
+    {
+      "id": "cats-short",
+      "label": "Short-haired Cats",
+      "items": [
+        "Bengal",
+        "Siamese",
+        "Abyssinian",
+        "Burmese"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 31,
+    "editorialRank": 52,
+    "gptDifficulty": 66,
+    "gptRationale": "Breed knowledge is concrete yet specialized, and players may know the animals without confidently knowing the subgroup labels."
+  }
+}

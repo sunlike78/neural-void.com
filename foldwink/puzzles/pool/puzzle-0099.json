@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0099",
+  "title": "String section",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "music",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 20,
+    "editorialRank": 19,
+    "gptDifficulty": 18,
+    "gptRationale": "Instrument families are highly familiar and the items are strongly prototypical with minimal misleading overlap."
+  },
+  "groups": [
+    {
+      "id": "strings",
+      "label": "String Instruments",
+      "items": [
+        "Violin",
+        "Cello",
+        "Harp",
+        "Banjo"
+      ]
+    },
+    {
+      "id": "brass",
+      "label": "Brass Instruments",
+      "items": [
+        "Trumpet",
+        "Trombone",
+        "Tuba",
+        "French Horn"
+      ]
+    },
+    {
+      "id": "woodwind",
+      "label": "Woodwind Instruments",
+      "items": [
+        "Clarinet",
+        "Oboe",
+        "Flute",
+        "Bassoon"
+      ]
+    },
+    {
+      "id": "percussion",
+      "label": "Percussion Instruments",
+      "items": [
+        "Snare",
+        "Timpani",
+        "Xylophone",
+        "Maracas"
+      ]
+    }
+  ]
+}

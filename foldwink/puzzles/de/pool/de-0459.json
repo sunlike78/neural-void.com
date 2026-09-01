@@ -1,0 +1,59 @@
+{
+  "id": "de-0459",
+  "title": "Controlling und Finanzen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "finanzen",
+    "batch": "de-batch-05",
+    "difficultyScore": 25,
+    "editorialRank": 36,
+    "gptDifficulty": 44,
+    "gptRationale": "Finanz- und Controllingblöcke folgen vertrauten Business-Kategorien, auch wenn einzelne Kennzahlen Abkürzungswissen verlangen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Kennzahlen",
+      "revealHint": "Zahlen die zählen",
+      "items": [
+        "EBIT",
+        "EBITDA",
+        "Return on Equity",
+        "Working Capital"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Methoden",
+      "revealHint": "Analysetools",
+      "items": [
+        "Break-Even-Analyse",
+        "Deckungsbeitrag",
+        "ABC-Analyse",
+        "Benchmarking"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Berichte",
+      "revealHint": "Abschlüsse & Docs",
+      "items": [
+        "Bilanz",
+        "GuV",
+        "Cashflow-Rechnung",
+        "Lagebericht"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Software",
+      "revealHint": "IT-Tools",
+      "items": [
+        "SAP FI",
+        "Excel-Pivot",
+        "Tableau",
+        "Power BI"
+      ]
+    }
+  ]
+}

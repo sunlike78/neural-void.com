@@ -1,0 +1,55 @@
+{
+  "id": "de-0175",
+  "title": "Europäische Flüsse",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-batch-02",
+    "difficultyScore": 21,
+    "editorialRank": 40,
+    "gptDifficulty": 53,
+    "gptRationale": "Die Flüsse selbst sind bekannt, aber die Zuordnung über Länder oder Städte entlang des Flusslaufs erfordert zusätzlichen Geografiekontext."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Donau-Länder",
+      "items": [
+        "Serbien",
+        "Österreich",
+        "Ungarn",
+        "Rumänien"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rhein-Länder",
+      "items": [
+        "Schweiz",
+        "Deutschland",
+        "Frankreich",
+        "Niederlande"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Themse-Städte",
+      "items": [
+        "London",
+        "Oxford",
+        "Windsor",
+        "Reading"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Seine-Städte",
+      "items": [
+        "Paris",
+        "Rouen",
+        "Le Havre",
+        "Vernon"
+      ]
+    }
+  ]
+}

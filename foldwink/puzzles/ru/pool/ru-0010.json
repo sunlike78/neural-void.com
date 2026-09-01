@@ -1,0 +1,55 @@
+{
+  "id": "ru-0010",
+  "title": "Времена года",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Времена года",
+    "batch": "ru-batch-01",
+    "difficultyScore": 29,
+    "editorialRank": 24,
+    "gptDifficulty": 20,
+    "gptRationale": "Seasonal signs are a very familiar schema and most entries strongly telegraph their season."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Признаки зимы",
+      "items": [
+        "Метель",
+        "Морозы",
+        "Сугробы",
+        "Гололёд"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Признаки весны",
+      "items": [
+        "Капель",
+        "Проталины",
+        "Половодье",
+        "Первоцветы"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Признаки лета",
+      "items": [
+        "Жара",
+        "Гроза",
+        "Загар",
+        "Белые ночи"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Признаки осени",
+      "items": [
+        "Листопад",
+        "Туман",
+        "Слякоть",
+        "Урожай"
+      ]
+    }
+  ]
+}

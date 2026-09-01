@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0102",
+  "title": "Kitchen drawer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "kitchen",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 31,
+    "editorialRank": 34,
+    "gptDifficulty": 36,
+    "gptRationale": "Kitchen tools are familiar overall, though a few items like mandoline and tongs can momentarily suggest multiple functional groups."
+  },
+  "groups": [
+    {
+      "id": "cut",
+      "label": "Cutting Tools",
+      "items": [
+        "Cleaver",
+        "Paring Knife",
+        "Scissors",
+        "Mandoline"
+      ]
+    },
+    {
+      "id": "measure",
+      "label": "Measuring Tools",
+      "items": [
+        "Thermometer",
+        "Timer",
+        "Scale",
+        "Measuring Cup"
+      ]
+    },
+    {
+      "id": "stir",
+      "label": "Stirring Tools",
+      "items": [
+        "Whisk",
+        "Spatula",
+        "Ladle",
+        "Tongs"
+      ]
+    },
+    {
+      "id": "bake",
+      "label": "Baking Tools",
+      "items": [
+        "Rolling Pin",
+        "Sieve",
+        "Piping Bag",
+        "Cookie Cutter"
+      ]
+    }
+  ]
+}

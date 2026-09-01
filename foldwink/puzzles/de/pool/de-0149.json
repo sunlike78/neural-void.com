@@ -1,0 +1,55 @@
+{
+  "id": "de-0149",
+  "title": "Motorsport",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-batch-02",
+    "difficultyScore": 21,
+    "editorialRank": 43,
+    "gptDifficulty": 58,
+    "gptRationale": "Motorsport bündelt mehrere Teildisziplinen mit etlichen englischen oder formatspezifischen Begriffen, was mehr Fachkenntnis erfordert als der Titel vermuten lässt."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Formel 1",
+      "items": [
+        "Qualifying",
+        "Boxenstopp",
+        "Safety Car",
+        "DRS"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rallye",
+      "items": [
+        "Sonderprüfung",
+        "Servicepunkt",
+        "Schotterpiste",
+        "Co-Pilot"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Motorrad",
+      "items": [
+        "MotoGP",
+        "Superbike",
+        "Sidecar",
+        "Enduro"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Tourenwagen",
+      "items": [
+        "DTM",
+        "WTCC",
+        "TCR",
+        "BTCC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0460",
+  "title": "Signal and Noise",
+  "difficulty": "easy",
+  "editorialSummary": "Networking terms sorted by OSI layer function: physical layer (bandwidth, latency, fiber, coax), data link (MAC address, VLAN, frame, switch), network (IP address, subnet, router, gateway), and application (DNS, HTTP, TLS, proxy). Each term belongs unambiguously to one layer family.",
+  "meta": {
+    "theme": "networking terms",
+    "categoryType": "classification",
+    "batch": "batch-14",
+    "status": "approved",
+    "difficultyScore": 33,
+    "editorialRank": 55,
+    "gptDifficulty": 69,
+    "gptRationale": "Networking terms demand technical layer-model knowledge, and several items feel adjacent enough to create strong false placements."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "PHYSICAL LAYER",
+      "items": [
+        "Hub",
+        "Repeater",
+        "Fiber",
+        "Coax"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "DATA LINK LAYER",
+      "items": [
+        "MAC Address",
+        "VLAN",
+        "Frame",
+        "Switch"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "NETWORK LAYER",
+      "items": [
+        "IP Address",
+        "Subnet",
+        "Router",
+        "Packet"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "APPLICATION LAYER",
+      "items": [
+        "DNS",
+        "HTTP",
+        "SMTP",
+        "Proxy"
+      ]
+    }
+  ]
+}

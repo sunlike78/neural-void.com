@@ -1,0 +1,55 @@
+{
+  "id": "de-9017",
+  "title": "Laster ohne Namen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Laster via idiomatische Bilder",
+    "batch": "de-batch-11",
+    "difficultyScore": 35,
+    "editorialRank": 31,
+    "gptDifficulty": 29,
+    "gptRationale": "Die Laster sind als Grundkategorien sehr vertraut und die Beispiele sprechen meist eindeutig für eine einzige Zuordnung."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Gier",
+      "items": [
+        "Voll, trotzdem mehr",
+        "Hamstern ohne Not",
+        "Zweiter Vertrag auch",
+        "Gut genug nie"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Faulheit",
+      "items": [
+        "Morgen erledigt",
+        "Bett als bester Freund",
+        "Aufgabe weitergegeben",
+        "Hängematte im Büro"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Rücksichtslosigkeit",
+      "items": [
+        "Blinker gespart",
+        "Laut im Zug am Handy",
+        "Schlange übersprungen",
+        "Anderen im Weg"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Eitelkeit",
+      "items": [
+        "Dreimal im Spiegel",
+        "Neustes Modell sofort",
+        "Foto vor Mona Lisa",
+        "Bewunderung erwartet"
+      ]
+    }
+  ]
+}

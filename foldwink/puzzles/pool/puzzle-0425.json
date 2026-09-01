@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0425",
+  "title": "Dinosaur Era",
+  "difficulty": "medium",
+  "editorialSummary": "Dinosaurs and prehistoric creatures sorted by geological period: Triassic, Jurassic, Cretaceous, and Paleogene (post-dinosaur megafauna). False trail: Many players think all dinosaurs lived at the same time; T. Rex (Cretaceous) never met Stegosaurus (Jurassic).",
+  "meta": {
+    "theme": "science",
+    "categoryType": "classification",
+    "batch": "batch-12",
+    "status": "approved",
+    "difficultyScore": 56,
+    "editorialRank": 50,
+    "gptDifficulty": 46,
+    "gptRationale": "The era categories are familiar, but some creatures are less well-known and the Paleogene group introduces a deliberate curveball."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "TRIASSIC CREATURES",
+      "items": [
+        "Coelophysis",
+        "Plateosaurus",
+        "Eoraptor",
+        "Herrerasaurus"
+      ],
+      "revealHint": "TRIASS"
+    },
+    {
+      "id": "g2",
+      "label": "JURASSIC CREATURES",
+      "items": [
+        "Stegosaurus",
+        "Camarasaurus",
+        "Ceratosaurus",
+        "Archaeopteryx"
+      ],
+      "revealHint": "JURASS"
+    },
+    {
+      "id": "g3",
+      "label": "CRETACEOUS CREATURES",
+      "items": [
+        "Ankylosaurus",
+        "Pachycephalosaurus",
+        "Quetzalcoatlus",
+        "Mosasaurus"
+      ],
+      "revealHint": "CRETAC"
+    },
+    {
+      "id": "g4",
+      "label": "CENOZOIC ANIMALS",
+      "items": [
+        "Mammoth",
+        "Saber-Tooth Tiger",
+        "Megalodon",
+        "Dodo"
+      ],
+      "revealHint": "CENOZO"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "de-0325",
+  "title": "Auf dem Wochenmarkt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Auf dem Wochenmarkt",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["markt", "alltag", "lebensmittel"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 12
+  },
+  "groups": [
+    {
+      "id": "market_vegetables",
+      "label": "Gemüse",
+      "items": ["Karotte", "Gurke", "Zucchini", "Kartoffel"]
+    },
+    {
+      "id": "market_fruit",
+      "label": "Obst",
+      "items": ["Banane", "Orange", "Traube", "Erdbeere"]
+    },
+    {
+      "id": "market_herbs",
+      "label": "Küchenkräuter",
+      "items": ["Petersilie", "Schnittlauch", "Basilikum", "Dill"]
+    },
+    {
+      "id": "market_flowers",
+      "label": "Blumen",
+      "items": ["Geranie", "Begonie", "Nelke", "Sonnenblume"]
+    }
+  ]
+}

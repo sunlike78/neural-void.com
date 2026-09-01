@@ -1,0 +1,55 @@
+{
+  "id": "ru-0228",
+  "title": "Литературные жанры",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Жанры литературы",
+    "batch": "ru-batch-08",
+    "difficultyScore": 17,
+    "editorialRank": 31,
+    "gptDifficulty": 41,
+    "gptRationale": "Literary genre labels are school-familiar, yet distinctions like 'роман/повесть/новелла' and special genres add abstraction."
+  },
+  "groups": [
+    {
+      "id": "prose_genres",
+      "label": "Проза",
+      "items": [
+        "Роман",
+        "Повесть",
+        "Рассказ",
+        "Новелла"
+      ]
+    },
+    {
+      "id": "poetry_forms",
+      "label": "Поэзия",
+      "items": [
+        "Сонет",
+        "Ода",
+        "Элегия",
+        "Баллада"
+      ]
+    },
+    {
+      "id": "drama_genres",
+      "label": "Драматургия",
+      "items": [
+        "Трагедия",
+        "Комедия",
+        "Драма",
+        "Фарс"
+      ]
+    },
+    {
+      "id": "special_genres",
+      "label": "Документальная проза",
+      "items": [
+        "Эссе",
+        "Мемуары",
+        "Дневник",
+        "Очерк"
+      ]
+    }
+  ]
+}

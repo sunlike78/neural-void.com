@@ -1,0 +1,39 @@
+{
+  "id": "ru-0395",
+  "title": "Мир животных",
+  "difficulty": "easy",
+  "editorialSummary": "Четыре знакомых класса животных разделены буквально: пресмыкающиеся, земноводные, рыбы и насекомые. Ни одна карточка не подходит к другой группе.",
+  "meta": {
+    "theme": "животный мир",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["easy", "животные", "природа"],
+    "batch": "cq6-ru-replacements-wave4",
+    "status": "draft",
+    "difficultyScore": 10
+  },
+  "groups": [
+    {
+      "id": "reptiles",
+      "label": "Пресмыкающиеся",
+      "items": ["Ящерица", "Черепаха", "Крокодил", "Змея"]
+    },
+    {
+      "id": "amphibians",
+      "label": "Земноводные",
+      "items": ["Лягушка", "Жаба", "Тритон", "Саламандра"]
+    },
+    {
+      "id": "fish",
+      "label": "Рыбы",
+      "items": ["Щука", "Окунь", "Карась", "Лосось"]
+    },
+    {
+      "id": "insects",
+      "label": "Насекомые",
+      "items": ["Бабочка", "Жук", "Муравей", "Стрекоза"]
+    }
+  ]
+}

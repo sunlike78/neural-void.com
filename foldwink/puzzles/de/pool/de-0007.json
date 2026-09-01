@@ -1,0 +1,55 @@
+{
+  "id": "de-0007",
+  "title": "Berufe im Krankenhaus",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berufe Gesundheit",
+    "batch": "de-batch-01",
+    "difficultyScore": 26,
+    "editorialRank": 51,
+    "gptDifficulty": 67,
+    "gptRationale": "Krankenhausberufe sind zwar thematisch eng, aber Abkürzungen wie MTA/MTRA/OTA/BTA und Überschneidungen zwischen Pflege und Verwaltung machen die Sortierung deutlich schwerer."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Ärzte",
+      "items": [
+        "Chirurg",
+        "Internist",
+        "Radiologe",
+        "Anästhesist"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Pflegeberufe",
+      "items": [
+        "Krankenpfleger",
+        "Hebamme",
+        "Pflegehelferin",
+        "Stationsschwester"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Medizinische Assistenzberufe",
+      "items": [
+        "MTA",
+        "MTRA",
+        "OTA",
+        "ATA"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Verwaltung",
+      "items": [
+        "Stationsleitung",
+        "Klinikverwaltung",
+        "Patientenaufnahme",
+        "Sozialdienst"
+      ]
+    }
+  ]
+}

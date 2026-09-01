@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-0010",
+  "title": "Atlas Check",
+  "difficulty": "easy",
+  "tags": [
+    "geography"
+  ],
+  "groups": [
+    {
+      "id": "continents",
+      "label": "Continents",
+      "items": [
+        "Africa",
+        "Asia",
+        "Europe",
+        "Australia"
+      ]
+    },
+    {
+      "id": "oceans",
+      "label": "Oceans",
+      "items": [
+        "Atlantic",
+        "Pacific",
+        "Arctic",
+        "Southern"
+      ]
+    },
+    {
+      "id": "rivers",
+      "label": "Rivers",
+      "items": [
+        "Nile",
+        "Amazon",
+        "Danube",
+        "Thames"
+      ]
+    },
+    {
+      "id": "ranges",
+      "label": "Mountain Ranges",
+      "items": [
+        "Alps",
+        "Andes",
+        "Rockies",
+        "Himalayas"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 10,
+    "editorialRank": 29,
+    "gptDifficulty": 41,
+    "gptRationale": "Geography remains concrete, but rivers and mountain ranges ask for more school-knowledge recall than most easy-tier sets."
+  }
+}

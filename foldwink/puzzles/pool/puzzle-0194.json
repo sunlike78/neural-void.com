@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0194",
+  "title": "Once upon a time",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "arts",
+    "categoryType": "classification",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 28,
+    "editorialRank": 19,
+    "gptDifficulty": 13,
+    "gptRationale": "Fairy-tale roles and objects are highly familiar storybook archetypes with obvious thematic grouping."
+  },
+  "groups": [
+    {
+      "id": "royalty",
+      "label": "Fairy Tale Royalty",
+      "items": [
+        "Princess",
+        "Prince",
+        "King",
+        "Queen"
+      ]
+    },
+    {
+      "id": "villains",
+      "label": "Fairy Tale Villains",
+      "items": [
+        "Witch",
+        "Ogre",
+        "Wolf",
+        "Troll"
+      ]
+    },
+    {
+      "id": "objects",
+      "label": "Magical Objects",
+      "items": [
+        "Wand",
+        "Mirror",
+        "Potion",
+        "Glass Slipper"
+      ]
+    },
+    {
+      "id": "creatures",
+      "label": "Fairy Tale Helpers",
+      "items": [
+        "Fairy",
+        "Elf",
+        "Dwarf",
+        "Talking Mouse"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0077",
+  "title": "Stones and sands",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "gemstones",
+      "label": "Gemstones",
+      "items": [
+        "Topaz",
+        "Opal",
+        "Garnet",
+        "Aquamarine"
+      ]
+    },
+    {
+      "id": "soil-types",
+      "label": "Soil Types",
+      "items": [
+        "Loam",
+        "Clay",
+        "Peat",
+        "Silt"
+      ]
+    },
+    {
+      "id": "sand-types",
+      "label": "Sands",
+      "items": [
+        "White Sand",
+        "Black Sand",
+        "Red Sand",
+        "Golden Sand"
+      ]
+    },
+    {
+      "id": "ores",
+      "label": "Ores",
+      "items": [
+        "Bauxite",
+        "Magnetite",
+        "Hematite",
+        "Galena"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 16,
+    "editorialRank": 48,
+    "gptDifficulty": 69,
+    "gptRationale": "Earth-material words are concrete but unevenly familiar, and ores especially rely on niche vocabulary rather than everyday recognition."
+  }
+}

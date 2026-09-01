@@ -1,0 +1,55 @@
+{
+  "id": "de-0070",
+  "title": "Renovierung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Reparatur und Renovierung",
+    "batch": "de-batch-03",
+    "difficultyScore": 19,
+    "editorialRank": 18,
+    "gptDifficulty": 18,
+    "gptRationale": "All four groups are everyday renovation concepts with little overlap, so the sorting feels very direct."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Renovierungswerkzeuge",
+      "items": [
+        "Farbroller",
+        "Spachtel",
+        "Abdeckfolie",
+        "Pinsel"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Renovierungsmaterialien",
+      "items": [
+        "Farbe",
+        "Tapete",
+        "Fliesenkleber",
+        "Silikon"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Renovierungsräume",
+      "items": [
+        "Bad",
+        "Küche",
+        "Wohnzimmer",
+        "Kinderzimmer"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Renovierungsschritte",
+      "items": [
+        "Abriss",
+        "Grundierung",
+        "Streichen",
+        "Versiegeln"
+      ]
+    }
+  ]
+}

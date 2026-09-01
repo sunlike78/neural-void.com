@@ -1,0 +1,39 @@
+{
+  "id": "ru-0405",
+  "title": "Сад в цвету",
+  "difficulty": "easy",
+  "editorialSummary": "Садовые карточки делятся на четыре ясные группы: цветы, плодовые деревья, ягодные кустарники и инструменты. Общая тема не создаёт спорных пересечений между группами.",
+  "meta": {
+    "theme": "сад",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["easy", "сад", "природа"],
+    "batch": "cq6-ru-replacements-wave4",
+    "status": "draft",
+    "difficultyScore": 11
+  },
+  "groups": [
+    {
+      "id": "garden_flowers",
+      "label": "Садовые цветы",
+      "items": ["Роза", "Тюльпан", "Пион", "Нарцисс"]
+    },
+    {
+      "id": "fruit_trees",
+      "label": "Плодовые деревья",
+      "items": ["Яблоня", "Груша", "Вишня", "Слива"]
+    },
+    {
+      "id": "berry_bushes",
+      "label": "Ягодные кустарники",
+      "items": ["Смородина", "Крыжовник", "Малина", "Ежевика"]
+    },
+    {
+      "id": "garden_tools",
+      "label": "Садовые инструменты",
+      "items": ["Лопата", "Грабли", "Секатор", "Лейка"]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0032",
+  "title": "Gewürze und Kräuter",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gewürze und Kräuter",
+    "batch": "de-batch-01",
+    "difficultyScore": 32,
+    "editorialRank": 42,
+    "gptDifficulty": 49,
+    "gptRationale": "Kräuter und Gewürze sind konkret, aber regionale Küchenzuordnungen und weniger geläufige Begriffe wie Galgant oder Liebstöckel machen es merklich kniffliger."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Mediterrane Kräuter",
+      "items": [
+        "Basilikum",
+        "Oregano",
+        "Rosmarin",
+        "Thymian"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Asiatische Gewürze",
+      "items": [
+        "Ingwer",
+        "Kurkuma",
+        "Zitronengras",
+        "Galgant"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Deutsche Küchenkräuter",
+      "items": [
+        "Petersilie",
+        "Schnittlauch",
+        "Dill",
+        "Liebstöckel"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Süße Gewürze",
+      "items": [
+        "Zimt",
+        "Vanille",
+        "Kardamom",
+        "Nelken"
+      ]
+    }
+  ]
+}

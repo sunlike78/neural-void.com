@@ -1,0 +1,55 @@
+{
+  "id": "ru-0058",
+  "title": "Музыкальные жанры",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Музыкальные жанры",
+    "batch": "ru-batch-01",
+    "difficultyScore": 17,
+    "editorialRank": 40,
+    "gptDifficulty": 55,
+    "gptRationale": "Music genres depend on pop-culture familiarity, and several labels have fuzzy stylistic boundaries."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Электронная музыка",
+      "items": [
+        "Техно",
+        "Хаус",
+        "Дабстеп",
+        "Транс"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Рок-направления",
+      "items": [
+        "Панк",
+        "Металл",
+        "Гранж",
+        "Инди-рок"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Уличная музыка",
+      "items": [
+        "Рэп",
+        "Хип-хоп",
+        "R&B",
+        "Трэп"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Живая классика",
+      "items": [
+        "Джаз",
+        "Блюз",
+        "Соул",
+        "Регги"
+      ]
+    }
+  ]
+}

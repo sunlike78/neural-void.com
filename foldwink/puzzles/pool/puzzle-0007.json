@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-0007",
+  "title": "Green Grow",
+  "difficulty": "easy",
+  "tags": [
+    "plants"
+  ],
+  "groups": [
+    {
+      "id": "trees",
+      "label": "Trees",
+      "items": [
+        "Oak",
+        "Maple",
+        "Birch",
+        "Willow"
+      ]
+    },
+    {
+      "id": "flowers",
+      "label": "Flowers",
+      "items": [
+        "Tulip",
+        "Daisy",
+        "Lily",
+        "Orchid"
+      ]
+    },
+    {
+      "id": "vegetables",
+      "label": "Vegetables",
+      "items": [
+        "Carrot",
+        "Onion",
+        "Cabbage",
+        "Broccoli"
+      ]
+    },
+    {
+      "id": "herbs",
+      "label": "Herbs",
+      "items": [
+        "Basil",
+        "Thyme",
+        "Parsley",
+        "Oregano"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 9,
+    "editorialRank": 25,
+    "gptDifficulty": 35,
+    "gptRationale": "Plant knowledge varies more by player, and herbs versus vegetables adds a modest layer of categorization precision."
+  }
+}

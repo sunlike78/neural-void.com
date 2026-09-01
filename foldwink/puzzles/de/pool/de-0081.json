@@ -1,0 +1,55 @@
+{
+  "id": "de-0081",
+  "title": "Deutsche Schlösser",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Deutsche Schlösser",
+    "batch": "de-batch-04",
+    "difficultyScore": 62,
+    "editorialRank": 68,
+    "gptDifficulty": 72,
+    "gptRationale": "This depends heavily on German regional cultural knowledge, and many castle names are not broadly familiar enough to sort confidently."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Bayerische Schlösser",
+      "items": [
+        "Neuschwanstein",
+        "Herrenchiemsee",
+        "Linderhof",
+        "Nymphenburg"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rheinschlösser",
+      "items": [
+        "Rheinfels",
+        "Marksburg",
+        "Stolzenfels",
+        "Pfalzgrafenstein"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Norddeutsche Schlösser",
+      "items": [
+        "Schwerin",
+        "Glücksburg",
+        "Eutin",
+        "Gottorf"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Thüringische Schlösser",
+      "items": [
+        "Wartburg",
+        "Weimar Residenz",
+        "Heidecksburg",
+        "Friedenstein"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0112",
+  "title": "Global capitals",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "geography",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 16,
+    "editorialRank": 17,
+    "gptDifficulty": 17,
+    "gptRationale": "Capital cities by continent are extremely familiar quiz-style knowledge with clean categorical boundaries."
+  },
+  "groups": [
+    {
+      "id": "europe",
+      "label": "European Capitals",
+      "items": [
+        "Vienna",
+        "Lisbon",
+        "Prague",
+        "Athens"
+      ]
+    },
+    {
+      "id": "asia",
+      "label": "Asian Capitals",
+      "items": [
+        "Tokyo",
+        "Bangkok",
+        "Seoul",
+        "Hanoi"
+      ]
+    },
+    {
+      "id": "africa",
+      "label": "African Capitals",
+      "items": [
+        "Nairobi",
+        "Cairo",
+        "Accra",
+        "Dakar"
+      ]
+    },
+    {
+      "id": "americas",
+      "label": "American Capitals",
+      "items": [
+        "Ottawa",
+        "Lima",
+        "Havana",
+        "Bogota"
+      ]
+    }
+  ]
+}

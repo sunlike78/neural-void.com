@@ -1,0 +1,59 @@
+{
+  "id": "de-0371",
+  "title": "Rechtssystem",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Recht",
+    "batch": "de-batch-04",
+    "difficultyScore": 33,
+    "editorialRank": 46,
+    "gptDifficulty": 55,
+    "gptRationale": "Die Rechtsgebiete sind logisch getrennt, aber viele Begriffe sind abstrakt und ohne juristisches Raster leicht zu vermischen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Strafrecht-Begriffe",
+      "revealHint": "Verbrechen/Strafe",
+      "items": [
+        "Tatbestand",
+        "Schuld",
+        "Strafe",
+        "Bewährung"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Zivilrecht-Begriffe",
+      "revealHint": "Zwischen Privaten",
+      "items": [
+        "Schadensersatz",
+        "Vertrag",
+        "Delikt",
+        "Haftung"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Öffentliches Recht",
+      "revealHint": "Staat und Bürger",
+      "items": [
+        "Verfassung",
+        "Verwaltungsakt",
+        "Ermessen",
+        "Grundrecht"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Internationales Recht",
+      "revealHint": "Zwischen Staaten",
+      "items": [
+        "Völkerrecht",
+        "Abkommen",
+        "Sanktion",
+        "Tribunal"
+      ]
+    }
+  ]
+}

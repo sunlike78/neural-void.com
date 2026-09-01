@@ -1,0 +1,59 @@
+{
+  "id": "ru-0269",
+  "title": "Спортивные трофеи",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Главные трофеи мирового спорта",
+    "batch": "ru-batch-10",
+    "difficultyScore": 32,
+    "editorialRank": 51,
+    "gptDifficulty": 64,
+    "gptRationale": "Трофеи и турниры из разных видов спорта требуют хорошей спортивной насмотренности, а названия не всегда явно маркируют дисциплину."
+  },
+  "groups": [
+    {
+      "id": "football_trophies",
+      "label": "Футбол",
+      "revealHint": "ФУТБОЛ",
+      "items": [
+        "Кубок мира",
+        "Кубок Лиги чемпионов",
+        "Кубок Европы",
+        "Кубок Америки"
+      ]
+    },
+    {
+      "id": "tennis_trophies",
+      "label": "Теннис",
+      "revealHint": "ТЕННИС",
+      "items": [
+        "Уимблдон",
+        "Ролан Гаррос",
+        "Открытый Австралии",
+        "ATP Finals"
+      ]
+    },
+    {
+      "id": "golf_trophies",
+      "label": "Гольф",
+      "revealHint": "ГОЛЬФ",
+      "items": [
+        "Мастерс",
+        "Открытый Британии",
+        "US Open Golf",
+        "PGA Championship"
+      ]
+    },
+    {
+      "id": "motorsport_trophies",
+      "label": "Автоспорт",
+      "revealHint": "АВТОСПОРТ",
+      "items": [
+        "Формула 1",
+        "Индикар",
+        "Ралли Дакар",
+        "24 часа Ле-Мана"
+      ]
+    }
+  ]
+}

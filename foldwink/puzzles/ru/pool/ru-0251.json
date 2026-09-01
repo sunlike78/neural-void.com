@@ -1,0 +1,55 @@
+{
+  "id": "ru-0251",
+  "title": "Природные зоны",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Природные зоны и биомы Земли",
+    "batch": "ru-batch-09",
+    "difficultyScore": 38,
+    "editorialRank": 54,
+    "gptDifficulty": 64,
+    "gptRationale": "Natural-zone terminology is more technical than it first appears, with several borderline habitat labels inviting misgrouping."
+  },
+  "groups": [
+    {
+      "id": "polar_zones",
+      "label": "Полярные и приполярные",
+      "items": [
+        "Тундра",
+        "Арктическая пустыня",
+        "Лесотундра",
+        "Субарктика"
+      ]
+    },
+    {
+      "id": "forest_zones",
+      "label": "Лесные зоны",
+      "items": [
+        "Тайга",
+        "Смешанный лес",
+        "Тропический лес",
+        "Широколиственный лес"
+      ]
+    },
+    {
+      "id": "dry_zones",
+      "label": "Засушливые зоны",
+      "items": [
+        "Пустыня",
+        "Полупустыня",
+        "Степь",
+        "Прерия"
+      ]
+    },
+    {
+      "id": "wet_zones",
+      "label": "Влажные зоны",
+      "items": [
+        "Мангровы",
+        "Болото",
+        "Пойма",
+        "Дельта"
+      ]
+    }
+  ]
+}

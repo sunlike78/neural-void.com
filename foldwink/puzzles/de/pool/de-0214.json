@@ -1,0 +1,55 @@
+{
+  "id": "de-0214",
+  "title": "Deutsche Mittelgebirge",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "mittelgebirge",
+    "batch": "de-batch-03",
+    "difficultyScore": 25,
+    "editorialRank": 42,
+    "gptDifficulty": 54,
+    "gptRationale": "Die Mittelgebirge sind noch alltagsnah, aber viele Einträge sind regionale Marker statt reiner Ortsnamen und dadurch weniger sofort sortierbar."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schwarzwald",
+      "items": [
+        "Feldberg",
+        "Titisee",
+        "Triberg",
+        "Bollenhut"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Harz",
+      "items": [
+        "Brocken",
+        "Hexentanzplatz",
+        "Quedlinburg",
+        "Wernigerode"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Erzgebirge",
+      "items": [
+        "Fichtelberg",
+        "Räuchermann",
+        "Erzbergbau",
+        "Schneeberg"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Rhön",
+      "items": [
+        "Wasserkuppe",
+        "Segelfliegen",
+        "Biosphärenreservat",
+        "Milseburg"
+      ]
+    }
+  ]
+}

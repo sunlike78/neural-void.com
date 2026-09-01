@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0071",
+  "title": "Trails on paper",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "maps",
+      "label": "Map Features",
+      "items": [
+        "Legend",
+        "Scale",
+        "Compass Rose",
+        "Contour"
+      ]
+    },
+    {
+      "id": "hiking",
+      "label": "Hiking Gear",
+      "items": [
+        "Trail Map",
+        "Water Flask",
+        "Boots",
+        "Headlamp"
+      ]
+    },
+    {
+      "id": "camping",
+      "label": "Camping Gear",
+      "items": [
+        "Tent",
+        "Sleeping Bag",
+        "Lantern",
+        "Stove"
+      ]
+    },
+    {
+      "id": "knots",
+      "label": "Knots",
+      "items": [
+        "Bowline",
+        "Clove Hitch",
+        "Square",
+        "Figure Eight"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 33,
+    "editorialRank": 49,
+    "gptDifficulty": 60,
+    "gptRationale": "Outdoor gear is accessible, but knot names and map-feature terminology introduce technical recall and some cross-category overlap."
+  }
+}

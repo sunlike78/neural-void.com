@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0074",
+  "title": "Long ago",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "ancient-empires",
+      "label": "Ancient Empires",
+      "items": [
+        "Assyria",
+        "Persia",
+        "Carthage",
+        "Babylon"
+      ]
+    },
+    {
+      "id": "medieval-roles",
+      "label": "Medieval Roles",
+      "items": [
+        "Knight",
+        "Squire",
+        "Jester",
+        "Herald"
+      ]
+    },
+    {
+      "id": "renaissance",
+      "label": "Renaissance Figures",
+      "items": [
+        "Dante",
+        "Galileo",
+        "Medici",
+        "Columbus"
+      ]
+    },
+    {
+      "id": "modern-events",
+      "label": "Modern Events",
+      "items": [
+        "Moonlanding",
+        "Cold War",
+        "Berlin Wall",
+        "Space Race"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 27,
+    "editorialRank": 53,
+    "gptDifficulty": 70,
+    "gptRationale": "Historical grouping is intuitive in shape, but placing names and events into the right era requires more exact recall than average."
+  }
+}

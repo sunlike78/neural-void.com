@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0059",
+  "title": "Workshop day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "woodworking",
+      "label": "Woodworking",
+      "items": [
+        "Plane",
+        "Chisel",
+        "Lathe",
+        "Router"
+      ]
+    },
+    {
+      "id": "masonry",
+      "label": "Masonry",
+      "items": [
+        "Trowel",
+        "Level",
+        "Plumb Bob",
+        "Float"
+      ]
+    },
+    {
+      "id": "plumbing",
+      "label": "Plumbing",
+      "items": [
+        "Pipe",
+        "Elbow",
+        "Flange",
+        "Coupling"
+      ]
+    },
+    {
+      "id": "electrical",
+      "label": "Electrical",
+      "items": [
+        "Fuse",
+        "Breaker",
+        "Socket",
+        "Conduit"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 9,
+    "editorialRank": 46,
+    "gptDifficulty": 71,
+    "gptRationale": "Trade vocabulary across woodworking, masonry, plumbing, and electrical is clear in structure but specialized in language."
+  }
+}

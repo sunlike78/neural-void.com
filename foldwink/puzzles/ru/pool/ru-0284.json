@@ -1,0 +1,59 @@
+{
+  "id": "ru-0284",
+  "title": "Марки телефонов",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Бренды смартфонов по стране",
+    "batch": "ru-batch-11",
+    "difficultyScore": 12,
+    "editorialRank": 38,
+    "gptDifficulty": 55,
+    "gptRationale": "Бренды телефонов кажутся простыми, но группы по странам происхождения содержат спорные и менее известные марки, что повышает риск ошибок."
+  },
+  "groups": [
+    {
+      "id": "us_phones",
+      "label": "США",
+      "items": [
+        "Apple iPhone",
+        "Google Pixel",
+        "Motorola",
+        "Palm"
+      ],
+      "revealHint": "пионеры мобильной эры"
+    },
+    {
+      "id": "korean_phones",
+      "label": "Корея",
+      "items": [
+        "Samsung",
+        "LG",
+        "Pantech",
+        "SKY"
+      ],
+      "revealHint": "экраны и раскладушки"
+    },
+    {
+      "id": "chinese_phones",
+      "label": "Китай",
+      "items": [
+        "Huawei",
+        "Xiaomi",
+        "Oppo",
+        "Vivo"
+      ],
+      "revealHint": "народный Android"
+    },
+    {
+      "id": "eu_phones",
+      "label": "Европа",
+      "items": [
+        "Nokia",
+        "Wiko",
+        "Gigaset",
+        "Fairphone"
+      ],
+      "revealHint": "спокойная инженерия"
+    }
+  ]
+}

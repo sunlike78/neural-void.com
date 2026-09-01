@@ -1,0 +1,59 @@
+{
+  "id": "de-0395",
+  "title": "Artenschutz",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Artenschutz",
+    "batch": "de-batch-04",
+    "difficultyScore": 26,
+    "editorialRank": 45,
+    "gptDifficulty": 57,
+    "gptRationale": "Artenschutz ist inhaltlich zugänglich, aber Gefährdungsgrade, Organisationen und Methoden verlangen präzises Lesen und etwas Fachvokabular."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schutzprogramme",
+      "revealHint": "Gezielte Rettung",
+      "items": [
+        "Zuchtprogramm",
+        "Habitatschutz",
+        "Wiederansiedlung",
+        "Genbank"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Gefährdungsgrade",
+      "revealHint": "Rote-Liste-Status",
+      "items": [
+        "Ausgestorben",
+        "Vom Aussterben",
+        "Gefährdet",
+        "Vorwarnliste"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Artenschutzorganisationen",
+      "revealHint": "Schutzorganis.",
+      "items": [
+        "WWF",
+        "IUCN",
+        "TRAFFIC",
+        "BirdLife"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Artenschutz-Methoden",
+      "revealHint": "Wie geschützt wird",
+      "items": [
+        "Monitoring",
+        "Kryokonservierung",
+        "Ex-situ-Schutz",
+        "Legislation"
+      ]
+    }
+  ]
+}

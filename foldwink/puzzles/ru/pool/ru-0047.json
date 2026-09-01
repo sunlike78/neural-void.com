@@ -1,0 +1,55 @@
+{
+  "id": "ru-0047",
+  "title": "Зимние виды спорта",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Зимние виды спорта",
+    "batch": "ru-batch-01",
+    "difficultyScore": 49,
+    "editorialRank": 53,
+    "gptDifficulty": 56,
+    "gptRationale": "Winter sports require more specialized knowledge, and some ice-based categories compete with one another."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "На лыжах",
+      "items": [
+        "Горные лыжи",
+        "Лыжные гонки",
+        "Биатлон",
+        "Прыжки с трамплина"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "На коньках",
+      "items": [
+        "Фигурное катание",
+        "Конькобежный спорт",
+        "Шорт-трек",
+        "Хоккей"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Скоростной спуск",
+      "items": [
+        "Сноуборд",
+        "Бобслей",
+        "Скелетон",
+        "Санный спорт"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "На льду с камнями",
+      "items": [
+        "Кёрлинг",
+        "Айс-сток",
+        "Ринк-бэнди",
+        "Юкигассен"
+      ]
+    }
+  ]
+}

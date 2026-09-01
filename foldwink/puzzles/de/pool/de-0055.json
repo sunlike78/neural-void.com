@@ -1,0 +1,55 @@
+{
+  "id": "de-0055",
+  "title": "Autoteile",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Autoteile",
+    "batch": "de-batch-02",
+    "difficultyScore": 36,
+    "editorialRank": 48,
+    "gptDifficulty": 56,
+    "gptRationale": "Autoteile sind konkret, aber viele Begriffe sind technisch genug, dass Nicht-Autointeressierte zwischen Baugruppen leicht durcheinanderkommen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Motorteile",
+      "items": [
+        "Kolben",
+        "Nockenwelle",
+        "Turbolader",
+        "Zylinderkopf"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Karosserieteile",
+      "items": [
+        "Kotflügel",
+        "Motorhaube",
+        "Stoßstange",
+        "Dach"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Innenraumteile",
+      "items": [
+        "Armaturenbrett",
+        "Lenkrad",
+        "Schalthebel",
+        "Rückspiegel"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Fahrwerksteile",
+      "items": [
+        "Stoßdämpfer",
+        "Bremsscheibe",
+        "Felge",
+        "Spurstange"
+      ]
+    }
+  ]
+}

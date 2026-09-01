@@ -1,0 +1,55 @@
+{
+  "id": "ru-0051",
+  "title": "Детские игры",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Детские игры",
+    "batch": "ru-batch-01",
+    "difficultyScore": 39,
+    "editorialRank": 46,
+    "gptDifficulty": 50,
+    "gptRationale": "Childhood games are concrete but culturally specific, and several traditional game names are easy to confuse."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Игры с мячом",
+      "items": [
+        "Футбол",
+        "Вышибалы",
+        "Догонялки с мячом",
+        "Съедобное-несъедобное"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Прятки и поиск",
+      "items": [
+        "Прятки",
+        "Жмурки",
+        "Казаки-разбойники",
+        "Горячо-холодно"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Игры на асфальте",
+      "items": [
+        "Классики",
+        "Резиночки",
+        "Скакалка",
+        "Колечко"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Хороводные игры",
+      "items": [
+        "Каравай",
+        "Ручеёк",
+        "Краски",
+        "Море волнуется"
+      ]
+    }
+  ]
+}

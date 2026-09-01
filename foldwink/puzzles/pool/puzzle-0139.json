@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0139",
+  "title": "Stargazing",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "science",
+    "categoryType": "classification",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 34,
+    "editorialRank": 37,
+    "gptDifficulty": 39,
+    "gptRationale": "Astronomy categories are well known, though mixing planets, small bodies, and star types asks for some basic science precision."
+  },
+  "groups": [
+    {
+      "id": "planet",
+      "label": "Rocky Planets",
+      "items": [
+        "Mercury",
+        "Venus",
+        "Mars",
+        "Earth"
+      ]
+    },
+    {
+      "id": "gas",
+      "label": "Gas Giants",
+      "items": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ]
+    },
+    {
+      "id": "small",
+      "label": "Small Bodies",
+      "items": [
+        "Asteroid",
+        "Comet",
+        "Meteoroid",
+        "Dwarf Planet"
+      ]
+    },
+    {
+      "id": "star",
+      "label": "Star Types",
+      "items": [
+        "Red Dwarf",
+        "Supergiant",
+        "Neutron Star",
+        "White Dwarf"
+      ]
+    }
+  ]
+}

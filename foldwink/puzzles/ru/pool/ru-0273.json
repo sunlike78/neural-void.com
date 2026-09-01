@@ -1,0 +1,55 @@
+{
+  "id": "ru-0273",
+  "title": "Хлеб и выпечка",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Виды хлеба и выпечки",
+    "batch": "ru-batch-10",
+    "difficultyScore": 17,
+    "editorialRank": 30,
+    "gptDifficulty": 39,
+    "gptRationale": "Bread and pastry categories are tangible and appealing, though some regional baked goods may be unfamiliar."
+  },
+  "groups": [
+    {
+      "id": "russian_bread",
+      "label": "Русский хлеб",
+      "items": [
+        "Бородинский",
+        "Ржаной",
+        "Ситный",
+        "Каравай"
+      ]
+    },
+    {
+      "id": "european_bread",
+      "label": "Европейская выпечка",
+      "items": [
+        "Чиабатта",
+        "Багет",
+        "Бриошь",
+        "Круассан"
+      ]
+    },
+    {
+      "id": "flatbreads",
+      "label": "Лепёшки",
+      "items": [
+        "Лаваш",
+        "Матнакаш",
+        "Наан",
+        "Тортилья"
+      ]
+    },
+    {
+      "id": "buns_rolls",
+      "label": "Булочки",
+      "items": [
+        "Плюшка",
+        "Синнабон",
+        "Штрудель",
+        "Шанежка"
+      ]
+    }
+  ]
+}

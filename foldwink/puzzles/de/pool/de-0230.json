@@ -1,0 +1,55 @@
+{
+  "id": "de-0230",
+  "title": "Zauberei und Hexerei",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "hexerei",
+    "batch": "de-batch-03",
+    "difficultyScore": 32,
+    "editorialRank": 26,
+    "gptDifficulty": 22,
+    "gptRationale": "Zauberei und Hexerei arbeitet mit sehr stereotypen und sofort lesbaren Kategorien, selbst wenn ein paar Kräuterbegriffe spezieller sind."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Hexen-Utensilien",
+      "items": [
+        "Besen",
+        "Kessel",
+        "Zauberstab",
+        "Hut"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Zauber-Begriffe",
+      "items": [
+        "Beschwörung",
+        "Fluch",
+        "Bann",
+        "Zauberspruch"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Zaubertränke-Zutaten",
+      "items": [
+        "Fliegenpilz",
+        "Krötenaugen",
+        "Wolfswurz",
+        "Bilsenkraut"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Hexen-Orte",
+      "items": [
+        "Blocksberg",
+        "Hexentanzplatz",
+        "Walpurgisberg",
+        "Brocken"
+      ]
+    }
+  ]
+}

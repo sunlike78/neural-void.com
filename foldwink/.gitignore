@@ -1,0 +1,28 @@
+node_modules
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.vite
+coverage
+
+# build cache
+.tsbuildinfo-node/
+tsconfig*.tsbuildinfo
+
+# transient audit / research output
+audit-results/
+*.zip
+
+# export archives
+export/
+
+# itch.io butler target (per-developer, never committed)
+.itch-target
+
+# itch.io butler CLI (unpacked locally, never committed)
+itch.io/tools/butler/
+
+# puzzle batch staging (audit trail lives in docs/reports/batch-*-audit/)
+puzzles/pool/_drafts/

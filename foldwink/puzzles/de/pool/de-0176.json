@@ -1,0 +1,55 @@
+{
+  "id": "de-0176",
+  "title": "Weltwunder",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kultur",
+    "batch": "de-batch-02",
+    "difficultyScore": 38,
+    "editorialRank": 45,
+    "gptDifficulty": 49,
+    "gptRationale": "Weltwunder sind populär, doch die Mischung aus antiken, neuen, Natur- und modernen Wundern schafft mehrere konkurrierende Ordnungsmuster."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Antike Weltwunder",
+      "items": [
+        "Pyramide von Gizeh",
+        "Koloss von Rhodos",
+        "Leuchtturm Alexandrien",
+        "Zeusstatue Olympia"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Neue Sieben Weltwunder",
+      "items": [
+        "Chinesische Mauer",
+        "Machu Picchu",
+        "Taj Mahal",
+        "Kolosseum"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Naturwunder",
+      "items": [
+        "Grand Canyon",
+        "Amazonas",
+        "Great Barrier Reef",
+        "Nördliche Polarlicht"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Moderne Wunder",
+      "items": [
+        "Burj Khalifa",
+        "Panamakanal",
+        "Eurotunnel",
+        "Golden Gate Bridge"
+      ]
+    }
+  ]
+}

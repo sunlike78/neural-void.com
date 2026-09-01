@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0035",
+  "title": "Read between the lines",
+  "difficulty": "medium",
+  "editorialSummary": "Four kinds of printed matter.",
+  "groups": [
+    {
+      "id": "newspapers",
+      "label": "Newspaper Sections",
+      "revealHint": "Newspaper",
+      "items": [
+        "Sports",
+        "Headline",
+        "Classifieds",
+        "Editorial"
+      ]
+    },
+    {
+      "id": "book-parts",
+      "label": "Book Parts",
+      "revealHint": "Book",
+      "items": [
+        "Preface",
+        "Chapter",
+        "Glossary",
+        "Index"
+      ]
+    },
+    {
+      "id": "magazines",
+      "label": "Magazine Types",
+      "revealHint": "Magazine",
+      "items": [
+        "Fashion",
+        "Gossip",
+        "Science",
+        "Cooking"
+      ]
+    },
+    {
+      "id": "print-formats",
+      "label": "Print Formats",
+      "revealHint": "Print",
+      "items": [
+        "Pamphlet",
+        "Brochure",
+        "Leaflet",
+        "Flyer"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 27,
+    "editorialRank": 35,
+    "gptDifficulty": 41,
+    "gptRationale": "Print-related vocabulary creates strong thematic cohesion, but distinguishing section, type, and format takes an extra pass."
+  }
+}

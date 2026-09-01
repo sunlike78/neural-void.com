@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0147",
+  "title": "Studio session",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "music",
+    "categoryType": "classification",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 21,
+    "editorialRank": 35,
+    "gptDifficulty": 45,
+    "gptRationale": "Music-domain categories are accessible, though notation and studio-production terms ask for some specialized exposure."
+  },
+  "groups": [
+    {
+      "id": "genre",
+      "label": "Music Genres",
+      "items": [
+        "Jazz",
+        "Reggae",
+        "Blues",
+        "Folk"
+      ]
+    },
+    {
+      "id": "notation",
+      "label": "Music Notation",
+      "items": [
+        "Treble Clef",
+        "Whole Note",
+        "Sharp",
+        "Coda"
+      ]
+    },
+    {
+      "id": "studio",
+      "label": "Recording Terms",
+      "items": [
+        "Mixing",
+        "Mastering",
+        "Overdub",
+        "Reverb"
+      ]
+    },
+    {
+      "id": "ensemble",
+      "label": "Musical Groups",
+      "items": [
+        "Quartet",
+        "Orchestra",
+        "Choir",
+        "Trio"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0149",
+  "title": "Professions",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "professions",
+    "categoryType": "classification",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 37,
+    "editorialRank": 37,
+    "gptDifficulty": 37,
+    "gptRationale": "Profession groups are intuitive, though legal job titles like barrister and solicitor may slow some players."
+  },
+  "groups": [
+    {
+      "id": "health",
+      "label": "Healthcare Workers",
+      "items": [
+        "Surgeon",
+        "Pharmacist",
+        "Midwife",
+        "Radiologist"
+      ]
+    },
+    {
+      "id": "legal",
+      "label": "Legal Professionals",
+      "items": [
+        "Barrister",
+        "Solicitor",
+        "Magistrate",
+        "Notary"
+      ]
+    },
+    {
+      "id": "creative",
+      "label": "Creative Professionals",
+      "items": [
+        "Illustrator",
+        "Copywriter",
+        "Animator",
+        "Typographer"
+      ]
+    },
+    {
+      "id": "trade",
+      "label": "Skilled Trades",
+      "items": [
+        "Electrician",
+        "Plumber",
+        "Welder",
+        "Carpenter"
+      ]
+    }
+  ]
+}

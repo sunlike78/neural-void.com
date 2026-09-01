@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0239",
+  "title": "Under the hood",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "automotive",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 18,
+    "editorialRank": 22,
+    "gptDifficulty": 24,
+    "gptRationale": "Car parts are common enough, but some mechanical terms and the part-of-car subdivision require a touch of technical knowledge."
+  },
+  "groups": [
+    {
+      "id": "engine",
+      "label": "Engine Parts",
+      "items": [
+        "Piston",
+        "Spark Plug",
+        "Radiator",
+        "Alternator"
+      ]
+    },
+    {
+      "id": "body",
+      "label": "Body Panels",
+      "items": [
+        "Hood",
+        "Fender",
+        "Bumper",
+        "Door"
+      ]
+    },
+    {
+      "id": "wheels",
+      "label": "Wheel Assembly",
+      "items": [
+        "Tire",
+        "Rim",
+        "Hubcap",
+        "Axle"
+      ]
+    },
+    {
+      "id": "interior",
+      "label": "Car Interior",
+      "items": [
+        "Dashboard",
+        "Glove Box",
+        "Seatbelt",
+        "Gear Stick"
+      ]
+    }
+  ]
+}

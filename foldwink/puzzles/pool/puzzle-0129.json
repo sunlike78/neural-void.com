@@ -1,0 +1,65 @@
+{
+  "id": "puzzle-0129",
+  "title": "Ready for the Day",
+  "difficulty": "easy",
+  "editorialSummary": "A clean, everyday classification board. Each set is concrete and exact, with no specialist knowledge or artificial false trail.",
+  "meta": {
+    "theme": "everyday routine",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "routine",
+      "personal-care",
+      "classification",
+      "easy"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 4
+  },
+  "groups": [
+    {
+      "id": "phone-accessories",
+      "label": "Phone Accessories",
+      "items": [
+        "Car Mount",
+        "Phone Case",
+        "Phone Stand",
+        "Screen Protector"
+      ]
+    },
+    {
+      "id": "bathroom-textiles",
+      "label": "Bathroom Textiles",
+      "items": [
+        "Bath Mat",
+        "Bath Towel",
+        "Hand Towel",
+        "Washcloth"
+      ]
+    },
+    {
+      "id": "hair-accessories",
+      "label": "Hair Accessories",
+      "items": [
+        "Barrette",
+        "Hair Clip",
+        "Headband",
+        "Scrunchie"
+      ]
+    },
+    {
+      "id": "first-aid-kit-items",
+      "label": "First-Aid Kit Items",
+      "items": [
+        "Antiseptic Wipe",
+        "Bandage",
+        "Gauze",
+        "Medical Tape"
+      ]
+    }
+  ]
+}

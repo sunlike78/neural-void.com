@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0050",
+  "title": "Checkmate world",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "pieces",
+      "label": "Chess Pieces",
+      "items": [
+        "Rook",
+        "Bishop",
+        "Knight",
+        "Pawn"
+      ]
+    },
+    {
+      "id": "openings",
+      "label": "Famous Openings",
+      "items": [
+        "Sicilian",
+        "Italian Game",
+        "Queen's Gambit",
+        "Ruy Lopez"
+      ]
+    },
+    {
+      "id": "moves",
+      "label": "Special Moves",
+      "items": [
+        "Castle",
+        "Promote",
+        "En Passant",
+        "Kingside Castle"
+      ]
+    },
+    {
+      "id": "endings",
+      "label": "Game Endings",
+      "items": [
+        "Checkmate",
+        "Stalemate",
+        "Draw",
+        "Resign"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 26,
+    "editorialRank": 46,
+    "gptDifficulty": 59,
+    "gptRationale": "Basic chess terms are common, but famous openings and tactical vocabulary make this distinctly trickier than average easy-tier content."
+  }
+}

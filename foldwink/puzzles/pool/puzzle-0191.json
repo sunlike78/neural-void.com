@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0191",
+  "title": "At the gym",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "sports",
+    "categoryType": "classification",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 24,
+    "editorialRank": 20,
+    "gptDifficulty": 18,
+    "gptRationale": "Gym equipment and exercise categories are very familiar modern-life vocabulary with clear functional distinctions."
+  },
+  "groups": [
+    {
+      "id": "cardio",
+      "label": "Cardio Machines",
+      "items": [
+        "Treadmill",
+        "Rower",
+        "Stair Climber",
+        "Elliptical"
+      ]
+    },
+    {
+      "id": "weights",
+      "label": "Free Weights",
+      "items": [
+        "Dumbbell",
+        "Kettlebell",
+        "Barbell",
+        "Medicine Ball"
+      ]
+    },
+    {
+      "id": "bodyweight",
+      "label": "Bodyweight Moves",
+      "items": [
+        "Push-Up",
+        "Pull-Up",
+        "Squat",
+        "Plank"
+      ]
+    },
+    {
+      "id": "yoga",
+      "label": "Yoga Props",
+      "items": [
+        "Yoga Mat",
+        "Yoga Block",
+        "Yoga Strap",
+        "Bolster"
+      ]
+    }
+  ]
+}

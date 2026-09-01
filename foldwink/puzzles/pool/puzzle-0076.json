@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0076",
+  "title": "Shelf life",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "classics",
+      "label": "Classic Authors",
+      "items": [
+        "Austen",
+        "Dickens",
+        "Tolstoy",
+        "Dumas"
+      ]
+    },
+    {
+      "id": "modernists",
+      "label": "Modernist Authors",
+      "items": [
+        "Woolf",
+        "Joyce",
+        "Kafka",
+        "Proust"
+      ]
+    },
+    {
+      "id": "sci-fi",
+      "label": "Science Fiction Authors",
+      "items": [
+        "Asimov",
+        "Le Guin",
+        "Bradbury",
+        "Clarke"
+      ]
+    },
+    {
+      "id": "mystery",
+      "label": "Mystery Authors",
+      "items": [
+        "Christie",
+        "Conan Doyle",
+        "Chandler",
+        "Highsmith"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 22,
+    "editorialRank": 56,
+    "gptDifficulty": 78,
+    "gptRationale": "Author names demand substantial literary knowledge, and distinguishing movements and genres makes the classification notably tough for this tier."
+  }
+}

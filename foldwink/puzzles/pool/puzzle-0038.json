@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0038",
+  "title": "Heads or tails",
+  "difficulty": "medium",
+  "editorialSummary": "Four coin-related clusters.",
+  "groups": [
+    {
+      "id": "coin-sides",
+      "label": "Coin Sides",
+      "revealHint": "SIDES",
+      "items": [
+        "Heads",
+        "Tails",
+        "Obverse",
+        "Reverse"
+      ]
+    },
+    {
+      "id": "denominations",
+      "label": "US Denominations",
+      "revealHint": "CENTS",
+      "items": [
+        "Nickel",
+        "Dime",
+        "Quarter",
+        "Penny"
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Coin Metals",
+      "revealHint": "METAL",
+      "items": [
+        "Bronze",
+        "Nickel Alloy",
+        "Silver",
+        "Gold"
+      ]
+    },
+    {
+      "id": "actions",
+      "label": "Coin Actions",
+      "revealHint": "FLIP",
+      "items": [
+        "Flip",
+        "Toss",
+        "Spin",
+        "Stack"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 30,
+    "editorialRank": 32,
+    "gptDifficulty": 33,
+    "gptRationale": "Coin-related sets are conceptually tidy, though shared vocabulary around metals and denominations creates mild overlap."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "de-0332",
+  "title": "Im Klassenzimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Im Klassenzimmer",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["schule", "alltag", "lernen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 12
+  },
+  "groups": [
+    {
+      "id": "writing_tools",
+      "label": "Schreibgeräte",
+      "items": ["Bleistift", "Füller", "Kreide", "Filzstift"]
+    },
+    {
+      "id": "learning_materials",
+      "label": "Lernmaterialien",
+      "items": ["Heft", "Schulbuch", "Atlas", "Wörterbuch"]
+    },
+    {
+      "id": "classroom_furniture",
+      "label": "Einrichtung",
+      "items": ["Tisch", "Stuhl", "Schrank", "Garderobe"]
+    },
+    {
+      "id": "school_subjects",
+      "label": "Unterrichtsfächer",
+      "items": ["Deutsch", "Mathematik", "Kunst", "Sport"]
+    }
+  ]
+}

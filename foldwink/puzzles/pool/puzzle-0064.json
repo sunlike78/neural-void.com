@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0064",
+  "title": "Silver screen",
+  "difficulty": "medium",
+  "editorialSummary": "Film craft grouped by phase of production.",
+  "groups": [
+    {
+      "id": "writing",
+      "label": "Screenwriting",
+      "revealHint": "SCRIPT",
+      "items": [
+        "Logline",
+        "Treatment",
+        "Draft",
+        "Beat Sheet"
+      ]
+    },
+    {
+      "id": "shooting",
+      "label": "On Set",
+      "revealHint": "CAMERA",
+      "items": [
+        "Take",
+        "Mark",
+        "Slate",
+        "Rehearsal"
+      ]
+    },
+    {
+      "id": "editing",
+      "label": "Editing",
+      "revealHint": "EDIT",
+      "items": [
+        "Cut",
+        "Dissolve",
+        "Montage",
+        "Jump Cut"
+      ]
+    },
+    {
+      "id": "sound",
+      "label": "Sound",
+      "revealHint": "AUDIO",
+      "items": [
+        "Foley",
+        "Boom",
+        "ADR",
+        "Score"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 10,
+    "editorialRank": 41,
+    "gptDifficulty": 61,
+    "gptRationale": "Film-production terminology is coherent but somewhat specialized, and multiple terms could plausibly belong to adjacent production stages."
+  }
+}

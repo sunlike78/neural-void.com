@@ -1,0 +1,51 @@
+{
+  "id": "de-0389",
+  "title": "Kaffeepause",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kaffeepause",
+    "batch": "cq6-de-replacements-wave3"
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Kaffeevarianten",
+      "items": [
+        "Espresso",
+        "Cappuccino",
+        "Latte Macchiato",
+        "Filterkaffee"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Teesorten",
+      "items": [
+        "Schwarztee",
+        "Grüntee",
+        "Früchtetee",
+        "Pfefferminztee"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Kleingebäck",
+      "items": [
+        "Keks",
+        "Muffin",
+        "Zimtschnecke",
+        "Donut"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kaffeegeschirr",
+      "items": [
+        "Tasse",
+        "Untertasse",
+        "Löffel",
+        "Milchkännchen"
+      ]
+    }
+  ]
+}

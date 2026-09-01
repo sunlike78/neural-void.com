@@ -1,0 +1,38 @@
+{
+  "id": "de-0311",
+  "title": "Frühstück daheim",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Frühstück daheim",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["frühstück", "alltag", "essen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 10
+  },
+  "groups": [
+    {
+      "id": "breakfast_drinks",
+      "label": "Frühstücksgetränke",
+      "items": ["Kaffee", "Tee", "Milch", "Saft"]
+    },
+    {
+      "id": "breakfast_baked_goods",
+      "label": "Backwaren",
+      "items": ["Brötchen", "Croissant", "Brezel", "Toast"]
+    },
+    {
+      "id": "breakfast_spreads",
+      "label": "Brotaufstriche",
+      "items": ["Butter", "Marmelade", "Honig", "Frischkäse"]
+    },
+    {
+      "id": "breakfast_tableware",
+      "label": "Auf dem Tisch",
+      "items": ["Tasse", "Teller", "Löffel", "Serviette"]
+    }
+  ]
+}

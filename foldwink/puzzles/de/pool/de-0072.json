@@ -1,0 +1,55 @@
+{
+  "id": "de-0072",
+  "title": "Auf dem Marktplatz",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Marktplatz",
+    "batch": "de-batch-03",
+    "difficultyScore": 35,
+    "editorialRank": 28,
+    "gptDifficulty": 24,
+    "gptRationale": "The market-stand groupings are intuitive, but a few food items can momentarily blur between neighboring stalls."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Obst- und Gemüsestand",
+      "items": [
+        "Erdbeeren",
+        "Zucchini",
+        "Äpfel",
+        "Paprika"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Fleisch- und Fischstand",
+      "items": [
+        "Hähnchen",
+        "Forelle",
+        "Kalbfleisch",
+        "Lachs"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Blumenstand",
+      "items": [
+        "Rosen",
+        "Tulpen",
+        "Gesteck",
+        "Topfpflanze"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Käse- und Wurststand",
+      "items": [
+        "Bergkäse",
+        "Salami",
+        "Schinken",
+        "Gouda"
+      ]
+    }
+  ]
+}

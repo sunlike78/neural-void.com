@@ -1,0 +1,55 @@
+{
+  "id": "de-0251",
+  "title": "Bildende Kunst Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "bildende-kunst",
+    "batch": "de-batch-03",
+    "difficultyScore": 33,
+    "editorialRank": 51,
+    "gptDifficulty": 63,
+    "gptRationale": "Bildende Kunst Deutschland fordert kunsthistorische Einordnung über mehrere Stilrichtungen hinweg und arbeitet mit einigen weniger populären Namen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Expressionismus",
+      "items": [
+        "Ernst Ludwig Kirchner",
+        "Emil Nolde",
+        "Franz Marc",
+        "Erich Heckel"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Bauhaus-Meister",
+      "items": [
+        "Klee",
+        "Kandinsky",
+        "Feininger",
+        "Moholy-Nagy"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Romantik-Maler",
+      "items": [
+        "C.D. Friedrich",
+        "Runge",
+        "Führich",
+        "Moritz von Schwind"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Gegenwartskunst",
+      "items": [
+        "Gerhard Richter",
+        "Joseph Beuys",
+        "Georg Baselitz",
+        "Sigmar Polke"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0280",
+  "title": "Einzelhandel Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "einzelhandel",
+    "batch": "de-batch-03",
+    "difficultyScore": 17,
+    "editorialRank": 18,
+    "gptDifficulty": 19,
+    "gptRationale": "Discounter, Kasse, Rabatt und Supermarktformate sind extrem alltagsnah und lassen sich fast ohne false trails sortieren."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Handelsketten",
+      "items": [
+        "Aldi",
+        "Lidl",
+        "Rewe",
+        "Edeka"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Handelsformate",
+      "items": [
+        "Supermarkt",
+        "Discounter",
+        "Kaufhaus",
+        "Fachmarkt"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Handelsprodukte",
+      "items": [
+        "Milch",
+        "Brot",
+        "Obst",
+        "Waschmittel"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Handelsbegriffe",
+      "items": [
+        "Einkaufszettel",
+        "Kasse",
+        "Rabatt",
+        "Treuepunkte"
+      ]
+    }
+  ]
+}

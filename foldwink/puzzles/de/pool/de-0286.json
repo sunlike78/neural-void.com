@@ -1,0 +1,55 @@
+{
+  "id": "de-0286",
+  "title": "Bundeswehr Einheiten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "bundeswehr",
+    "batch": "de-batch-03",
+    "difficultyScore": 36,
+    "editorialRank": 58,
+    "gptDifficulty": 73,
+    "gptRationale": "Die vielen militärischen Einheitsbezeichnungen sind spezialisiert, ähnlich gebaut und ohne Bundeswehrwissen schwer sauber zu trennen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Heer-Einheiten",
+      "items": [
+        "Panzerbrigade",
+        "Gebirgsjäger",
+        "Fallschirmjäger",
+        "Pioniere"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Marine-Einheiten",
+      "items": [
+        "Fregattengeschwader",
+        "U-Boot-Geschwader",
+        "Minengeschwader",
+        "Seebataillon"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Luftwaffe-Einheiten",
+      "items": [
+        "Jagdgeschwader",
+        "Transportgeschwader",
+        "Hubschrauberregiment",
+        "Fernmeldegruppe"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Spezialkräfte",
+      "items": [
+        "KSK",
+        "KSM",
+        "Fernspäher",
+        "ABC-Abwehr"
+      ]
+    }
+  ]
+}

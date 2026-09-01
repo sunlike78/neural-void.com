@@ -1,0 +1,63 @@
+{
+  "id": "hard-013",
+  "title": "Dead end",
+  "difficulty": "hard",
+  "editorialSummary": "Four things that can be dead overlap.",
+  "meta": {
+    "theme": "abstract",
+    "categoryType": "thematic",
+    "fairnessRisk": 1,
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 21,
+    "editorialRank": 55,
+    "gptDifficulty": 78,
+    "gptRationale": "The 'dead' modifier spans literal, figurative, and idiomatic uses, and some entries feel especially loose unless the solver buys into the metaphorical reading."
+  },
+  "groups": [
+    {
+      "id": "battery",
+      "label": "Dead battery",
+      "revealHint": "Battery",
+      "items": [
+        "Drained",
+        "Flat",
+        "Charger",
+        "Jumper Cable"
+      ]
+    },
+    {
+      "id": "language",
+      "label": "Dead language",
+      "revealHint": "Language",
+      "items": [
+        "Latin",
+        "Sanskrit",
+        "Aramaic",
+        "Coptic"
+      ]
+    },
+    {
+      "id": "metaphor",
+      "label": "Dead metaphor",
+      "revealHint": "Metaphor",
+      "items": [
+        "Deadline",
+        "Headstone",
+        "Footstep",
+        "Eyebrow"
+      ]
+    },
+    {
+      "id": "silence",
+      "label": "Dead silence",
+      "revealHint": "Silence",
+      "items": [
+        "Hush",
+        "Stillness",
+        "Void",
+        "Vacuum"
+      ]
+    }
+  ]
+}

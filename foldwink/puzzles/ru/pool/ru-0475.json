@@ -1,0 +1,59 @@
+{
+  "id": "ru-0475",
+  "title": "Типы программирования",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Парадигмы программирования",
+    "batch": "ru-batch-20",
+    "difficultyScore": 22,
+    "editorialRank": 29,
+    "gptDifficulty": 34,
+    "gptRationale": "Программирование и adjacent-термины знакомы многим, а группы по парадигмам, паттернам, методологиям и качеству кода разделены довольно прозрачно."
+  },
+  "groups": [
+    {
+      "id": "prog_paradigms",
+      "label": "Парадигмы",
+      "revealHint": "ПАРАДИГМЫ",
+      "items": [
+        "ООП",
+        "Функциональное",
+        "Императивное",
+        "Декларативное"
+      ]
+    },
+    {
+      "id": "design_patterns",
+      "label": "Паттерны",
+      "revealHint": "ПАТТЕРНЫ",
+      "items": [
+        "Синглтон",
+        "Фасад",
+        "Наблюдатель",
+        "Фабрика"
+      ]
+    },
+    {
+      "id": "dev_methodologies",
+      "label": "Методологии",
+      "revealHint": "МЕТОДОЛОГИИ",
+      "items": [
+        "Agile",
+        "Scrum",
+        "Kanban",
+        "Waterfall"
+      ]
+    },
+    {
+      "id": "code_quality",
+      "label": "Качество кода",
+      "revealHint": "КАЧЕСТВО",
+      "items": [
+        "Рефакторинг",
+        "Code review",
+        "Тесты",
+        "CI/CD"
+      ]
+    }
+  ]
+}

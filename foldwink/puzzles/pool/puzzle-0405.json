@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0405",
+  "title": "Elements by Periodic Group",
+  "difficulty": "hard",
+  "editorialSummary": "Chemical elements by periodic table group. False trail: Sodium and Potassium feel like one group to non-chemists — they are both alkali metals, correctly together. Hardest part: separating alkali (Group 1) from alkaline earth (Group 2). Barium and Calcium are most commonly misidentified. Noble gases and Halogens are the solving anchors.",
+  "meta": {
+    "theme": "science",
+    "categoryType": "classification",
+    "batch": "batch-11",
+    "status": "approved",
+    "difficultyScore": 31,
+    "editorialRank": 24,
+    "gptDifficulty": 19,
+    "gptRationale": "Periodic table groups are canonical categories with very familiar members, making this easy relative to the hard tier."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "NOBLE GASES",
+      "items": [
+        "Helium",
+        "Neon",
+        "Argon",
+        "Krypton"
+      ],
+      "revealHint": "NOBLE"
+    },
+    {
+      "id": "g2",
+      "label": "HALOGENS",
+      "items": [
+        "Fluorine",
+        "Chlorine",
+        "Bromine",
+        "Iodine"
+      ],
+      "revealHint": "HALOGE"
+    },
+    {
+      "id": "g3",
+      "label": "ALKALI METALS",
+      "items": [
+        "Lithium",
+        "Sodium",
+        "Potassium",
+        "Caesium"
+      ],
+      "revealHint": "ALKALI"
+    },
+    {
+      "id": "g4",
+      "label": "ALKALINE EARTH METALS",
+      "items": [
+        "Beryllium",
+        "Magnesium",
+        "Calcium",
+        "Barium"
+      ],
+      "revealHint": "ALKALI"
+    }
+  ]
+}

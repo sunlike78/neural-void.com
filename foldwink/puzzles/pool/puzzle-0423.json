@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0423",
+  "title": "Greek Alphabet Groups",
+  "difficulty": "medium",
+  "editorialSummary": "Greek letters grouped by position in the alphabet: first quarter (1–6), second quarter (7–12), third quarter (13–18), fourth quarter (19–24). False trail: Players who know a few letters may misplace Theta (8th) or Omicron (15th) — ordinal knowledge required.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "classification",
+    "batch": "batch-12",
+    "status": "approved",
+    "difficultyScore": 23,
+    "editorialRank": 26,
+    "gptDifficulty": 28,
+    "gptRationale": "The sequence-based Greek-letter blocks are systematic, though players still need enough alphabet recall to place them correctly."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "SELECTED GREEK LETTERS 1–6",
+      "items": [
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta"
+      ],
+      "revealHint": "SELECT"
+    },
+    {
+      "id": "g2",
+      "label": "SELECTED GREEK LETTERS 7–12",
+      "items": [
+        "Eta",
+        "Theta",
+        "Iota",
+        "Kappa"
+      ],
+      "revealHint": "SELECT"
+    },
+    {
+      "id": "g3",
+      "label": "SELECTED GREEK LETTERS 13–18",
+      "items": [
+        "Nu",
+        "Xi",
+        "Omicron",
+        "Pi"
+      ],
+      "revealHint": "SELECT"
+    },
+    {
+      "id": "g4",
+      "label": "SELECTED GREEK LETTERS 19–24",
+      "items": [
+        "Tau",
+        "Upsilon",
+        "Phi",
+        "Omega"
+      ],
+      "revealHint": "SELECT"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0172",
+  "title": "Länder Europas",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-batch-02",
+    "difficultyScore": 35,
+    "editorialRank": 27,
+    "gptDifficulty": 21,
+    "gptRationale": "Europäische Länder nach Himmelsrichtungen sind sehr vertraut und die Kategorien dadurch fast sofort ersichtlich."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Westeuropa",
+      "items": [
+        "Frankreich",
+        "Spanien",
+        "Portugal",
+        "Irland"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Osteuropa",
+      "items": [
+        "Polen",
+        "Ungarn",
+        "Rumänien",
+        "Bulgarien"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Nordeuropa",
+      "items": [
+        "Schweden",
+        "Norwegen",
+        "Finnland",
+        "Dänemark"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Südeuropa",
+      "items": [
+        "Italien",
+        "Griechenland",
+        "Kroatien",
+        "Malta"
+      ]
+    }
+  ]
+}

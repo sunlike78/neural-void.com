@@ -1,0 +1,131 @@
+{
+  "measurements": [
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 650,
+      "height": 48,
+      "viewportHeight": 800,
+      "doc": {
+        "scrollHeight": 836,
+        "scrollTop": 0,
+        "clientHeight": 800
+      },
+      "round": 1,
+      "profile": "desktop"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 724,
+      "height": 48,
+      "viewportHeight": 800,
+      "doc": {
+        "scrollHeight": 910,
+        "scrollTop": 0,
+        "clientHeight": 800
+      },
+      "round": 2,
+      "profile": "desktop"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 724,
+      "height": 48,
+      "viewportHeight": 800,
+      "doc": {
+        "scrollHeight": 910,
+        "scrollTop": 0,
+        "clientHeight": 800
+      },
+      "round": 3,
+      "profile": "desktop"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 630,
+      "height": 48,
+      "viewportHeight": 844,
+      "doc": {
+        "scrollHeight": 844,
+        "scrollTop": 0,
+        "clientHeight": 844
+      },
+      "round": 1,
+      "profile": "ios"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 704,
+      "height": 48,
+      "viewportHeight": 844,
+      "doc": {
+        "scrollHeight": 882,
+        "scrollTop": 0,
+        "clientHeight": 844
+      },
+      "round": 2,
+      "profile": "ios"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 704,
+      "height": 48,
+      "viewportHeight": 844,
+      "doc": {
+        "scrollHeight": 882,
+        "scrollTop": 0,
+        "clientHeight": 844
+      },
+      "round": 3,
+      "profile": "ios"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 630,
+      "height": 48,
+      "viewportHeight": 915,
+      "doc": {
+        "scrollHeight": 915,
+        "scrollTop": 0,
+        "clientHeight": 915
+      },
+      "round": 1,
+      "profile": "android"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 704,
+      "height": 48,
+      "viewportHeight": 915,
+      "doc": {
+        "scrollHeight": 915,
+        "scrollTop": 0,
+        "clientHeight": 915
+      },
+      "round": 2,
+      "profile": "android"
+    },
+    {
+      "exists": true,
+      "inViewport": true,
+      "y": 704,
+      "height": 48,
+      "viewportHeight": 915,
+      "doc": {
+        "scrollHeight": 915,
+        "scrollTop": 0,
+        "clientHeight": 915
+      },
+      "round": 3,
+      "profile": "android"
+    }
+  ],
+  "generatedAt": "2026-04-17T09:27:46.128Z"
+}

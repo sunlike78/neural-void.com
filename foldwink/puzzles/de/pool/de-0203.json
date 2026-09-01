@@ -1,0 +1,55 @@
+{
+  "id": "de-0203",
+  "title": "Friedrich der Große",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "preussen",
+    "batch": "de-batch-03",
+    "difficultyScore": 34,
+    "editorialRank": 60,
+    "gptDifficulty": 78,
+    "gptRationale": "Friedrich der Große ist stark wissensbasiert, und Schlachten, Hofpersonen und preußische Orte sind für typische Spieler eher Spezialstoff."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schlachten Friedrichs",
+      "items": [
+        "Roßbach",
+        "Leuthen",
+        "Zorndorf",
+        "Kunersdorf"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Reformen",
+      "items": [
+        "Religionsfreiheit",
+        "Justizreform",
+        "Schulpflicht",
+        "Pressefreiheit"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Preußische Orte",
+      "items": [
+        "Sanssouci",
+        "Rheinsberg",
+        "Breslau",
+        "Potsdam"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Personen am Hof",
+      "items": [
+        "Voltaire",
+        "Quantz",
+        "Knobeldorff",
+        "Wilhelmine"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0109",
+  "title": "Dance floor",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "dance",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 21,
+    "editorialRank": 45,
+    "gptDifficulty": 61,
+    "gptRationale": "Dance categories rely on genre knowledge and several names are culturally specific enough to make the set trickier than average."
+  },
+  "groups": [
+    {
+      "id": "ballroom",
+      "label": "Ballroom Dances",
+      "items": [
+        "Waltz",
+        "Foxtrot",
+        "Quickstep",
+        "Tango"
+      ]
+    },
+    {
+      "id": "latin",
+      "label": "Latin Dances",
+      "items": [
+        "Salsa",
+        "Merengue",
+        "Bachata",
+        "Rumba"
+      ]
+    },
+    {
+      "id": "street",
+      "label": "Street Dances",
+      "items": [
+        "Breakdance",
+        "Popping",
+        "Locking",
+        "Krumping"
+      ]
+    },
+    {
+      "id": "folk",
+      "label": "Folk Dances",
+      "items": [
+        "Polka",
+        "Hora",
+        "Ceilidh",
+        "Tarantella"
+      ]
+    }
+  ]
+}

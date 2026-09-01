@@ -1,0 +1,55 @@
+{
+  "id": "ru-0241",
+  "title": "Виды танцев",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Танцевальные стили",
+    "batch": "ru-batch-09",
+    "difficultyScore": 10,
+    "editorialRank": 25,
+    "gptDifficulty": 35,
+    "gptRationale": "Dance families are fairly intuitive, though folk and street substyles require a bit of cultural recognition."
+  },
+  "groups": [
+    {
+      "id": "latin_dances",
+      "label": "Латиноамериканские",
+      "items": [
+        "Самба",
+        "Румба",
+        "Ча-ча-ча",
+        "Пасодобль"
+      ]
+    },
+    {
+      "id": "ballroom_dances",
+      "label": "Бальные",
+      "items": [
+        "Вальс",
+        "Фокстрот",
+        "Квикстеп",
+        "Венский вальс"
+      ]
+    },
+    {
+      "id": "folk_dances",
+      "label": "Народные",
+      "items": [
+        "Лезгинка",
+        "Гопак",
+        "Калинка",
+        "Полька"
+      ]
+    },
+    {
+      "id": "street_dances",
+      "label": "Уличные",
+      "items": [
+        "Брейкданс",
+        "Хип-хоп",
+        "Поппинг",
+        "Крамп"
+      ]
+    }
+  ]
+}

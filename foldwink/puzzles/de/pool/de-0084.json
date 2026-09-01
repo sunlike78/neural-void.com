@@ -1,0 +1,55 @@
+{
+  "id": "de-0084",
+  "title": "Das Rheintal",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Rheintal",
+    "batch": "de-batch-04",
+    "difficultyScore": 34,
+    "editorialRank": 54,
+    "gptDifficulty": 67,
+    "gptRationale": "Rheintal knowledge is specialized and the legend, wine, and place names create meaningful confusion for typical players."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Rheinburgen",
+      "items": [
+        "Burg Rheinstein",
+        "Burg Katz",
+        "Maus",
+        "Burg Gutenfels"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rheinweine",
+      "items": [
+        "Riesling",
+        "Spätburgunder",
+        "Müller-Thurgau",
+        "Silvaner"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Rheinorte",
+      "items": [
+        "Rüdesheim",
+        "Bacharach",
+        "Sankt Goar",
+        "Boppard"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Rhein-Sagen",
+      "items": [
+        "Loreley",
+        "Nibelungen",
+        "Mäuseturm",
+        "Drachenfels"
+      ]
+    }
+  ]
+}

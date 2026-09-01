@@ -1,0 +1,35 @@
+{
+  "id": "de-0435",
+  "title": "Auf dem Schreibtisch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 11,
+    "editorialRank": 0,
+    "gptDifficulty": 11,
+    "gptRationale": "Schreibgeräte, Befestigungsmittel, Papierwaren und Computergeräte bilden vier alltägliche, eindeutige Gruppen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schreibgeräte",
+      "items": ["Bleistift", "Kugelschreiber", "Füller", "Textmarker"]
+    },
+    {
+      "id": "group_b",
+      "label": "Befestigungsmittel",
+      "items": ["Büroklammer", "Heftklammer", "Reißzwecke", "Gummiband"]
+    },
+    {
+      "id": "group_c",
+      "label": "Papierwaren",
+      "items": ["Briefpapier", "Briefumschlag", "Karteikarte", "Notizblock"]
+    },
+    {
+      "id": "group_d",
+      "label": "Computergeräte",
+      "items": ["Tastatur", "Maus", "Bildschirm", "Drucker"]
+    }
+  ]
+}

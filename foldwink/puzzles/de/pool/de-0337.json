@@ -1,0 +1,59 @@
+{
+  "id": "de-0337",
+  "title": "Laborgeräte",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Labor",
+    "batch": "de-batch-04",
+    "difficultyScore": 39,
+    "editorialRank": 26,
+    "gptDifficulty": 18,
+    "gptRationale": "Laborgeräte und Sicherheitsausrüstung sind stark gegenständlich und bilden sehr offensichtliche Kategorien ohne nennenswerte Irreführung."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Messgeräte im Labor",
+      "revealHint": "Messen und prüfen",
+      "items": [
+        "pH-Meter",
+        "Waage",
+        "Spektrometer",
+        "Thermometer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Behälter im Labor",
+      "revealHint": "Flüssig. halten",
+      "items": [
+        "Becherglas",
+        "Erlenmeyerkolben",
+        "Reagenzglas",
+        "Messkolben"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Werkzeuge im Labor",
+      "revealHint": "Handwerkzeuge",
+      "items": [
+        "Pinzette",
+        "Spatel",
+        "Bunsenbrenner",
+        "Zentrifuge"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Sicherheitsausrüstung",
+      "revealHint": "Schutzausrüstung",
+      "items": [
+        "Schutzbrille",
+        "Handschuhe",
+        "Laborkittel",
+        "Abzug"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "de-0348",
+  "title": "Im Wohnzimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wohnzimmer",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 17,
+    "editorialRank": 17,
+    "gptDifficulty": 16,
+    "gptRationale": "Vier konkrete und vertraute Gruppen aus dem Wohnzimmer."
+  },
+  "groups": [
+    {
+      "id": "seating",
+      "label": "Sitzmöbel",
+      "items": ["Sofa", "Sessel", "Hocker", "Stuhl"]
+    },
+    {
+      "id": "lighting",
+      "label": "Lichtquellen",
+      "items": ["Stehlampe", "Tischlampe", "Deckenlampe", "Kerze"]
+    },
+    {
+      "id": "media",
+      "label": "Für Medien",
+      "items": ["Fernseher", "Radio", "Lautsprecher", "Fernbedienung"]
+    },
+    {
+      "id": "decor",
+      "label": "Dekoration",
+      "items": ["Vase", "Bild", "Kissen", "Teppich"]
+    }
+  ]
+}

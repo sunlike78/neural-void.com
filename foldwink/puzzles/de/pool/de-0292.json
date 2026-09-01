@@ -1,0 +1,55 @@
+{
+  "id": "de-0292",
+  "title": "Sozialleistungen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "sozialleistungen",
+    "batch": "de-batch-03",
+    "difficultyScore": 41,
+    "editorialRank": 48,
+    "gptDifficulty": 52,
+    "gptRationale": "Sozialrechtliche Begriffe und Behörden sind zwar bekannt genug, aber als bürokratisches Vokabular deutlich trockener und abstrakter als der Schnitt."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Sozialleistungs-Arten",
+      "items": [
+        "Kindergeld",
+        "Wohngeld",
+        "Sozialhilfe",
+        "BAföG"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Sozial-Behörden",
+      "items": [
+        "Jobcenter",
+        "Sozialamt",
+        "Jugendamt",
+        "Rentenversicherung"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Antragstellung",
+      "items": [
+        "Antrag stellen",
+        "Bescheid",
+        "Widerspruch",
+        "Klage"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Sozial-Begriffe",
+      "items": [
+        "Bedürftigkeit",
+        "Grundsicherung",
+        "Regelleistung",
+        "Sanktion"
+      ]
+    }
+  ]
+}

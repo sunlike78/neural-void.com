@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0236",
+  "title": "Round table",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "mythology",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 35,
+    "editorialRank": 37,
+    "gptDifficulty": 38,
+    "gptRationale": "Arthurian material is famous enough to feel accessible, yet the legend-specific names and thematic abstractions raise the bar somewhat."
+  },
+  "groups": [
+    {
+      "id": "characters",
+      "label": "Arthurian Characters",
+      "items": [
+        "King Arthur",
+        "Merlin",
+        "Guinevere",
+        "Lancelot"
+      ]
+    },
+    {
+      "id": "objects",
+      "label": "Legendary Objects",
+      "items": [
+        "Excalibur",
+        "Round Table",
+        "Holy Grail",
+        "Sword in the Stone"
+      ]
+    },
+    {
+      "id": "places",
+      "label": "Legendary Places",
+      "items": [
+        "Camelot",
+        "Avalon",
+        "Tintagel",
+        "Logres"
+      ]
+    },
+    {
+      "id": "themes",
+      "label": "Knightly Themes",
+      "items": [
+        "Chivalry",
+        "Quest",
+        "Joust",
+        "Honor"
+      ]
+    }
+  ]
+}

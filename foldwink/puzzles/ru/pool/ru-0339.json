@@ -1,0 +1,59 @@
+{
+  "id": "ru-0339",
+  "title": "Компании-гиганты",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Крупнейшие компании по отраслям",
+    "batch": "ru-batch-13",
+    "difficultyScore": 23,
+    "editorialRank": 25,
+    "gptDifficulty": 26,
+    "gptRationale": "Корпоративные гиганты широко известны, хотя отдельные компании можно по привычке отнести сразу к нескольким секторам."
+  },
+  "groups": [
+    {
+      "id": "tech_companies",
+      "label": "IT и технологии",
+      "items": [
+        "Apple",
+        "Google",
+        "Microsoft",
+        "Meta"
+      ],
+      "revealHint": "экран и облако"
+    },
+    {
+      "id": "oil_companies",
+      "label": "Нефть и газ",
+      "items": [
+        "Газпром",
+        "Роснефть",
+        "Saudi Aramco",
+        "ExxonMobil"
+      ],
+      "revealHint": "скважина и труба"
+    },
+    {
+      "id": "retail_companies",
+      "label": "Ритейл",
+      "items": [
+        "Costco",
+        "Walmart",
+        "Target",
+        "IKEA"
+      ],
+      "revealHint": "тележка и касса"
+    },
+    {
+      "id": "bank_companies",
+      "label": "Банки",
+      "items": [
+        "JPMorgan",
+        "HSBC",
+        "Сбербанк",
+        "Deutsche Bank"
+      ],
+      "revealHint": "счёт и процент"
+    }
+  ]
+}

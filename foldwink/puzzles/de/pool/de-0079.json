@@ -1,0 +1,55 @@
+{
+  "id": "de-0079",
+  "title": "Programmierung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Programmierung",
+    "batch": "de-batch-03",
+    "difficultyScore": 15,
+    "editorialRank": 25,
+    "gptDifficulty": 31,
+    "gptRationale": "Programming vocabulary is structured clearly, though non-technical players may find several terms less immediately accessible."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Programmiersprachen",
+      "items": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "C++"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Programmierkonzepte",
+      "items": [
+        "Schleife",
+        "Variable",
+        "Funktion",
+        "Klasse"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Entwicklerwerkzeuge",
+      "items": [
+        "IDE",
+        "Git",
+        "Terminal",
+        "Debugger"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Datenbankbegriffe",
+      "items": [
+        "Tabelle",
+        "Abfrage",
+        "Index",
+        "Schlüssel"
+      ]
+    }
+  ]
+}

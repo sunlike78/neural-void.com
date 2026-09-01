@@ -1,0 +1,55 @@
+{
+  "id": "ru-0239",
+  "title": "Спорт с мячом",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Виды спорта с мячом",
+    "batch": "ru-batch-08",
+    "difficultyScore": 53,
+    "editorialRank": 59,
+    "gptDifficulty": 63,
+    "gptRationale": "Several sports invite category overlap or misclassification, and the final group includes non-water items that create strong false trails."
+  },
+  "groups": [
+    {
+      "id": "team_ball",
+      "label": "Командные игры",
+      "items": [
+        "Футбол",
+        "Баскетбол",
+        "Волейбол",
+        "Гандбол"
+      ]
+    },
+    {
+      "id": "racket_ball",
+      "label": "С ракеткой",
+      "items": [
+        "Теннис",
+        "Бадминтон",
+        "Сквош",
+        "Настольный теннис"
+      ]
+    },
+    {
+      "id": "stick_ball",
+      "label": "С клюшкой",
+      "items": [
+        "Хоккей на траве",
+        "Поло",
+        "Крикет",
+        "Лакросс"
+      ]
+    },
+    {
+      "id": "water_ball",
+      "label": "Водные виды",
+      "items": [
+        "Плавание",
+        "Кёрлинг",
+        "Пляжный волейбол",
+        "Пляжный футбол"
+      ]
+    }
+  ]
+}

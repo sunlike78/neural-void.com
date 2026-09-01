@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0054",
+  "title": "Sea depths",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "mammals",
+      "label": "Ocean Mammals",
+      "items": [
+        "Dolphin",
+        "Whale",
+        "Seal",
+        "Manatee"
+      ]
+    },
+    {
+      "id": "cephalopods",
+      "label": "Cephalopods",
+      "items": [
+        "Octopus",
+        "Squid",
+        "Cuttlefish",
+        "Nautilus"
+      ]
+    },
+    {
+      "id": "sharks",
+      "label": "Shark Types",
+      "items": [
+        "Great White",
+        "Hammerhead",
+        "Tiger Shark",
+        "Mako"
+      ]
+    },
+    {
+      "id": "coral-reef",
+      "label": "Reef Life",
+      "items": [
+        "Coral",
+        "Anemone",
+        "Clownfish",
+        "Starfish"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 25,
+    "editorialRank": 34,
+    "gptDifficulty": 40,
+    "gptRationale": "Marine life is vivid and concrete, though cephalopods and reef life require a bit more category awareness than basic animal sets."
+  }
+}

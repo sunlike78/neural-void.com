@@ -1,0 +1,62 @@
+{
+  "id": "ru-0332",
+  "title": "Знакомые вещи",
+  "difficulty": "easy",
+  "editorialSummary": "Четыре бытовые и общеизвестные категории с прямыми, непересекающимися признаками; без ложных связей между карточками.",
+  "meta": {
+    "theme": "повседневные знания",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "easy",
+      "everyday",
+      "general-knowledge"
+    ],
+    "batch": "cq6-ru-replacements-wave2",
+    "status": "draft"
+  },
+  "groups": [
+    {
+      "id": "wind_instruments",
+      "label": "Духовые инструменты",
+      "items": [
+        "Флейта",
+        "Кларнет",
+        "Труба",
+        "Саксофон"
+      ]
+    },
+    {
+      "id": "writing_tools",
+      "label": "Принадлежности для письма",
+      "items": [
+        "Ручка",
+        "Карандаш",
+        "Фломастер",
+        "Маркер"
+      ]
+    },
+    {
+      "id": "forest_berries",
+      "label": "Лесные ягоды",
+      "items": [
+        "Малина",
+        "Черника",
+        "Брусника",
+        "Клюква"
+      ]
+    },
+    {
+      "id": "deciduous_trees",
+      "label": "Лиственные деревья",
+      "items": [
+        "Берёза",
+        "Дуб",
+        "Клён",
+        "Липа"
+      ]
+    }
+  ]
+}

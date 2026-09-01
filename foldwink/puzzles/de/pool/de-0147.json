@@ -1,0 +1,55 @@
+{
+  "id": "de-0147",
+  "title": "Turnen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-batch-02",
+    "difficultyScore": 14,
+    "editorialRank": 31,
+    "gptDifficulty": 43,
+    "gptRationale": "Turnen ist grundsätzlich vertraut, aber die Mischung aus Geräteturnen, rhythmischer Sportgymnastik und Fachbegriffen wie Aufgang erschwert die Zuordnung etwas."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Geräteturnen",
+      "items": [
+        "Reck",
+        "Barren",
+        "Ringe",
+        "Pferd"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rhythmische Sportgym.",
+      "items": [
+        "Band",
+        "Reifen",
+        "Keulen",
+        "Ball"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Bewegungsarten",
+      "items": [
+        "Rolle",
+        "Rad",
+        "Handstand",
+        "Überschlag"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Turnbegriffe",
+      "items": [
+        "Kür",
+        "Pflicht",
+        "Abgang",
+        "Aufgang"
+      ]
+    }
+  ]
+}

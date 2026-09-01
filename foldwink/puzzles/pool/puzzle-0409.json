@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0409",
+  "title": "Types of Beer",
+  "difficulty": "easy",
+  "editorialSummary": "Beer styles grouped by broad family: lagers, stouts/porters, IPAs/pale ales, wheat beers. False trail: Porter is dark like Stout but both belong in the dark ale group.",
+  "meta": {
+    "theme": "beverages",
+    "categoryType": "classification",
+    "batch": "batch-12",
+    "status": "approved",
+    "difficultyScore": 35,
+    "editorialRank": 41,
+    "gptDifficulty": 45,
+    "gptRationale": "Beer styles are common enough for many players, though some crossover between ale, lager, and dark categories adds light confusion."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "LAGER STYLES",
+      "items": [
+        "Pilsner",
+        "Märzen",
+        "Helles",
+        "Dunkel"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "DARK ALES",
+      "items": [
+        "Stout",
+        "Porter",
+        "Brown Ale",
+        "Milk Stout"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "PALE ALES & IPAs",
+      "items": [
+        "West Coast IPA",
+        "Session IPA",
+        "Pale Ale",
+        "Bitter"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "WHEAT BEERS",
+      "items": [
+        "Hefeweizen",
+        "Witbier",
+        "Berliner Weisse",
+        "Dunkelweizen"
+      ]
+    }
+  ]
+}

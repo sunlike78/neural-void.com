@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0244",
+  "title": "Read and write",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "language",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 32,
+    "editorialRank": 25,
+    "gptDifficulty": 21,
+    "gptRationale": "Language-classroom terms are broadly familiar, though world alphabets introduce a mild knowledge check."
+  },
+  "groups": [
+    {
+      "id": "punctuation",
+      "label": "Punctuation Marks",
+      "items": [
+        "Comma",
+        "Semicolon",
+        "Colon",
+        "Apostrophe"
+      ]
+    },
+    {
+      "id": "parts",
+      "label": "Parts of Speech",
+      "items": [
+        "Noun",
+        "Verb",
+        "Adjective",
+        "Adverb"
+      ]
+    },
+    {
+      "id": "alphabets",
+      "label": "World Alphabets",
+      "items": [
+        "Cyrillic",
+        "Greek",
+        "Hebrew",
+        "Arabic"
+      ]
+    },
+    {
+      "id": "sentence",
+      "label": "Sentence Types",
+      "items": [
+        "Statement",
+        "Question",
+        "Command",
+        "Exclamation"
+      ]
+    }
+  ]
+}

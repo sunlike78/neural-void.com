@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0138",
+  "title": "Soup kitchen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 28,
+    "editorialRank": 51,
+    "gptDifficulty": 66,
+    "gptRationale": "Soup and stew terminology leans culinary and international, so obscurer dish names and texture-based categories drive up difficulty."
+  },
+  "groups": [
+    {
+      "id": "broth",
+      "label": "Broth-Based Soups",
+      "items": [
+        "Pho",
+        "Ramen",
+        "Minestrone",
+        "Consomme"
+      ]
+    },
+    {
+      "id": "cream",
+      "label": "Cream Soups",
+      "items": [
+        "Chowder",
+        "Bisque",
+        "Vichyssoise",
+        "Cream of Mushroom"
+      ]
+    },
+    {
+      "id": "cold",
+      "label": "Cold Soups",
+      "items": [
+        "Gazpacho",
+        "Cucumber",
+        "Borscht",
+        "Tarator"
+      ]
+    },
+    {
+      "id": "stew",
+      "label": "Thick Stews",
+      "items": [
+        "Gumbo",
+        "Chili",
+        "Bouillabaisse",
+        "Cassoulet"
+      ]
+    }
+  ]
+}

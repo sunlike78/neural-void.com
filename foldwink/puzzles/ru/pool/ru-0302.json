@@ -1,0 +1,55 @@
+{
+  "id": "ru-0302",
+  "title": "Акулы",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Виды акул",
+    "batch": "ru-batch-12",
+    "difficultyScore": 61,
+    "editorialRank": 68,
+    "gptDifficulty": 73,
+    "gptRationale": "Shark taxonomy is specialized and several labels are uncommon or misleadingly grouped, producing heavy false-trail pressure."
+  },
+  "groups": [
+    {
+      "id": "great_sharks",
+      "label": "Крупные хищники",
+      "items": [
+        "Большая белая",
+        "Тигровая",
+        "Бычья акула",
+        "Длиннокрылая"
+      ]
+    },
+    {
+      "id": "filter_sharks",
+      "label": "Фильтраторы",
+      "items": [
+        "Китовая акула",
+        "Гигантская акула",
+        "Большеротая",
+        "Зебровая"
+      ]
+    },
+    {
+      "id": "deep_sharks",
+      "label": "Глубоководные",
+      "items": [
+        "Гоблин-акула",
+        "Плащеносная акула",
+        "Кошачья акула",
+        "Семижаберная"
+      ]
+    },
+    {
+      "id": "small_sharks",
+      "label": "Небольшие виды",
+      "items": [
+        "Молот-акула",
+        "Нянька-акула",
+        "Голубая акула",
+        "Карликовая акула"
+      ]
+    }
+  ]
+}

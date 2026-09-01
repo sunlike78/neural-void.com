@@ -1,0 +1,55 @@
+{
+  "id": "de-0352",
+  "title": "Im Kino",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kino",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 18,
+    "editorialRank": 18,
+    "gptDifficulty": 17,
+    "gptRationale": "Kinoerlebnis mit vier gewöhnlichen, klar abgrenzbaren Gruppen."
+  },
+  "groups": [
+    {
+      "id": "genres",
+      "label": "Filmgenres",
+      "items": [
+        "Komödie",
+        "Drama",
+        "Krimi",
+        "Horror"
+      ]
+    },
+    {
+      "id": "before-film",
+      "label": "Auf dem Ticket",
+      "items": [
+        "Saal",
+        "Reihe",
+        "Platz",
+        "Uhrzeit"
+      ]
+    },
+    {
+      "id": "snacks",
+      "label": "Kinosnacks",
+      "items": [
+        "Popcorn",
+        "Nachos",
+        "Cola",
+        "Gummibärchen"
+      ]
+    },
+    {
+      "id": "auditorium",
+      "label": "Saalobjekte",
+      "items": [
+        "Leinwand",
+        "Sessel",
+        "Notausgang",
+        "Vorhang"
+      ]
+    }
+  ]
+}

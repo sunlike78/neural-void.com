@@ -1,0 +1,55 @@
+{
+  "id": "de-0086",
+  "title": "Ostseeküste",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Ostseeküste",
+    "batch": "de-batch-04",
+    "difficultyScore": 23,
+    "editorialRank": 39,
+    "gptDifficulty": 49,
+    "gptRationale": "Baltic coast references are moderately specialized, especially the regional-geography terms and animal names."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Ostseebäder",
+      "items": [
+        "Heringsdorf",
+        "Ahlbeck",
+        "Warnemünde",
+        "Binz"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Ostseestiere",
+      "items": [
+        "Schweinswal",
+        "Meeresente",
+        "Silbermöwe",
+        "Kabeljau"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Ostsee-Aktivitäten",
+      "items": [
+        "Bernstein suchen",
+        "Segeln",
+        "Kajakfahren",
+        "Baden"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Ostsee-Besonderheiten",
+      "items": [
+        "Kreideküste",
+        "Kaiserbäder",
+        "Haffküste",
+        "Bodden"
+      ]
+    }
+  ]
+}

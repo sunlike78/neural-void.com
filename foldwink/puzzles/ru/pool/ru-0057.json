@@ -1,0 +1,55 @@
+{
+  "id": "ru-0057",
+  "title": "Жанры кино",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Жанры кино",
+    "batch": "ru-batch-01",
+    "difficultyScore": 32,
+    "editorialRank": 45,
+    "gptDifficulty": 53,
+    "gptRationale": "Film genres are recognizable, but labels mix formal genres with styles and modes, making the taxonomy less tidy."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Страшное кино",
+      "items": [
+        "Ужасы",
+        "Триллер",
+        "Мистика",
+        "Слэшер"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Смешное кино",
+      "items": [
+        "Комедия",
+        "Пародия",
+        "Ромком",
+        "Мокьюментари"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Героическое кино",
+      "items": [
+        "Боевик",
+        "Супергерои",
+        "Вестерн",
+        "Приключения"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Умное кино",
+      "items": [
+        "Драма",
+        "Документальный",
+        "Артхаус",
+        "Биография"
+      ]
+    }
+  ]
+}

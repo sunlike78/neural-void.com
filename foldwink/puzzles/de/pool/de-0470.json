@@ -1,0 +1,59 @@
+{
+  "id": "de-0470",
+  "title": "Meditationstechniken",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "meditation",
+    "batch": "de-batch-05",
+    "difficultyScore": 24,
+    "editorialRank": 48,
+    "gptDifficulty": 64,
+    "gptRationale": "Meditationsschulen teilen Vokabular und Praxisnähe, während einzelne Eigennamen und Sanskrit-Begriffe nur begrenzt bekannt sind."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "MBSR-Merkmale",
+      "revealHint": "Stressreduktion",
+      "items": [
+        "Bodyscan",
+        "Atemübung",
+        "Achtsames Gehen",
+        "Kabat-Zinn"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Vipassana-Merkmale",
+      "revealHint": "Einsichtsmeditatn.",
+      "items": [
+        "Empfindung beobacht.",
+        "10-Tage-Schweigen",
+        "Anicca",
+        "Goenka"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Zen-Merkmale",
+      "revealHint": "Jap. Buddhismus",
+      "items": [
+        "Zazen",
+        "Koan",
+        "Dojo",
+        "Satori"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "TM-Merkmale",
+      "revealHint": "Transzendentale M.",
+      "items": [
+        "Mantra",
+        "Maharishi",
+        "20 Min. 2x tägl.",
+        "Stilles Wiederholen"
+      ]
+    }
+  ]
+}

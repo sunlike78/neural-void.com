@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0203",
+  "title": "Rich or poor",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of rich — wealthy, flavourful, abundant, deep colour. Wealth/flavour false trail.",
+  "meta": {
+    "theme": "abstract",
+    "categoryType": "attribute",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 27,
+    "editorialRank": 43,
+    "gptDifficulty": 53,
+    "gptRationale": "Rich as flavor, abundance, wealth, and color is elegant but somewhat abstract, so the categories are less instantly separable than average."
+  },
+  "groups": [
+    {
+      "id": "wealthy",
+      "label": "Rich (wealthy)",
+      "revealHint": "Money",
+      "items": [
+        "Affluent",
+        "Opulent",
+        "Tycoon",
+        "Millionaire"
+      ]
+    },
+    {
+      "id": "flavourful",
+      "label": "Rich (flavour)",
+      "revealHint": "Taste",
+      "items": [
+        "Buttery",
+        "Creamy",
+        "Decadent",
+        "Indulgent"
+      ]
+    },
+    {
+      "id": "abundant",
+      "label": "Rich (abundant)",
+      "revealHint": "Plenty",
+      "items": [
+        "Lush",
+        "Bountiful",
+        "Teeming",
+        "Fertile"
+      ]
+    },
+    {
+      "id": "deep",
+      "label": "Rich (deep tone)",
+      "revealHint": "Hue",
+      "items": [
+        "Saturated",
+        "Vivid",
+        "Deep Red",
+        "Jewel Tone"
+      ]
+    }
+  ]
+}

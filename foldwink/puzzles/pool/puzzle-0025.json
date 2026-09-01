@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0025",
+  "title": "Bright words",
+  "difficulty": "medium",
+  "editorialSummary": "Synonym clusters. False trail: 'warm' and 'bright' flirt with multiple groups.",
+  "groups": [
+    {
+      "id": "smart",
+      "label": "Meaning SMART",
+      "revealHint": "SMART",
+      "items": [
+        "Clever",
+        "Sharp",
+        "Bright",
+        "Wise"
+      ]
+    },
+    {
+      "id": "strong",
+      "label": "Meaning STRONG",
+      "revealHint": "STRONG",
+      "items": [
+        "Mighty",
+        "Robust",
+        "Sturdy",
+        "Hardy"
+      ]
+    },
+    {
+      "id": "brave",
+      "label": "Meaning BRAVE",
+      "revealHint": "BRAVE",
+      "items": [
+        "Bold",
+        "Fearless",
+        "Valiant",
+        "Daring"
+      ]
+    },
+    {
+      "id": "kind",
+      "label": "Meaning KIND",
+      "revealHint": "KIND",
+      "items": [
+        "Gentle",
+        "Warm",
+        "Tender",
+        "Caring"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 33,
+    "editorialRank": 25,
+    "gptDifficulty": 19,
+    "gptRationale": "These adjective-synonym groups are accessible, but several positive-descriptor words could briefly cross-pull between categories."
+  }
+}

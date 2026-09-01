@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-0012",
+  "title": "Game Night",
+  "difficulty": "easy",
+  "tags": [
+    "games"
+  ],
+  "groups": [
+    {
+      "id": "suits",
+      "label": "Card Suits",
+      "items": [
+        "Hearts",
+        "Spades",
+        "Clubs",
+        "Diamonds"
+      ]
+    },
+    {
+      "id": "board",
+      "label": "Board Games",
+      "items": [
+        "Monopoly",
+        "Scrabble",
+        "Checkers",
+        "Backgammon"
+      ]
+    },
+    {
+      "id": "cards",
+      "label": "Card Games",
+      "items": [
+        "Poker",
+        "Bridge",
+        "Solitaire",
+        "Rummy"
+      ]
+    },
+    {
+      "id": "party",
+      "label": "Party Games",
+      "items": [
+        "Charades",
+        "Twister",
+        "Jenga",
+        "Pictionary"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 30,
+    "editorialRank": 32,
+    "gptDifficulty": 34,
+    "gptRationale": "Game knowledge is common but somewhat culture-dependent, and board games versus card games can momentarily blur."
+  }
+}

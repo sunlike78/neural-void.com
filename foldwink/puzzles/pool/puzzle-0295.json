@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0295",
+  "title": "Chemical Reactions",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "science",
+    "categoryType": "classification",
+    "batch": "batch-07",
+    "status": "approved",
+    "difficultyScore": 42,
+    "editorialRank": 55,
+    "gptDifficulty": 64,
+    "gptRationale": "Chemistry categories are academically clean, but the apparatus and bond or indicator terminology are meaningfully technical."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Types of Chemical Bonds",
+      "items": [
+        "Covalent Bond",
+        "Ionic Bond",
+        "Metallic Bond",
+        "Coordinate Bond"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Acid-Base Indicators",
+      "items": [
+        "Litmus",
+        "Phenolphthalein",
+        "Methyl Orange",
+        "Universal Indicator"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Types of Chemical Reactions",
+      "items": [
+        "Synthesis",
+        "Decomposition",
+        "Combustion",
+        "Neutralisation"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Laboratory Apparatus",
+      "items": [
+        "Burette",
+        "Conical Flask",
+        "Retort Stand",
+        "Volumetric Flask"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0271",
+  "title": "Deutsche Wirtschaft",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "wirtschaft",
+    "batch": "de-batch-03",
+    "difficultyScore": 23,
+    "editorialRank": 49,
+    "gptDifficulty": 67,
+    "gptRationale": "Wirtschaftsinstitutionen und Fachbegriffe verlangen recht viel Deutschlandwissen und haben mehr abstrakte, weniger sofort sichtbare Gruppen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Wirtschaftsbranchen",
+      "items": [
+        "Automobilindustrie",
+        "Maschinenbau",
+        "Chemie",
+        "Tourismus"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Große Unternehmen",
+      "items": [
+        "Volkswagen",
+        "Siemens",
+        "BASF",
+        "Allianz"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Wirtschaftsbegriffe",
+      "items": [
+        "BIP",
+        "Export",
+        "Mittelstand",
+        "Tarifvertrag"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Wirtschaftsinstitutionen",
+      "items": [
+        "Bundesbank",
+        "IHK",
+        "Bundeskartellamt",
+        "Ifo-Institut"
+      ]
+    }
+  ]
+}

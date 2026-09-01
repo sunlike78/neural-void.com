@@ -1,0 +1,55 @@
+{
+  "id": "de-0044",
+  "title": "Theater",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Theater",
+    "batch": "de-batch-02",
+    "difficultyScore": 18,
+    "editorialRank": 45,
+    "gptDifficulty": 63,
+    "gptRationale": "Theaterbegriffe sind merklich abstrakter als Alltagskategorien und enthalten mit Katharsis, Rezitativ oder Libretto mehrere bildungsnahe Fachwörter."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Tragödie-Elemente",
+      "items": [
+        "Untergang",
+        "Schuld",
+        "Schicksal",
+        "Katharsis"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Komödie-Elemente",
+      "items": [
+        "Verwechslung",
+        "Intrige",
+        "Happy End",
+        "Narr"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Musical-Elemente",
+      "items": [
+        "Choreo",
+        "Showtune",
+        "Duett",
+        "Revue"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Opern-Elemente",
+      "items": [
+        "Arie",
+        "Rezitativ",
+        "Ouvertüre",
+        "Libretto"
+      ]
+    }
+  ]
+}

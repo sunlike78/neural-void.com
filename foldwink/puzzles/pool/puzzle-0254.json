@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0254",
+  "title": "Take the plunge",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "sports",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 60,
+    "editorialRank": 41,
+    "gptDifficulty": 29,
+    "gptRationale": "The sport families are recognizable, yet several extreme-sport names are less universal and easy to mix by setting rather than activity type."
+  },
+  "groups": [
+    {
+      "id": "extreme-air",
+      "label": "Air Extreme Sports",
+      "items": [
+        "Skydiving",
+        "Paragliding",
+        "Bungee Jumping",
+        "Hang Gliding"
+      ]
+    },
+    {
+      "id": "extreme-water",
+      "label": "Water Extreme Sports",
+      "items": [
+        "Surfing",
+        "White Water Rafting",
+        "Kitesurfing",
+        "Cliff Diving"
+      ]
+    },
+    {
+      "id": "extreme-climb",
+      "label": "Climbing Sports",
+      "items": [
+        "Rock Climbing",
+        "Rappelling",
+        "Ice Climbing",
+        "Mountaineering"
+      ]
+    },
+    {
+      "id": "extreme-wheels",
+      "label": "Wheeled Extreme",
+      "items": [
+        "BMX",
+        "Skateboarding",
+        "Mountain Biking",
+        "Inline Skating"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0029",
+  "title": "Weather report",
+  "difficulty": "medium",
+  "editorialSummary": "Four weather states.",
+  "groups": [
+    {
+      "id": "storm",
+      "label": "Thunderstorm Phenomena",
+      "revealHint": "Storm",
+      "items": [
+        "Thunder",
+        "Lightning",
+        "Hail",
+        "Tornado"
+      ]
+    },
+    {
+      "id": "cold",
+      "label": "Winter Weather",
+      "revealHint": "Winter",
+      "items": [
+        "Blizzard",
+        "Frost",
+        "Sleet",
+        "Flurry"
+      ]
+    },
+    {
+      "id": "hot",
+      "label": "Heat Conditions",
+      "revealHint": "Heat",
+      "items": [
+        "Heatwave",
+        "Drought",
+        "Scorcher",
+        "Humidity"
+      ]
+    },
+    {
+      "id": "calm",
+      "label": "Mild/Cloudy Conditions",
+      "revealHint": "Mild",
+      "items": [
+        "Breeze",
+        "Mist",
+        "Drizzle",
+        "Overcast"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 25,
+    "editorialRank": 29,
+    "gptDifficulty": 31,
+    "gptRationale": "Weather grouping is natural, but calm and hot categories contain terms that feel more descriptive than event-based."
+  }
+}

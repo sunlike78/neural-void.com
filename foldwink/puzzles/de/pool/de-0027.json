@@ -1,0 +1,55 @@
+{
+  "id": "de-0027",
+  "title": "Unser Sonnensystem",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Planetensystem",
+    "batch": "de-batch-01",
+    "difficultyScore": 15,
+    "editorialRank": 34,
+    "gptDifficulty": 46,
+    "gptRationale": "Das Sonnensystem ist bekannt, doch bei Monden und Kleinkörpern entstehen durch Pluto und ähnliche astronomische Grenzfälle merkliche Unsicherheiten."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Gesteinsplaneten",
+      "items": [
+        "Merkur",
+        "Venus",
+        "Erde",
+        "Mars"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Riesenplaneten",
+      "items": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptun"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Bekannte Monde",
+      "items": [
+        "Mond",
+        "Titan",
+        "Europa",
+        "Ganymed"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kleine Himmelskörper",
+      "items": [
+        "Komet",
+        "Asteroid",
+        "Meteorit",
+        "Pluto"
+      ]
+    }
+  ]
+}

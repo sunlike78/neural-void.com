@@ -1,0 +1,55 @@
+{
+  "id": "ru-0053",
+  "title": "Настольные игры",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Настольные игры",
+    "batch": "ru-batch-01",
+    "difficultyScore": 32,
+    "editorialRank": 48,
+    "gptDifficulty": 59,
+    "gptRationale": "Board-game formats overlap heavily and some titles fit more than one play-style lens, creating strong false trails."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Классические игры",
+      "items": [
+        "Шахматы",
+        "Шашки",
+        "Нарды",
+        "Домино"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Игры с карточками",
+      "items": [
+        "Уно",
+        "Дурак",
+        "Покер",
+        "Дженга-карты"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Популярные настольные игры",
+      "items": [
+        "Монополия",
+        "Эрудит",
+        "Имаджинариум",
+        "Активити"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Игры на реакцию",
+      "items": [
+        "Дженга",
+        "Твистер",
+        "Бинго",
+        "Данетки"
+      ]
+    }
+  ]
+}

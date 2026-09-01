@@ -1,0 +1,62 @@
+{
+  "id": "ru-0346",
+  "title": "Домашняя кухня",
+  "difficulty": "easy",
+  "editorialSummary": "Прямая продуктовая доска: каждая категория узнаваема по назначению, а карточки не образуют альтернативных четвёрок.",
+  "meta": {
+    "theme": "домашняя кухня",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "easy",
+      "food",
+      "everyday"
+    ],
+    "batch": "cq6-ru-replacements-wave2",
+    "status": "draft"
+  },
+  "groups": [
+    {
+      "id": "russian_soups",
+      "label": "Первые блюда",
+      "items": [
+        "Борщ",
+        "Щи",
+        "Уха",
+        "Рассольник"
+      ]
+    },
+    {
+      "id": "grains",
+      "label": "Крупы",
+      "items": [
+        "Рис",
+        "Гречка",
+        "Манка",
+        "Пшено"
+      ]
+    },
+    {
+      "id": "fermented_dairy",
+      "label": "Кисломолочные продукты",
+      "items": [
+        "Кефир",
+        "Сметана",
+        "Творог",
+        "Ряженка"
+      ]
+    },
+    {
+      "id": "spices",
+      "label": "Пряности",
+      "items": [
+        "Паприка",
+        "Куркума",
+        "Корица",
+        "Гвоздика"
+      ]
+    }
+  ]
+}

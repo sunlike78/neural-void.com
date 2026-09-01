@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0002",
+  "title": "Bite and Hold",
+  "difficulty": "medium",
+  "groups": [
+    {
+      "id": "teeth_items",
+      "label": "Things that have teeth",
+      "revealHint": "TEETH",
+      "items": [
+        "Comb",
+        "Gear",
+        "Saw",
+        "Zipper"
+      ]
+    },
+    {
+      "id": "fasteners",
+      "label": "Sewing and fabric fasteners",
+      "revealHint": "FASTEN",
+      "items": [
+        "Button",
+        "Clip",
+        "Snap",
+        "Pin"
+      ]
+    },
+    {
+      "id": "hair_styling",
+      "label": "Hair styling accessories",
+      "revealHint": "HAIR",
+      "items": [
+        "Barrette",
+        "Scrunchie",
+        "Bobby Pin",
+        "Headband"
+      ]
+    },
+    {
+      "id": "hand_tools",
+      "label": "Workshop hand tools",
+      "revealHint": "TOOLS",
+      "items": [
+        "Wrench",
+        "Pliers",
+        "Hammer",
+        "Chisel"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "objects",
+    "categoryType": "attribute",
+    "difficultyScore": 22,
+    "editorialRank": 28,
+    "gptRationale": "Zipper and Bobby Pin create multi-way cross-trails across grooming, workshop, and clothing."
+  }
+}

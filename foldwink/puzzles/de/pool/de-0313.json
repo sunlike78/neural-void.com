@@ -1,0 +1,38 @@
+{
+  "id": "de-0313",
+  "title": "Kochen zu Hause",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kochen zu Hause",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["küche", "alltag", "kochen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 13
+  },
+  "groups": [
+    {
+      "id": "cookware",
+      "label": "Kochgeschirr",
+      "items": ["Topf", "Pfanne", "Auflaufform", "Backblech"]
+    },
+    {
+      "id": "cooking_tools",
+      "label": "Kochwerkzeuge",
+      "items": ["Kochlöffel", "Schneebesen", "Pfannenwender", "Sieb"]
+    },
+    {
+      "id": "spices",
+      "label": "Gewürze",
+      "items": ["Salz", "Pfeffer", "Curry", "Zimt"]
+    },
+    {
+      "id": "baking_ingredients",
+      "label": "Backzutaten",
+      "items": ["Mehl", "Zucker", "Eier", "Backpulver"]
+    }
+  ]
+}

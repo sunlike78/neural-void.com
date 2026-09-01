@@ -1,0 +1,59 @@
+{
+  "id": "de-0312",
+  "title": "Philosophie-Schulen Vertreter",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Philosophie",
+    "batch": "de-batch-04",
+    "difficultyScore": 19,
+    "editorialRank": 41,
+    "gptDifficulty": 56,
+    "gptRationale": "Die philosophischen Schulen sind erkennbar, aber mehrere Denker könnten für typische Spielende auch in benachbarte Strömungen passen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Deutscher Idealismus",
+      "revealHint": "Geist über Materie",
+      "items": [
+        "Kant",
+        "Fichte",
+        "Schelling",
+        "Hegel"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Materialismus",
+      "revealHint": "Materie über Geist",
+      "items": [
+        "Marx",
+        "Engels",
+        "Feuerbach",
+        "Büchner"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Existentialismus",
+      "revealHint": "Existenz zuerst",
+      "items": [
+        "Heidegger",
+        "Jaspers",
+        "Sartre",
+        "Camus"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kritische Theorie",
+      "revealHint": "Frankfurter Schule",
+      "items": [
+        "Adorno",
+        "Horkheimer",
+        "Marcuse",
+        "Habermas"
+      ]
+    }
+  ]
+}

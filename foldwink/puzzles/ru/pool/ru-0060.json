@@ -1,0 +1,55 @@
+{
+  "id": "ru-0060",
+  "title": "Театр и сцена",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Театр и сцена",
+    "batch": "ru-batch-01",
+    "difficultyScore": 31,
+    "editorialRank": 30,
+    "gptDifficulty": 30,
+    "gptRationale": "Theater vocabulary is fairly standard, though a few backstage terms are less common in everyday speech."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Театральные жанры",
+      "items": [
+        "Опера",
+        "Балет",
+        "Мюзикл",
+        "Оперетта"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Люди театра",
+      "items": [
+        "Режиссёр",
+        "Актёр",
+        "Суфлёр",
+        "Декоратор"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Части театра",
+      "items": [
+        "Сцена",
+        "Кулисы",
+        "Партер",
+        "Ложа"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Атрибуты спектакля",
+      "items": [
+        "Декорации",
+        "Грим",
+        "Костюм",
+        "Занавес"
+      ]
+    }
+  ]
+}

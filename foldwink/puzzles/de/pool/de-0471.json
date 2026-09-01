@@ -1,0 +1,35 @@
+{
+  "id": "de-0471",
+  "title": "Frühstückstisch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Frühstück",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 9,
+    "editorialRank": 1,
+    "gptDifficulty": 13,
+    "gptRationale": "Die Gegenstände und Lebensmittel eines alltäglichen Frühstücks bilden vier klar getrennte, leicht erkennbare Gruppen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Besteck",
+      "items": ["Gabel", "Messer", "Löffel", "Teelöffel"]
+    },
+    {
+      "id": "group_b",
+      "label": "Geschirr",
+      "items": ["Teller", "Tasse", "Schüssel", "Becher"]
+    },
+    {
+      "id": "group_c",
+      "label": "Aufstriche",
+      "items": ["Butter", "Marmelade", "Honig", "Frischkäse"]
+    },
+    {
+      "id": "group_d",
+      "label": "Backwaren",
+      "items": ["Toast", "Brötchen", "Brezel", "Croissant"]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0472",
+  "title": "Court is in Session",
+  "difficulty": "medium",
+  "editorialSummary": "Areas of law grouped by subject matter. False trail: tort and contract are both civil law, but the groups split civil law from criminal law; constitutional law and administrative law both involve government but belong to different groups. Players must know the exact branch, not just public vs private.",
+  "meta": {
+    "theme": "types of law",
+    "categoryType": "classification",
+    "batch": "batch-14",
+    "status": "approved",
+    "difficultyScore": 45,
+    "editorialRank": 38,
+    "gptDifficulty": 34,
+    "gptRationale": "The categories are familiar legal domains and most terms are standard textbook examples, so the structure is clearer than average for the tier."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "CRIMINAL LAW",
+      "items": [
+        "Homicide",
+        "Burglary",
+        "Arson",
+        "Robbery"
+      ],
+      "revealHint": "CRIMIN"
+    },
+    {
+      "id": "g2",
+      "label": "CIVIL / TORT",
+      "items": [
+        "Negligence",
+        "Defamation",
+        "Nuisance",
+        "Conversion"
+      ],
+      "revealHint": "CIVIL"
+    },
+    {
+      "id": "g3",
+      "label": "CONSTITUTIONAL",
+      "items": [
+        "Due Process",
+        "Equal Protection",
+        "Free Speech",
+        "Habeas Corpus"
+      ],
+      "revealHint": "CONSTI"
+    },
+    {
+      "id": "g4",
+      "label": "CONTRACT LAW",
+      "items": [
+        "Offer",
+        "Acceptance",
+        "Consideration",
+        "Breach"
+      ],
+      "revealHint": "CONTRA"
+    }
+  ]
+}

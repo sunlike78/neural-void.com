@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0026",
+  "title": "Capital by continent",
+  "difficulty": "medium",
+  "editorialSummary": "Capitals grouped by their continent.",
+  "groups": [
+    {
+      "id": "europe",
+      "label": "European Capitals",
+      "revealHint": "Europe",
+      "items": [
+        "Lisbon",
+        "Vienna",
+        "Athens",
+        "Prague"
+      ]
+    },
+    {
+      "id": "asia",
+      "label": "Asian Capitals",
+      "revealHint": "Asia",
+      "items": [
+        "Seoul",
+        "Bangkok",
+        "Hanoi",
+        "Manila"
+      ]
+    },
+    {
+      "id": "africa",
+      "label": "African Capitals",
+      "revealHint": "Africa",
+      "items": [
+        "Nairobi",
+        "Abuja",
+        "Accra",
+        "Kampala"
+      ]
+    },
+    {
+      "id": "americas",
+      "label": "American Capitals",
+      "revealHint": "Americas",
+      "items": [
+        "Ottawa",
+        "Lima",
+        "Brasilia",
+        "Havana"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 16,
+    "editorialRank": 35,
+    "gptDifficulty": 47,
+    "gptRationale": "The continent theme is clear, but accuracy depends on enough geography knowledge and noticing Lagos is a false-looking outlier."
+  }
+}

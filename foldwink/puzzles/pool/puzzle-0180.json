@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0180",
+  "title": "Frame rate",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of frame — picture, body, accusation, film. Border/Structure overlap.",
+  "meta": {
+    "theme": "abstract",
+    "categoryType": "attribute",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 17,
+    "editorialRank": 43,
+    "gptDifficulty": 61,
+    "gptRationale": "Body frame, picture frame, film frame, and frame-as-accuse create a fairly subtle mix of literal and metaphorical meanings."
+  },
+  "groups": [
+    {
+      "id": "picture",
+      "label": "Picture frame",
+      "revealHint": "Picture",
+      "items": [
+        "Matting",
+        "Gallery",
+        "Canvas",
+        "Mounting"
+      ]
+    },
+    {
+      "id": "body",
+      "label": "Body frame",
+      "revealHint": "Body",
+      "items": [
+        "Skeleton",
+        "Posture",
+        "Stature",
+        "Build"
+      ]
+    },
+    {
+      "id": "accuse",
+      "label": "Frame (accuse)",
+      "revealHint": "Accuse",
+      "items": [
+        "Setup",
+        "Conspiracy",
+        "Fabricate",
+        "Alibi"
+      ]
+    },
+    {
+      "id": "film",
+      "label": "Film frame",
+      "revealHint": "Film",
+      "items": [
+        "Storyboard",
+        "Shot",
+        "Sequence",
+        "Reel"
+      ]
+    }
+  ]
+}

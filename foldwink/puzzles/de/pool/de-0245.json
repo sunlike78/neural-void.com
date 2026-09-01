@@ -1,0 +1,55 @@
+{
+  "id": "de-0245",
+  "title": "Deutsche Rockbands",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "rockbands",
+    "batch": "de-batch-03",
+    "difficultyScore": 29,
+    "editorialRank": 30,
+    "gptDifficulty": 31,
+    "gptRationale": "Die Epochenblöcke deutscher Rockbands sind klar und mit breit bekannten Namen gefüllt, trotz kleiner Genreunschärfen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Deutsche Bands 70er",
+      "items": [
+        "Scorpions",
+        "Kraftwerk",
+        "Can",
+        "Amon Düül"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Deutsche Bands 80er",
+      "items": [
+        "Nena",
+        "Trio",
+        "Extrabreit",
+        "Ideal"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Deutsche Bands 90er",
+      "items": [
+        "Die Toten Hosen",
+        "Rammstein",
+        "Böhse Onkelz",
+        "Guano Apes"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Deutsche Bands 2000er",
+      "items": [
+        "Tokio Hotel",
+        "Silbermond",
+        "Juli",
+        "Wir sind Helden"
+      ]
+    }
+  ]
+}

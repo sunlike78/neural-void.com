@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0478",
+  "title": "Weight Class",
+  "difficulty": "medium",
+  "editorialSummary": "Combat sport weight classes sorted by sport (boxing, wrestling, MMA, and judo). False trail: weight class names (flyweight, bantamweight, etc.) are shared across sports, so players may try to group by name rather than sport. The canonical grouping is by the governing body and sport that uses those exact classes.",
+  "meta": {
+    "theme": "combat sport weight classes",
+    "categoryType": "classification",
+    "batch": "batch-14",
+    "status": "approved",
+    "difficultyScore": 63,
+    "editorialRank": 67,
+    "gptDifficulty": 69,
+    "gptRationale": "Weight-class naming systems are sport-specific and easy to confuse across combat sports, especially where labels overlap but structures differ."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "BOXING (WBC)",
+      "items": [
+        "Minimumweight",
+        "Super Flyweight",
+        "Super Featherweight",
+        "Super Welterweight"
+      ],
+      "revealHint": "BOXING"
+    },
+    {
+      "id": "g2",
+      "label": "UFC / MMA",
+      "items": [
+        "Women's Strawweight (115 lb)",
+        "Flyweight (125 lb)",
+        "Bantamweight (135 lb)",
+        "Featherweight (145 lb)"
+      ],
+      "revealHint": "UFC"
+    },
+    {
+      "id": "g3",
+      "label": "FREESTYLE WRESTLING",
+      "items": [
+        "57 kg",
+        "65 kg",
+        "74 kg",
+        "86 kg"
+      ],
+      "revealHint": "FREEST"
+    },
+    {
+      "id": "g4",
+      "label": "JUDO",
+      "items": [
+        "Extra-Lightweight",
+        "Half-Lightweight",
+        "Lightweight",
+        "Half-Middleweight"
+      ],
+      "revealHint": "JUDO"
+    }
+  ]
+}

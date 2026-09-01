@@ -1,0 +1,55 @@
+{
+  "id": "de-0372",
+  "title": "Am Frühstückstisch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Frühstück",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 9,
+    "editorialRank": 9,
+    "gptDifficulty": 9,
+    "gptRationale": "Die vier Frühstücksgruppen bestehen aus sehr bekannten Lebensmitteln und Zubereitungen mit klaren, voneinander getrennten Funktionen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Brotaufstriche",
+      "items": [
+        "Butter",
+        "Marmelade",
+        "Honig",
+        "Nuss-Nougat-Creme"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Müslizutaten",
+      "items": [
+        "Haferflocken",
+        "Apfelstücke",
+        "Rosinen",
+        "Mandeln"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Heißgetränke",
+      "items": [
+        "Kaffee",
+        "Espresso",
+        "Tee",
+        "Kakao"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Eierspeisen",
+      "items": [
+        "Rührei",
+        "Spiegelei",
+        "Omelett",
+        "gekochtes Ei"
+      ]
+    }
+  ]
+}

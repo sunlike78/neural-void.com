@@ -1,0 +1,55 @@
+{
+  "id": "ru-0013",
+  "title": "Овощи",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Овощи",
+    "batch": "ru-batch-01",
+    "difficultyScore": 18,
+    "editorialRank": 25,
+    "gptDifficulty": 30,
+    "gptRationale": "Mostly accessible grocery knowledge, but botanical versus culinary vegetable groupings raise the difficulty slightly."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Корнеплоды",
+      "items": [
+        "Морковь",
+        "Свёкла",
+        "Редис",
+        "Репа"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Листовые овощи",
+      "items": [
+        "Капуста",
+        "Салат",
+        "Шпинат",
+        "Щавель"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Луковичные овощи",
+      "items": [
+        "Лук",
+        "Чеснок",
+        "Порей",
+        "Шалот"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Плодовые овощи",
+      "items": [
+        "Помидор",
+        "Огурец",
+        "Кабачок",
+        "Перец"
+      ]
+    }
+  ]
+}

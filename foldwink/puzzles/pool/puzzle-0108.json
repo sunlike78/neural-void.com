@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0108",
+  "title": "Under the sea",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "nature",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 18,
+    "editorialRank": 26,
+    "gptDifficulty": 31,
+    "gptRationale": "Sea-life categories are familiar and concrete, though reef dwellers versus shellfish introduces a bit of biological overlap."
+  },
+  "groups": [
+    {
+      "id": "mammal",
+      "label": "Marine Mammals",
+      "items": [
+        "Dolphin",
+        "Whale",
+        "Seal",
+        "Manatee"
+      ]
+    },
+    {
+      "id": "fish",
+      "label": "Common Fish",
+      "items": [
+        "Tuna",
+        "Salmon",
+        "Cod",
+        "Sardine"
+      ]
+    },
+    {
+      "id": "shell",
+      "label": "Shellfish",
+      "items": [
+        "Lobster",
+        "Crab",
+        "Shrimp",
+        "Oyster"
+      ]
+    },
+    {
+      "id": "coral",
+      "label": "Reef Dwellers",
+      "items": [
+        "Clownfish",
+        "Seahorse",
+        "Starfish",
+        "Anemone"
+      ]
+    }
+  ]
+}

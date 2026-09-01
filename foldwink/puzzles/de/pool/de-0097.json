@@ -1,0 +1,55 @@
+{
+  "id": "de-0097",
+  "title": "Ritter und Rittertum",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Ritter und Rittertum",
+    "batch": "de-batch-04",
+    "difficultyScore": 24,
+    "editorialRank": 47,
+    "gptDifficulty": 63,
+    "gptRationale": "Rittertum terms are somewhat familiar, yet tournament and order names introduce archaic vocabulary and stronger false trails."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Ritterrüstung",
+      "items": [
+        "Helm",
+        "Kettenpanzer",
+        "Plattenpanzer",
+        "Visier"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Ritterwaffen",
+      "items": [
+        "Schwert",
+        "Lanze",
+        "Streitkolben",
+        "Morgenstern"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Turnierdisziplinen",
+      "items": [
+        "Tjost",
+        "Ritterturnier",
+        "Buhurt",
+        "Behourd"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Ritterorden",
+      "items": [
+        "Templer",
+        "Deutscher Orden",
+        "Johanniter",
+        "Malteser"
+      ]
+    }
+  ]
+}

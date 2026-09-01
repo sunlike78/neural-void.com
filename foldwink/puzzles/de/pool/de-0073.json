@@ -1,0 +1,55 @@
+{
+  "id": "de-0073",
+  "title": "In der Apotheke",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Apotheke",
+    "batch": "de-batch-03",
+    "difficultyScore": 35,
+    "editorialRank": 31,
+    "gptDifficulty": 28,
+    "gptRationale": "Apotheke vocabulary is common, yet some products could plausibly be read as either medical, cosmetic, or supplemental."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Medikamente",
+      "items": [
+        "Ibuprofen",
+        "Paracetamol",
+        "Antibiotikum",
+        "Hustensaft"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Verbandsmaterial",
+      "items": [
+        "Pflaster",
+        "Mullbinde",
+        "Wundgaze",
+        "Desinfektionsmittel"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Kosmetik",
+      "items": [
+        "Sonnencreme",
+        "Lippenpflege",
+        "Handcreme",
+        "Gesichtswasser"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nahrungsergänzung",
+      "items": [
+        "Vitamin C",
+        "Magnesium",
+        "Omega-3",
+        "Probiotikum"
+      ]
+    }
+  ]
+}

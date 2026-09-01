@@ -1,0 +1,64 @@
+{
+  "id": "ru-0490",
+  "title": "Утро дома",
+  "difficulty": "easy",
+  "editorialSummary": "Ванная, завтрак, одежда и вещи перед выходом образуют четыре узнаваемые части обычного утра; группы разделены по конкретной ситуации и не требуют специальных знаний.",
+  "meta": {
+    "theme": "утренние дела",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "easy",
+      "дом",
+      "утро",
+      "повседневность"
+    ],
+    "batch": "cq6-ru-replacements-wave6",
+    "status": "draft",
+    "difficultyScore": 6
+  },
+  "groups": [
+    {
+      "id": "bathroom_items",
+      "label": "В ванной",
+      "items": [
+        "Зубная щётка",
+        "Зубная паста",
+        "Полотенце",
+        "Мыло"
+      ]
+    },
+    {
+      "id": "breakfast_food",
+      "label": "На завтрак",
+      "items": [
+        "Каша",
+        "Тост",
+        "Яйцо",
+        "Йогурт"
+      ]
+    },
+    {
+      "id": "clothing_items",
+      "label": "Что надевают",
+      "items": [
+        "Рубашка",
+        "Брюки",
+        "Носки",
+        "Туфли"
+      ]
+    },
+    {
+      "id": "leaving_items",
+      "label": "Берут перед выходом",
+      "items": [
+        "Ключи",
+        "Телефон",
+        "Кошелёк",
+        "Рюкзак"
+      ]
+    }
+  ]
+}

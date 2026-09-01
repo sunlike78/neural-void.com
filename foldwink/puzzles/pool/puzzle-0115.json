@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0115",
+  "title": "Lab bench",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "science",
+    "categoryType": "classification",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 19,
+    "editorialRank": 42,
+    "gptDifficulty": 57,
+    "gptRationale": "The science-lab frame is clear, but mixing chemistry, physics units, and equipment requires broader classroom knowledge."
+  },
+  "groups": [
+    {
+      "id": "element",
+      "label": "Noble Gases",
+      "items": [
+        "Helium",
+        "Neon",
+        "Argon",
+        "Krypton"
+      ]
+    },
+    {
+      "id": "acid",
+      "label": "Common Acids",
+      "items": [
+        "Citric",
+        "Acetic",
+        "Sulfuric",
+        "Hydrochloric"
+      ]
+    },
+    {
+      "id": "unit",
+      "label": "Measurement Units",
+      "items": [
+        "Kelvin",
+        "Mole",
+        "Joule",
+        "Pascal"
+      ]
+    },
+    {
+      "id": "equip",
+      "label": "Lab Equipment",
+      "items": [
+        "Beaker",
+        "Pipette",
+        "Bunsen Burner",
+        "Petri Dish"
+      ]
+    }
+  ]
+}

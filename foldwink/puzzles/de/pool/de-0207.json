@@ -1,0 +1,55 @@
+{
+  "id": "de-0207",
+  "title": "Zweiter Weltkrieg",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "zweiter-weltkrieg",
+    "batch": "de-batch-03",
+    "difficultyScore": 48,
+    "editorialRank": 41,
+    "gptDifficulty": 37,
+    "gptRationale": "Der Zweite Weltkrieg ist sehr präsent und die Oberkategorien sind deutlich, auch wenn einige Generäle und Wendepunkt-Begriffe leicht verwechselt werden können."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schlachten",
+      "items": [
+        "Stalingrad",
+        "El Alamein",
+        "Kursk",
+        "Ardennen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Personen",
+      "items": [
+        "Rommel",
+        "Paulus",
+        "Manstein",
+        "Kesselring"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Wendepunkte",
+      "items": [
+        "Kriegseintritt USA",
+        "Normandie",
+        "Midway",
+        "Atombombe"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kriegsfolgen",
+      "items": [
+        "Teilung Deutschlands",
+        "Nürnberger Prozesse",
+        "Marshallplan",
+        "Vertreibung"
+      ]
+    }
+  ]
+}

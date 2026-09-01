@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foldwink / Neural Void — TikTok Batch 01 (v2)</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a31;
+      --panel-2: #18223f;
+      --text: #eef2ff;
+      --muted: #b6c2e1;
+      --accent: #7aa2ff;
+      --accent-2: #97f0c6;
+      --warn: #ffb98a;
+      --danger: #ff8a9b;
+      --border: rgba(255,255,255,0.10);
+      --code: #0d1428;
+      --shadow: 0 10px 30px rgba(0,0,0,0.28);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d 0%, #0d1326 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 18px 64px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(122,162,255,0.18), rgba(151,240,198,0.10));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 17px;
+      margin: 0;
+      max-width: 900px;
+    }
+
+    .version {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(151,240,198,0.12);
+      border: 1px solid rgba(151,240,198,0.25);
+      color: var(--accent-2);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    .chip.warn { background: rgba(255,185,138,0.12); border-color: rgba(255,185,138,0.35); color: var(--warn); }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      display: block;
+      box-shadow: var(--shadow);
+    }
+
+    .toc a:hover { border-color: rgba(122,162,255,0.5); }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin: 18px 0;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(22px, 2.6vw, 30px);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 18px;
+      color: var(--accent-2);
+    }
+
+    h4 {
+      margin: 14px 0 6px;
+      font-size: 15px;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+
+    p, li { color: var(--text); }
+    .muted { color: var(--muted); }
+
+    ul, ol {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .card.accent { border-color: rgba(151,240,198,0.35); }
+    .card.warn   { border-color: rgba(255,185,138,0.35); }
+    .card.danger { border-color: rgba(255,138,155,0.35); }
+
+    .post-card {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+
+    .post-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .post-head strong {
+      font-size: 18px;
+      color: var(--accent-2);
+    }
+
+    .label {
+      font-size: 13px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+    }
+
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: var(--code);
+      color: #e8eeff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow: auto;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    code.inline {
+      background: var(--code);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2px 6px;
+      font-size: 13px;
+      color: #e8eeff;
+    }
+
+    .copy-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(122,162,255,0.18), rgba(122,162,255,0.10));
+      color: var(--text);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 0 0 12px;
+    }
+
+    .copy-btn:hover { border-color: rgba(122,162,255,0.45); }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      background: rgba(122,162,255,0.10);
+      border-radius: 0 14px 14px 0;
+      color: var(--text);
+      margin: 12px 0 6px;
+    }
+
+    .note.warn   { border-left-color: var(--warn);   background: rgba(255,185,138,0.10); }
+    .note.danger { border-left-color: var(--danger); background: rgba(255,138,155,0.10); }
+
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .matrix th, .matrix td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .matrix th {
+      background: rgba(122,162,255,0.12);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .matrix tbody tr:nth-child(odd) td { background: rgba(255,255,255,0.02); }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 14px 12px 52px; }
+      .hero, section { padding: 18px; border-radius: 18px; }
+      .kv { grid-template-columns: 1fr; }
+      .matrix { font-size: 13px; }
+      .matrix th, .matrix td { padding: 8px; }
+    }
+
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; gap: 20px;
+      padding: 14px 22px;
+      background: rgba(10,15,29,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .topnav .brand { color: var(--accent-2); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .topnav .nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+    .topnav .nav-links a {
+      color: var(--muted); text-decoration: none;
+      padding: 6px 12px; border-radius: 10px; font-size: 14px;
+      border: 1px solid transparent;
+    }
+    .topnav .nav-links a:hover { color: var(--text); border-color: var(--border); }
+    .topnav .nav-links a[aria-current="page"] {
+      color: var(--text);
+      background: rgba(122,162,255,0.14);
+      border-color: rgba(122,162,255,0.35);
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="index.html" class="brand">Foldwink TikTok</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="foldwink_tiktok_launch_page.html" aria-current="page">Strategy</a>
+      <a href="batch_01/channel_setup.html">Channel Setup</a>
+      <a href="batch_01/operator_runbook.html">Operator Runbook</a>
+    </div>
+  </nav>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Foldwink / Neural Void — TikTok Batch 01</h1>
+      <span class="version">v2 — product-honest rework</span>
+      <p class="subtitle" style="margin-top:14px">Рабочая шпаргалка для запуска первой серии интерфейсных роликов: определение рынка, правила упаковки продукта, production-правила читаемости, контент-матрица, мегапромпт в три этапа, 10 постов с cover text и pinned reply, workflow публикации и success framework.</p>
+      <div class="chips">
+        <div class="chip">Формат: TikTok-first</div>
+        <div class="chip">Контент: только gameplay / UI</div>
+        <div class="chip">Аккаунт: Business (см. §1)</div>
+        <div class="chip">Primary market: US (EN)</div>
+        <div class="chip">Серия: 10 постов</div>
+        <div class="chip warn">Без live publish API — ручная загрузка + scheduler</div>
+      </div>
+    </div>
+
+    <div class="toc">
+      <a href="#market">1. Рынок и окна публикации</a>
+      <a href="#strategy">2. Что делаем и для кого</a>
+      <a href="#integrity">3. Честная упаковка продукта</a>
+      <a href="#production">4. Production-правила</a>
+      <a href="#matrix">5. Контент-матрица</a>
+      <a href="#claude">6. Мегапромпт Claude Code (3 этапа)</a>
+      <a href="#schedule">7. Ритм и расписание</a>
+      <a href="#posts">8. 10 постов (с cover text)</a>
+      <a href="#workflow">9. Workflow публикации + автоматизация</a>
+      <a href="#checklist">10. Чек-лист запуска</a>
+      <a href="#success">11. Success framework</a>
+      <a href="#metrics">12. Что смотреть в аналитике</a>
+    </div>
+
+    <section id="market">
+      <h2>1. Рынок и окна публикации</h2>
+      <p>Рекомендация: <strong>primary market — US</strong>, secondary — UK и англоязычная EU. Обоснование: подписи на английском, puzzle-аудитория в США массивная (Wordle / Connections / NYT Games crowd), и именно там короткие puzzle-ролики регулярно ловят волны. EU-окна мы не теряем — они частично пересекаются.</p>
+
+      <div class="grid-3">
+        <div class="card accent">
+          <h4>Основной слот</h4>
+          <p><code class="inline">18:00 CET</code> = <code class="inline">12:00 ET</code> / <code class="inline">09:00 PT</code>.<br/>Полдень по Восточному побережью, утро по Западному.</p>
+        </div>
+        <div class="card">
+          <h4>Запасной слот</h4>
+          <p><code class="inline">01:00 CET</code> (следующий день) = <code class="inline">19:00 ET</code> / <code class="inline">16:00 PT</code>.<br/>Вечерний prime-time US.</p>
+        </div>
+        <div class="card warn">
+          <h4>Не использовать</h4>
+          <p>13:00 Berlin / 20:30 Berlin — это 07:00 ET / 14:30 ET. Не мёртвые, но слабее для puzzle-нативной US-аудитории.</p>
+        </div>
+      </div>
+
+      <div class="note"><strong>Update (сверено с TikTok support, апрель 2026):</strong> в TikTok больше нет отдельного Creator-типа — только Personal, Business, Organization. Для Foldwink Batch 01 используем <strong>Business</strong>. Две причины: (a) Business даёт clickable link-in-bio <em>сразу</em>, тогда как Personal требует 1000 followers до разблокировки ссылки — воронка к itch.io не может ждать; (b) единственное ограничение Business — Commercial Music Library, но наш контент на тактильных SFX без музыки, это нас не бьёт.</div>
+    </section>
+
+    <section id="strategy">
+      <h2>2. Что делаем и для кого</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Главный принцип</h3>
+          <p>На первом этапе <strong>не</strong> снимаем «рекламу с актёром». Сначала проверяем саму механику: challenge, near-fail, escalation, satisfying solve, curiosity click. Если хуки зашли — второй волной добавляем UGC-слой.</p>
+        </div>
+        <div class="card">
+          <h3>Что должен дать первый батч</h3>
+          <p>Не просто красивые ролики, а ясный ответ: какие хуки удерживают внимание, провоцируют комментарии и пересмотры, и приводят к переходу по ссылке в био.</p>
+        </div>
+      </div>
+
+      <h3>Рабочие сегменты аудитории</h3>
+      <p class="muted">Гипотезы сегментов — хуки, CTA и посадочная должны немного различаться:</p>
+      <div class="grid-3">
+        <div class="card">
+          <h4>A. Connections / Wordle crowd</h4>
+          <p>Любят ежедневную привычку и hidden categories. Для них работает <em>«four hidden groups»</em>, <em>«daily puzzle»</em>, <em>«what connects these?»</em>.</p>
+        </div>
+        <div class="card">
+          <h4>B. Cozy browser puzzle</h4>
+          <p>Бежит от «хардкора». Работает <em>«tiny puzzle, big payoff»</em>, <em>«browser puzzle I didn't expect to like»</em>, satisfying solves.</p>
+        </div>
+        <div class="card">
+          <h4>C. Logic / challenge seekers</h4>
+          <p>Хотят пощекотать мозг. Работает <em>«pause and solve»</em>, <em>«this one bit me»</em>, near-fail, одной-ногой-фейл.</p>
+        </div>
+      </div>
+      <div class="note">Каждый из 10 постов должен быть явно адресован одному из сегментов A/B/C. Это помечено в §8. Если пост не ложится ни в один — переписать или убрать.</div>
+    </section>
+
+    <section id="integrity">
+      <h2>3. Честная упаковка продукта</h2>
+      <p>Puzzle-аудитория особенно чувствительна к рассинхрону между обещанием ролика и реальным продуктом. Один неверный хук убивает conversion на всю серию.</p>
+
+      <div class="grid-2">
+        <div class="card danger">
+          <h3>Что <u>нельзя</u> обещать</h3>
+          <ul>
+            <li><strong>«Level 1 / Level 2 / Level 3»</strong> — в Foldwink нет уровней. Есть daily-пазл и последовательный пул standard-режима.</li>
+            <li>«Tap to play» в рамках ролика — игра браузерная, не in-feed.</li>
+            <li>Любые обещания прогрессии, XP, разблокировок — ничего этого нет.</li>
+            <li>«Infinite mode», «endless», «roguelike» — не про эту игру.</li>
+          </ul>
+        </div>
+        <div class="card accent">
+          <h3>Что <u>можно и нужно</u> обещать</h3>
+          <ul>
+            <li><strong>16 cards. 4 hidden groups.</strong> Одно предложение — и вся механика понятна.</li>
+            <li><strong>One new puzzle every day.</strong> — это правда и это ритуал.</li>
+            <li><strong>4 mistakes and you're out.</strong> — стек напряжения.</li>
+            <li><strong>Foldwink Tab / Wink</strong> — один раз за пазл можно «подсмотреть» категорию. Используйте этот момент как отдельный creative beat (см. пост 8).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="production">
+      <h2>4. Production-правила</h2>
+
+      <h3>Читаемость 16 карточек в вертикали</h3>
+      <p>Это главный production-risk батча. Без решения этой задачи хук <em>«Can you solve this?»</em> превращается в visual noise.</p>
+      <ol>
+        <li><strong>Вертикальный crop 9:16</strong> делает grid с 16 карточками мельче — увеличивайте по короткой стороне, не по длинной.</li>
+        <li><strong>Staged reveal</strong> — не показывайте все 16 карточек сразу. Сначала 4 → пауза → ещё 4 → пауза → полный board.</li>
+        <li><strong>Минимум 2–3 секунды «читательского» окна</strong> на каждый важный state. Если зритель не успевает прочитать — ролик не работает как challenge, только как atmosphere.</li>
+        <li><strong>Zoom-in на критический момент</strong> (последнее решение, момент ошибки, Wink-reveal) — это легитимно, но только на 1–2 секунды.</li>
+      </ol>
+
+      <h3>Reveal logic (когда показывать ответ)</h3>
+      <p>Базовый монтажный шаблон: <strong>challenge → micro-pause (2–3 сек) → one wrong intuition shown → clean reveal</strong>. Это решает фундаментальное напряжение puzzle-контента: слишком ранний reveal убивает вовлечение, слишком поздний — retention.</p>
+
+      <h3>Variation layers (против визуальной однообразности)</h3>
+      <p>Если все 10 роликов снять одинаково, алгоритм и пользователь воспримут их как дубликаты. В батче обязательно варьируем:</p>
+      <ul>
+        <li><strong>Crop logic</strong>: full board vs zoomed group vs split-screen mistake + reveal</li>
+        <li><strong>First frame</strong>: puzzle state / error moment / partial solve / Wink-tab / near-fail</li>
+        <li><strong>Caption architecture</strong>: one-line / question / two-step / observational</li>
+        <li><strong>On-screen emphasis</strong>: цветная обводка / стрелка / freeze-frame / count-up таймер</li>
+      </ul>
+    </section>
+
+    <section id="matrix">
+      <h2>5. Контент-матрица</h2>
+      <p>Не только 5 hook-бакетов — ещё и 3 темпа / длительности. Это нужно, чтобы алгоритм не считал все 10 роликов одним и тем же creative skeleton.</p>
+
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Bucket</th>
+            <th>Длительность</th>
+            <th>Темп</th>
+            <th>Reveal type</th>
+            <th>Segment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Challenge</td><td>10–12s</td><td>средний</td><td>pause-then-reveal</td><td>C</td></tr>
+          <tr><td>2</td><td>Satisfying solve</td><td>7–9s</td><td>быстрый</td><td>payoff only</td><td>B</td></tr>
+          <tr><td>3</td><td>Escalation</td><td>15–18s</td><td>средний</td><td>slow-build</td><td>C</td></tr>
+          <tr><td>4</td><td>Near-fail</td><td>12–14s</td><td>средний с паузой</td><td>freeze + reveal</td><td>C</td></tr>
+          <tr><td>5</td><td>Curiosity click</td><td>14–16s</td><td>спокойный</td><td>no full reveal</td><td>B</td></tr>
+          <tr><td>6</td><td>Pause-and-solve</td><td>18–22s</td><td>медленный</td><td>delayed reveal</td><td>A</td></tr>
+          <tr><td>7</td><td>Tension / one move left</td><td>8–10s</td><td>быстрый</td><td>cut-before-reveal</td><td>C</td></tr>
+          <tr><td>8</td><td>Wink-mechanic showcase</td><td>12–14s</td><td>средний</td><td>mechanic reveal</td><td>A</td></tr>
+          <tr><td>9</td><td>Clean solve</td><td>6–8s</td><td>очень быстрый</td><td>full satisfying payoff</td><td>B</td></tr>
+          <tr><td>10</td><td>Looks-easy trap</td><td>11–13s</td><td>средний</td><td>reveal difficulty</td><td>A/C</td></tr>
+        </tbody>
+      </table>
+      <p class="muted" style="margin-top:10px">Сегменты: A = Connections/Wordle crowd, B = cozy browser, C = logic/challenge seekers.</p>
+    </section>
+
+    <section id="claude">
+      <h2>6. Мегапромпт Claude Code — в три этапа</h2>
+      <p>Один монолитный промпт на ~350 строк исполнитель пропускает деталями. Делим на три этапа с gate-check между ними.</p>
+
+      <h3>Этап 1 — Концепт и раскадровка</h3>
+      <button class="copy-btn" onclick="copyBlock('prompt-concept')">Скопировать промпт этапа 1</button>
+      <pre id="prompt-concept">You are a senior short-form video strategist.
+
+Project: Foldwink, a browser puzzle game (4x4 grid of 16 cards, find 4 hidden groups of 4, 4 mistakes = loss, one daily puzzle).
+
+Goal of this stage: produce 10 concepts + 3 reserves as a concept document only. Do NOT export any video yet.
+
+Inputs:
+- Source gameplay recording: [INSERT FILE PATH]
+- Optional extra captures: [INSERT FILE PATHS]
+- Primary market: US English audience
+- Aspect: 9:16 vertical, 1080x1920
+
+For each concept output:
+- working title
+- bucket (challenge / escalation / satisfying solve / near-fail / curiosity click / pause-solve / wink-mechanic / looks-easy trap / clean solve / tension-one-move-left)
+- target segment (A = Connections/Wordle crowd, B = cozy browser, C = logic/challenge seekers)
+- duration target (seconds)
+- pace (slow / medium / fast)
+- reveal type (payoff-only / pause-then-reveal / slow-build / freeze-reveal / delayed / cut-before-reveal / no-full-reveal / mechanic-reveal)
+- first-frame composition
+- on-screen text (max 2 short lines)
+- caption (English, native, non-corporate)
+- suggested pinned first comment (author will pin it)
+- cover text for profile grid (2-5 words, readable)
+- hook type (Can you solve this? / Looks easy. It isn't. / Watch the last move. / etc.)
+- what this clip is testing
+- why it may work
+
+Product integrity rules (hard):
+- NEVER promise "levels", "Level 1", "Level 2", "Level 3" — Foldwink has daily + sequential pool, no levels.
+- NEVER promise "tap to play", "infinite mode", "XP", "progression".
+- DO reference: "16 cards", "4 hidden groups", "daily puzzle", "4 mistakes".
+- DO feature the Wink mechanic honestly when relevant.
+
+Readability rules:
+- Assume viewer cannot read all 16 cards in one second.
+- Plan at least 2–3 seconds of readable time per important board state.
+- Plan staged reveal (4 cards → pause → more) for challenge clips.
+
+Output location:
+Save concept document to:
+tiktok/batch_01/manifests/tiktok_batch_01_concepts.md
+
+STOP at end of this stage. Do not export videos.</pre>
+
+      <div class="note">Gate-check между этапом 1 и 2: вручную проверить концепты на соответствие §3 (упаковка продукта) и §4 (production-правила). Отклонить всё, что нарушает.</div>
+
+      <h3>Этап 2 — Монтаж и экспорт</h3>
+      <button class="copy-btn" onclick="copyBlock('prompt-edit')">Скопировать промпт этапа 2</button>
+      <pre id="prompt-edit">You are a senior short-form video editor.
+
+Project: Foldwink TikTok Batch 01.
+Reference concept document: tiktok/batch_01/manifests/tiktok_batch_01_concepts.md
+
+Goal of this stage: cut and export 10 publish-ready vertical MP4s + 3 reserves from the approved concepts.
+
+Technical requirements:
+- 9:16, 1080x1920
+- Safe margins for TikTok UI overlays (keep first/last 140 px clear of critical text)
+- High readability on phone
+- Clean, modern text overlays — one idea at a time, high contrast
+- Two audio variants per clip: (a) SFX-only, (b) no-audio fallback
+- No licensed pop music (SFX only)
+
+Editing philosophy:
+- Native TikTok feel, not ad
+- Hook in the first 1 second (challenge / near-fail / strange layout / elegant transformation)
+- No logo stings, no title cards, no black intros, no menu browsing
+- Aggressive trimming, no dead air
+- Reveal logic per concept (pause-then-reveal, freeze-reveal, delayed, etc.)
+
+Output location:
+- tiktok/batch_01/exports/       10 main clips
+- tiktok/batch_01/exports/reserves/  3 reserve clips
+- tiktok/batch_01/covers/        10 cover frames (JPG, 1080x1920)
+- tiktok/batch_01/previews/      contact sheet PNG
+
+STOP after export. Do not produce packaging docs yet.</pre>
+
+      <div class="note">Gate-check между этапом 2 и 3: QA по §4 и §10. Проверить каждый клип на телефоне, а не только на десктопе.</div>
+
+      <h3>Этап 3 — Packaging (manifests + publish queue)</h3>
+      <button class="copy-btn" onclick="copyBlock('prompt-pack')">Скопировать промпт этапа 3</button>
+      <pre id="prompt-pack">You are preparing publish packaging for Foldwink TikTok Batch 01.
+
+Inputs:
+- tiktok/batch_01/manifests/tiktok_batch_01_concepts.md
+- tiktok/batch_01/exports/ and covers/
+
+Goal: produce packaging docs and a publish queue JSON that a human operator uses to upload videos one by one to TikTok Studio.
+
+Create:
+1. tiktok/batch_01/manifests/tiktok_batch_01_manifest.md    (human-readable)
+2. tiktok/batch_01/manifests/tiktok_batch_01_manifest.csv   (machine-readable)
+3. tiktok/batch_01/manifests/tiktok_batch_01_schedule.md    (slot per clip, ET timezone)
+4. tiktok/batch_01/manifests/tiktok_batch_01_captions.md    (exact caption per clip)
+5. tiktok/batch_01/manifests/tiktok_batch_01_first_comments.md (exact pinned-reply per clip)
+6. tiktok/batch_01/manifests/tiktok_batch_01_qa_report.md
+7. tiktok/batch_01/manifests/publish_queue.json             (see schema below)
+
+publish_queue.json schema (array of objects, one per clip):
+{
+  "id": "post-01",
+  "file": "tiktok/batch_01/exports/post-01.mp4",
+  "cover": "tiktok/batch_01/covers/post-01.jpg",
+  "cover_text": "Four hidden groups",
+  "caption": "Can you get this before the last move?",
+  "hashtags": ["#puzzlegame", "#braingame", "#logicpuzzle", "#browsergame"],
+  "pinned_comment": "I'll post the harder one next.",
+  "destination_url": "https://neural-void.itch.io/foldwink?utm_source=tiktok&utm_medium=social&utm_campaign=batch_01&utm_content=post-01",
+  "scheduled_slot_iso": "2026-04-25T12:00:00-04:00",
+  "bucket": "challenge",
+  "segment": "C",
+  "duration_sec": 11,
+  "what_testing": "pause-and-solve hook on 16 cards",
+  "reserve": false
+}
+
+Destination URL rule:
+Always use https://neural-void.itch.io/foldwink with UTM:
+?utm_source=tiktok&utm_medium=social&utm_campaign=batch_01&utm_content=post-NN
+
+Do not generate video. Do not edit. Only package.</pre>
+    </section>
+
+    <section id="schedule">
+      <h2>7. Ритм и расписание</h2>
+      <div class="grid-2">
+        <div class="card accent">
+          <h3>Рекомендуемый ритм (default)</h3>
+          <p><strong>1 пост в день, 10 дней подряд</strong>. Для нового puzzle-аккаунта это чище методологически: каждый ролик получает полноценный алгоритмический цикл, и сигнал, что именно сработало, не размывается.</p>
+        </div>
+        <div class="card warn">
+          <h3>Альтернатива (2/день, 5 дней)</h3>
+          <p>Только если второй ролик дня — явно другой формат (не два gameplay-клипа подряд). Иначе каннибализация показов и мутный сигнал.</p>
+        </div>
+      </div>
+
+      <h3>Стартовые слоты (ET, primary = US)</h3>
+      <ul>
+        <li><strong>Основной</strong>: <code class="inline">12:00 ET</code> = <code class="inline">18:00 CET</code></li>
+        <li><strong>Альтернативный</strong>: <code class="inline">19:00 ET</code> = <code class="inline">01:00 CET</code> следующего дня</li>
+        <li><strong>Пятница / суббота</strong>: можно сдвинуть на <code class="inline">17:00 ET</code> = <code class="inline">23:00 CET</code></li>
+      </ul>
+      <p class="muted">Это стартовая гипотеза. После 10 постов корректируем по реальной аналитике профиля: TikTok покажет топ-часы твоих follower/viewer.</p>
+    </section>
+
+    <section id="posts">
+      <h2>8. Готовые 10 постов</h2>
+      <p class="muted">Каждый пост имеет cover text (для profile grid), pinned author reply (запинить сразу после публикации) и помечен сегментом A/B/C (см. §2).</p>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 1</strong><span class="label">Challenge · Segment C · 10–12s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>Four hidden groups</div>
+          <div>Текст на видео</div><div>Can you spot the four groups?</div>
+          <div>Подпись</div><div>16 cards. 4 hidden groups. Can you see them before I do?</div>
+          <div>Pinned reply (от автора)</div><div>I almost missed the last group. Which one did you see first?</div>
+          <div>Хэштеги</div><div>#puzzlegame #connections #logicpuzzle #browsergame</div>
+          <div>Reveal</div><div>pause-then-reveal (2 сек на чтение → wrong intuition → clean reveal)</div>
+          <div>Почему первым</div><div>Самый чистый тест на то, цепляет ли базовая механика (hidden categories) без всяких обвесов.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 2</strong><span class="label">Satisfying solve · Segment B · 7–9s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>Tiny puzzle, big payoff</div>
+          <div>Текст на видео</div><div>Tiny puzzle. Big payoff.</div>
+          <div>Подпись</div><div>This is way more satisfying than it should be.</div>
+          <div>Pinned reply</div><div>The last move is the whole point.</div>
+          <div>Хэштеги</div><div>#puzzlegame #casualgame #oddlysatisfying #browsergame</div>
+          <div>Reveal</div><div>payoff only — показываем финальный clean solve без challenge</div>
+          <div>Зачем</div><div>Контраст первому посту: вместо challenge — visual-satisfaction тест для cozy-аудитории.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 3</strong><span class="label">Escalation · Segment C · 15–18s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>The last group bites</div>
+          <div>Текст на видео</div><div>First three groups: easy. Last one: wait.</div>
+          <div>Подпись</div><div>Three easy solves. Then the last group is not nice.</div>
+          <div>Pinned reply</div><div>The last group always has the trap word in it.</div>
+          <div>Хэштеги</div><div>#puzzlegame #indiegame #logicpuzzle #connections</div>
+          <div>Reveal</div><div>slow-build — три быстрых solve, пауза, дальше struggle на четвёртом</div>
+          <div>Зачем</div><div>Честная escalation Foldwink: не уровни, а «последняя группа — самая злая». Соответствует реальному дизайну пазлов.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 4</strong><span class="label">Near-fail · Segment C · 12–14s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>3 mistakes. 1 left.</div>
+          <div>Текст на видео</div><div>3 mistakes in. One left.</div>
+          <div>Подпись</div><div>I almost threw it here.</div>
+          <div>Pinned reply</div><div>This is where most people would quit.</div>
+          <div>Хэштеги</div><div>#puzzlegame #braingame #replaybait #browsergame</div>
+          <div>Reveal</div><div>freeze-reveal — freeze на моменте submit, потом reveal</div>
+          <div>Зачем</div><div>4 mistakes = loss — это реальное правило игры, не метафора. Сильный replay-bait.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 5</strong><span class="label">Curiosity click · Segment B · 14–16s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>Weirdly good browser puzzle</div>
+          <div>Текст на видео</div><div>Browser puzzle I didn't expect to like</div>
+          <div>Подпись</div><div>Found a weirdly good daily browser puzzle.</div>
+          <div>Pinned reply</div><div>Link in bio. New puzzle every day.</div>
+          <div>Хэштеги</div><div>#browsergame #indiegame #puzzlegame #dailypuzzle</div>
+          <div>Reveal</div><div>no-full-reveal — показываем атмосферу, не дорешиваем</div>
+          <div>Зачем</div><div>Мягкий формат для B-сегмента; единственный пост, где pinned reply открыто говорит про link in bio.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 6</strong><span class="label">Pause-and-solve · Segment A · 18–22s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>Pause and solve</div>
+          <div>Текст на видео</div><div>Pause here. What connects four?</div>
+          <div>Подпись</div><div>Pause now. What's your first group?</div>
+          <div>Pinned reply</div><div>No cheating. Drop your four in the comments.</div>
+          <div>Хэштеги</div><div>#puzzlegame #connections #logicpuzzle #braingame</div>
+          <div>Reveal</div><div>delayed reveal — даём 5+ сек на паузу, потом answer</div>
+          <div>Зачем</div><div>Прямая провокация на вовлечение. Связывает Foldwink с Connections-привычкой — главный A-сегмент.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 7</strong><span class="label">Tension / one move left · Segment C · 8–10s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>One move left</div>
+          <div>Текст на видео</div><div>One submit left.</div>
+          <div>Подпись</div><div>This is the exact kind of move that makes me restart.</div>
+          <div>Pinned reply</div><div>Would you have submitted these four?</div>
+          <div>Хэштеги</div><div>#puzzlegame #casualgame #logicpuzzle #indiegame</div>
+          <div>Reveal</div><div>cut-before-reveal — обрываем до submit, комментарии добивают retention</div>
+          <div>Зачем</div><div>Сильный comment-bait, короткий watch time на повтор.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 8</strong><span class="label">Wink-mechanic showcase · Segment A · 12–14s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>One free peek</div>
+          <div>Текст на видео</div><div>I get one peek per puzzle.</div>
+          <div>Подпись</div><div>You get exactly one free peek per puzzle. When do you use it?</div>
+          <div>Pinned reply</div><div>The whole game is deciding which tab to Wink.</div>
+          <div>Хэштеги</div><div>#puzzlegame #indiegame #dailypuzzle #connections</div>
+          <div>Reveal</div><div>mechanic reveal — акцент на самом таб-Wink моменте, не на solve</div>
+          <div>Зачем</div><div>Единственный твист, который в игре реально есть (Foldwink Tabs + Wink). Угол «feeling of getting smarter» — не challenge-угол.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 9</strong><span class="label">Clean solve · Segment B · 6–8s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>Clean solve</div>
+          <div>Текст на видео</div><div>Clean solve.</div>
+          <div>Подпись</div><div>When it finally clicks, it really clicks.</div>
+          <div>Pinned reply</div><div>Pure brain massage.</div>
+          <div>Хэштеги</div><div>#oddlysatisfying #puzzlegame #logicpuzzle #browsergame</div>
+          <div>Reveal</div><div>full satisfying payoff — короткий, быстрый, без challenge</div>
+          <div>Зачем</div><div>Второй тест на satisfying payoff. Сравниваем с постом 2, а не угадываем.</div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-head"><strong>Пост 10</strong><span class="label">Looks-easy trap · Segment A+C · 11–13s</span></div>
+        <div class="kv">
+          <div>Cover text</div><div>Looks easy. It isn't.</div>
+          <div>Текст на видео</div><div>Looks easy. It isn't.</div>
+          <div>Подпись</div><div>This is exactly how the game tricks you.</div>
+          <div>Pinned reply</div><div>The obvious four is almost never the right four.</div>
+          <div>Хэштеги</div><div>#puzzlegame #connections #braingame #dailypuzzle</div>
+          <div>Reveal</div><div>reveal-difficulty — показываем «обманный» набор, потом правильный</div>
+          <div>Зачем</div><div>Финальный пост серии, передаёт сам характер Foldwink в одном предложении.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <h2>9. Workflow публикации + автоматизация</h2>
+
+      <h3>Что реально автоматизируется (и что нет)</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h4>TikTok Content Posting API</h4>
+          <p>Официальный. Требует approved dev app и verified business. Для 10 роликов — overkill и месяцы approval.</p>
+          <p class="muted">Не используем в Batch 01.</p>
+        </div>
+        <div class="card warn">
+          <h4>Playwright / tiktok-uploader</h4>
+          <p>Скрипты-роботы через сохранённые cookies. Формально против TOS, ломаются при каждом UI-редизайне.</p>
+          <p class="muted">Не рекомендую для бренд-аккаунта.</p>
+        </div>
+        <div class="card accent">
+          <h4>TikTok Studio scheduling</h4>
+          <p>Нативный web-планировщик TikTok — до 10 дней вперёд. Бесплатный, без скриптов. Закрывает 90 % задачи.</p>
+          <p class="muted">Это и используем.</p>
+        </div>
+      </div>
+
+      <h3>Рекомендуемый workflow</h3>
+      <ol>
+        <li>Этап 3 мегапромпта генерирует <code class="inline">tiktok/batch_01/manifests/publish_queue.json</code> (один объект на пост со всеми полями: file, cover, cover_text, caption, hashtags, pinned_comment, destination_url, scheduled_slot_iso).</li>
+        <li>Локально запускаем <code class="inline">npm run tiktok:prep &lt;post-id&gt;</code> — скрипт читает publish_queue.json и кладёт в буфер обмена caption+hashtags (по запросу — cover_text или pinned_comment). Это убирает копипасту между файлами и TikTok Studio.</li>
+        <li>Оператор в TikTok Studio: загружает видео → Paste caption → Upload cover → выставляет schedule time из манифеста → Publish (scheduled).</li>
+        <li>В момент публикации (или через scheduled webhook) оператор вручную: (a) добавляет первый comment от своего аккаунта, (b) пинит его, (c) заходит в аналитику проверить старт.</li>
+      </ol>
+
+      <div class="note warn">Pinned author comment — обязательный publish step, не опциональный. Без него теряется самый дешёвый retention-слой и второй хук поста.</div>
+
+      <h3>Destination link и UTM</h3>
+      <p>В bio профиля ведём одну ссылку:</p>
+      <pre>https://neural-void.itch.io/foldwink?utm_source=tiktok&amp;utm_medium=social&amp;utm_campaign=batch_01</pre>
+      <p>Для каждого поста pinned reply может (не всегда) содержать ту же ссылку с уточнённым <code class="inline">utm_content=post-NN</code>, чтобы отделить трафик конкретного ролика от общего bio-трафика. Pinned reply с URL — только на постах 5, 8 и 10.</p>
+
+      <h3>Clipboard helper (следующий шаг)</h3>
+      <p>Скрипт <code class="inline">scripts/tiktok-prep.mjs</code>, который принимает <code class="inline">&lt;post-id&gt;</code> и <code class="inline">--field=caption|comment|cover|all</code> и кладёт поле в clipboard (через <code class="inline">clipboardy</code>). Это то, что стоит автоматизировать. Больше автоматики — либо approval-процесс на месяцы (официальный API), либо хрупкий робот (Playwright против TOS).</p>
+    </section>
+
+    <section id="checklist">
+      <h2>10. Чек-лист запуска</h2>
+      <ol>
+        <li>Создать отдельный аккаунт Foldwink / Neural Void.</li>
+        <li>Переключить на <strong>Business</strong> (не Personal): Profile → Menu ☰ → Settings and privacy → Account → Switch to Business Account. Это даёт clickable link-in-bio сразу, без 1000-follower gate.</li>
+        <li>В bio — одна ссылка: <code class="inline">neural-void.itch.io/foldwink?utm_source=tiktok&amp;utm_medium=social&amp;utm_campaign=batch_01</code>.</li>
+        <li>Bio-текст: одна строка, без маркетинг-voice. Например: <em>«Daily 4×4 puzzle. 16 cards. 4 hidden groups.»</em></li>
+        <li>Подготовить 10 роликов + 3 резерва (см. §6, этапы 1–3).</li>
+        <li>Проверить каждый клип <strong>на телефоне</strong>, не только на десктопе.</li>
+        <li>Проверить cover text каждого поста на profile-grid preview.</li>
+        <li>Загрузить первые 4 ролика в TikTok Studio как scheduled черновики заранее.</li>
+        <li>Постить 1 раз в день 10 дней (если 2/день — строго разные форматы).</li>
+        <li>В первые 2 минуты после публикации: <strong>опубликовать</strong> pinned reply от автора и <strong>закрепить</strong> его.</li>
+        <li>Отвечать на содержательные комментарии в первые 30–60 минут.</li>
+        <li>Не использовать popular/licensed music.</li>
+        <li>После 10 постов — выбрать 3 победителя и уже от них строить Batch 02.</li>
+      </ol>
+
+      <div class="note">Если времени мало, делаем в первую очередь 5 роликов: <strong>пост 1</strong> (challenge), <strong>пост 4</strong> (near-fail), <strong>пост 3</strong> (escalation на «последней группе»), <strong>пост 2</strong> (satisfying), <strong>пост 8</strong> (Wink-mechanic — уникальное нашей игре).</div>
+    </section>
+
+    <section id="success">
+      <h2>11. Success framework</h2>
+      <p>Чтобы после Batch 01 не спорить задним числом «что сработало», фиксируем baseline <strong>до запуска</strong>.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Что считается promising signal (на ролик)</h3>
+          <ul>
+            <li><strong>Avg watch time &gt; 70 %</strong> от длительности клипа</li>
+            <li><strong>Completion rate &gt; 40 %</strong></li>
+            <li><strong>Rewatch signal</strong>: avg watch time &gt; длительность</li>
+            <li><strong>Comments &gt; 10</strong> в первые 24 часа</li>
+            <li><strong>Shares &gt; 3</strong> в первые 24 часа</li>
+            <li><strong>Profile visits &gt; 50</strong> (показатель curiosity click)</li>
+            <li><strong>Bio CTR</strong> — любая заметная доля от profile visits</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Что НЕ считается сигналом</h3>
+          <ul>
+            <li>Только лайки — часто растут без retention</li>
+            <li>Один хит из 10 — случайность, не тренд</li>
+            <li>Плохие первые 2 ролика — не повод менять стратегию</li>
+            <li>Отсутствие viral — не отсутствие рабочего хука</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Решения после Batch 01</h3>
+      <ul>
+        <li>Если <strong>2+ ролика</strong> перешагнули promising signal — эти хуки идут основой Batch 02, варьируем только форму.</li>
+        <li>Если <strong>0–1 ролика</strong> попали в planning signal — переосмысливаем гипотезу сегмента, не форму.</li>
+        <li>Если есть <strong>хороший comment-ролик, но слабый retention</strong> — это заготовка под UGC-слой, не под ещё один gameplay-клип.</li>
+      </ul>
+    </section>
+
+    <section id="metrics">
+      <h2>12. Что смотреть в аналитике</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Главные метрики</h3>
+          <ul>
+            <li>удержание первых 2 секунд;</li>
+            <li>average watch time;</li>
+            <li>completion rate;</li>
+            <li>rewatch-сигналы;</li>
+            <li>comments и глубина обсуждения;</li>
+            <li>shares;</li>
+            <li>saves;</li>
+            <li>profile visits (главный proxy curiosity click);</li>
+            <li>bio CTR (по UTM на stat-панели);</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Чего не делать</h3>
+          <ul>
+            <li>не судить ролики только по лайкам;</li>
+            <li>не делать выводы по одному посту;</li>
+            <li>не менять стратегию после 1–2 слабых роликов;</li>
+            <li>не переходить сразу к «рекламе с актёром», пока не известны победившие хуки;</li>
+            <li>не игнорировать разрыв между profile visits и bio CTR — это симптом плохой воронки, а не плохих роликов.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted">Задача после первой десятки проста: понять, какие 2–3 типа роликов реально цепляют аудиторию Foldwink. Уже на этом строится Batch 02: сильнее вариации, точнее подписи, умнее pinned-комменты и, если надо, UGC-слой.</p>
+    </section>
+
+    <div class="footer">HTML-шпаргалка v2 для запуска TikTok Batch 01 по Foldwink / Neural Void. Пересобрана после кросс-ревью Claude × GPT.</div>
+  </div>
+
+  <script>
+    function copyBlock(id) {
+      const el = document.getElementById(id);
+      const text = el.innerText;
+      const btn = event && event.target ? event.target : null;
+      navigator.clipboard.writeText(text).then(() => {
+        if (!btn) return;
+        const old = btn.textContent;
+        btn.textContent = 'Скопировано';
+        setTimeout(() => btn.textContent = old, 1400);
+      });
+    }
+  </script>
+</body>
+</html>

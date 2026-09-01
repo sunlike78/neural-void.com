@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0175",
+  "title": "Stage fright",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of stage — theatre, rocket, development, cycling. Act/Phase overlap.",
+  "meta": {
+    "theme": "abstract",
+    "categoryType": "attribute",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 34,
+    "editorialRank": 43,
+    "gptDifficulty": 49,
+    "gptRationale": "Rocket, development, and cycling all use stage language naturally, so the solver has to disentangle several equally plausible modern senses."
+  },
+  "groups": [
+    {
+      "id": "theatre",
+      "label": "Theatre stage",
+      "revealHint": "Theatre",
+      "items": [
+        "Curtain",
+        "Spotlight",
+        "Wings",
+        "Backdrop"
+      ]
+    },
+    {
+      "id": "rocket",
+      "label": "Rocket stage",
+      "revealHint": "Rocket",
+      "items": [
+        "Booster",
+        "Separation",
+        "Payload",
+        "Thruster"
+      ]
+    },
+    {
+      "id": "develop",
+      "label": "Development stage",
+      "revealHint": "Software",
+      "items": [
+        "Prototype",
+        "Beta",
+        "Alpha",
+        "Iteration"
+      ]
+    },
+    {
+      "id": "cycling",
+      "label": "Cycling stage",
+      "revealHint": "Cycling",
+      "items": [
+        "Peloton",
+        "Sprint",
+        "Climb",
+        "Time Trial"
+      ]
+    }
+  ]
+}

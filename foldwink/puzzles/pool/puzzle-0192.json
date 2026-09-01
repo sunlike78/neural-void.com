@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0192",
+  "title": "Desk setup",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "batch": "batch-03",
+    "status": "approved",
+    "difficultyScore": 26,
+    "editorialRank": 19,
+    "gptDifficulty": 15,
+    "gptRationale": "Computer-peripheral categories are sharply defined and use very common tech terms."
+  },
+  "groups": [
+    {
+      "id": "input",
+      "label": "Input Devices",
+      "items": [
+        "Keyboard",
+        "Mouse",
+        "Trackpad",
+        "Stylus"
+      ]
+    },
+    {
+      "id": "output",
+      "label": "Output Devices",
+      "items": [
+        "Monitor",
+        "Speakers",
+        "Printer",
+        "Headphones"
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Storage Devices",
+      "items": [
+        "Hard Drive",
+        "SSD",
+        "USB Stick",
+        "SD Card"
+      ]
+    },
+    {
+      "id": "network",
+      "label": "Network Gear",
+      "items": [
+        "Router",
+        "Modem",
+        "Switch",
+        "Ethernet"
+      ]
+    }
+  ]
+}

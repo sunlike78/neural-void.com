@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0256",
+  "title": "Under the eaves",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "architecture",
+    "categoryType": "classification",
+    "batch": "batch-06",
+    "status": "approved",
+    "difficultyScore": 16,
+    "editorialRank": 43,
+    "gptDifficulty": 61,
+    "gptRationale": "Home-design terminology is comparatively niche, with several architectural style words that demand exact recognition."
+  },
+  "groups": [
+    {
+      "id": "roof",
+      "label": "Roof Shapes",
+      "items": [
+        "Gable",
+        "Hip",
+        "Mansard",
+        "Flat"
+      ]
+    },
+    {
+      "id": "window",
+      "label": "Window Styles",
+      "items": [
+        "Bay",
+        "Bow",
+        "Casement",
+        "Sash"
+      ]
+    },
+    {
+      "id": "door",
+      "label": "Door Types",
+      "items": [
+        "Dutch",
+        "French",
+        "Sliding",
+        "Pocket"
+      ]
+    },
+    {
+      "id": "ceiling",
+      "label": "Ceiling Finishes",
+      "items": [
+        "Coffered",
+        "Vaulted",
+        "Tray",
+        "Beamed"
+      ]
+    }
+  ]
+}

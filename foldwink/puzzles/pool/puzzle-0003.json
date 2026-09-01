@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0003",
+  "title": "Folding Pressure",
+  "difficulty": "medium",
+  "groups": [
+    {
+      "id": "things_that_fold",
+      "label": "Things that fold",
+      "revealHint": "FOLD",
+      "items": [
+        "Origami",
+        "Lawn Chair",
+        "Poker Hand",
+        "Laundry"
+      ]
+    },
+    {
+      "id": "board_games",
+      "label": "Classic tabletop board games",
+      "revealHint": "GAMES",
+      "items": [
+        "Chess",
+        "Checkers",
+        "Monopoly",
+        "Scrabble"
+      ]
+    },
+    {
+      "id": "poker_terms",
+      "label": "Poker actions",
+      "revealHint": "POKER",
+      "items": [
+        "Call",
+        "Raise",
+        "Check",
+        "Bluff"
+      ]
+    },
+    {
+      "id": "paper_crafts",
+      "label": "Paper craft techniques",
+      "revealHint": "PAPER",
+      "items": [
+        "Quilling",
+        "Collage",
+        "Papier-mache",
+        "Decoupage"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "craft_and_play",
+    "categoryType": "wordplay_attribute",
+    "difficultyScore": 24,
+    "editorialRank": 30,
+    "gptRationale": "Check/Fold/Origami/Lawn Chair create seamless thematic misdirection between casino, craft, and backyard."
+  }
+}

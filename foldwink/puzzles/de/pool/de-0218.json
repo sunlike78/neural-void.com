@@ -1,0 +1,55 @@
+{
+  "id": "de-0218",
+  "title": "Bayern Regionen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "bayern-regionen",
+    "batch": "de-batch-03",
+    "difficultyScore": 42,
+    "editorialRank": 48,
+    "gptDifficulty": 52,
+    "gptRationale": "Bayerische Regierungsbezirke sind noch konkret, aber die regionale Feinaufteilung fordert mehr Landeswissen als ein durchschnittliches Easy-Puzzle."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Oberbayern",
+      "items": [
+        "München",
+        "Zugspitze",
+        "Chiemsee",
+        "Berchtesgaden"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Unterfranken",
+      "items": [
+        "Würzburg",
+        "Frankenweinfest",
+        "Spessart",
+        "Aschaffenburg"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Bayerisch-Schwaben",
+      "items": [
+        "Augsburg",
+        "Kempten",
+        "Memmingen",
+        "Nördlingen"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Oberpfalz",
+      "items": [
+        "Regensburg",
+        "Walhalla",
+        "Amberg",
+        "Waldsassen"
+      ]
+    }
+  ]
+}

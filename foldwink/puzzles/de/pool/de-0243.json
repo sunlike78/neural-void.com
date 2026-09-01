@@ -1,0 +1,55 @@
+{
+  "id": "de-0243",
+  "title": "Musik in Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "musik-deutschland",
+    "batch": "de-batch-03",
+    "difficultyScore": 29,
+    "editorialRank": 27,
+    "gptDifficulty": 26,
+    "gptRationale": "Die Musikblöcke sind prominent besetzt und stilistisch gut voneinander abgegrenzt, obwohl einzelne Acts genreübergreifend wirken könnten."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Klassik-Komponisten",
+      "items": [
+        "Bach",
+        "Beethoven",
+        "Brahms",
+        "Schumann"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Deutsche Bands",
+      "items": [
+        "Scorpions",
+        "Rammstein",
+        "Die Toten Hosen",
+        "Die Ärzte"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Deutschsprachige Solokünstler",
+      "items": [
+        "Helene Fischer",
+        "Peter Maffay",
+        "Udo Lindenberg",
+        "Roland Kaiser"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Electronic-Pioniere",
+      "items": [
+        "Kraftwerk",
+        "Tangerine Dream",
+        "Klaus Schulze",
+        "Can"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0040",
+  "title": "Комнаты в доме",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Комнаты в доме",
+    "batch": "ru-batch-01",
+    "difficultyScore": 35,
+    "editorialRank": 27,
+    "gptDifficulty": 21,
+    "gptRationale": "Rooms in a home are easy to picture and the functional categories are cleanly separated."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Для отдыха",
+      "items": [
+        "Гостиная",
+        "Спальня",
+        "Детская",
+        "Кабинет"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Для готовки и еды",
+      "items": [
+        "Кухня",
+        "Столовая",
+        "Кладовая",
+        "Буфетная"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Санузел и гигиена",
+      "items": [
+        "Ванная",
+        "Туалет",
+        "Душевая",
+        "Прачечная"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Вспомогательные",
+      "items": [
+        "Прихожая",
+        "Коридор",
+        "Подвал",
+        "Чердак"
+      ]
+    }
+  ]
+}

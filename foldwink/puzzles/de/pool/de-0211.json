@@ -1,0 +1,55 @@
+{
+  "id": "de-0211",
+  "title": "Deutsche Bundeskanzler",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "bundeskanzler",
+    "batch": "de-batch-03",
+    "difficultyScore": 27,
+    "editorialRank": 30,
+    "gptDifficulty": 32,
+    "gptRationale": "Bundeskanzler und ihre Epochenmarker sind sehr geläufig und die Parteiblocks geben zusätzliche Strukturhilfe."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "CDU/CSU-Kanzler",
+      "items": [
+        "Adenauer",
+        "Erhard",
+        "Kiesinger",
+        "Kohl"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "SPD-Kanzler",
+      "items": [
+        "Brandt",
+        "Schmidt",
+        "Schröder",
+        "Scholz"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Merkel-Ära",
+      "items": [
+        "Eurokrise",
+        "Große Koalition",
+        "Flüchtlingskrise",
+        "Energiewende"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kanzler-Ereignisse",
+      "items": [
+        "Wirtschaftswunder",
+        "Ostpolitik",
+        "Wiedervereinigung",
+        "Agenda 2010"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0011",
+  "title": "Цвета радуги",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Цвета радуги",
+    "batch": "ru-batch-01",
+    "difficultyScore": 58,
+    "editorialRank": 61,
+    "gptDifficulty": 63,
+    "gptRationale": "This one leans on color theory and naming precision, with nonstandard rainbow choices creating notable false-trail pressure."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Тёплые цвета радуги",
+      "items": [
+        "Красный",
+        "Оранжевый",
+        "Жёлтый",
+        "Зелёный"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Холодные цвета радуги",
+      "items": [
+        "Синий",
+        "Голубой",
+        "Фиолетовый",
+        "Индиго"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Оттенки зелёного",
+      "items": [
+        "Оливковый",
+        "Изумрудный",
+        "Салатовый",
+        "Мятный"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Не цвета радуги",
+      "items": [
+        "Белый",
+        "Чёрный",
+        "Серый",
+        "Коричневый"
+      ]
+    }
+  ]
+}

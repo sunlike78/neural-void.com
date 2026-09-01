@@ -1,0 +1,55 @@
+{
+  "id": "ru-0312",
+  "title": "Спортивные команды",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Известные спортивные клубы",
+    "batch": "ru-batch-12",
+    "difficultyScore": 27,
+    "editorialRank": 32,
+    "gptDifficulty": 36,
+    "gptRationale": "Big sports teams are widely known, though mixing Russian and global clubs adds a moderate recall requirement."
+  },
+  "groups": [
+    {
+      "id": "russian_football",
+      "label": "Футбольные клубы России",
+      "items": [
+        "Спартак",
+        "ЦСКА Москва",
+        "Зенит",
+        "Локомотив"
+      ]
+    },
+    {
+      "id": "world_football_clubs",
+      "label": "Мировой футбол",
+      "items": [
+        "Барселона",
+        "Реал Мадрид",
+        "Манчестер Юн.",
+        "Бавария"
+      ]
+    },
+    {
+      "id": "basketball_teams",
+      "label": "Баскетбол",
+      "items": [
+        "Чикаго Буллс",
+        "Лейкерс",
+        "Бостон Селтикс",
+        "Голден Стейт"
+      ]
+    },
+    {
+      "id": "hockey_teams",
+      "label": "Хоккей",
+      "items": [
+        "ЦСКА хоккей",
+        "Динамо Москва",
+        "Монреаль",
+        "Торонто"
+      ]
+    }
+  ]
+}

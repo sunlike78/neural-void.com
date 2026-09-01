@@ -1,0 +1,55 @@
+{
+  "id": "de-0256",
+  "title": "Hamburger Architektur",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "hamburger-architektur",
+    "batch": "de-batch-03",
+    "difficultyScore": 39,
+    "editorialRank": 49,
+    "gptDifficulty": 55,
+    "gptRationale": "Hamburger Architektur ist regional enger und enthält einige spezifische Bau- und Ortsnamen, die außerhalb Hamburgs weniger vertraut sind."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Speicherstadt",
+      "items": [
+        "Kaispeicher B",
+        "Roter Backsteinbau",
+        "Fleetkanal",
+        "Gründerzeit"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Kontorhäuser",
+      "items": [
+        "Chilehaus",
+        "Sprinkenhof",
+        "Mohlenhof",
+        "Montanhof"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Moderne Hamburg",
+      "items": [
+        "Elbphilharmonie",
+        "HafenCity",
+        "Deichtorhallen",
+        "Dockland"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Historisches Hamburg",
+      "items": [
+        "Rathaus",
+        "Michel",
+        "Alsterarkaden",
+        "Binnenalster"
+      ]
+    }
+  ]
+}

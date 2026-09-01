@@ -1,0 +1,59 @@
+{
+  "id": "de-0439",
+  "title": "Religiöse Feste",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "religion",
+    "batch": "de-batch-05",
+    "difficultyScore": 31,
+    "editorialRank": 47,
+    "gptDifficulty": 57,
+    "gptRationale": "Die Religionsblöcke sind grundsätzlich klar, aber einzelne Feste sind je nach Vorwissen deutlich weniger geläufig."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Christliche Feste",
+      "items": [
+        "Weihnachten",
+        "Ostern",
+        "Pfingsten",
+        "Erntedankfest"
+      ],
+      "revealHint": "Christlich"
+    },
+    {
+      "id": "group_b",
+      "label": "Jüdische Feste",
+      "items": [
+        "Jom Kippur",
+        "Rosch ha-Schana",
+        "Chanukka",
+        "Pessach"
+      ],
+      "revealHint": "Jüdisch"
+    },
+    {
+      "id": "group_c",
+      "label": "Islamische Feste",
+      "items": [
+        "Eid al-Fitr",
+        "Eid al-Adha",
+        "Islamisches Neujahr",
+        "Mawlid an-Nabi"
+      ],
+      "revealHint": "Islamisch"
+    },
+    {
+      "id": "group_d",
+      "label": "Buddhistische Feste",
+      "items": [
+        "Vesak",
+        "Kathina",
+        "Asalha Puja",
+        "Losar"
+      ],
+      "revealHint": "Buddhistisch"
+    }
+  ]
+}

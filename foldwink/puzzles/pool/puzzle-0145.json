@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0145",
+  "title": "Fabric store",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "materials",
+    "categoryType": "classification",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 25,
+    "editorialRank": 47,
+    "gptDifficulty": 62,
+    "gptRationale": "Sewing and textile terms are less universal, and pattern, stitch, and fibre knowledge can blur for non-crafters."
+  },
+  "groups": [
+    {
+      "id": "stitch",
+      "label": "Sewing Stitches",
+      "items": [
+        "Backstitch",
+        "Cross-Stitch",
+        "Blanket Stitch",
+        "Running Stitch"
+      ]
+    },
+    {
+      "id": "pattern",
+      "label": "Fabric Patterns",
+      "items": [
+        "Plaid",
+        "Polka Dot",
+        "Houndstooth",
+        "Paisley"
+      ]
+    },
+    {
+      "id": "closure",
+      "label": "Garment Closures",
+      "items": [
+        "Zipper",
+        "Button",
+        "Velcro",
+        "Snap"
+      ]
+    },
+    {
+      "id": "fiber",
+      "label": "Luxury Fibres",
+      "items": [
+        "Cashmere",
+        "Alpaca",
+        "Mohair",
+        "Angora"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ru-0255",
+  "title": "Картины",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Знаменитые картины мира",
+    "batch": "ru-batch-09",
+    "difficultyScore": 27,
+    "editorialRank": 52,
+    "gptDifficulty": 68,
+    "gptRationale": "Recognizing famous paintings across multiple art-historical movements requires substantial cultural knowledge and invites author/style confusion."
+  },
+  "groups": [
+    {
+      "id": "da_vinci_paintings",
+      "label": "Леонардо да Винчи",
+      "items": [
+        "Мона Лиза",
+        "Тайная вечеря",
+        "Витрувианский человек",
+        "Мадонна в гроте"
+      ]
+    },
+    {
+      "id": "russian_paintings",
+      "label": "Русская живопись",
+      "items": [
+        "Бурлаки на Волге",
+        "Утро в сосновом лесу",
+        "Богатыри",
+        "Боярыня Морозова"
+      ]
+    },
+    {
+      "id": "impressionism",
+      "label": "Импрессионизм",
+      "items": [
+        "Кувшинки",
+        "Завтрак гребцов",
+        "Впечатление. Восход солнца",
+        "Бал в Мулен де ла Галетт"
+      ]
+    },
+    {
+      "id": "surrealism_pics",
+      "label": "Сюрреализм",
+      "items": [
+        "Постоянство памяти",
+        "Сон",
+        "Сын человеческий",
+        "Метаморфоза"
+      ]
+    }
+  ]
+}

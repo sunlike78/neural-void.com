@@ -1,0 +1,55 @@
+{
+  "id": "ru-0245",
+  "title": "Музыкальные инструменты",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Музыкальные инструменты по группам",
+    "batch": "ru-batch-09",
+    "difficultyScore": 16,
+    "editorialRank": 26,
+    "gptDifficulty": 33,
+    "gptRationale": "Instrument families are standard educational material, and most terms are recognizable despite a few orchestral specifics."
+  },
+  "groups": [
+    {
+      "id": "strings",
+      "label": "Струнные",
+      "items": [
+        "Скрипка",
+        "Виолончель",
+        "Арфа",
+        "Контрабас"
+      ]
+    },
+    {
+      "id": "woodwinds",
+      "label": "Деревянные духовые",
+      "items": [
+        "Флейта",
+        "Гобой",
+        "Кларнет",
+        "Фагот"
+      ]
+    },
+    {
+      "id": "brass",
+      "label": "Медные духовые",
+      "items": [
+        "Труба",
+        "Тромбон",
+        "Валторна",
+        "Туба"
+      ]
+    },
+    {
+      "id": "percussion",
+      "label": "Ударные",
+      "items": [
+        "Литавры",
+        "Ксилофон",
+        "Тарелки",
+        "Треугольник"
+      ]
+    }
+  ]
+}

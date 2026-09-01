@@ -1,0 +1,63 @@
+{
+  "id": "puzzle-0119",
+  "title": "Bar none",
+  "difficulty": "medium",
+  "editorialSummary": "Four kinds of bars.",
+  "meta": {
+    "theme": "wordplay",
+    "categoryType": "attribute",
+    "wordplay": true,
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 40,
+    "editorialRank": 54,
+    "gptDifficulty": 64,
+    "gptRationale": "The repeated 'bar' concept creates strong false trails because every category uses nearby vocabulary from a different sense of the same word."
+  },
+  "groups": [
+    {
+      "id": "candy",
+      "label": "Candy bars",
+      "revealHint": "Candy",
+      "items": [
+        "Snickers",
+        "Kit Kat",
+        "Twix",
+        "Milky Way"
+      ]
+    },
+    {
+      "id": "legal",
+      "label": "Legal bars",
+      "revealHint": "Legal",
+      "items": [
+        "Bench",
+        "Counsel",
+        "Objection",
+        "Verdict"
+      ]
+    },
+    {
+      "id": "music",
+      "label": "Musical bars",
+      "revealHint": "Music",
+      "items": [
+        "Measure",
+        "Rest",
+        "Clef",
+        "Tempo"
+      ]
+    },
+    {
+      "id": "gym",
+      "label": "Gymnastics bars",
+      "revealHint": "Gymnastics",
+      "items": [
+        "Uneven",
+        "Parallel",
+        "Dismount",
+        "Mount"
+      ]
+    }
+  ]
+}

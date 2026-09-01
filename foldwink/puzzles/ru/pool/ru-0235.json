@@ -1,0 +1,55 @@
+{
+  "id": "ru-0235",
+  "title": "Породы кошек",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Породы домашних кошек",
+    "batch": "ru-batch-08",
+    "difficultyScore": 35,
+    "editorialRank": 36,
+    "gptDifficulty": 37,
+    "gptRationale": "Cat breeds are still accessible, but the more exotic modern breeds and hybrid-looking group increase difficulty somewhat."
+  },
+  "groups": [
+    {
+      "id": "longhair_cats",
+      "label": "Длинношёрстные",
+      "items": [
+        "Персидская",
+        "Мейн-кун",
+        "Сибирская",
+        "Ангорская"
+      ]
+    },
+    {
+      "id": "shorthair_cats",
+      "label": "Короткошёрстные",
+      "items": [
+        "Британская",
+        "Абиссинская",
+        "Русская голубая",
+        "Бурманская"
+      ]
+    },
+    {
+      "id": "noear_cats",
+      "label": "Необычные",
+      "items": [
+        "Шотландская вислоухая",
+        "Сфинкс",
+        "Корниш-рекс",
+        "Манчкин"
+      ]
+    },
+    {
+      "id": "wild_cat_breeds",
+      "label": "Дикие черты",
+      "items": [
+        "Саванна",
+        "Оцикет",
+        "Чаузи",
+        "Серенгети"
+      ]
+    }
+  ]
+}

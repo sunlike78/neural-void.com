@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0479",
+  "title": "Nahuatl Legacies",
+  "difficulty": "hard",
+  "editorialSummary": "English words borrowed from Nahuatl (via Spanish), grouped by the semantic field through which they entered: food (chocolate, tomato, avocado, chili), animals (ocelot, coyote, axolotl, quetzal), plants/nature (mesquite, copal, zapote, nopal), and objects/culture (hammock is Taino not Nahuatl — excluded; items are: cocoa, atlatl, chipotle, cenote). Every item is a real Nahuatl-origin English word. Hard because players likely know the words but not their origin language, and many feel like they could belong in multiple semantic buckets.",
+  "meta": {
+    "theme": "Nahuatl loanwords",
+    "categoryType": "classification",
+    "batch": "batch-14",
+    "status": "approved",
+    "difficultyScore": 42,
+    "editorialRank": 68,
+    "gptDifficulty": 86,
+    "gptRationale": "This combines etymology with category sorting, and several words are familiar in English without most players knowing their Nahuatl origin."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "NAHUATL: FOOD",
+      "items": [
+        "Chocolate",
+        "Tomato",
+        "Avocado",
+        "Chili"
+      ],
+      "revealHint": "NAHUAT"
+    },
+    {
+      "id": "g2",
+      "label": "NAHUATL: ANIMALS",
+      "items": [
+        "Ocelot",
+        "Coyote",
+        "Axolotl",
+        "Quetzal"
+      ],
+      "revealHint": "NAHUAT"
+    },
+    {
+      "id": "g3",
+      "label": "NAHUATL: PLANTS",
+      "items": [
+        "Mesquite",
+        "Copal",
+        "Zapote",
+        "Nopal"
+      ],
+      "revealHint": "NAHUAT"
+    },
+    {
+      "id": "g4",
+      "label": "NAHUATL: PLACE / RITUAL",
+      "items": [
+        "Milpa",
+        "Atlatl",
+        "Teocalli",
+        "Cenote"
+      ],
+      "revealHint": "NAHUAT"
+    }
+  ]
+}

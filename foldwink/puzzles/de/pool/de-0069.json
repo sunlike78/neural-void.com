@@ -1,0 +1,55 @@
+{
+  "id": "de-0069",
+  "title": "Auf der Baustelle",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baustelle",
+    "batch": "de-batch-03",
+    "difficultyScore": 23,
+    "editorialRank": 25,
+    "gptDifficulty": 27,
+    "gptRationale": "Baustelle als Thema ist sehr konkret und die Gruppen sind klar, auch wenn einzelne Berufe oder Materialien minimale Fachnähe haben."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Baumaschinen",
+      "items": [
+        "Bagger",
+        "Kran",
+        "Betonmischer",
+        "Planierraupe"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Baumaterialien",
+      "items": [
+        "Beton",
+        "Ziegel",
+        "Stahl",
+        "Holzbalken"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Bauberufe",
+      "items": [
+        "Maurer",
+        "Zimmermann",
+        "Elektriker",
+        "Polier"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Schutzausrüstung",
+      "items": [
+        "Schutzhelm",
+        "Warnweste",
+        "Sicherheitsschuhe",
+        "Schutzbrille"
+      ]
+    }
+  ]
+}

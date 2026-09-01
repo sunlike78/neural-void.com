@@ -1,0 +1,55 @@
+{
+  "id": "de-0241",
+  "title": "Kino in Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "kino",
+    "batch": "de-batch-03",
+    "difficultyScore": 50,
+    "editorialRank": 51,
+    "gptDifficulty": 52,
+    "gptRationale": "Kino in Deutschland bleibt konkret, aber Filmstudios und Preisbegriffe sind für Durchschnittsspieler weniger geläufig als Genres oder Regisseure."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Deutsche Regisseure",
+      "items": [
+        "Fassbinder",
+        "Wenders",
+        "Herzog",
+        "Tykwer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Filmstudios",
+      "items": [
+        "Babelsberg",
+        "Bavaria Film",
+        "CCC Filmstudios",
+        "Roxy"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Filmgenres",
+      "items": [
+        "Heimatfilm",
+        "Bergfilm",
+        "Autorenfilm",
+        "Neuer Deutscher Film"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Filmpreise",
+      "items": [
+        "Berlinale-Bär",
+        "Bayerischer Filmpreis",
+        "Europäischer Filmpreis",
+        "Deutscher Filmpreis"
+      ]
+    }
+  ]
+}

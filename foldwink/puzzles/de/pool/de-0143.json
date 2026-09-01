@@ -1,0 +1,55 @@
+{
+  "id": "de-0143",
+  "title": "Volleyball und Beach",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-batch-02",
+    "difficultyScore": 37,
+    "editorialRank": 42,
+    "gptDifficulty": 46,
+    "gptRationale": "Volleyballbegriffe sind meist zugänglich, aber positionsspezifische Rollen und die Überschneidung zwischen Hallen- und Beach-Kontext kosten etwas Zeit."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Positionen",
+      "items": [
+        "Libero",
+        "Zuspieler",
+        "Mittelblock",
+        "Außenangreifer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Techniken",
+      "items": [
+        "Aufschlag",
+        "Annahme",
+        "Zuspiel",
+        "Angriff"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Spielregeln",
+      "items": [
+        "Satz",
+        "Punkt",
+        "Netzberührung",
+        "Aufstellung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Turniere",
+      "items": [
+        "Bundesliga",
+        "Champions League",
+        "Weltliga",
+        "Olympia"
+      ]
+    }
+  ]
+}

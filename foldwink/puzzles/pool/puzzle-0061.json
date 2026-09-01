@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0061",
+  "title": "Turn the page",
+  "difficulty": "medium",
+  "editorialSummary": "Four groups of words that precede BOOK, FACE, WORD, or LINE.",
+  "groups": [
+    {
+      "id": "book",
+      "label": "___ BOOK",
+      "revealHint": "BOOK",
+      "items": [
+        "Note",
+        "Cook",
+        "Text",
+        "Scrap"
+      ]
+    },
+    {
+      "id": "face",
+      "label": "___ FACE",
+      "revealHint": "FACE",
+      "items": [
+        "Inter",
+        "Sur",
+        "Type",
+        "Poker"
+      ]
+    },
+    {
+      "id": "word",
+      "label": "___ WORD",
+      "revealHint": "WORD",
+      "items": [
+        "Cross",
+        "Pass",
+        "Key",
+        "Fore"
+      ]
+    },
+    {
+      "id": "line",
+      "label": "___ LINE",
+      "revealHint": "LINE",
+      "items": [
+        "Head",
+        "Out",
+        "Pipe",
+        "Dead"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 20,
+    "editorialRank": 46,
+    "gptDifficulty": 63,
+    "gptRationale": "This hinges on spotting four different prefix-compound patterns, with several fragments feeling plausible in more than one slot."
+  }
+}

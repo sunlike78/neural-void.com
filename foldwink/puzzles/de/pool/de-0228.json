@@ -1,0 +1,55 @@
+{
+  "id": "de-0228",
+  "title": "Nibelungensage",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "nibelungen",
+    "batch": "de-batch-03",
+    "difficultyScore": 27,
+    "editorialRank": 44,
+    "gptDifficulty": 56,
+    "gptRationale": "Die Nibelungensage ist bekannt genug, verlangt aber präzises Zuordnen von Figuren, Orten, Gegenständen und Ereignissen aus demselben Erzählkosmos."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Nibelungen-Personen",
+      "items": [
+        "Siegfried",
+        "Kriemhild",
+        "Hagen",
+        "Brunhild"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Nibelungen-Orte",
+      "items": [
+        "Worms",
+        "Xanten",
+        "Etzelburg",
+        "Island"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Schätze und Gegenstände",
+      "items": [
+        "Nibelungenhort",
+        "Tarnkappe",
+        "Drachenblut",
+        "Balmung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nibelungen-Ereignisse",
+      "items": [
+        "Drachentod",
+        "Hochzeit",
+        "Burgunderuntergang",
+        "Rache"
+      ]
+    }
+  ]
+}

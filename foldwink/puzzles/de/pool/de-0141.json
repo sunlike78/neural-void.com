@@ -1,0 +1,55 @@
+{
+  "id": "de-0141",
+  "title": "Handball in Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-batch-02",
+    "difficultyScore": 23,
+    "editorialRank": 43,
+    "gptDifficulty": 57,
+    "gptRationale": "Handball ist in Deutschland vertraut, doch Vereinsnamen, Turniere und die absichtlich falsche Spur Abseits machen das Sortieren etwas fehleranfällig."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Vereine",
+      "items": [
+        "THW Kiel",
+        "Rhein-Neckar Löwen",
+        "SG Flensburg",
+        "Bergischer HC"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Positionen",
+      "items": [
+        "Torwart",
+        "Kreisläufer",
+        "Rückraum",
+        "Außen"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Spielregeln",
+      "items": [
+        "Sieben-Meter",
+        "Zeitstrafe",
+        "Schrittfehler",
+        "Freiwurf"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Turniere",
+      "items": [
+        "Bundesliga",
+        "EHF Champions League",
+        "EM",
+        "WM"
+      ]
+    }
+  ]
+}

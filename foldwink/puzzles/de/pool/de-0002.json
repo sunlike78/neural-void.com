@@ -1,0 +1,55 @@
+{
+  "id": "de-0002",
+  "title": "Typisch Feierabend",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "alltagsrituale_und_gemuetlichkeit",
+    "categoryType": "cultural_lifestyle",
+    "batch": "de-batch-01",
+    "difficultyScore": 14,
+    "editorialRank": 12,
+    "gptRationale": "Deutsche Alltagsrituale, Gemütlichkeit im Biergarten und der berühmte Kabelsalat."
+  },
+  "groups": [
+    {
+      "id": "german_rituals",
+      "label": "Deutsche Alltagsrituale",
+      "items": [
+        "Stoßlüften",
+        "Kehrwoche",
+        "Mülltrennung",
+        "Feierabend"
+      ]
+    },
+    {
+      "id": "biergarten",
+      "label": "Im Biergarten",
+      "items": [
+        "Brezel",
+        "Radler",
+        "Senf",
+        "Weißwurst"
+      ]
+    },
+    {
+      "id": "cozy_sofa",
+      "label": "Gemütlich auf dem Sofa",
+      "items": [
+        "Kissen",
+        "Decke",
+        "Fernbedienung",
+        "Buch"
+      ]
+    },
+    {
+      "id": "salat_compounds",
+      "label": "Wortsalat mit «-salat»",
+      "items": [
+        "Kartoffelsalat",
+        "Nudelsalat",
+        "Kabelsalat",
+        "Wortsalat"
+      ]
+    }
+  ]
+}

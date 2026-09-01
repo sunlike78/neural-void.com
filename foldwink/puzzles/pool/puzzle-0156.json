@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0156",
+  "title": "Cast iron",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of cast — theatre, fishing, medical, metal. Mould/Type cross-trail.",
+  "meta": {
+    "theme": "abstract",
+    "categoryType": "attribute",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 23,
+    "editorialRank": 39,
+    "gptDifficulty": 49,
+    "gptRationale": "Cast has four clean domains and mostly distinct vocabulary, with only modest ambiguity from shared object-oriented nouns."
+  },
+  "groups": [
+    {
+      "id": "theatre",
+      "label": "Theatre cast",
+      "revealHint": "Theatre",
+      "items": [
+        "Ensemble",
+        "Understudy",
+        "Lead Role",
+        "Audition"
+      ]
+    },
+    {
+      "id": "fishing",
+      "label": "Fishing cast",
+      "revealHint": "Fishing",
+      "items": [
+        "Reel",
+        "Rod",
+        "Fly",
+        "Lure"
+      ]
+    },
+    {
+      "id": "medical",
+      "label": "Medical cast",
+      "revealHint": "Medical",
+      "items": [
+        "Plaster",
+        "Splint",
+        "Sling",
+        "Fracture"
+      ]
+    },
+    {
+      "id": "metal",
+      "label": "Metal casting",
+      "revealHint": "Metal",
+      "items": [
+        "Mould",
+        "Foundry",
+        "Alloy",
+        "Crucible"
+      ]
+    }
+  ]
+}

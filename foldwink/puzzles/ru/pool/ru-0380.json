@@ -1,0 +1,59 @@
+{
+  "id": "ru-0380",
+  "title": "Марки пива",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Сорта и марки пива",
+    "batch": "ru-batch-15",
+    "difficultyScore": 15,
+    "editorialRank": 44,
+    "gptDifficulty": 64,
+    "gptRationale": "Подборка специально играет на том, что здесь смешаны бренды и стили пива, а для неэнтузиаста это создаёт заметную неоднозначность."
+  },
+  "groups": [
+    {
+      "id": "lager_types",
+      "label": "Лагеры",
+      "revealHint": "ЛАГЕР",
+      "items": [
+        "Балтика",
+        "Жигулёвское",
+        "Heineken",
+        "Budweiser"
+      ]
+    },
+    {
+      "id": "ale_types",
+      "label": "Эли",
+      "revealHint": "ЭЛЬ",
+      "items": [
+        "Guinness",
+        "Newcastle Brown",
+        "Bass Ale",
+        "London Pride"
+      ]
+    },
+    {
+      "id": "craft_beers",
+      "label": "Бельгийские",
+      "revealHint": "БЕЛЬГИЯ",
+      "items": [
+        "Chimay",
+        "Duvel",
+        "Leffe",
+        "Stella Artois"
+      ]
+    },
+    {
+      "id": "german_beers",
+      "label": "Немецкие",
+      "revealHint": "ГЕРМАНИЯ",
+      "items": [
+        "Weizen",
+        "Märzen",
+        "Dunkel",
+        "Bock"
+      ]
+    }
+  ]
+}

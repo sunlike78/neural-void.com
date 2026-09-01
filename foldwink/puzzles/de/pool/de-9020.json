@@ -1,0 +1,35 @@
+{
+  "id": "de-9020",
+  "title": "Am Schreibtisch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schreibtisch",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 10,
+    "editorialRank": 1,
+    "gptDifficulty": 14,
+    "gptRationale": "Typische Bürogegenstände sind nach ihrer konkreten Art gruppiert; die Gruppen überschneiden sich nicht."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schreibgeräte",
+      "items": ["Bleistift", "Kugelschreiber", "Füller", "Textmarker"]
+    },
+    {
+      "id": "group_b",
+      "label": "Papierwaren",
+      "items": ["Notizblock", "Heft", "Briefumschlag", "Karteikarte"]
+    },
+    {
+      "id": "group_c",
+      "label": "Computergeräte",
+      "items": ["Tastatur", "Maus", "Bildschirm", "Drucker"]
+    },
+    {
+      "id": "group_d",
+      "label": "Befestigungsmittel",
+      "items": ["Büroklammer", "Heftklammer", "Reißzwecke", "Klebeband"]
+    }
+  ]
+}

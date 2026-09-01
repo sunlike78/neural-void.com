@@ -1,0 +1,55 @@
+{
+  "id": "de-0156",
+  "title": "Erste Hilfe",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gesundheit",
+    "batch": "de-batch-02",
+    "difficultyScore": 32,
+    "editorialRank": 27,
+    "gptDifficulty": 24,
+    "gptRationale": "Erste Hilfe besteht aus extrem vertrauten, handlungsnahen Begriffen, die sich fast von selbst in praktische Kategorien ordnen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Wundversorgung",
+      "items": [
+        "Pflaster",
+        "Wunddesinfektion",
+        "Verband",
+        "Kompresse"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Verbrennungen",
+      "items": [
+        "Kühlen",
+        "Blasen nicht öffnen",
+        "Folie abdecken",
+        "Arzt aufsuchen"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Knochenbrüche",
+      "items": [
+        "Ruhigstellen",
+        "Schiene",
+        "Kältekompresse",
+        "Röntgen"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Reanimation",
+      "items": [
+        "Herzdruckmassage",
+        "Beatmung",
+        "Notruf 112",
+        "AED"
+      ]
+    }
+  ]
+}

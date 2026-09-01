@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0235",
+  "title": "Dragon and dumpling",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "culture",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 24,
+    "editorialRank": 43,
+    "gptDifficulty": 55,
+    "gptRationale": "The cultural-symbol split is workable, but some East Asian motifs and foods demand more specific cultural knowledge and invite cross-group confusion."
+  },
+  "groups": [
+    {
+      "id": "chinese",
+      "label": "Chinese Symbols",
+      "items": [
+        "Dragon",
+        "Phoenix",
+        "Jade",
+        "Yin Yang"
+      ]
+    },
+    {
+      "id": "japanese",
+      "label": "Japanese Symbols",
+      "items": [
+        "Cherry Blossom",
+        "Koi",
+        "Torii Gate",
+        "Mount Fuji"
+      ]
+    },
+    {
+      "id": "food-chinese",
+      "label": "Chinese Food",
+      "items": [
+        "Dumpling",
+        "Peking Duck",
+        "Mapo Tofu",
+        "Bao Bun"
+      ]
+    },
+    {
+      "id": "food-japanese",
+      "label": "Japanese Food",
+      "items": [
+        "Ramen",
+        "Tempura",
+        "Onigiri",
+        "Miso Soup"
+      ]
+    }
+  ]
+}

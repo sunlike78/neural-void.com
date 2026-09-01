@@ -1,0 +1,53 @@
+{
+  "id": "puzzle-0081",
+  "title": "Galaxy guide",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "galaxy-types",
+      "label": "Galaxy Types",
+      "items": [
+        "Spiral",
+        "Elliptical",
+        "Lenticular",
+        "Irregular"
+      ]
+    },
+    {
+      "id": "star-stages",
+      "label": "Star Life Stages",
+      "items": [
+        "Nebula",
+        "Main Sequence",
+        "Red Giant",
+        "White Dwarf"
+      ]
+    },
+    {
+      "id": "black-holes",
+      "label": "Black Hole Classes",
+      "items": [
+        "Stellar",
+        "Supermassive",
+        "Intermediate",
+        "Primordial"
+      ]
+    },
+    {
+      "id": "space-missions",
+      "label": "Space Missions",
+      "items": [
+        "Apollo",
+        "Voyager",
+        "Hubble",
+        "Juno"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 31,
+    "editorialRank": 62,
+    "gptDifficulty": 82,
+    "gptRationale": "Astronomy categories are logically neat, but black-hole classes and stellar life-cycle terms are specialized enough to feel near the top of easy-tier difficulty."
+  }
+}

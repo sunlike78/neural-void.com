@@ -1,0 +1,55 @@
+{
+  "id": "de-0272",
+  "title": "Automobilindustrie",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "automobil",
+    "batch": "de-batch-03",
+    "difficultyScore": 22,
+    "editorialRank": 23,
+    "gptDifficulty": 24,
+    "gptRationale": "Autohersteller, Fahrzeugklassen und Antriebe sind sehr geläufig, nur die Standorte verlangen etwas zusätzliches Vorwissen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Autohersteller",
+      "items": [
+        "Volkswagen",
+        "BMW",
+        "Mercedes-Benz",
+        "Porsche"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Fahrzeugklassen",
+      "items": [
+        "Kleinwagen",
+        "Limousine",
+        "SUV",
+        "Sportwagen"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Antriebstechnologien",
+      "items": [
+        "Elektroantrieb",
+        "Hybrid",
+        "Wasserstoff",
+        "Verbrenner"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Automobilstandorte",
+      "items": [
+        "Wolfsburg",
+        "Stuttgart",
+        "München",
+        "Zwickau"
+      ]
+    }
+  ]
+}

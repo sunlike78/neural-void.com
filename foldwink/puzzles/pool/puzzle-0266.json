@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-0266",
+  "title": "Money moves",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "finance",
+    "categoryType": "classification",
+    "batch": "batch-06",
+    "status": "approved",
+    "difficultyScore": 37,
+    "editorialRank": 26,
+    "gptDifficulty": 18,
+    "gptRationale": "Finance vocabulary is mainstream and concrete, with only light ambiguity between bank and paperwork terms."
+  },
+  "groups": [
+    {
+      "id": "payment",
+      "label": "Payment Methods",
+      "items": [
+        "Cash",
+        "Credit Card",
+        "Wire Transfer",
+        "Cheque"
+      ]
+    },
+    {
+      "id": "banking",
+      "label": "Bank Actions",
+      "items": [
+        "Deposit",
+        "Withdrawal",
+        "Transfer",
+        "Balance Check"
+      ]
+    },
+    {
+      "id": "market",
+      "label": "Investment Terms",
+      "items": [
+        "Stock",
+        "Bond",
+        "Dividend",
+        "Portfolio"
+      ]
+    },
+    {
+      "id": "tax",
+      "label": "Financial Documents",
+      "items": [
+        "Invoice",
+        "Receipt",
+        "Payslip",
+        "Tax Return"
+      ]
+    }
+  ]
+}

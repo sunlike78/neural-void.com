@@ -1,0 +1,59 @@
+{
+  "id": "de-0374",
+  "title": "Diplomatie",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Diplomatie",
+    "batch": "de-batch-04",
+    "difficultyScore": 40,
+    "editorialRank": 54,
+    "gptDifficulty": 63,
+    "gptRationale": "Diplomatievokabular ist homogen und teils historisch aufgeladen, wodurch Personen, Verträge und Fachbegriffe leicht falsche Fährten legen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Diplomatische Instrumente",
+      "revealHint": "Diplom. Werkzeuge",
+      "items": [
+        "Verhandlung",
+        "Mediation",
+        "Embargo",
+        "Sanktion"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Diplomatische Verträge",
+      "revealHint": "Internat. Verträge",
+      "items": [
+        "Westfälischer Friede",
+        "Versailler Vertrag",
+        "Wiener Kongress",
+        "Helsinki"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Diplomatische Personen",
+      "revealHint": "Auslandsvertreter",
+      "items": [
+        "Botschafter",
+        "Konsul",
+        "Attaché",
+        "Chargé d'affaires"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Diplomatische Begriffe",
+      "revealHint": "Fachvokabular",
+      "items": [
+        "Persona non grata",
+        "Immunität",
+        "Akkreditierung",
+        "Demarche"
+      ]
+    }
+  ]
+}

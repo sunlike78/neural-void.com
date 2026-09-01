@@ -1,0 +1,55 @@
+{
+  "id": "de-0233",
+  "title": "Moderne Deutsche Literatur",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "moderne-literatur",
+    "batch": "de-batch-03",
+    "difficultyScore": 41,
+    "editorialRank": 55,
+    "gptDifficulty": 64,
+    "gptRationale": "Moderne Literatur mischt Autoren, Werke, Literaturströmungen und Preise, wodurch mehrere abstrakte Wissensarten gleichzeitig verlangt werden."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Autoren 20. Jh.",
+      "items": [
+        "Thomas Mann",
+        "Brecht",
+        "Böll",
+        "Grass"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Werke 20. Jh.",
+      "items": [
+        "Blechtrommel",
+        "Buddenbrooks",
+        "Steppenwolf",
+        "Im Westen nichts Neues"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Themen",
+      "items": [
+        "Exilliteratur",
+        "Trümmerliteratur",
+        "Heimatroman",
+        "Kriegsroman"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Literaturpreise",
+      "items": [
+        "Büchner-Preis",
+        "Ingeborg-Bachmann",
+        "Nobelpreis",
+        "Deutscher Buchpreis"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0441",
+  "title": "Sounds Like",
+  "difficulty": "easy",
+  "editorialSummary": "Onomatopoeia words grouped by the sound-source they mimic: animal sounds, impact/collision sounds, water sounds, and human mouth sounds. Every word directly imitates the sound it names.",
+  "meta": {
+    "theme": "onomatopoeia",
+    "categoryType": "classification",
+    "batch": "batch-13",
+    "status": "approved",
+    "difficultyScore": 23,
+    "editorialRank": 18,
+    "gptDifficulty": 14,
+    "gptRationale": "These are highly familiar sound words with intuitive semantic groupings and almost no abstraction required."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "ANIMAL SOUNDS",
+      "items": [
+        "Moo",
+        "Hiss",
+        "Chirp",
+        "Growl"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "IMPACT SOUNDS",
+      "items": [
+        "Thud",
+        "Clang",
+        "Crash",
+        "Thwack"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "WATER SOUNDS",
+      "items": [
+        "Splash",
+        "Drip",
+        "Gurgle",
+        "Swoosh"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "MOUTH SOUNDS",
+      "items": [
+        "Slurp",
+        "Chomp",
+        "Burp",
+        "Whisper"
+      ]
+    }
+  ]
+}

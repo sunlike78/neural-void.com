@@ -1,0 +1,55 @@
+{
+  "id": "ru-0027",
+  "title": "Посуда",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Посуда",
+    "batch": "ru-batch-01",
+    "difficultyScore": 25,
+    "editorialRank": 24,
+    "gptDifficulty": 24,
+    "gptRationale": "Kitchenware categories are practical and easy to visualize, with only limited overlap between serving and storage items."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Для приготовления еды",
+      "items": [
+        "Кастрюля",
+        "Сковорода",
+        "Противень",
+        "Котелок"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Для напитков",
+      "items": [
+        "Чашка",
+        "Стакан",
+        "Бокал",
+        "Кружка"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Для подачи блюд",
+      "items": [
+        "Тарелка",
+        "Блюдо",
+        "Салатница",
+        "Супница"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Для хранения продуктов",
+      "items": [
+        "Банка",
+        "Контейнер",
+        "Лоток",
+        "Судок"
+      ]
+    }
+  ]
+}

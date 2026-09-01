@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0067",
+  "title": "Into the keyboard",
+  "difficulty": "medium",
+  "editorialSummary": "Developer vocabulary split by layer.",
+  "groups": [
+    {
+      "id": "errors",
+      "label": "Common Errors",
+      "revealHint": "ERROR",
+      "items": [
+        "Null",
+        "Timeout",
+        "Overflow",
+        "Segfault"
+      ]
+    },
+    {
+      "id": "versioning",
+      "label": "Version Control",
+      "revealHint": "GIT",
+      "items": [
+        "Branch",
+        "Merge",
+        "Rebase",
+        "Cherry-pick"
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing",
+      "revealHint": "TEST",
+      "items": [
+        "Mock",
+        "Stub",
+        "Snapshot",
+        "Fixture"
+      ]
+    },
+    {
+      "id": "build",
+      "label": "Build Steps",
+      "revealHint": "BUILD",
+      "items": [
+        "Compile",
+        "Bundle",
+        "Minify",
+        "Tree Shake"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 15,
+    "editorialRank": 40,
+    "gptDifficulty": 57,
+    "gptRationale": "For tech-literate players the sets are fair, but jargon and cross-domain software vocabulary raise the barrier for a typical solver."
+  }
+}

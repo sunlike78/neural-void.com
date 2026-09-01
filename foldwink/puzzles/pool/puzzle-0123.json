@@ -1,0 +1,63 @@
+{
+  "id": "puzzle-0123",
+  "title": "Scale model",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of scale.",
+  "meta": {
+    "theme": "wordplay",
+    "categoryType": "attribute",
+    "wordplay": true,
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 42,
+    "editorialRank": 54,
+    "gptDifficulty": 62,
+    "gptRationale": "The 'scale' theme is clever, though each group mixes objects and associated terms, which makes the category logic feel less immediate."
+  },
+  "groups": [
+    {
+      "id": "fish",
+      "label": "Fish scales",
+      "revealHint": "Fish",
+      "items": [
+        "Trout",
+        "Carp",
+        "Salmon",
+        "Pike"
+      ]
+    },
+    {
+      "id": "music",
+      "label": "Musical scales",
+      "revealHint": "Notes",
+      "items": [
+        "Major",
+        "Minor",
+        "Pentatonic",
+        "Chromatic"
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weighing scales",
+      "revealHint": "Weight",
+      "items": [
+        "Balance",
+        "Gram",
+        "Calibrate",
+        "Tare"
+      ]
+    },
+    {
+      "id": "map",
+      "label": "Map scale",
+      "revealHint": "Map",
+      "items": [
+        "Legend",
+        "Ratio",
+        "Grid",
+        "Contour"
+      ]
+    }
+  ]
+}
