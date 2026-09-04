@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Security Policy — Neural Void</title>
+  <meta name="description" content="Partner security policy for Neural Void products and Atlassian Cloud Forge applications. Details on Zero-Egress architecture, incident response, and vulnerability management.">
+  <link rel="canonical" href="https://neural-void.com/security/">
+  <meta property="og:title" content="Partner Security Policy — Neural Void">
+  <meta property="og:description" content="Enterprise security, incident response, and vulnerability management policy for Neural Void Atlassian Cloud Forge apps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neural-void.com/security/">
+  <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .security-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 212, 245, 0.1);
+      border: 1px solid rgba(0, 212, 245, 0.3);
+      color: var(--nv-accent);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: var(--nv-font-mono);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .sec-card {
+      background: rgba(17, 17, 24, 0.7);
+      border: 1px solid var(--nv-border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+    .sec-card h4 {
+      color: var(--nv-white);
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+    .sla-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+    .sla-table th, .sla-table td {
+      border: 1px solid var(--nv-border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .sla-table th {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--nv-white);
+      font-family: var(--nv-font-mono);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="nav-logo">NEURAL<span>VOID</span></a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#jira-suite">Jira Suite</a></li>
+          <li><a href="/sprint-scope-guard/">Scope Guard</a></li>
+          <li><a href="/security/" style="color: var(--nv-accent); font-weight: 600;">Security</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="mailto:vladimir.evseev.pro@gmail.com" class="btn btn-ghost nav-cta" style="padding: 6px 16px;">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 140px; padding-bottom: 80px;">
+    <div class="container reveal">
+      <span class="security-badge">🛡️ Verified Partner Security Policy</span>
+      <h1 class="section-title">Security & Vulnerability Management Policy</h1>
+      <div class="section-text" style="max-width: 820px; line-height: 1.8;">
+        <p><strong>Vendor:</strong> Neural Void | <strong>Platform:</strong> Atlassian Cloud Ecosystem | <strong>Last Updated:</strong> September 2026</p>
+        <p style="margin-top: 12px;">
+          This Security Policy establishes the operational, architectural, and governance standards applied by Neural Void across all our digital products and enterprise Atlassian Cloud Forge applications (including <em>Sprint Scope Guard & Agile JQL Pro</em>, <em>Smart Defaults & DoD Guard</em>, and <em>JSM Outgoing Email Audit</em>).
+        </p>
+
+        <!-- SECTION 1: ARCHITECTURE -->
+        <div class="sec-card">
+          <h4>1. Zero-Egress Architecture & Infrastructure Security</h4>
+          <p>
+            All Neural Void Jira applications are built 100% natively on the <strong>Atlassian Forge serverless runtime</strong> and qualify for the official <strong>Runs on Atlassian</strong> trust badge.
+          </p>
+          <ul style="margin-top: 10px; padding-left: 20px; list-style-type: disc; color: var(--nv-text);">
+            <li style="margin-bottom: 6px;"><strong>Zero External Data Egress:</strong> Our applications do not maintain external application servers, third-party databases, or external analytics endpoints. Compute operations execute entirely inside Atlassian-managed isolated serverless sandboxes.</li>
+            <li style="margin-bottom: 6px;"><strong>Isolated App Storage:</strong> Configuration parameters, sprint baselines, and project settings are stored exclusively in <strong>Atlassian Forge Key-Value Storage (KVS)</strong>, partitioned and isolated per customer tenant.</li>
+            <li style="margin-bottom: 6px;"><strong>Encryption at Rest and in Transit:</strong> All customer data is encrypted in transit using TLS 1.3 and at rest using industry-standard AES-256 encryption managed directly by Atlassian Cloud / AWS infrastructure.</li>
+            <li style="margin-bottom: 6px;"><strong>Data Residency:</strong> All data storage automatically inherits your Jira instance's designated data residency region (EU, US, Germany, etc.). Customer data never crosses regional boundaries without explicit administrator configuration.</li>
+          </ul>
+        </div>
+
+        <!-- SECTION 2: APPLICATION ACCESS CONTROLS -->
+        <div class="sec-card">
+          <h4>2. Application Security Controls & Least Privilege</h4>
+          <p>
+            We implement defense-in-depth principles to protect customer project data and permissions:
+          </p>
+          <ul style="margin-top: 10px; padding-left: 20px; list-style-type: disc; color: var(--nv-text);">
+            <li style="margin-bottom: 6px;"><strong>User Context Enforcement (asUser):</strong> All read and write operations interact with Jira REST endpoints through the calling user context (<code>asUser()</code>), strictly respecting Jira project permissions and user roles.</li>
+            <li style="margin-bottom: 6px;"><strong>Administrative Authorization Gates:</strong> Mutating administrative settings or initiating Scope Swap operations strictly requires verified Jira <code>ADMINISTER_PROJECTS</code> privileges. Unauthorized requests are blocked at the resolver boundary.</li>
+            <li style="margin-bottom: 6px;"><strong>Anti-Injection & Sanitization:</strong> Input parameters and JQL queries undergo strict regular expression validation to prevent JQL injection. CSV data exports enforce formula injection escaping against DDE attacks.</li>
+            <li style="margin-bottom: 6px;"><strong>SSRF Protection:</strong> Outbound webhook testing resolves target hostnames and enforces strict blocking of loopback addresses (127.0.0.0/8), RFC 1918 private subnets, and cloud metadata IPs (169.254.169.254).</li>
+          </ul>
+        </div>
+
+        <!-- SECTION 3: VULNERABILITY MANAGEMENT -->
+        <div class="sec-card">
+          <h4>3. Vulnerability Management & Patching SLA</h4>
+          <p>
+            Neural Void maintains proactive vulnerability management to discover, assess, and remediate security issues continuously:
+          </p>
+          <ul style="margin-top: 10px; padding-left: 20px; list-style-type: disc; color: var(--nv-text);">
+            <li style="margin-bottom: 6px;"><strong>Automated Scanning:</strong> Automated scans via Atlassian Ecoscanner, npm audit, and automated static application security testing (SAST) run prior to every production release.</li>
+            <li style="margin-bottom: 6px;"><strong>Dependency Hygiene:</strong> Third-party dependencies are pinned to verified versions and scanned against the National Vulnerability Database (NVD).</li>
+          </ul>
+
+          <table class="sla-table">
+            <thead>
+              <tr>
+                <th>Vulnerability Severity</th>
+                <th>CVSS v3 Score</th>
+                <th>Remediation & Patch SLA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: #ff5630; font-weight: 600;">Critical</td>
+                <td>9.0 – 10.0</td>
+                <td><strong>Within 48 Hours</strong></td>
+              </tr>
+              <tr>
+                <td style="color: #ffab00; font-weight: 600;">High</td>
+                <td>7.0 – 8.9</td>
+                <td><strong>Within 7 Business Days</strong></td>
+              </tr>
+              <tr>
+                <td style="color: #36b37e;">Medium</td>
+                <td>4.0 – 6.9</td>
+                <td><strong>Within 30 Calendar Days</strong></td>
+              </tr>
+              <tr>
+                <td>Low</td>
+                <td>0.1 – 3.9</td>
+                <td>Next regular maintenance release</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 12px; font-size: 0.85rem; color: var(--nv-text-dim);">
+            Deployments on Atlassian Forge Cloud are executed serverless-side with zero customer downtime and immediate propagation across all cloud instances.
+          </p>
+        </div>
+
+        <!-- SECTION 4: INCIDENT MANAGEMENT -->
+        <div class="sec-card">
+          <h4>4. Security Incident Management & Notification Procedure</h4>
+          <p>
+            In the event of a suspected or confirmed security incident:
+          </p>
+          <ol style="margin-top: 10px; padding-left: 20px; color: var(--nv-text);">
+            <li style="margin-bottom: 6px;"><strong>Triage & Containment:</strong> The incident response team immediately isolates the affected module and deploys hotfix mitigations to the Forge production environment.</li>
+            <li style="margin-bottom: 6px;"><strong>Customer Notification (24h SLA):</strong> If an incident poses any risk to tenant configuration or security boundaries, Neural Void will notify affected administrators and Atlassian Security within <strong>24 hours</strong> of incident confirmation.</li>
+            <li style="margin-bottom: 6px;"><strong>Root Cause Analysis (RCA):</strong> A comprehensive Root Cause Analysis detailing findings, timeline, and corrective actions will be published within 5 business days.</li>
+          </ol>
+        </div>
+
+        <!-- SECTION 5: RESPONSIBLE DISCLOSURE & CONTACT -->
+        <div class="sec-card">
+          <h4>5. Responsible Disclosure & Security Contact</h4>
+          <p>
+            We welcome responsible security reports from researchers, partners, and customers. If you believe you have discovered a vulnerability, please contact us immediately:
+          </p>
+          <div style="margin-top: 12px; font-family: var(--nv-font-mono); font-size: 0.9rem; background: rgba(0,0,0,0.3); padding: 14px; border-radius: 6px; border: 1px solid var(--nv-border);">
+            <div><strong>Security Contact:</strong> <a href="mailto:vladimir.evseev.pro@gmail.com" style="color: var(--nv-accent);">vladimir.evseev.pro@gmail.com</a></div>
+            <div style="margin-top: 4px;"><strong>Secondary Contact:</strong> <a href="mailto:hello@neural-void.com" style="color: var(--nv-accent);">hello@neural-void.com</a></div>
+            <div style="margin-top: 4px;"><strong>Acknowledgement SLA:</strong> Within 24 hours</div>
+            <div style="margin-top: 4px;"><strong>Confidentiality:</strong> Security inquiries are prioritized and handled with strict responsible disclosure confidentiality.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Neural Void</p>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#jira-suite">Jira Suite</a></li>
+          <li><a href="/sprint-scope-guard/">Scope Guard</a></li>
+          <li><a href="/security/">Security</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="mailto:vladimir.evseev.pro@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
