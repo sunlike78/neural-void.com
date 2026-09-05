@@ -1,6 +1,6 @@
 import type { DailyRecord } from "../game/types/stats";
 
-export type DailyCellState = "won" | "lost" | "empty";
+export type DailyCellState = "won" | "lost" | "empty" | "cracked";
 
 export interface DailyFoldCell {
   date: string;
@@ -86,6 +86,7 @@ export function normalizeDailyRecord(
     result: record.result === "win" ? "win" : "loss",
     mistakesUsed: isFiniteNumber(record.mistakesUsed) ? Math.max(0, record.mistakesUsed) : 0,
     durationMs: isFiniteNumber(record.durationMs) ? Math.max(0, record.durationMs) : 0,
+    graceWaxUsed: record.graceWaxUsed === true ? true : undefined,
   };
 }
 
@@ -125,7 +126,13 @@ export function deriveSevenDayFold(
     cells.push({
       date,
       isToday: date === today,
-      state: !record ? "empty" : record.result === "win" ? "won" : "lost",
+      state: !record
+        ? "empty"
+        : record.graceWaxUsed
+          ? "cracked"
+          : record.result === "win"
+            ? "won"
+            : "lost",
       record,
     });
   }
@@ -184,3 +191,79 @@ export function derivePersonalMoment(
 
   return { kind: "today-logged", record: todayRecord, recent };
 }
+
+export function calculateDailyStreak(
+  history: Record<string, DailyRecord>,
+  today: string,
+): number {
+  const normalized = normalizeDailyHistory(history);
+  let streak = 0;
+  const todayRecord = normalized[today];
+  let checkDate =
+    todayRecord && todayRecord.result === "win" ? today : addLocalDays(today, -1);
+
+  while (true) {
+    const record = normalized[checkDate];
+    if (record && record.result === "win") {
+      streak += 1;
+      checkDate = addLocalDays(checkDate, -1);
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
+
+export interface GraceWaxResult {
+  applied: boolean;
+  protectedDate?: string;
+  waxRemaining?: number;
+}
+
+export function applyGraceWaxProtection(
+  history: Record<string, DailyRecord>,
+  today: string,
+  profile: { wax: number },
+): {
+  history: Record<string, DailyRecord>;
+  waxRemaining: number;
+  result: GraceWaxResult;
+} {
+  const normalized = normalizeDailyHistory(history);
+  const yesterday = addLocalDays(today, -1);
+  const twoDaysAgo = addLocalDays(today, -2);
+
+  // Check if yesterday is missing and player missed a day
+  if (!normalized[yesterday]) {
+    // Check if player had an active streak ending two days ago
+    const hadStreakTwoDaysAgo = normalized[twoDaysAgo]?.result === "win";
+    if (hadStreakTwoDaysAgo && profile.wax >= 1) {
+      const updatedWax = profile.wax - 1;
+      const graceRecord: DailyRecord = {
+        date: yesterday,
+        puzzleId: "grace_wax",
+        result: "win",
+        mistakesUsed: 0,
+        durationMs: 0,
+        graceWaxUsed: true,
+      };
+      const nextHistory = { ...normalized, [yesterday]: graceRecord };
+      return {
+        history: nextHistory,
+        waxRemaining: updatedWax,
+        result: {
+          applied: true,
+          protectedDate: yesterday,
+          waxRemaining: updatedWax,
+        },
+      };
+    }
+  }
+
+  return {
+    history: normalized,
+    waxRemaining: profile.wax,
+    result: { applied: false },
+  };
+}
+

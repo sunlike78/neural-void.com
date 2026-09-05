@@ -8,6 +8,8 @@ import {
   listDailyRecords,
   mergeDailyHistory,
   parseLocalDate,
+  calculateDailyStreak,
+  applyGraceWaxProtection,
 } from "../dailyRitual";
 
 function daily(date: string, overrides: Partial<DailyRecord> = {}): DailyRecord {
@@ -129,5 +131,48 @@ describe("dailyRitual", () => {
     );
     expect(moment?.kind).toBe("today-logged");
     expect(moment?.recent).toEqual({ solved: 2, recorded: 2 });
+  });
+
+  it("calculates daily streak correctly from consecutive wins and handles Grace Wax", () => {
+    const history = {
+      "2026-07-20": daily("2026-07-20"),
+      "2026-07-21": daily("2026-07-21"),
+      "2026-07-22": daily("2026-07-22"),
+    };
+    expect(calculateDailyStreak(history, "2026-07-22")).toBe(3);
+
+    // Today not yet played, yesterday won
+    expect(calculateDailyStreak(history, "2026-07-23")).toBe(3);
+
+    // Two days gap without grace wax -> streak broken (0)
+    expect(calculateDailyStreak(history, "2026-07-24")).toBe(0);
+  });
+
+  it("protects daily streak with Grace Wax when a day is missed and wax >= 1", () => {
+    const history = {
+      "2026-07-20": daily("2026-07-20"),
+      // 2026-07-21 was missed
+    };
+    const today = "2026-07-22";
+
+    // Player has wax
+    const resWithWax = applyGraceWaxProtection(history, today, { wax: 2 });
+    expect(resWithWax.result.applied).toBe(true);
+    expect(resWithWax.result.protectedDate).toBe("2026-07-21");
+    expect(resWithWax.waxRemaining).toBe(1);
+    expect(resWithWax.history["2026-07-21"]?.graceWaxUsed).toBe(true);
+
+    // Seven-day fold marks the grace day as cracked
+    const cells = deriveSevenDayFold(resWithWax.history, today);
+    const crackedCell = cells.find((c) => c.date === "2026-07-21");
+    expect(crackedCell?.state).toBe("cracked");
+
+    // Streak is preserved
+    expect(calculateDailyStreak(resWithWax.history, today)).toBe(2);
+
+    // Player with 0 wax does not get grace wax
+    const resNoWax = applyGraceWaxProtection(history, today, { wax: 0 });
+    expect(resNoWax.result.applied).toBe(false);
+    expect(resNoWax.waxRemaining).toBe(0);
   });
 });

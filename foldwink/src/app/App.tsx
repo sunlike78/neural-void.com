@@ -21,6 +21,7 @@ export function App() {
   const completeOnboarding = useGameStore((s) => s.completeOnboarding);
   const closeHowToPlay = useGameStore((s) => s.closeHowToPlay);
   const startDaily = useGameStore((s) => s.startDaily);
+  const startDuel = useGameStore((s) => s.startDuel);
   const lang = useLang();
   const initialLang = useRef(lang);
 
@@ -29,6 +30,25 @@ export function App() {
     // A restored game takes precedence over the normal first-run handoff.
     if (screen === "menu") startDaily();
   };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const vs = params.get("vs");
+      if (vs) {
+        const m = Math.max(0, parseInt(params.get("m") ?? "0", 10) || 0);
+        const t = Math.max(0, parseInt(params.get("t") ?? "0", 10) || 0);
+        if (!onboarded) {
+          completeOnboarding();
+        }
+        startDuel(vs, m, t);
+        window.history.replaceState({}, "", window.location.pathname);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, [onboarded, completeOnboarding, startDuel]);
 
   useEffect(() => {
     void prepareSoundPack();

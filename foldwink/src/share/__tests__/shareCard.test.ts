@@ -28,9 +28,14 @@ describe("shareCard renderer", () => {
     const storyOpts: ShareCardOptions = {
       ...squareOpts,
       format: "story",
+      sealIcon: "🦅",
+      sealLabel: "Raven Crest",
+      dateStr: "2026-09-05",
     };
 
     expect(squareOpts.format).toBe("square");
     expect(storyOpts.format).toBe("story");
+    expect(storyOpts.sealIcon).toBe("🦅");
+    expect(storyOpts.dateStr).toBe("2026-09-05");
   });
 });

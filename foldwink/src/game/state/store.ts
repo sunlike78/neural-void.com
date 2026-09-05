@@ -54,12 +54,18 @@ export interface StoreState {
   newBest: boolean;
   onboarded: boolean;
   howToPlayOpen: boolean;
+  duel: {
+    puzzleId: string;
+    challengerMistakes: number;
+    challengerTimeSec: number;
+  } | null;
 
   startStandard: () => void;
   startEasy: () => void;
   startMedium: () => void;
   startHard: () => void;
   startDaily: () => void;
+  startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => void;
   toggleSelection: (value: string) => void;
   clearSelection: () => void;
   reshuffleActive: () => void;
@@ -212,6 +218,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     newBest: false,
     onboarded: deps.initialOnboarded,
     howToPlayOpen: false,
+    duel: null,
 
     startStandard: () => {
       get().startEasy();
@@ -364,6 +371,39 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         props: {
           surface: "menu",
           mode: "daily",
+          difficulty: puzzle.difficulty,
+          lang: getLangSync(),
+        },
+      });
+    },
+
+    startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => {
+      let puzzle = deps.getPuzzleById(puzzleId);
+      if (!puzzle && deps.getPool) {
+        const fullPool = deps.getPool();
+        puzzle = fullPool.find((p) => p.id === puzzleId);
+      }
+      if (!puzzle) return;
+      const active = initialActive(puzzle, "standard", String(deps.now()), false, deps.now());
+      set({
+        screen: "game",
+        puzzle,
+        active,
+        summary: null,
+        flash: null,
+        streakDelta: 0,
+        newBest: false,
+        duel: {
+          puzzleId,
+          challengerMistakes,
+          challengerTimeSec,
+        },
+      });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "standard",
           difficulty: puzzle.difficulty,
           lang: getLangSync(),
         },
@@ -542,6 +582,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+        duel: null,
       });
     },
 
