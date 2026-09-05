@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Verbum Voice Lab — Lite & Pro Downloads | Neural Void</title>
+  <meta name="description" content="Download Verbum Lite and Pro: 100% offline speech recognition, Vulkan GPU acceleration, and Push-to-Talk HUD for Windows 11.">
+  <link rel="canonical" href="https://neural-void.com/lab/verbum/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <style>
+    body { background-color: #050811; color: var(--nv-text); font-family: var(--nv-font-sans); }
+    .lab-hero { padding: 130px 0 50px; text-align: center; }
+    .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin: 40px 0 60px; text-align: left; }
+    .tier-card {
+      background: rgba(13, 17, 28, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 36px 30px;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .tier-card.featured {
+      border-color: rgba(0, 240, 255, 0.45);
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.1);
+    }
+    .tier-badge {
+      display: inline-block;
+      font-family: var(--nv-font-mono);
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .badge-lite { background: rgba(255, 255, 255, 0.08); color: #cbd5e1; }
+    .badge-pro { background: rgba(0, 240, 255, 0.15); color: #00f0ff; border: 1px solid rgba(0, 240, 255, 0.3); }
+    .tier-price { font-size: 2.2rem; font-weight: 800; color: #fff; margin: 12px 0 16px; font-family: var(--nv-font-mono); }
+    .tier-price small { font-size: 0.85rem; color: var(--nv-text-dim); font-weight: 400; }
+    .tier-features { list-style: none; margin: 24px 0; padding: 0; }
+    .tier-features li { margin-bottom: 12px; font-size: 0.92rem; color: #e2e8f0; display: flex; align-items: baseline; gap: 10px; }
+    .tier-features li span.icon { color: #00f0ff; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="nav-logo">NEURAL<span>VOID</span></a>
+        <ul class="nav-links">
+          <li><a href="/lab/">← Lab Hub</a></li>
+          <li><a href="/lab/acoustic/">Acoustic Lab</a></li>
+          <li><a href="/lab/verbum/" style="color: #00f0ff; font-weight: 700;">Verbum Downloads</a></li>
+          <li><a href="/verbum/">Verbum Product Page</a></li>
+          <li><a href="/security/">Security</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="lab-hero">
+      <div style="font-family: var(--nv-font-mono); font-size: 0.75rem; color: #00f0ff; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">
+        Local Voice Dictation // Release Channel
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; color: #fff; margin-bottom: 16px;">
+        Download Verbum: <span>Lite & Pro</span>
+      </h1>
+      <p style="max-width: 680px; margin: 0 auto; color: var(--nv-text-dim); font-size: 1.1rem; line-height: 1.6;">
+        100% offline Windows 11 voice input designed for developers and technical writing. Speak Russian with mixed English technical terms, with hardware-level terminal protection.
+      </p>
+
+      <div class="tier-grid">
+        <!-- Verbum Lite -->
+        <div class="tier-card">
+          <div>
+            <span class="tier-badge badge-lite">Verbum Lite • Free / Community</span>
+            <h2 style="font-size: 1.6rem; color: #fff; margin-bottom: 8px;">Verbum Lite</h2>
+            <p style="color: var(--nv-text-dim); font-size: 0.9rem;">
+              Lightweight, instant CPU & Vulkan dictation for notes, chats, and general writing.
+            </p>
+            <div class="tier-price">0.00 € <small>/ Free Forever</small></div>
+            <ul class="tier-features">
+              <li><span class="icon">✓</span> <strong>Whisper Base/Small int8</strong> offline model</li>
+              <li><span class="icon">✓</span> Right-Alt Push-to-Talk global hotkey</li>
+              <li><span class="icon">✓</span> Floating glassmorphic HUD status pill</li>
+              <li><span class="icon">✓</span> 100% Zero-Egress local processing</li>
+              <li><span class="icon">✓</span> Low RAM footprint (~450 MB)</li>
+              <li style="color: var(--nv-text-dim);"><span style="color: #64748b;">✗</span> No terminal execution lock</li>
+              <li style="color: var(--nv-text-dim);"><span style="color: #64748b;">✗</span> Standard acoustic pre-filtering</li>
+            </ul>
+          </div>
+          <div>
+            <a href="https://github.com/vladimirevseevpro-collab/neural-void.com/releases/download/v1.2.0/Verbum-Setup-1.2.0.exe" class="btn btn-secondary" style="width: 100%; justify-content: center; display: flex; font-family: var(--nv-font-mono);">
+              ⬇ Download Verbum Lite (Win 11)
+            </a>
+            <div style="font-size: 0.72rem; color: var(--nv-text-dim); text-align: center; margin-top: 8px; font-family: var(--nv-font-mono);">
+              Inno Setup • ~1.0 GB complete offline bundle
+            </div>
+          </div>
+        </div>
+
+        <!-- Verbum Pro -->
+        <div class="tier-card featured">
+          <div>
+            <span class="tier-badge badge-pro">Verbum Pro • Engineering Edition</span>
+            <h2 style="font-size: 1.6rem; color: #fff; margin-bottom: 8px;">Verbum Pro</h2>
+            <p style="color: var(--nv-text-dim); font-size: 0.9rem;">
+              The full developer power-tool with acoustic triage, terminal lock, and code macro expansions.
+            </p>
+            <div class="tier-price">15-Day Trial <small>/ Commercial License</small></div>
+            <ul class="tier-features">
+              <li><span class="icon">✓</span> <strong>Everything in Lite</strong> + Large-v3 Turbo engine</li>
+              <li><span class="icon">✓</span> <strong>Terminal Zero-Execution Guard</strong> (Hardware Enter lock)</li>
+              <li><span class="icon">✓</span> <strong>NoiseKiller Acoustic Triage</strong> (Real-time de-hum & de-clatter)</li>
+              <li><span class="icon">✓</span> Trilingual technical code dictation (EN/DE/RU)</li>
+              <li><span class="icon">✓</span> Custom dev macros & automated prompt wraps</li>
+              <li><span class="icon">✓</span> Multi-speaker diarization for podcast recordings</li>
+              <li><span class="icon">✓</span> Vulkan GPU dedicated acceleration (< 38ms latency)</li>
+            </ul>
+          </div>
+          <div>
+            <a href="https://github.com/vladimirevseevpro-collab/neural-void.com/releases/download/v1.2.0/Verbum-Setup-1.2.0.exe" class="btn btn-primary" style="width: 100%; justify-content: center; display: flex; font-family: var(--nv-font-mono);">
+              ⚡ Download Verbum Pro (15-Day Trial)
+            </a>
+            <div style="font-size: 0.72rem; color: var(--nv-text-dim); text-align: center; margin-top: 8px; font-family: var(--nv-font-mono);">
+              Direct Windows 11 x64 Installer • SHA256 Verified
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Neural Void • Zero-Egress Software Lab</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
