@@ -1,6 +1,6 @@
 import type { ArchivistProfile, DisciplineId } from "./types";
 import { GUILD_RANKS } from "./types";
-import { SEALS, TITLES } from "./stamps";
+import { SEALS, TITLES, STAMP_COLLECTION } from "./stamps";
 import { fnv1a } from "../utils/hash";
 import { generateQrMatrix, drawQrToCanvas } from "./qr";
 
@@ -57,24 +57,39 @@ export function encodePassportToSeal(
   profile: ArchivistProfile,
   playerSeed?: string,
 ): string {
-  const payload: CompactPassportPayload = {
-    v: 1,
-    lvl: Math.max(1, Math.floor(profile.level)),
-    xp: Math.max(0, Math.floor(profile.xp)),
-    ink: Math.max(0, Math.floor(profile.ink)),
-    wax: Math.max(0, Math.floor(profile.wax)),
-    p: Math.max(0, Math.floor(profile.prestige)),
-    d: profile.discipline || "scribe",
-    s: profile.sealId || "seal_raven",
-    n: profile.nibId || "nib_brass",
-    t: profile.titleId || "title_truths",
-    st: Array.isArray(profile.collectedStampIds) ? [...profile.collectedStampIds] : [],
-    ps: playerSeed ?? profile.playerSeed,
-    ca: Math.max(0, Math.floor(profile.contractsAttempted || 0)),
-    cw: Math.max(0, Math.floor(profile.contractsWon || 0)),
-  };
+  const stampIds = Array.isArray(profile.collectedStampIds) ? profile.collectedStampIds : [];
+  let stampMask = 0;
+  let allInCollection = true;
+  for (const s of stampIds) {
+    const idx = STAMP_COLLECTION.findIndex((item) => item.id === s);
+    if (idx !== -1) {
+      stampMask |= (1 << idx);
+    } else {
+      allInCollection = false;
+      break;
+    }
+  }
+  const compactStamps = allInCollection ? stampMask : stampIds;
 
-  const jsonStr = JSON.stringify(payload);
+  // Ultra-compact array payload: [v, lvl, xp, ink, wax, p, d, s, n, t, st, ps, ca, cw]
+  const payloadArray = [
+    1,
+    Math.max(1, Math.floor(profile.level)),
+    Math.max(0, Math.floor(profile.xp)),
+    Math.max(0, Math.floor(profile.ink)),
+    Math.max(0, Math.floor(profile.wax)),
+    Math.max(0, Math.floor(profile.prestige)),
+    profile.discipline || "scribe",
+    profile.sealId || "seal_raven",
+    profile.nibId || "nib_brass",
+    profile.titleId || "title_truths",
+    compactStamps,
+    playerSeed ?? profile.playerSeed ?? null,
+    Math.max(0, Math.floor(profile.contractsAttempted || 0)),
+    Math.max(0, Math.floor(profile.contractsWon || 0)),
+  ];
+
+  const jsonStr = JSON.stringify(payloadArray);
   const hash = (fnv1a(jsonStr) >>> 0).toString(16).padStart(8, "0");
   const b64 = toBase64(jsonStr);
   return `FWSEAL1:${hash}-${b64}`;
@@ -109,33 +124,90 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
       return { ok: false, error: "Seal verification failed (checksum mismatch / tampering)" };
     }
 
-    const payload = JSON.parse(jsonStr) as Partial<CompactPassportPayload>;
-    if (payload.v !== 1) {
-      return { ok: false, error: `Unsupported seal version (${payload.v})` };
+    const rawPayload = JSON.parse(jsonStr);
+    let v: number;
+    let lvl: number;
+    let xp: number;
+    let ink: number;
+    let wax: number;
+    let p: number;
+    let d: DisciplineId;
+    let s: string;
+    let n: string;
+    let t: string;
+    let st: number | string[];
+    let ps: string | null | undefined;
+    let ca: number;
+    let cw: number;
+
+    if (Array.isArray(rawPayload)) {
+      [v, lvl, xp, ink, wax, p, d, s, n, t, st, ps, ca, cw] = rawPayload;
+    } else {
+      const obj = rawPayload as Partial<CompactPassportPayload>;
+      v = obj.v ?? 1;
+      lvl = obj.lvl ?? 1;
+      xp = obj.xp ?? 0;
+      ink = obj.ink ?? 0;
+      wax = obj.wax ?? 0;
+      p = obj.p ?? 0;
+      d = obj.d ?? "scribe";
+      s = obj.s ?? "seal_raven";
+      n = obj.n ?? "nib_brass";
+      t = obj.t ?? "title_truths";
+      st = obj.st ?? ["stamp_morning_brew"];
+      ps = obj.ps;
+      ca = obj.ca ?? 0;
+      cw = obj.cw ?? 0;
     }
-    if (typeof payload.lvl !== "number" || typeof payload.xp !== "number") {
+
+    if (v !== 1) {
+      return { ok: false, error: `Unsupported seal version (${v})` };
+    }
+    if (typeof lvl !== "number" || typeof xp !== "number") {
       return { ok: false, error: "Missing level or XP in seal data" };
     }
 
+    // Resolve stamps
+    let collectedStampIds: string[];
+    if (typeof st === "number") {
+      collectedStampIds = [];
+      for (let i = 0; i < STAMP_COLLECTION.length; i++) {
+        if ((st & (1 << i)) !== 0) {
+          collectedStampIds.push(STAMP_COLLECTION[i].id);
+        }
+      }
+      if (collectedStampIds.length === 0) {
+        collectedStampIds = ["stamp_morning_brew"];
+      }
+    } else if (Array.isArray(st)) {
+      collectedStampIds = st.map((item) => (item.startsWith("stamp_") ? item : `stamp_${item}`));
+    } else {
+      collectedStampIds = ["stamp_morning_brew"];
+    }
+
+    const cleanSealId = s?.startsWith("seal_") ? s : s ? `seal_${s}` : "seal_raven";
+    const cleanNibId = n?.startsWith("nib_") ? n : n ? `nib_${n}` : "nib_brass";
+    const cleanTitleId = t?.startsWith("title_") ? t : t ? `title_${t}` : "title_truths";
+
     const profile: ArchivistProfile = {
       version: 1,
-      level: Math.max(1, payload.lvl),
-      xp: Math.max(0, payload.xp),
-      ink: Math.max(0, payload.ink ?? 0),
-      wax: Math.max(0, payload.wax ?? 0),
-      prestige: Math.max(0, payload.p ?? 0),
-      discipline: payload.d ?? "scribe",
-      sealId: payload.s ?? "seal_raven",
-      nibId: payload.n ?? "nib_brass",
-      titleId: payload.t ?? "title_truths",
-      collectedStampIds: Array.isArray(payload.st) ? payload.st : ["stamp_morning_brew"],
-      contractsAttempted: Math.max(0, payload.ca ?? 0),
-      contractsWon: Math.max(0, payload.cw ?? 0),
+      level: Math.max(1, lvl),
+      xp: Math.max(0, xp),
+      ink: Math.max(0, ink ?? 0),
+      wax: Math.max(0, wax ?? 0),
+      prestige: Math.max(0, p ?? 0),
+      discipline: d ?? "scribe",
+      sealId: cleanSealId,
+      nibId: cleanNibId,
+      titleId: cleanTitleId,
+      collectedStampIds,
+      contractsAttempted: Math.max(0, ca ?? 0),
+      contractsWon: Math.max(0, cw ?? 0),
       activeContract: null,
-      playerSeed: payload.ps,
+      playerSeed: ps || undefined,
     };
 
-    return { ok: true, profile, playerSeed: payload.ps };
+    return { ok: true, profile, playerSeed: ps || undefined };
   } catch (err) {
     return { ok: false, error: `Decoding error: ${err instanceof Error ? err.message : String(err)}` };
   }
@@ -301,4 +373,55 @@ export function drawWaxSealCertificate(
   ctx.fillStyle = "#4a534c";
   ctx.font = `700 8px ${fontStack}`;
   ctx.fillText("neural-void.com/foldwink", width / 2, height - 24);
+}
+
+export const ARCHIVIST_BACKUP_KEY = "foldwink_archivist_backup";
+
+export interface ArchivistBackupPayload {
+  profile: ArchivistProfile;
+  playerSeed?: string;
+  backedUpAt: string;
+}
+
+export function saveArchivistBackup(profile: ArchivistProfile, playerSeed?: string): void {
+  if (typeof localStorage === "undefined") return;
+  try {
+    const payload: ArchivistBackupPayload = {
+      profile,
+      playerSeed,
+      backedUpAt: new Date().toISOString(),
+    };
+    localStorage.setItem(ARCHIVIST_BACKUP_KEY, JSON.stringify(payload));
+  } catch {
+    /* ignore */
+  }
+}
+
+export function loadArchivistBackup(): ArchivistBackupPayload | null {
+  if (typeof localStorage === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(ARCHIVIST_BACKUP_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as ArchivistBackupPayload;
+  } catch {
+    return null;
+  }
+}
+
+export function hasArchivistBackup(): boolean {
+  if (typeof localStorage === "undefined") return false;
+  try {
+    return Boolean(localStorage.getItem(ARCHIVIST_BACKUP_KEY));
+  } catch {
+    return false;
+  }
+}
+
+export function clearArchivistBackup(): void {
+  if (typeof localStorage === "undefined") return;
+  try {
+    localStorage.removeItem(ARCHIVIST_BACKUP_KEY);
+  } catch {
+    /* ignore */
+  }
 }

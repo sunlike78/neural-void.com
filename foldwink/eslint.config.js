@@ -14,7 +14,10 @@ export default [
       "node_modules",
       "coverage",
       ".vite",
-      "tiktok/video_automation/**",
+      "assets/**",
+      "ios/**",
+      "itch.io/**",
+      "tiktok/**",
       "docs/reports/**",
     ],
   },
@@ -67,12 +70,16 @@ export default [
     // this file and references browser globals (window, document,
     // getComputedStyle) that only exist at browser-evaluation time. ESLint
     // lints the callback as source code, so we declare them here.
-    files: ["scripts/**/*.{ts,mjs,js}", "tests/**/*.{ts,mjs,js}"],
+    files: ["scripts/**/*.{ts,mjs,js,cjs}", "tests/**/*.{ts,mjs,js}"],
     languageOptions: {
       globals: {
         // Node.js runtime globals (scripts/*.mjs run on node)
         process: "readonly",
         console: "readonly",
+        require: "readonly",
+        module: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
         setTimeout: "readonly",
         clearTimeout: "readonly",
         setInterval: "readonly",
@@ -89,6 +96,7 @@ export default [
     },
     rules: {
       "no-console": "off",
+      "@typescript-eslint/no-require-imports": "off",
       // Script-local heuristic: empty catch around filesystem / JSON
       // probing is deliberate (try the file, move on). Don't flag it.
       "no-empty": ["error", { allowEmptyCatch: true }],

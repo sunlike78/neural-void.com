@@ -82,6 +82,14 @@ const VERSION_SPECS: VersionSpec[] = [
   { version: 10, totalCodewords: 346, dataCodewords: 274, ecCodewordsPerBlock: 18, blocks: [{ count: 2, dataCodewords: 68 }, { count: 2, dataCodewords: 69 }], alignments: [6, 28, 50] },
 ];
 
+// ISO/IEC 18004 Table D.1 - Version Information (BCH 18, 6)
+const VERSION_INFO: Record<number, number> = {
+  7: 0x07c94,
+  8: 0x085bc,
+  9: 0x09a99,
+  10: 0x0a4d3,
+};
+
 function selectVersion(dataLenBytes: number): VersionSpec {
   for (const spec of VERSION_SPECS) {
     const headerBits = spec.version < 10 ? 12 : 20;
@@ -116,17 +124,7 @@ class BitBuffer {
 }
 
 export function generateQrMatrix(text: string): boolean[][] {
-  const utf8Bytes: number[] = [];
-  for (let i = 0; i < text.length; i++) {
-    const c = text.charCodeAt(i);
-    if (c < 128) {
-      utf8Bytes.push(c);
-    } else if (c < 2048) {
-      utf8Bytes.push(192 | (c >> 6), 128 | (c & 63));
-    } else {
-      utf8Bytes.push(224 | (c >> 12), 128 | ((c >> 6) & 63), 128 | (c & 63));
-    }
-  }
+  const utf8Bytes = Array.from(new TextEncoder().encode(text));
 
   const spec = selectVersion(utf8Bytes.length);
   const buffer = new BitBuffer();
@@ -255,6 +253,18 @@ export function generateQrMatrix(text: string): boolean[][] {
   // Dark module
   matrix[4 * spec.version + 9][8] = true;
 
+  // Version information for Version 7 and above (ISO/IEC 18004 Table D.1)
+  if (spec.version >= 7) {
+    const vInfo = VERSION_INFO[spec.version] ?? 0;
+    for (let i = 0; i < 18; i++) {
+      const bit = ((vInfo >>> i) & 1) === 1;
+      // Bottom-left: 3 rows x 6 cols
+      matrix[size - 11 + (i % 3)][Math.floor(i / 3)] = bit;
+      // Top-right: 6 rows x 3 cols
+      matrix[Math.floor(i / 3)][size - 11 + (i % 3)] = bit;
+    }
+  }
+
   // Reserve format information spaces
   for (let i = 0; i < 9; i++) {
     if (matrix[8][i] === null) matrix[8][i] = false;
@@ -300,18 +310,26 @@ export function generateQrMatrix(text: string): boolean[][] {
   }
 
   // Format info: EC Level L (01), Mask 0 (000)
-  const formatBits = [true, true, true, false, true, true, true, true, true, false, false, false, true, false, false];
+  // Final 15-bit BCH codeword = 0b111011111000100
+  // bit 0 (LSB) = 0, bit 14 (MSB) = 1
+  const finalBits = 0b111011111000100;
+  const formatBits = new Array(15);
+  for (let i = 0; i < 15; i++) {
+    formatBits[i] = ((finalBits >>> i) & 1) === 1;
+  }
 
-  // Write format info
-  // Top-left
+  // Write format info (ISO/IEC 18004 Table 23)
+  // Top-left: (8, 0..5) -> bit 0..5, (8, 7) -> bit 6, (8, 8) -> bit 7, (7, 8) -> bit 8, (5..0, 8) -> bit 9..14
   for (let i = 0; i <= 5; i++) matrix[8][i] = formatBits[i];
   matrix[8][7] = formatBits[6];
   matrix[8][8] = formatBits[7];
   matrix[7][8] = formatBits[8];
   for (let i = 9; i < 15; i++) matrix[14 - i][8] = formatBits[i];
 
-  // Right-top & left-bottom
+  // Right-top & left-bottom:
+  // Top-right: (8, size - 1) down to (8, size - 8) receives bit 0 to 7
   for (let i = 0; i < 8; i++) matrix[8][size - 1 - i] = formatBits[i];
+  // Bottom-left: (size - 7, 8) up to (size - 1, 8) receives bit 8 to 14
   for (let i = 8; i < 15; i++) matrix[size - 15 + i][8] = formatBits[i];
 
   return matrix.map((row) => row.map((cell) => cell ?? false));

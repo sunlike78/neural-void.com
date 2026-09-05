@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 
 const POOLS = [
@@ -40,7 +40,7 @@ for (const { key, dir } of POOLS) {
       continue;
     }
 
-    const { id, title, difficulty, groups } = puzzle;
+    const { id, title: _title, difficulty, groups } = puzzle;
 
     // ─── Layer 1: 4x4 Grid Structure & Unique Partition ─────────────────────
     if (!Array.isArray(groups) || groups.length !== 4) {

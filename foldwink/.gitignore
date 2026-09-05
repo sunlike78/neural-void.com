@@ -26,3 +26,9 @@ itch.io/tools/butler/
 
 # puzzle batch staging (audit trail lives in docs/reports/batch-*-audit/)
 puzzles/pool/_drafts/
+
+# iOS build artifacts
+build/
+*.ipa
+*.xcarchive
+

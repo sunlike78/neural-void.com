@@ -248,6 +248,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+        duel: null,
       });
       trackEvent({
         name: "mode_start",
@@ -283,6 +284,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+        duel: null,
       });
       trackEvent({
         name: "mode_start",
@@ -318,6 +320,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+        duel: null,
       });
       trackEvent({
         name: "mode_start",
@@ -365,6 +368,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+        duel: null,
       });
       trackEvent({
         name: "mode_start",

@@ -9,8 +9,8 @@ export function WinkSparkles() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let w = (canvas.width = canvas.offsetWidth);
-    let h = (canvas.height = canvas.offsetHeight);
+    const w = (canvas.width = canvas.offsetWidth);
+    const h = (canvas.height = canvas.offsetHeight);
 
     const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (isReduced) return;

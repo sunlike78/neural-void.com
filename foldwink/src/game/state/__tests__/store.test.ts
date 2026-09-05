@@ -536,5 +536,20 @@ describe("store — duel mode", () => {
     expect(store.getState().duel).toBeNull();
     expect(store.getState().screen).toBe("menu");
   });
+
+  it("clears duel state when starting regular modes (easy, medium, hard, daily)", () => {
+    const puzzle = mkPuzzle("duel-puzzle-3");
+    const store = createStore(makeDeps([puzzle]));
+    store.getState().startDuel("duel-puzzle-3", 1, 30);
+    expect(store.getState().duel).not.toBeNull();
+
+    store.getState().startEasy();
+    expect(store.getState().duel).toBeNull();
+
+    store.getState().startDuel("duel-puzzle-3", 1, 30);
+    expect(store.getState().duel).not.toBeNull();
+    store.getState().startDaily();
+    expect(store.getState().duel).toBeNull();
+  });
 });
 

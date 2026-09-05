@@ -30,9 +30,14 @@
     "tiktok:compose:batch02": "node tiktok/video_automation/scripts/compose-tiktok-batch02.mjs",
     "audit:logic": "node scripts/audit-puzzle-logic.mjs",
     "validate:ru": "tsx scripts/validate-puzzles.ts --dir=puzzles/ru/pool",
-    "validate:de": "tsx scripts/validate-puzzles.ts --dir=puzzles/de/pool"
+    "validate:de": "tsx scripts/validate-puzzles.ts --dir=puzzles/de/pool",
+    "mobile:assets": "node scripts/build-ios-icons.mjs",
+    "mobile:sync": "npm run build && npm run mobile:assets && cap sync ios",
+    "mobile:open": "cap open ios"
   },
   "dependencies": {
+    "@capacitor/core": "^8.5.1",
+    "@capacitor/ios": "^8.5.1",
     "@fontsource-variable/manrope": "^5.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -40,6 +45,7 @@
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.90.0",
+    "@capacitor/cli": "^8.5.1",
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
     "@types/react": "^18.3.12",
