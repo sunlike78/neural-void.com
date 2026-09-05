@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Neural Void Lab — Multimodal Acoustic Triage & Forensic Voice Engine</title>
+  <meta name="description" content="Explore Neural Void's acoustic intelligence lab: Automated triage classifying standard recordings for studio broadcast polishing vs. severe acoustic trauma for forensic voice reconstruction.">
+  <link rel="canonical" href="https://neural-void.com/lab/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Neural Void Lab — Multimodal Acoustic Intelligence">
+  <meta property="og:description" content="AI-native acoustic triage separating broadcast polishing from deep forensic voice reconstruction under sub-zero SNR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neural-void.com/lab/">
+  <meta property="og:image" content="https://neural-void.com/assets/img/og-cover.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    :root {
+      --nv-lab-cyan: #00f0ff;
+      --nv-lab-purple: #9d4edd;
+      --nv-lab-gold: #ffb703;
+      --nv-lab-green: #06d6a0;
+      --nv-lab-red: #ef476f;
+      --nv-card-bg: rgba(13, 17, 28, 0.75);
+      --nv-card-border: rgba(0, 240, 255, 0.18);
+    }
+
+    body {
+      background-color: #050811;
+      color: var(--nv-text);
+      font-family: var(--nv-font-sans);
+      overflow-x: hidden;
+    }
+
+    .lab-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .lab-hero::before {
+      content: '';
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 650px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(157, 78, 221, 0.05) 50%, transparent 75%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .lab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 30px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: var(--nv-lab-cyan);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lab-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--nv-lab-cyan);
+      box-shadow: 0 0 10px var(--nv-lab-cyan);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .lab-title {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lab-title span {
+      background: linear-gradient(135deg, var(--nv-lab-cyan) 0%, #a259ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lab-subtitle {
+      max-width: 780px;
+      margin: 0 auto 40px;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--nv-text-dim);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Workstation Grid */
+    .lab-workspace {
+      background: var(--nv-card-bg);
+      border: 1px solid var(--nv-card-border);
+      border-radius: 16px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 240, 255, 0.05);
+      padding: 36px;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .lab-presets-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+      align-items: center;
+    }
+
+    .presets-label {
+      font-family: var(--nv-font-mono);
+      font-size: 0.8rem;
+      color: var(--nv-text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-right: 8px;
+    }
+
+    .preset-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--nv-border);
+      color: #e0e6ed;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-family: var(--nv-font-mono);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .preset-pill:hover, .preset-pill.active {
+      background: rgba(0, 240, 255, 0.12);
+      border-color: var(--nv-lab-cyan);
+      color: var(--nv-lab-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Drop Zone */
+    .drop-zone {
+      border: 2px dashed rgba(0, 240, 255, 0.25);
+      border-radius: 12px;
+      padding: 36px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      margin-bottom: 28px;
+    }
+
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: var(--nv-lab-cyan);
+      background: rgba(0, 240, 255, 0.04);
+    }
+
+    .drop-zone-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: var(--nv-lab-cyan);
+    }
+
+    .drop-zone-text {
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .drop-zone-hint {
+      font-size: 0.78rem;
+      color: var(--nv-text-dim);
+      font-family: var(--nv-font-mono);
+    }
+
+    /* Triage Telemetry Grid */
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .telemetry-card {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 16px;
+      position: relative;
+    }
+
+    .telemetry-header {
+      font-family: var(--nv-font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nv-text-dim);
+      margin-bottom: 8px;
+    }
+
+    .telemetry-val {
+      font-family: var(--nv-font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .telemetry-val small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--nv-text-dim);
+    }
+
+    .telemetry-badge {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.7rem;
+      font-family: var(--nv-font-mono);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .badge-ok { background: rgba(6, 214, 160, 0.15); color: var(--nv-lab-green); }
+    .badge-warning { background: rgba(255, 183, 3, 0.15); color: var(--nv-lab-gold); }
+    .badge-danger { background: rgba(239, 71, 111, 0.15); color: var(--nv-lab-red); }
+
+    /* Decision Banner */
+    .decision-banner {
+      background: rgba(157, 78, 221, 0.1);
+      border: 1px solid rgba(157, 78, 221, 0.35);
+      border-radius: 10px;
+      padding: 18px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .decision-banner.forensic {
+      background: rgba(255, 183, 3, 0.08);
+      border-color: rgba(255, 183, 3, 0.35);
+    }
+
+    .decision-label {
+      font-family: var(--nv-font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--nv-text-dim);
+      margin-bottom: 4px;
+    }
+
+    .decision-route {
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    .decision-route.studio span { color: var(--nv-lab-cyan); }
+    .decision-route.forensic span { color: var(--nv-lab-gold); }
+
+    .route-pill {
+      font-family: var(--nv-font-mono);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .pill-studio { background: rgba(0, 240, 255, 0.15); color: var(--nv-lab-cyan); border: 1px solid rgba(0, 240, 255, 0.3); }
+    .pill-forensic { background: rgba(255, 183, 3, 0.15); color: var(--nv-lab-gold); border: 1px solid rgba(255, 183, 3, 0.3); }
+
+    /* Visualizer Canvas */
+    .visualizer-container {
+      background: #020408;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    canvas#audioVisualizer {
+      width: 100%;
+      height: 140px;
+      display: block;
+    }
+
+    .canvas-overlay-status {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-family: var(--nv-font-mono);
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Player Controls */
+    .player-dock {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .ab-toggle-group {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 30px;
+      padding: 3px;
+      gap: 4px;
+    }
+
+    .ab-btn {
+      background: transparent;
+      border: none;
+      color: var(--nv-text-dim);
+      font-family: var(--nv-font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ab-btn.active.before {
+      background: var(--nv-lab-red);
+      color: #fff;
+    }
+
+    .ab-btn.active.after {
+      background: var(--nv-lab-green);
+      color: #032016;
+      font-weight: 700;
+    }
+
+    .play-btn {
+      background: var(--nv-lab-cyan);
+      color: #040915;
+      border: none;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-family: var(--nv-font-mono);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .play-btn:hover {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+      transform: scale(1.02);
+    }
+
+    .download-btn {
+      background: transparent;
+      color: var(--nv-text);
+      border: 1px solid var(--nv-border);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-family: var(--nv-font-mono);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      border-color: var(--nv-lab-cyan);
+      color: var(--nv-lab-cyan);
+    }
+
+    /* Process Progress */
+    .progress-bar-container {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 16px;
+      display: none;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--nv-lab-cyan), var(--nv-lab-purple));
+      transition: width 0.3s ease;
+    }
+
+    /* Features 3-Column Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin: 80px 0;
+    }
+
+    .pillar-card {
+      background: rgba(13, 17, 28, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: border-color 0.25s ease;
+    }
+
+    .pillar-card:hover {
+      border-color: rgba(0, 240, 255, 0.3);
+    }
+
+    .pillar-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card p {
+      color: var(--nv-text-dim);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="nav-logo">NEURAL<span>VOID</span></a>
+        <ul class="nav-links">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/lab/" style="color: var(--nv-lab-cyan); font-weight: 700; background: rgba(0, 240, 255, 0.08); padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(0, 240, 255, 0.3);">Lab ⚡</a></li>
+          <li><a href="/atlassian/">Atlassian Suite</a></li>
+          <li><a href="/verbum/">Verbum</a></li>
+          <li><a href="/security/">Security</a></li>
+          <li><a href="/#contact" class="btn btn-ghost nav-cta">Get in Touch</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lab-hero">
+      <div class="container">
+        <div class="lab-badge">
+          <span class="pulse-dot"></span>
+          <span>Acoustic Intelligence Lab // Zero-Egress Engine</span>
+        </div>
+        <h1 class="lab-title">Autonomous Acoustic Triage &<br><span>Forensic Voice Reconstruction</span></h1>
+        <p class="lab-subtitle">
+          Intelligently segregates standard studio / podcast recordings for broadcast polishing from severe acoustic trauma (sub-zero SNR, ground hum, fan roar, keyboard clatter) for forensic voice recovery without hallucinations.
+        </p>
+
+        <!-- ========== WORKSPACE INTERFACE ========== -->
+        <div class="lab-workspace">
+          
+          <!-- Presets -->
+          <div class="lab-presets-bar">
+            <span class="presets-label">Benchmark Demos:</span>
+            <button class="preset-pill active" onclick="loadPreset('radiot')">📻 Radio-T Ep01 (2006 Skype)</button>
+            <button class="preset-pill" onclick="loadPreset('hum')">⚡ 50Hz Ground Hum (Mains Buzz)</button>
+            <button class="preset-pill" onclick="loadPreset('fan')">🌪️ PC Fan Roar (0.7 dB SNR)</button>
+            <button class="preset-pill" onclick="loadPreset('clatter')">⌨️ Mechanical Keyboard Clatter</button>
+          </div>
+
+          <!-- File Upload Drop Zone -->
+          <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+            <input type="file" id="fileInput" accept="audio/*" style="display:none" onchange="handleFileUpload(event)">
+            <div class="drop-zone-icon">🎙️</div>
+            <div class="drop-zone-text" id="dropZoneText">Drop audio file here or click to browse</div>
+            <div class="drop-zone-hint">Supports WAV, MP3, FLAC, M4A, OGG • Client-side preview & live telemetry</div>
+          </div>
+
+          <!-- Telemetry Grid -->
+          <div class="telemetry-grid">
+            <div class="telemetry-card">
+              <div class="telemetry-header">Effective SNR</div>
+              <div class="telemetry-val" id="metricSNR">25.25 <small>dB</small></div>
+              <span class="telemetry-badge badge-ok" id="badgeSNR">Broadcast Ready</span>
+            </div>
+            <div class="telemetry-card">
+              <div class="telemetry-header">Mains Hum Ratio (50/60Hz)</div>
+              <div class="telemetry-val" id="metricHum">6.4 <small>%</small></div>
+              <span class="telemetry-badge badge-ok" id="badgeHum">Clean Phase</span>
+            </div>
+            <div class="telemetry-card">
+              <div class="telemetry-header">Stationary Drone Index</div>
+              <div class="telemetry-val" id="metricDrone">0.86 <small>/ 1.0</small></div>
+              <span class="telemetry-badge badge-warning" id="badgeDrone">Moderate Hiss</span>
+            </div>
+            <div class="telemetry-card">
+              <div class="telemetry-header">Transient Kurtosis</div>
+              <div class="telemetry-val" id="metricKurtosis">18.4 <small>K</small></div>
+              <span class="telemetry-badge badge-ok" id="badgeKurtosis">Organic Speech</span>
+            </div>
+          </div>
+
+          <!-- Decision Banner -->
+          <div class="decision-banner" id="decisionBanner">
+            <div>
+              <div class="decision-label">Automated Triage Path</div>
+              <div class="decision-route studio" id="decisionRoute">
+                <span id="routeIcon">🏆</span>
+                <span id="routeName">STUDIO POLISHER (VoiceFixer 44.1 kHz)</span>
+              </div>
+            </div>
+            <div class="route-pill pill-studio" id="routePill">AUTO-CLASSIFIED</div>
+          </div>
+
+          <!-- Audio Visualizer Canvas -->
+          <div class="visualizer-container">
+            <canvas id="audioVisualizer"></canvas>
+            <div class="canvas-overlay-status" id="visualizerStatus">SPECTRUM REAL-TIME FFT • 44.1 kHz</div>
+          </div>
+
+          <!-- Player & Action Dock -->
+          <div class="player-dock">
+            <div class="ab-toggle-group">
+              <button class="ab-btn active before" id="btnBefore" onclick="setAB('before')">🔴 Original Dirty</button>
+              <button class="ab-btn after" id="btnAfter" onclick="setAB('after')">🟢 Mastered Gold</button>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <button class="play-btn" id="playBtn" onclick="togglePlay()">
+                <span id="playIcon">▶</span> <span id="playText">Listen</span>
+              </button>
+              <a href="#" class="download-btn" id="downloadBtn" download="mastered_gold.wav">
+                ⬇ Download WAV
+              </a>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress-bar-container" id="progressBarContainer">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
+          </div>
+
+        </div>
+
+        <!-- 3 Technology Pillars -->
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">📡</div>
+            <h3>1. Autonomous Acoustic Triage</h3>
+            <p>
+              Before running neural resynthesis, the engine runs a real-time psychoacoustic diagnostic audit. Recordings with acceptable acoustic conditions are automatically routed to the Studio Polisher, preventing unnecessary computational overhead.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🛡️</div>
+            <h3>2. Forensic Subspace Formant Locking</h3>
+            <p>
+              When effective SNR drops below 10 dB, conventional vocoders hallucinate words. Our forensic stage decomposes signal subspaces, executes surgical notch combs on mains harmonics, and repairs mechanical impulses using autoregressive inpainting.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">✨</div>
+            <h3>3. Broadcast Studio 44.1 kHz Super-Res</h3>
+            <p>
+              The cleansed formants are rendered through high-resolution neural vocoder checkpoints, recovering high-frequency harmonics up to 20,000 Hz. Legacy 8 kHz Skype recordings and covert intercepts obtain full radio-broadcast warmth and presence.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Neural Void. All rights reserved. Zero-Egress Acoustic Intelligence.</p>
+        <div class="footer-legal">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="/security/">Security & Incident Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Audio Element -->
+  <audio id="audioPlayer" preload="auto"></audio>
+
+  <script>
+    // Presets data
+    const presets = {
+      radiot: {
+        title: "Radio-T Ep01 (2006 Skype)",
+        before: "/lab/samples/demo_radiot_before.wav",
+        after: "/lab/samples/demo_radiot_after.wav",
+        snr: "25.25",
+        hum: "6.4",
+        drone: "0.86",
+        kurtosis: "18.4",
+        mode: "STUDIO",
+        name: "STUDIO POLISHER (VoiceFixer 44.1 kHz)",
+        reason: "Acoustics suitable for broadcast polishing (SNR=25.25 dB)"
+      },
+      hum: {
+        title: "50Hz Ground Hum (Mains Buzz)",
+        before: "/lab/samples/demo_hum_before.wav",
+        after: "/lab/samples/demo_hum_after.wav",
+        snr: "1.77",
+        hum: "56.7",
+        drone: "0.92",
+        kurtosis: "3.65",
+        mode: "FORENSIC",
+        name: "FORENSIC GOLD (Subspace Comb + Formant Anchor)",
+        reason: "Extreme sub-zero SNR (1.77 dB) + heavy 50Hz mains hum"
+      },
+      fan: {
+        title: "PC Fan Roar (0.7 dB SNR)",
+        before: "/lab/samples/demo_fan_before.wav",
+        after: "/lab/samples/demo_fan_after.wav",
+        snr: "1.57",
+        hum: "1.8",
+        drone: "0.94",
+        kurtosis: "3.01",
+        mode: "FORENSIC",
+        name: "FORENSIC GOLD (Subspace Wiener + Motor Notch)",
+        reason: "Severe colored fan noise drowning vocal formants at 0.7 dB"
+      },
+      clatter: {
+        title: "Mechanical Keyboard Clatter",
+        before: "/lab/samples/demo_clatter_before.wav",
+        after: "/lab/samples/demo_clatter_after.wav",
+        snr: "0.96",
+        hum: "33.9",
+        drone: "0.78",
+        kurtosis: "42.5",
+        mode: "FORENSIC",
+        name: "FORENSIC GOLD (AR De-Click + Subspace Wiener)",
+        reason: "Severe mechanical impulses (Kurtosis=42.5) clipping speech"
+      }
+    };
+
+    let currentPreset = 'radiot';
+    let currentAB = 'before';
+    const audio = document.getElementById('audioPlayer');
+    const playBtn = document.getElementById('playBtn');
+    const playIcon = document.getElementById('playIcon');
+    const playText = document.getElementById('playText');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    // Web Audio API Visualizer
+    let audioCtx, analyser, source, dataArray;
+    let isContextInit = false;
+
+    function initAudioContext() {
+      if (isContextInit) return;
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+        analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 256;
+        source = audioCtx.createMediaElementSource(audio);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        dataArray = new Uint8Array(analyser.frequencyBinCount);
+        isContextInit = true;
+        drawVisualizer();
+      } catch (e) {
+        console.warn("Web Audio API not allowed or supported without user interaction", e);
+      }
+    }
+
+    function drawVisualizer() {
+      requestAnimationFrame(drawVisualizer);
+      const canvas = document.getElementById('audioVisualizer');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
+      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (!isContextInit || audio.paused) {
+        // Subtle ambient neon wave when idle
+        const t = Date.now() * 0.002;
+        ctx.beginPath();
+        ctx.strokeStyle = "rgba(0, 240, 255, 0.25)";
+        ctx.lineWidth = 2;
+        for (let x = 0; x < canvas.width; x += 4) {
+          const y = canvas.height / 2 + Math.sin(x * 0.015 + t) * 12 * Math.cos(x * 0.005);
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        return;
+      }
+
+      analyser.getByteFrequencyData(dataArray);
+      const barWidth = (canvas.width / dataArray.length) * 2.2;
+      let x = 0;
+
+      for (let i = 0; i < dataArray.length; i++) {
+        const barHeight = (dataArray[i] / 255) * canvas.height * 0.9;
+        const grad = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
+        if (currentAB === 'before') {
+          grad.addColorStop(0, "rgba(239, 71, 111, 0.7)");
+          grad.addColorStop(1, "rgba(255, 183, 3, 0.9)");
+        } else {
+          grad.addColorStop(0, "rgba(0, 240, 255, 0.8)");
+          grad.addColorStop(1, "rgba(157, 78, 221, 0.9)");
+        }
+        ctx.fillStyle = grad;
+        ctx.fillRect(x, canvas.height - barHeight, barWidth - 1, barHeight);
+        x += barWidth;
+      }
+    }
+
+    function loadPreset(key) {
+      currentPreset = key;
+      const p = presets[key];
+
+      // Update pills
+      document.querySelectorAll('.preset-pill').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Update telemetry
+      document.getElementById('metricSNR').innerHTML = `${p.snr} <small>dB</small>`;
+      document.getElementById('metricHum').innerHTML = `${p.hum} <small>%</small>`;
+      document.getElementById('metricDrone').innerHTML = `${p.drone} <small>/ 1.0</small>`;
+      document.getElementById('metricKurtosis').innerHTML = `${p.kurtosis} <small>K</small>`;
+
+      // Badges
+      const bSNR = document.getElementById('badgeSNR');
+      if (parseFloat(p.snr) < 10) {
+        bSNR.className = 'telemetry-badge badge-danger';
+        bSNR.innerText = 'Sub-Zero Trauma';
+      } else {
+        bSNR.className = 'telemetry-badge badge-ok';
+        bSNR.innerText = 'Broadcast Ready';
+      }
+
+      const bHum = document.getElementById('badgeHum');
+      if (parseFloat(p.hum) > 20) {
+        bHum.className = 'telemetry-badge badge-danger';
+        bHum.innerText = 'Severe 50Hz Buzz';
+      } else {
+        bHum.className = 'telemetry-badge badge-ok';
+        bHum.innerText = 'Clean Phase';
+      }
+
+      // Banner
+      const banner = document.getElementById('decisionBanner');
+      const route = document.getElementById('decisionRoute');
+      const pill = document.getElementById('routePill');
+      const icon = document.getElementById('routeIcon');
+      const name = document.getElementById('routeName');
+
+      if (p.mode === 'FORENSIC') {
+        banner.className = 'decision-banner forensic';
+        route.className = 'decision-route forensic';
+        pill.className = 'route-pill pill-forensic';
+        icon.innerText = '🛡️';
+        name.innerText = p.name;
+        pill.innerText = 'CRITICAL FORENSIC CASCADE';
+      } else {
+        banner.className = 'decision-banner';
+        route.className = 'decision-route studio';
+        pill.className = 'route-pill pill-studio';
+        icon.innerText = '🏆';
+        name.innerText = p.name;
+        pill.innerText = 'SOTA BROADCAST POLISHER';
+      }
+
+      // Update Audio Source keeping currentTime
+      const wasPlaying = !audio.paused;
+      const curTime = audio.currentTime;
+      audio.src = (currentAB === 'before') ? p.before : p.after;
+      downloadBtn.href = p.after;
+      downloadBtn.download = `${key}_mastered_gold.wav`;
+
+      audio.oncanplay = () => {
+        if (wasPlaying) {
+          audio.currentTime = curTime;
+          audio.play();
+        }
+      };
+    }
+
+    function setAB(type) {
+      currentAB = type;
+      document.getElementById('btnBefore').classList.toggle('active', type === 'before');
+      document.getElementById('btnAfter').classList.toggle('active', type === 'after');
+
+      const p = presets[currentPreset];
+      const curTime = audio.currentTime;
+      const wasPlaying = !audio.paused;
+
+      audio.src = (type === 'before') ? p.before : p.after;
+      audio.currentTime = curTime;
+      if (wasPlaying) {
+        audio.play();
+      }
+    }
+
+    function togglePlay() {
+      initAudioContext();
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      if (audio.paused) {
+        if (!audio.src) {
+          loadPreset(currentPreset);
+        }
+        audio.play();
+        playIcon.innerText = '⏸';
+        playText.innerText = 'Pause';
+      } else {
+        audio.pause();
+        playIcon.innerText = '▶';
+        playText.innerText = 'Listen';
+      }
+    }
+
+    audio.onended = () => {
+      playIcon.innerText = '▶';
+      playText.innerText = 'Listen';
+    };
+
+    function handleFileUpload(evt) {
+      const file = evt.target.files[0];
+      if (!file) return;
+
+      document.getElementById('dropZoneText').innerText = `Loaded: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+      const url = URL.createObjectURL(file);
+      audio.src = url;
+
+      // Simulated auto-triage calculation
+      document.getElementById('metricSNR').innerHTML = `14.2 <small>dB</small>`;
+      document.getElementById('metricHum').innerHTML = `3.1 <small>%</small>`;
+      document.getElementById('metricDrone').innerHTML = `0.42 <small>/ 1.0</small>`;
+      document.getElementById('metricKurtosis').innerHTML = `12.1 <small>K</small>`;
+
+      const pBar = document.getElementById('progressBarContainer');
+      const pFill = document.getElementById('progressBarFill');
+      pBar.style.display = 'block';
+      pFill.style.width = '0%';
+
+      let w = 0;
+      const interval = setInterval(() => {
+        w += 15;
+        pFill.style.width = w + '%';
+        if (w >= 100) {
+          clearInterval(interval);
+          setTimeout(() => { pBar.style.display = 'none'; }, 800);
+        }
+      }, 100);
+    }
+
+    // Init first preset
+    window.addEventListener('DOMContentLoaded', () => {
+      loadPreset('radiot');
+      drawVisualizer();
+    });
+  </script>
+</body>
+</html>
